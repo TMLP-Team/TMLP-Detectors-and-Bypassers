@@ -26,6 +26,7 @@
     - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
     - Search for a free recent keybox.xml in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use MT the Manager to move it to ``/data/adb/tricky_store/``
     - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Strong integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
+    - Please try to generate a ``keybox.xml`` via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the ``keybox.xml`` signed based on the root certificate from the AOSP does not work or is minded
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
@@ -60,6 +61,7 @@
     - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
     - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 keybox.xml 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
     - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过强完整性（Strong Integrity），如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
+    - 如果基于安卓开源项目根证书签署的 ``keybox.xml`` 不生效或介意使用，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 ``keybox.xml``
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
