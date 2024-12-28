@@ -23,6 +23,8 @@
     - Add the package names of the applications that are allowed to obtain root privileges to this file if necessary
   - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
   - Install the [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
+    - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
+    - Search for a recent keybox.xml in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use MT the Manager to move it to ``/data/adb/tricky_store/``
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
@@ -54,7 +56,8 @@
     - 如果需要可以向该文件添加允许获取 root 权限的应用的包名
   - 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-    - https://t.me/FreeKeyboxShare
+    - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+    - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的 keybox.xml 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
