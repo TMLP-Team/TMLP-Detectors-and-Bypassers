@@ -21,7 +21,10 @@
   - Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
     - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
     - Add the package names of the applications that are allowed to obtain root privileges to this file if necessary
-  
+  - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
+  - Install the [Tricky Store](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
+  - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
+
 ---
 
 ## 过检方法
@@ -47,3 +50,6 @@
   - 在面具层安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
     - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（可直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
     - 如果需要可以向该文件添加允许获取 root 权限的应用的包名
+  - 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
+  - 在面具层安装 [Tricky Store](https://github.com/chiteroman/PlayIntegrityFix) 模块
+  - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
