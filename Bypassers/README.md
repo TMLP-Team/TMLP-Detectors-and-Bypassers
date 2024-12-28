@@ -9,6 +9,8 @@
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
   - Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
+    - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
+    - Add the package names of the applications that are allowed to obtain root privileges to this file if necessary
   - Install the [LSPosed](https://github.com/LSPosed/LSPosed) module in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable LSPosed taskbar notification $\rightarrow$ Uninstall the LSPosed manager
     - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
@@ -32,6 +34,8 @@
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
   - 在面具层安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
+    - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（可直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
+    - 如果需要可以向该文件添加允许获取 root 权限的应用的包名
   - 在面具层安装 [LSPosed](https://github.com/LSPosed/LSPosed) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
