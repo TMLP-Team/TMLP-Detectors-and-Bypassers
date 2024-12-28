@@ -24,6 +24,8 @@
   - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
   - Install the [Tricky Store](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
+    - Please remove the other module if one is selected to be used since they are not compatible
+    - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
 
 ---
 
@@ -53,3 +55,5 @@
   - 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/chiteroman/PlayIntegrityFix) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
+    - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
+    - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
