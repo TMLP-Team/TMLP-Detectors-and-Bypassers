@@ -16,7 +16,8 @@
     - Reboot the device
     - Configure the HMAL
       - Hide HMAL's icon from the launcher in HMAL's settings page
-      - 
+      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates
+      - Except for the Magisk manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
 
 ---
 
@@ -39,4 +40,4 @@
     - 配置 HMAL 插件
       - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
       - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
-      - 对除面具和插件之外的一切
+      - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
