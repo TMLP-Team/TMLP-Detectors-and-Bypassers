@@ -2,11 +2,11 @@
 
 ### Using Official Magisk
 
-- Official Magisk with Zygisk Enabled and Denylist 
+- Install the latest Official [Magisk](https://github.com/LSPosed/LSPosed.github.io/releases/)
   - Enable Zygisk (or use [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext))
   - Disable Denylist
   - Empty Denylist
-- Install [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) in the Magisk layer
+- Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
 
 ---
 
@@ -14,5 +14,8 @@
 
 ### 正在使用官方版面具
 
-- 官方版面具
-- 
+- 安装最新版[官方版面具](https://github.com/LSPosed/LSPosed.github.io/releases/)
+  - 打开 Zygisk（或使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)）
+  - 关闭“遵守排除列表”开关
+  - 清空“配置排除列表”列表
+- 在面具层安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
