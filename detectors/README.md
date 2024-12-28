@@ -4,7 +4,8 @@
 - Official links: Unknown. 
 - Open source status: Unknown. 
 - Purposes: Environment detection.
-- The latest version: ``4.4.1``. 
+- The latest version: ``4.4.1``.
+- 
 
 ### Native test
 - Official links: Unknown.
