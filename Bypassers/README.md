@@ -67,3 +67,60 @@
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
+
+### 正在使用 Delta 版面具（小狐狸面具）
+
+- 安装停更前的最后一个版本的 [Delta 面具](https://github.com/HuskyDG/magisk-files)
+  - 由于已在 2024 年初停更未来可能跟不上时代潮流
+  - 配置面具
+    - 打开 Zygisk（或使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)）
+    - 在设置界面启用白名单模式
+    - 选定需要 root 权限的应用的包（可以不选定某个应用程序内的所有包）
+  - 在面具层安装 [LSPosed](https://github.com/LSPosed/LSPosed) 模块
+    - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
+    - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
+    - 设置作用域为仅**系统框架**并启用插件
+    - 重启设备
+    - 配置 HMAL 插件
+      - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
+      - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+      - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
+  - 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
+  - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+    - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+    - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+    - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过强完整性（Strong Integrity），如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
+    - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过设备完整性的 ``keybox.xml``
+    - 请不要购买 ``keybox.xml`` 因为它们通常在不久的一段时间内失效
+  - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
+    - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
+    - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
+
+### 特殊情况
+
+#### Momo
+
+##### 包管理服务异常
+
+参考一篇 2023 年初的问答：[https://zhidao.baidu.com/question/633770792883881924.html](https://zhidao.baidu.com/question/633770792883881924.html)
+
+##### 已开启调试模式
+
+- 在不使用调试模式时关闭调试模式
+- 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed 注入（确信级别）反而得不偿失
+
+##### 存在 TWRP 文件
+
+将 ``/sdcard/`` 下的 TWRP 文件夹重命名（例如 .TWRP）
+
+##### Bootloader 未锁定
+
+- 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
+- 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed 注入（确信级别）反而得不偿失
+
+#### Ruru
+
+##### syscall 找到 HMA
+
+换用 HMAL
