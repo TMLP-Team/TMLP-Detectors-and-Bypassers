@@ -6,6 +6,8 @@ We do not own any of the detectors and bypassers here. Thus, please kindly conta
 
 We only keep the latest versions for each detector and bypasser here, keeping them as up-to-date as possible. 
 
+The last files are updated at 1:30 on January 4th, 2025 (UTC+8). 
+
 ---
 
 # TMLP-Detectors-and-Bypassers
@@ -15,3 +17,5 @@ We only keep the latest versions for each detector and bypasser here, keeping th
 我们不拥有此处的检测工具和过检工具。因此，如这些工具的所有者不希望让相应的工具在此处分发，请联系我们删除。
 
 我们仅保留最新的检测工具和过检工具，并尽可能保持实时更新。
+
+最后更新时间：2025 年 1 月 4 日 1:30（中国标准时间）。
