@@ -8,7 +8,7 @@
     - Disable Denylist
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
-  - Install the [LSPosed](https://github.com/LSPosed/LSPosed) module in the Magisk layer
+  - Install the [LSPosed](https://github.com/LSPosed/LSPosed) module in the Magisk layer (or the [modified version](https://github.com/mywalkb/LSPosed_mod/) if you wish to)
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable LSPosed taskbar notification $\rightarrow$ Uninstall the LSPosed Manager
     - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
     - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
@@ -45,7 +45,7 @@
     - 关闭“遵守排除列表”开关
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
-  - 在面具层安装 [LSPosed](https://github.com/LSPosed/LSPosed) 模块
+  - 在面具层安装 [LSPosed](https://github.com/LSPosed/LSPosed) 模块（或使用[修改版](https://github.com/mywalkb/LSPosed_mod/)）
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
     - 设置作用域为仅**系统框架**并启用插件
