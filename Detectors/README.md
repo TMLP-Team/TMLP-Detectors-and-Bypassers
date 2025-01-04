@@ -40,6 +40,7 @@
 - **Release Date**: Unknown
 
 ### Momo
+- **Package Name**: ``io.github.vvb2060.mahoshojo``
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
@@ -120,6 +121,7 @@
 - **发布日期**: Unknown
 
 ### Momo
+- **应用包名**：``io.github.vvb2060.mahoshojo``
 - **官方链接**：未知
 - **开源专题**：未知
 - **开发用途**：环境检测
