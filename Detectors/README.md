@@ -31,6 +31,14 @@
 - **Latest Version**: ``6.4.1``
 - **Release Date**: June 20, 2024. 
 
+## Key Attestation
+- **Package Name**: ``io.github.vvb2060.keyattestation``
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Key Attestation
+- **Latest Version**: ``1.7.0``
+- **Release Date**: Unknown
+
 ### Momo
 - **Official Link**: Unknown
 - **Source Status**: Unknown
@@ -46,6 +54,7 @@
 - **Release Date**: January 2nd, 2025
 
 ### Native Test
+- **Package Name**: ``icu.nullptr.nativetest``
 - **Official Link**: Unknown
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
@@ -102,6 +111,14 @@
 - **最新版本**：``6.4.1``
 - **发布日期**：2024 年 6 月 20 日
 
+## Key Attestation（密钥认证）
+- **应用包名**: ``io.github.vvb2060.keyattestation``
+- **官方链接**: Unknown
+- **开源状态**：未知
+- **开发用途**: 密钥认证
+- **最新版本**: ``1.7.0``
+- **发布日期**: Unknown
+
 ### Momo
 - **官方链接**：未知
 - **开源专题**：未知
@@ -118,6 +135,7 @@
 - **发布日期**：2025 年 1 月 2 日
 
 ### Native test（牛头人）
+- **软件包名**：``icu.nullptr.nativetest``
 - **官方链接**：未知
 - **开源状态**：闭源
 - **开发用途**：环境检测
