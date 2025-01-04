@@ -37,7 +37,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``4.4.1``
 
-### Native root detector
+### Native Root Detector / Native Detector / Native Check
 - **Package Name**: ``com.reveny.nativecheck``
 - **Official Link**: [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Unknown
@@ -45,7 +45,7 @@
 - **Latest Version**: ``6.5.9``
 - **Release Date**: January 2nd, 2025
 
-### Native test
+### Native Test
 - **Official Link**: Unknown
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
@@ -104,22 +104,22 @@
 
 ### Momo
 - **官方链接**：未知
-- 开源情况：未知
+- **开源专题**：未知
 - **开发用途**：环境检测
 - **最新版本**：``4.4.1``
 ![momoNormalZH.jpg](momoNormalZH.jpg)
 
-### Native root detector
+### Native Root Detector / Native Detector / Native Check
 - **应用包名**：``com.reveny.nativecheck``
 - **官方链接**：[https://t.me/rootdetector](https://t.me/rootdetector)
-- 开源情况：未知
+- **开源状态**：未知
 - **开发用途**：环境检测
 - **最新版本**：``6.5.9``
 - **发布日期**：2025 年 1 月 2 日
 
 ### Native test（牛头人）
 - **官方链接**：未知
-- 开源情况：闭源
+- **开源状态**：闭源
 - **开发用途**：环境检测
 - **最新版本**：``30``
 
