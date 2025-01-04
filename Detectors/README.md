@@ -1,63 +1,81 @@
 ## Detectors
 
+### DRM Info
+- Package Name: ``com.androidfung.drminfo``
+- Official Link: [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
+- Source Status: Unknown
+- Developing Purpose: Information Gathering
+- Latest Version: ``1.1.15-240919``
+- Release Date: September 19th, 2024
+- Remark: Check whether the Security Level is Level 1
+
 ### Holmes
-- Official links: [https://t.me/app_process64](https://t.me/app_process64)
-- Source status: Unknown
-- Developing purposes: Environment Detection
-- Latest version: ``1.5.1``
+- Official Link: [https://t.me/app_process64](https://t.me/app_process64)
+- Source Status: Unknown
+- Developing Purpose: Environment Detection
+- Latest Version: ``1.5.1``
 - Remark: Fail passing if the application crashes
 
 ### Hunter
-- Official links: Unknown
-- Source status: Unknown
-- Developing purposes: Environment Detection
-- Latest version: ``6.0.4``
+- Official Link: Unknown
+- Source Status: Unknown
+- Developing Purpose: Environment Detection
+- Latest Version: ``6.0.4``
 
 ### IIQE
 - Official links: [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
-- Source status: Android desktop application
-- Developing purposes: Not developed only for environment detection
-- Latest version: ``6.4.1``
-- Release date: June 20, 2024. 
+- Source Status: Android desktop application
+- Developing Purpose: Not developed only for environment detection
+- Latest Version: ``6.4.1``
+- Release Date: June 20, 2024. 
 
 ### Momo
-- Official links: Unknown
-- Source status: Unknown
-- Developing purposes: Environment Detection
-- Latest version: ``4.4.1``
+- Official Link: Unknown
+- Source Status: Unknown
+- Developing Purpose: Environment Detection
+- Latest Version: ``4.4.1``
 
 ### Native root detector
-- Official links: [https://t.me/rootdetector](https://t.me/rootdetector)
-- Source status: Unknown
-- Developing purposes: Environment Detection
-- Latest version: ``6.5.9``
-- Release date: January 2nd, 2025
+- Official Link: [https://t.me/rootdetector](https://t.me/rootdetector)
+- Source Status: Unknown
+- Developing Purpose: Environment Detection
+- Latest Version: ``6.5.9``
+- Release Date: January 2nd, 2025
 
 ### Native test
-- Official links: Unknown
-- Source status: Closed-source
-- Developing purposes: Environment Detection
-- Latest version: ``30``
+- Official Link: Unknown
+- Source Status: Closed-source
+- Developing Purpose: Environment Detection
+- Latest Version: ``30``
 
 ### NSDL Jiffy
-- Official links: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
-- Source status: Android desktop application
-- Developing purposes: Not developed only for environment detection
-- Latest version: Unknown
-- Release date: December 5th, 2024
-- Remark: Can be the most challenging one
+- Official Link: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
+- Source Status: Android desktop application
+- Developing Purpose: Not developed only for environment detection
+- Latest Version: Unknown
+- Release Date: December 5th, 2024
+- Remark: The most challenging one
 
 ### Ruru
 
-- Official links：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
-- Source status: Open-source
-- Developing purposes: Environment Detection
-- Latest version: ``1.1.1``
-- Release date: April 18th, 2024
+- Official Link：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
+- Source Status: Open-source
+- Developing Purpose: Environment Detection
+- Latest Version: ``1.1.1``
+- Release Date: April 18th, 2024
 
 ---
 
 ## 检测工具
+
+### DRM Info
+- 包名：``com.androidfung.drminfo``
+- 官方链接：[https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
+- 开源状态：未知
+- 开发用途：信息搜集
+- 最新版本：``1.1.15-240919``
+- 发布日期：2024 年 9 月 19 日
+- 备注：Security Level 应当显示为 Level 1
 
 ### Holmes
 - 官方链接：[https://t.me/app_process64](https://t.me/app_process64)
