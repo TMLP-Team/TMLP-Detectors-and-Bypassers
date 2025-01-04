@@ -6,7 +6,7 @@ We do not own any of the detectors and bypassers here. Thus, please kindly conta
 
 We only keep the latest versions for each detector and bypasser here, keeping them as up-to-date as possible. 
 
-The last files are updated at 21:30 on January 4th, 2025 (UTC+8). 
+The last files are updated at 23:30 on January 4th, 2025 (UTC+8). 
 
 ---
 
@@ -18,4 +18,4 @@ The last files are updated at 21:30 on January 4th, 2025 (UTC+8).
 
 我们仅保留最新的检测工具和过检工具，并尽可能保持实时更新。
 
-最后更新时间：2025 年 1 月 4 日 21:30（中国标准时间）。
+最后更新时间：2025 年 1 月 4 日 23:30（中国标准时间）。
