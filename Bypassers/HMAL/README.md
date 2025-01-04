@@ -27,7 +27,7 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $C$: ``com.reveny.nativecheck`` and ``com.zhenxi.hunter``;
   - $D$: ``com.tencent.mm`` and `` com.tencent.mobileqq``. 
 - Configurations: 
-  - $\forall a \in A$: $a$ should ba able to see and be seen by $A$, $B$, $C$, and $D$; 
+  - $\forall a \in A$: $a$ should be able to see and be seen by $A$, $B$, $C$, and $D$; 
   - $\forall b \in B$: $b$ should be able to see $A$, $B$, $C$, and $D$ while should be unable to be seen by $C$ and $D$;
   - $\forall c \in C$: $c$ should be able to see and be seen by only $c$;
   - $\forall d \in D$: $d$ should be able to see and be seen by only $D$. 
