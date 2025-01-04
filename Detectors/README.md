@@ -1,140 +1,140 @@
 ## Detectors
 
 ### DRM Info
-- Package Name: ``com.androidfung.drminfo``
-- Official Link: [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
-- Source Status: Unknown
-- Developing Purpose: Information Gathering
-- Latest Version: ``1.1.15-240919``
-- Release Date: September 19th, 2024
-- Remark: Check whether the Security Level is Level 1
+- **Package Name**: ``com.androidfung.drminfo``
+- **Official Link**: [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
+- **Source Status**: Unknown
+- **Developing Purpose**: Information Gathering
+- **Latest Version**: ``1.1.15-240919``
+- **Release Date**: September 19th, 2024
+- **Detection Remark**: Check whether the Security Level is Level 1
 
 ### Holmes
-- Official Link: [https://t.me/app_process64](https://t.me/app_process64)
-- Source Status: Unknown
-- Developing Purpose: Environment Detection
-- Latest Version: ``1.5.1``
-- Remark: Fail passing if the application crashes
+- **Official Link**: [https://t.me/app_process64](https://t.me/app_process64)
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``1.5.1``
+- **Detection Remark**: Fail passing if the application crashes
 
 ### Hunter
-- Package Name: ``com.zhenxi.hunter``
-- Official Link: Unknown
-- Source Status: Unknown
-- Developing Purpose: Environment Detection
-- Latest Version: ``6.0.4``
+- **Package Name**: ``com.zhenxi.hunter``
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``6.0.4``
 
 ### IIQE
-- Package Name: ``com.prudential.iiqe``
-- Official Link: [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
-- Source Status: Android desktop application
-- Developing Purpose: Not developed only for environment detection
-- Latest Version: ``6.4.1``
-- Release Date: June 20, 2024. 
+- **Package Name**: ``com.prudential.iiqe``
+- **Official Link**: [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
+- **Source Status**: Android desktop application
+- **Developing Purpose**: Not developed only for environment detection
+- **Latest Version**: ``6.4.1``
+- **Release Date**: June 20, 2024. 
 
 ### Momo
-- Official Link: Unknown
-- Source Status: Unknown
-- Developing Purpose: Environment Detection
-- Latest Version: ``4.4.1``
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``4.4.1``
 
 ### Native root detector
-- Package Name: ``com.reveny.nativecheck``
-- Official Link: [https://t.me/rootdetector](https://t.me/rootdetector)
-- Source Status: Unknown
-- Developing Purpose: Environment Detection
-- Latest Version: ``6.5.9``
-- Release Date: January 2nd, 2025
+- **Package Name**: ``com.reveny.nativecheck``
+- **Official Link**: [https://t.me/rootdetector](https://t.me/rootdetector)
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``6.5.9``
+- **Release Date**: January 2nd, 2025
 
 ### Native test
-- Official Link: Unknown
-- Source Status: Closed-source
-- Developing Purpose: Environment Detection
-- Latest Version: ``30``
+- **Official Link**: Unknown
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``30``
 
 ### NSDL Jiffy
-- Official Link: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
-- Source Status: Android desktop application
-- Developing Purpose: Not developed only for environment detection
-- Latest Version: Unknown
-- Release Date: December 5th, 2024
-- Remark: The most challenging one
+- **Official Link**: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
+- **Source Status**: Android desktop application
+- **Developing Purpose**: Not developed only for environment detection
+- **Latest Version**: Unknown
+- **Release Date**: December 5th, 2024
+- **Detection Remark**: The most challenging one
 
 ### Ruru
 
-- Official Link：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
-- Source Status: Open-source
-- Developing Purpose: Environment Detection
-- Latest Version: ``1.1.1``
-- Release Date: April 18th, 2024
+- **Official Link**: [https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
+- **Source Status**: Open-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``1.1.1``
+- **Release Date**: April 18th, 2024
 
 ---
 
 ## 检测工具
 
 ### DRM Info
-- 应用包名：``com.androidfung.drminfo``
-- 官方链接：[https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
-- 开源状态：未知
-- 开发用途：信息搜集
-- 最新版本：``1.1.15-240919``
-- 发布日期：2024 年 9 月 19 日
-- 备注：Security Level 应当显示为 Level 1
+- **应用包名**：``com.androidfung.drminfo``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
+- **开源状态**：未知
+- **开发用途**：信息搜集
+- **最新版本**：``1.1.15-240919``
+- **发布日期**：2024 年 9 月 19 日
+- **注意事项**：Security Level 应当显示为 Level 1
 
 ### Holmes
-- 官方链接：[https://t.me/app_process64](https://t.me/app_process64)
-- 开源状态：未知
-- 开发用途：环境检测
-- 最新版本：``1.5.1``
-- 备注：闪退或许也是过检失败
+- **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
+- **开源状态**：未知
+- **开发用途**：环境检测
+- **最新版本**：``1.5.1``
+- **注意事项**：闪退或许也是过检失败
 
 ### Hunter
-- 应用包名：``com.zhenxi.hunter``
-- 官方链接：未知
-- 开源状态：未知
-- 开发用途：环境检测
-- 最新版本：``6.0.4``
+- **应用包名**：``com.zhenxi.hunter``
+- **官方链接**：未知
+- **开源状态**：未知
+- **开发用途**：环境检测
+- **最新版本**：``6.0.4``
 
 ### IIQE
-- 应用包名：``com.prudential.iiqe``
-- 官方链接：[https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
-- 开源状态：安卓桌面应用
-- 开发用途：并非专为检测环境开发
-- 最新版本：``6.4.1``
-- 发布日期：2024 年 6 月 20 日
+- **应用包名**：``com.prudential.iiqe``
+- **官方链接**：[https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
+- **开源状态**：安卓桌面应用
+- **开发用途**：并非专为检测环境开发
+- **最新版本**：``6.4.1``
+- **发布日期**：2024 年 6 月 20 日
 
 ### Momo
-- 官方链接：未知
+- **官方链接**：未知
 - 开源情况：未知
-- 开发用途：环境检测
-- 最新版本：``4.4.1``
+- **开发用途**：环境检测
+- **最新版本**：``4.4.1``
 ![momoNormalZH.jpg](momoNormalZH.jpg)
 
 ### Native root detector
-- 应用包名：``com.reveny.nativecheck``
-- 官方链接：[https://t.me/rootdetector](https://t.me/rootdetector)
+- **应用包名**：``com.reveny.nativecheck``
+- **官方链接**：[https://t.me/rootdetector](https://t.me/rootdetector)
 - 开源情况：未知
-- 开发用途：环境检测
-- 最新版本：``6.5.9``
-- 发布日期：2025 年 1 月 2 日
+- **开发用途**：环境检测
+- **最新版本**：``6.5.9``
+- **发布日期**：2025 年 1 月 2 日
 
 ### Native test（牛头人）
-- 官方链接：未知
+- **官方链接**：未知
 - 开源情况：闭源
-- 开发用途：环境检测
-- 最新版本：``30``
+- **开发用途**：环境检测
+- **最新版本**：``30``
 
 ### NSDL Jiffy
-- 官方链接：[https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
-- 开源状态：安卓桌面应用
-- 开发用途：并非专为检测环境开发
-- 最新版本：未知
-- 发布日期：2024 年 12 月 5 日
-- 备注：应该是最“难过”的
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
+- **开源状态**：安卓桌面应用
+- **开发用途**：并非专为检测环境开发
+- **最新版本**：未知
+- **发布日期**：2024 年 12 月 5 日
+- **注意事项**：应该是最“难过”的
 
 ### Ruru
 
-- 官方链接：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
-- 开源状态：开源
-- 开发用途：环境检测
-- 最新版本：``1.1.1``
-- 发布日期：2024 年 4 月 18 日
+- **官方链接**：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
+- **开源状态**：开源
+- **开发用途**：环境检测
+- **最新版本**：``1.1.1``
+- **发布日期**：2024 年 4 月 18 日
