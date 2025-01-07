@@ -21,7 +21,8 @@
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``6.0.4``
+- **Latest Version**: ``6.0.6``
+- **Release Date**: Around January 6th, 2025
 
 ### IIQE
 - **Package Name**: ``com.prudential.iiqe``
