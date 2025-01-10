@@ -28,7 +28,7 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $D$: ``com.tencent.mm`` and `` com.tencent.mobileqq``. 
 - Configurations: 
   - $\forall a \in A$: $a$ should be able to see and be seen by $\forall x, x \in A \cup B \cup C \cup D$; 
-  - $\forall b \in B$: $b$ should be able to see $\forall x, x \in A \cup B \cup C \cup D$ and unable to be seen by $$\forall x, x \in C \cup D$; 
+  - $\forall b \in B$: $b$ should be able to see $\forall x, x \in A \cup B \cup C \cup D$ and unable to be seen by $\forall x, x \in C \cup D$; 
   - $\forall c \in C$: $c$ should be able to see and be seen by only $c$; 
   - $\forall d \in D$: $d$ should be able to see and be seen by only $\forall x, x \in D$ (note that we do not consider the detection between applications caused by enterprises having severe conflicts of interest with each other). 
 - Accomplishments: 
