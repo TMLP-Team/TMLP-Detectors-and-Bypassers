@@ -16,23 +16,23 @@ These two operations can be configured dynamically without rebooting, configurin
 In this folder, you may see a JSON configuration file, which includes a blacklist and a whitelist template. In the future, we hope to include all package names of apps that may be detected and those that should not be detected in this configuration. Any pull requests are welcome. 
 
 Nonetheless, faithfully speaking, a plugin that can hide the application list without manual configuration would be better. 
-- Classifications:
+- Classifications: 
   - Classification $A$: System applications that cannot be launched and system pre-installed applications that can be launched but are not critical; 
   - Classification $B$: TMLP-related applications; 
   - Classification $C$: Applications designed for environment detection; and
-  - Classification $D$: Others.
-- Examples:
-  - $A$: ``com.onlus`` and ``com.android.settings``;
-  - $B$: ``io.github.vvb2060.magisk`` and ``com.google.android.hmal``;
-  - $C$: ``com.reveny.nativecheck`` and ``com.zhenxi.hunter``;
+  - Classification $D$: Others. 
+- Examples: 
+  - $A$: ``com.onlus`` and ``com.android.settings``; 
+  - $B$: ``io.github.vvb2060.magisk`` and ``com.google.android.hmal``; 
+  - $C$: ``com.reveny.nativecheck`` and ``com.zhenxi.hunter``; 
   - $D$: ``com.tencent.mm`` and `` com.tencent.mobileqq``. 
 - Configurations: 
-  - $\forall a \in A$: $a$ should be able to see and be seen by $A$, $B$, $C$, and $D$; 
-  - $\forall b \in B$: $b$ should be able to see $A$, $B$, $C$, and $D$ while should be unable to be seen by $C$ and $D$;
-  - $\forall c \in C$: $c$ should be able to see and be seen by only $c$;
-  - $\forall d \in D$: $d$ should be able to see and be seen by only $D$. 
-- Accomplishments:
-  - Library: Gather all the lists in a cloud library and generate configurations based on the library;
+  - $\forall a \in A$: $a$ should be able to see and be seen by $\forall x, x \in A \cup B \cup C \cup D$; 
+  - $\forall b \in B$: $b$ should be able to see $\forall x, x \in A \cup B \cup C \cup D$ and unable to be seen by $$\forall x, x \in C \cup D$; 
+  - $\forall c \in C$: $c$ should be able to see and be seen by only $c$; 
+  - $\forall d \in D$: $d$ should be able to see and be seen by only $\forall x, x \in D$ (note that we do not consider the detection between applications caused by enterprises having severe conflicts of interest with each other). 
+- Accomplishments: 
+  - Library: Gather all the lists in a cloud library and generate configurations based on the library; 
   - Local recognition: It should belong to $A$ when an application contains an Xposed/Edxposed/LSPosed interface. 
 
 ---
@@ -66,10 +66,10 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $C$: ``com.reveny.nativecheck`` 和 ``com.zhenxi.hunter``;
   - $D$: ``com.tencent.mm`` 和 `` com.tencent.mobileqq``. 
 - 配置：
-  - $\forall a \in A$：$a$ 应当能够检测到 \(A\)、$B$、$C$ 和 $D$，并且能够被 $A$、$B$、$C$ 和 $D$ 检测到；
-  - $\forall b \in B$：$b$ 应当能够检测到 $A$、$B$、$C$ 和 $D$，但不能被 $C$ 和 $D$ 检测到；
+  - $\forall a \in A$：$a$ 应当能够检测到 $\forall x, x \in A \cup B \cup C \cup D$，并且能够被 $\forall x, x \in A \cup B \cup C \cup D$ 检测到；
+  - $\forall b \in B$：$b$ 应当能够检测到 $\forall x, x \in A \cup B \cup C \cup D$，但不能被 $\forall x, x \in C \cup D$ 检测到；
   - $\forall c \in C$：$c$ 应当能够检测到 $c$，并且只能被 $c$ 检测到；
-  - $\forall d \in D$：$d$ 应当能够检测到 $D$，并且只能被 $D$ 检测到。
+  - $\forall d \in D$：$d$ 应当能够检测到 $\forall x, x \in D$，并且只能被 $\forall x, x \in D$ 检测到（此处不考虑由企业利益冲突引发的相互检测）。
 - 实现：
   - 库：将分类上传到云库中基于云库下发配置；
   - 本地识别：识别到插件接口时应当自动归类为 $A$。
