@@ -66,7 +66,7 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $C$: ``com.reveny.nativecheck`` 和 ``com.zhenxi.hunter``;
   - $D$: ``com.tencent.mm`` 和 `` com.tencent.mobileqq``. 
 - 配置：
-  - $\forall a \in A$：$a$ 应当能够检测到 $A$、$B$、$C$ 和 $D$，并且能够被 $A$、$B$、$C$ 和 $D$ 检测到；
+  - $\forall a \in A$：$a$ 应当能够检测到 \(A\)、$B$、$C$ 和 $D$，并且能够被 $A$、$B$、$C$ 和 $D$ 检测到；
   - $\forall b \in B$：$b$ 应当能够检测到 $A$、$B$、$C$ 和 $D$，但不能被 $C$ 和 $D$ 检测到；
   - $\forall c \in C$：$c$ 应当能够检测到 $c$，并且只能被 $c$ 检测到；
   - $\forall d \in D$：$d$ 应当能够检测到 $D$，并且只能被 $D$ 检测到。
