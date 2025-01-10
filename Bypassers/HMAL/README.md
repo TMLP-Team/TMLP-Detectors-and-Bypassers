@@ -31,6 +31,9 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $\forall b \in B$: $b$ should be able to see $A$, $B$, $C$, and $D$ while should be unable to be seen by $C$ and $D$;
   - $\forall c \in C$: $c$ should be able to see and be seen by only $c$;
   - $\forall d \in D$: $d$ should be able to see and be seen by only $D$. 
+- Accomplishments:
+  - Library: Gather all the lists in a cloud library and generate configurations based on the library;
+  - Local recognition: It should belong to $A$ when an application contains an Xposed/Edxposed/LSPosed interface. 
 
 ---
 
@@ -49,7 +52,7 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
 - 如果您想让应用程序可见或不可见，只需修改 HMA/HMAL 中指定应用程序的模板或指定配置即可。
 - 如果您想让某个应用程序能够或无法看到其他应用程序，只需转到 HMA/HMAL 中的应用程序管理页面。
 
-在这个文件夹中，你或许会看到一个 JSON 配置文件，里面包含一个黑名单和白名单模板。在未来，我们希望将所有可能会发起检测的应用包名和应当不被检测到的应用包名都包含在此配置中。欢迎提出任何请求。
+在这个文件夹中，你或许会看到一个 JSON 配置文件，里面包含一个黑名单和白名单模板。在未来，我们希望将所有可能会发起检测的应用包名和应当不被检测到的应用包名都包含在此配置中。欢迎提交拉取请求。
 
 尽管如此，事实上，或许一个不需要手动配置就能够完成应用列表隐藏的插件会更好。
 - 分类：
@@ -67,3 +70,6 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $\forall b \in B$：$b$ 应当能够检测到 $A$、$B$、$C$ 和 $D$，但不能被 $C$ 和 $D$ 检测到；
   - $\forall c \in C$：$c$ 应当能够检测到 $c$，并且只能被 $c$ 检测到；
   - $\forall d \in D$：$d$ 应当能够检测到 $D$，并且只能被 $D$ 检测到。
+- 实现：
+  - 库：将分类上传到云库中基于云库下发配置；
+  - 本地识别：识别到插件接口时应当自动归类为 $A$。
