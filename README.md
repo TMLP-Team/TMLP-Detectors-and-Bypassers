@@ -4,7 +4,7 @@ This project is designed to provide the TMLP environment detectors and bypassers
 
 We do not own any of the detectors and bypassers here. Thus, please kindly contact us to remove them here if the corresponding owners do not wish them to be distributed here. 
 
-We only keep the latest versions for each detector and bypasser here, keeping them as up-to-date as possible. 
+We only keep the latest versions for each detector and bypasser here, keeping them as up-to-date as possible. Any pull request (PR) is welcome! 
 
 Please see [Detectors](./Detectors/README.md) and [Bypassers](./Bypassers/README.md) for details. 
 
@@ -18,7 +18,7 @@ The last files are updated at 23:00 on January 8th, 2025 (UTC+8).
 
 我们不拥有此处的检测工具和过检工具。因此，如这些工具的所有者不希望让相应的工具在此处分发，请联系我们删除。
 
-我们仅保留最新的检测工具和过检工具，并尽可能保持实时更新。
+我们仅保留最新的检测工具和过检工具，并尽可能保持实时更新。欢迎提交任何 Pull Request（PR）！
 
 详情请查看 [Detectors](./Detectors/README.md) 和 [Bypassers](./Bypassers/README.md)。
 
