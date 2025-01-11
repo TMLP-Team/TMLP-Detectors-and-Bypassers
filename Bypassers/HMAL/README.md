@@ -27,10 +27,11 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $C$: ``com.reveny.nativecheck`` and ``com.zhenxi.hunter``; 
   - $D$: ``com.tencent.mm`` and `` com.tencent.mobileqq``. 
 - Configurations: 
-  - $\forall a \in A$: $a$ should be able to see and be seen by $\forall x, x \in A \cup B \cup C \cup D$; 
-  - $\forall b \in B$: $b$ should be able to see $\forall x, x \in A \cup B \cup C \cup D$ and unable to be seen by $\forall x, x \in C \cup D$; 
-  - $\forall c \in C$: $c$ should be able to see and be seen by only $c$; 
-  - $\forall d \in D$: $d$ should be able to see and be seen by only $\forall x, x \in D$ (note that we do not consider the detection between applications caused by enterprises having severe conflicts of interest with each other). 
+  - $U := A \cup B \cup C \cup D$
+  - $\forall a \in A$: $a$ should be able to see and be seen by $\forall x, x \in U$; 
+  - $\forall b \in B$: $b$ should be able to see $\forall x, x \in U$ and be seen by only $\forall x, x \in A \cup B$; 
+  - $\forall c \in C$: $c$ should be able to see $\forall x, x \in A \cup \{c\} \cup D$ and be seen by only $\forall x, x \in A \cup B \cup \{c\}$; 
+  - $\forall d \in D$: $d$ should be able to see $\forall x, x \in A \cup D$ and be seen by $\forall x, x \in U$ (note that we do not consider the detection between applications caused by enterprises having severe conflicts of interest with each other or detection from home applications to abroad ones). 
 - Accomplishments: 
   - Library: Gather all the lists in a cloud library and generate configurations based on the library; 
   - Local recognition: It should belong to $A$ when an application contains an Xposed/Edxposed/LSPosed interface. 
@@ -66,10 +67,11 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $C$: ``com.reveny.nativecheck`` 和 ``com.zhenxi.hunter``;
   - $D$: ``com.tencent.mm`` 和 `` com.tencent.mobileqq``. 
 - 配置：
-  - $\forall a \in A$：$a$ 应当能够检测到 $\forall x, x \in A \cup B \cup C \cup D$，并且能够被 $\forall x, x \in A \cup B \cup C \cup D$ 检测到；
-  - $\forall b \in B$：$b$ 应当能够检测到 $\forall x, x \in A \cup B \cup C \cup D$，但不能被 $\forall x, x \in C \cup D$ 检测到；
-  - $\forall c \in C$：$c$ 应当能够检测到 $c$，并且只能被 $c$ 检测到；
-  - $\forall d \in D$：$d$ 应当能够检测到 $\forall x, x \in D$，并且只能被 $\forall x, x \in D$ 检测到（此处不考虑由企业利益冲突引发的相互检测）。
+  - $U := A \cup B \cup C \cup D$
+  - $\forall a \in A$：$a$ 应当能够检测到并被 $\forall x, x \in U$ 检测到；
+  - $\forall b \in B$：$b$ 应当能够检测到 $\forall x, x \in A \cup B \cup C \cup D$，但仅能够被 $\forall x, x \in A \cup B$ 检测到；
+  - $\forall c \in C$：$c$ 应当能够检测到 $\forall x, x \in A \cup \{c\} \cup D$，但仅能够被 $\forall x, x \in A \cup B \cup \{c\}$ 检测到；
+  - $\forall d \in D$：$d$ 应当能够检测到 $\forall x, x \in A \cup D$，但能够被 $\forall x, x \in U$ 检测到（此处不考虑由企业利益冲突引发的相互检测以及境内软件对境外软件的检测）。
 - 实现：
   - 库：将分类上传到云库中基于云库下发配置；
   - 本地识别：识别到插件接口时应当自动归类为 $A$。
