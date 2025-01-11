@@ -5,8 +5,8 @@
 - **Package Name**: ``me.garfieldhan.hiapatch``
 - **Official Link**: Unknown
 - **Source Status**: Unknown
-- **Developing Purpose**: Environment Detection
-- **Latest Version**: ``vUnknown``
+- **Developing Purpose**: Apatch Detection
+- **Latest Version**: ``v1.0``
 - **Release Date**: Unknown
 
 ### Applist Detector
@@ -17,6 +17,7 @@
 - **Developing Purpose**: Applist Detection
 - **Latest Version**: ``v2.4``
 - **Release Date**: August 12th, 2022
+![applistDetectorNormal.jpg](applistDetectorNormal.jpg)
 
 ### Checker
 
@@ -182,8 +183,8 @@
 - **应用包名**：``me.garfieldhan.hiapatch``
 - **官方链接**：未知
 - **开源状态**：未知
-- **开发用途**：环境检测
-- **最新版本**：``vUnknown``
+- **开发用途**：Apatch 环境检测
+- **最新版本**：``v1.0``
 - **发布日期**：未知
 
 ### Applist Detector
@@ -194,6 +195,7 @@
 - **开发用途**：应用列表检测
 - **最新版本**：``v2.4``
 - **发布日期**：2022 年 8 月 12 日
+![applistDetectorNormal.jpg](applistDetectorNormal.jpg)
 
 ### Checker
 
