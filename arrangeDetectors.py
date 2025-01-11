@@ -35,6 +35,15 @@ class Detector:
 		if not self.__latestVersion.replace("`", "").startswith("v"):
 			self.__latestVersion = "``v{0}``".format(self.__latestVersion.replace("`", ""))
 			bRet = True
+		for k in ("packageName", "officialLink", "developingPurpose", "sourceStatus", "latestVersion", "releaseDate"):
+			key = "_Detector__{0}".format(k)
+			currentValue = getattr(self, key)
+			if self.__isEnglish and currentValue in ("Play 完整性检验", "环境检测", "未知"):
+				setattr(self, key, {"Play 完整性检验":"Play Integrity Check", "环境检测":"Environment Detection", "未知":"Unknown"}[currentValue])
+				bRet = True
+			elif not self.__isEnglish and currentValue in ("Environment Detection", "Play Integrity Check", "Unknown"):
+				setattr(self, key, {"Environment Detection":"环境检测", "Play Integrity Check":"Play 完整性检验", "Unknown":"未知"}[currentValue])
+				bRet = True
 		return bRet
 	def update(self:object, **d:str) -> bool:
 		bRet = False
@@ -144,6 +153,13 @@ def pull(filePath:str) -> list|None:
 					d.clear()
 				if line.startswith("### "):
 					d["name"] = line[4:]
+		if d:
+			if 1 == flag:
+				d["isEnglish"] = True
+				vectorEN.append(Detector(**d))
+			elif 2 == flag:
+				d["isEnglish"] = False
+				vectorZH.append(Detector(**d))
 		return [vectorEN, vectorZH]
 
 def mergeDetectors(folder:str) -> list:
@@ -189,14 +205,14 @@ def push(vecEN:tuple|list, vecZH:tuple|list, filePath:str) -> bool:
 		if handleFolder(os.path.split(filePath)[0]):
 			try:
 				with open(filePath, "w", encoding = "utf-8") as f:
-					f.write("## Detectors\n\n")
+					f.write("## Detectors\n")
 					for v in vectorEN:
 						if isinstance(v, Detector):
-							f.write("{0}\n\n".format(v))
-					f.write("---\n\n## 检测工具\n\n")
+							f.write("\n{0}\n".format(v))
+					f.write("---\n\n## 检测工具\n")
 					for v in vectorZH:
 						if isinstance(v, Detector):
-							f.write("{0}\n\n".format(v))
+							f.write("\n{0}\n".format(v))
 				print("Successfully wrote {0} English item(s) and {1} Chinese item(s) to \"{2}\". ".format(len(vectorEN), len(vectorZH), filePath))
 				return True
 			except BaseException as e:
@@ -217,19 +233,23 @@ def main() -> int:
 		for v in vector:
 			if "name" in v:
 				if v["name"] in vectorEN:
+					v["isEnglish"] = True
 					vectorEN[vectorEN.index(v["name"])].update(**v)
 				else:
+					v["isEnglish"] = True
 					vectorEN.append(Detector(**v))
 				if v["name"] in vectorZH:
+					v["isEnglish"] = False
 					vectorZH[vectorZH.index(v["name"])].update(**v)
 				else:
+					v["isEnglish"] = False
 					vectorZH.append(Detector(**v))
 		vectorEN.sort()
 		vectorZH.sort()
 		iRet = EXIT_SUCCESS if push(vectorEN, vectorZH, outputFilePath) else EXIT_FAILURE
 	else:
 		iRet = EOF
-	print("Please press the enter key to exit {0}. ".format(iRet))
+	print("Please press the enter key to exit ({0}). ".format(iRet))
 	try:
 		input()
 	except:
