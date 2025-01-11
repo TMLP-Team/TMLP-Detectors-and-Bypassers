@@ -116,8 +116,8 @@
 ### Native Root Detector / Native Detector / Native Check
 
 - **Package Name**: ``com.reveny.nativecheck``
-- **Official Link**: [https://t.me/rootdetector](https://t.me/rootdetector)
-- **Source Status**: Unknown
+- **Official Link**: [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector) and [https://t.me/rootdetector](https://t.me/rootdetector)
+- **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v6.6.0``
 - **Release Date**: January 11th, 2025
@@ -298,8 +298,8 @@
 ### Native Root Detector / Native Detector / Native Check
 
 - **应用包名**：``com.reveny.nativecheck``
-- **官方链接**：[https://t.me/rootdetector](https://t.me/rootdetector)
-- **开源状态**：未知
+- **官方链接**：[https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector) 和 [https://t.me/rootdetector](https://t.me/rootdetector)
+- **开源状态**：开源
 - **开发用途**：环境检测
 - **最新版本**：``v6.6.0``
 - **发布日期**：2025 年 1 月 11 日
