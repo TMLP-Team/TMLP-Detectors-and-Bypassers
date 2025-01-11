@@ -69,20 +69,21 @@
 ### Key Attestation
 
 - **Package Name**: ``io.github.vvb2060.keyattestation``
-- **Official Link**: Unknown
-- **Source Status**: Unknown
+- **Official Link**: [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector)
+- **Source Status**: Open-source
 - **Developing Purpose**: Key Attestation
 - **Latest Version**: ``v1.7.0``
 - **Release Date**: Unknown
+- **Detection Remark**: The version ``v1.7.0`` provided here is from a Telegram channel instead of the official link
 
 ### Magisk Detector
 
-- **Package Name**: Unknown
-- **Official Link**: Unknown
-- **Source Status**: Unknown
-- **Developing Purpose**: Environment Detection
+- **Package Name**: ``io.github.vvb2060.magiskdetector``
+- **Official Link**: [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector)
+- **Source Status**: Archieved Open-source
+- **Developing Purpose**: Magisk Detection
 - **Latest Version**: ``v3.0``
-- **Release Date**: Unknown
+- **Release Date**: Auguest 9th, 2022
 
 ### Momo
 
@@ -141,11 +142,11 @@
 
 ### Ruru
 
-- **Package Name**: Unknown
+- **Package Name**: ``com.byxiaorun.detector``
 - **Official Link**: [https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.1.1``
+- **Latest Version**: ``v1.1.1(15)``
 - **Release Date**: April 18th, 2024
 
 ### Securify
@@ -248,20 +249,21 @@
 ### Key Attestation / 密钥认证
 
 - **应用包名**：``io.github.vvb2060.keyattestation``
-- **官方链接**：未知
-- **开源状态**：未知
+- **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
+- **开源状态**：开源
 - **开发用途**：密钥认证
 - **最新版本**：``v1.7.0``
 - **发布日期**：未知
+- **注意事项**：此处提供的 ``v1.7.0`` 版本源于 Telegram 频道而非源于官方链接
 
-### Magisk Detector
+### Magisk Detector / Magisk 检测应用
 
-- **应用包名**：未知
-- **官方链接**：未知
-- **开源状态**：未知
-- **开发用途**：环境检测
+- **应用包名**：``io.github.vvb2060.magiskdetector``
+- **官方链接**：[https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector)
+- **开源状态**：开源但已存档
+- **开发用途**：面具环境检测
 - **最新版本**：``v3.0``
-- **发布日期**：未知
+- **发布日期**：2022 年 8 月 9 日
 
 ### Momo
 
@@ -321,12 +323,12 @@
 
 ### Ruru
 
-- **应用包名**：未知
-- **官方链接**：未知
-- **开源状态**：未知
+- **应用包名**：``com.byxiaorun.detector``
+- **官方链接**：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
+- **开源状态**：开源
 - **开发用途**：环境检测
 - **最新版本**：``v1.1.1(15)``
-- **发布日期**：未知
+- **发布日期**：2024 年 4 月 18 日
 
 ### Securify
 
