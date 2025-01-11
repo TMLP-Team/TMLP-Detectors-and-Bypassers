@@ -12,11 +12,11 @@
 ### Applist Detector
 
 - **Package Name**: Unknown
-- **Official Link**: Unknown
-- **Source Status**: Unknown
-- **Developing Purpose**: Environment Detection
+- **Official Link**: [https://github.com/Dr-TSNG/ApplistDetector](https://github.com/Dr-TSNG/ApplistDetector)
+- **Source Status**: Open-source
+- **Developing Purpose**: Applist Detection
 - **Latest Version**: ``v1.3.2``
-- **Release Date**: Unknown
+- **Release Date**: August 12th, 2022
 
 ### Checker
 
@@ -158,7 +158,7 @@
 
 ### Simple Play Integrity Checker
 
-- **Package Name**: Unknown
+- **Package Name**: ``com.henrikherzig.playintegritychecker``
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Play Integrity Check
@@ -167,12 +167,12 @@
 
 ### 邮储银行
 
-- **Package Name**: Unknown
-- **Official Link**: Unknown
+- **Package Name**: ``com.yitong.mbank.psbc``
+- **Official Link**: [https://phone.psbc.com](https://phone.psbc.com)
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Not Developed Only For Environment Detection
 - **Latest Version**: ``v10.0.1``
-- **Release Date**: Unknown
+- **Release Date**: December 28th, 2024
 ---
 
 ## 检测工具
@@ -189,11 +189,11 @@
 ### Applist Detector
 
 - **应用包名**：未知
-- **官方链接**：未知
-- **开源状态**：未知
-- **开发用途**：环境检测
+- **官方链接**：[https://github.com/Dr-TSNG/ApplistDetector](https://github.com/Dr-TSNG/ApplistDetector)
+- **开源状态**：开源
+- **开发用途**：应用列表检测
 - **最新版本**：``v1.3.2``
-- **发布日期**：未知
+- **发布日期**：2022 年 8 月 12 日
 
 ### Checker
 
@@ -233,7 +233,7 @@
 - **最新版本**：``v6.0.4``
 - **发布日期**：未知
 
-### IIQE
+### IIQE / IIQE 一考通
 
 - **应用包名**：``com.prudential.iiqe``
 - **官方链接**：[https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
@@ -336,7 +336,7 @@
 
 ### Simple Play Integrity Checker
 
-- **应用包名**：未知
+- **应用包名**：``com.henrikherzig.playintegritychecker``
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：Play 完整性检验
@@ -345,9 +345,9 @@
 
 ### 邮储银行
 
-- **应用包名**：未知
-- **官方链接**：未知
+- **应用包名**：``com.yitong.mbank.psbc``
+- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
 - **开源状态**：安卓桌面应用
 - **开发用途**：并非专为检测环境开发
 - **最新版本**：``v10.0.1``
-- **发布日期**：未知
+- **发布日期**：2024 年 12 月 28 日
