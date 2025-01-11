@@ -1,21 +1,50 @@
 ## Detectors
 
+### APTest
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``vUnknown``
+- **Release Date**: Unknown
+
+### Applist Detector
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.3.2``
+- **Release Date**: Unknown
+
+### Checker
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.0.9``
+- **Release Date**: Unknown
+
 ### DRM Info
 
 - **Package Name**: ``com.androidfung.drminfo``
 - **Official Link**: [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
 - **Source Status**: Unknown
 - **Developing Purpose**: Information Gathering
-- **Latest Version**: ``1.1.15-240919``
+- **Latest Version**: ``v1.1.15-240919``
 - **Release Date**: September 19th, 2024
 - **Detection Remark**: Check whether the Security Level is Level 1
 
 ### Holmes
 
+- **Package Name**: Unknown
 - **Official Link**: [https://t.me/app_process64](https://t.me/app_process64)
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``1.5.1``
+- **Latest Version**: ``v1.5.1``
+- **Release Date**: Unknown
 - **Detection Remark**: Fail passing if the application crashes
 
 ### Hunter
@@ -24,16 +53,16 @@
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``6.0.6``
+- **Latest Version**: ``v6.0.6``
 - **Release Date**: Around January 6th, 2025
 
 ### IIQE
 
 - **Package Name**: ``com.prudential.iiqe``
 - **Official Link**: [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
-- **Source Status**: Android desktop application
-- **Developing Purpose**: Not developed only for environment detection
-- **Latest Version**: ``6.4.1``
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Not Developed Only For Environment Detection
+- **Latest Version**: ``v6.4.1``
 - **Release Date**: June 20th, 2024. 
 
 ### Key Attestation
@@ -42,7 +71,16 @@
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Key Attestation
-- **Latest Version**: ``1.7.0``
+- **Latest Version**: ``v1.7.0``
+- **Release Date**: Unknown
+
+### Magisk Detector
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v3.0``
 - **Release Date**: Unknown
 
 ### Momo
@@ -51,7 +89,27 @@
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``4.4.1``
+- **Latest Version**: ``v4.4.1``
+- **Release Date**: Unknown
+
+### Money2India
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.0.73``
+- **Release Date**: Unknown
+
+### NSDL Jiffy
+
+- **Package Name**: Unknown
+- **Official Link**: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Not Developed Only For Environment Detection
+- **Latest Version**: ``vUnknown``
+- **Release Date**: December 5th, 2024
+- **Detection Remark**: The most challenging one
 
 ### Native Root Detector / Native Detector / Native Check
 
@@ -59,8 +117,8 @@
 - **Official Link**: [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``6.5.9``
-- **Release Date**: January 2nd, 2025
+- **Latest Version**: ``v6.6.0``
+- **Release Date**: January 11th, 2025
 
 ### Native Test
 
@@ -68,28 +126,84 @@
 - **Official Link**: Unknown
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``30``
+- **Latest Version**: ``v30``
+- **Release Date**: November 15th, 2024
 
-### NSDL Jiffy
+### Play Integrity API Checker
 
-- **Official Link**: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
-- **Source Status**: Android desktop application
-- **Developing Purpose**: Not developed only for environment detection
-- **Latest Version**: Unknown
-- **Release Date**: December 5th, 2024
-- **Detection Remark**: The most challenging one
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.2``
+- **Release Date**: Unknown
 
 ### Ruru
 
+- **Package Name**: Unknown
 - **Official Link**: [https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``1.1.1``
+- **Latest Version**: ``v1.1.1``
 - **Release Date**: April 18th, 2024
+
+### Securify
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.3.0``
+- **Release Date**: Unknown
+
+### Simple Play Integrity Checker
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.4.0``
+- **Release Date**: Unknown
+
+### 邮储银行
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v10.0.1``
+- **Release Date**: Unknown
 
 ---
 
 ## 检测工具
+
+### APTest
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``vUnknown``
+- **Release Date**: Unknown
+
+### Applist Detector
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.3.2``
+- **Release Date**: Unknown
+
+### Checker
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.0.9``
+- **Release Date**: Unknown
 
 ### DRM Info
 
@@ -97,16 +211,18 @@
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo)
 - **开源状态**：未知
 - **开发用途**：信息搜集
-- **最新版本**：``1.1.15-240919``
+- **最新版本**：``v1.1.15-240919``
 - **发布日期**：2024 年 9 月 19 日
 - **注意事项**：Security Level 应当显示为 Level 1
 
 ### Holmes
 
+- **应用包名**：未知
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
 - **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``1.5.1``
+- **最新版本**：``v1.5.1``
+- **发布日期**：未知
 - **注意事项**：闪退或许也是过检失败
 
 ### Hunter
@@ -115,7 +231,8 @@
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``6.0.4``
+- **最新版本**：``v6.0.4``
+- **发布日期**：未知
 
 ### IIQE
 
@@ -123,26 +240,55 @@
 - **官方链接**：[https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/)
 - **开源状态**：安卓桌面应用
 - **开发用途**：并非专为检测环境开发
-- **最新版本**：``6.4.1``
+- **最新版本**：``v6.4.1``
 - **发布日期**：2024 年 6 月 20 日
 
-### Key Attestation（密钥认证）
+### Key Attestation / 密钥认证
 
 - **应用包名**：``io.github.vvb2060.keyattestation``
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：密钥认证
-- **最新版本**：``1.7.0``
+- **最新版本**：``v1.7.0``
 - **发布日期**：未知
+
+### Magisk Detector
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v3.0``
+- **Release Date**: Unknown
 
 ### Momo
 
 - **应用包名**：``io.github.vvb2060.mahoshojo``
 - **官方链接**：未知
-- **开源专题**：未知
+- **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``4.4.1``
+- **最新版本**：``v4.4.1``
+- **发布日期**：未知
 ![momoNormalZH.jpg](momoNormalZH.jpg)
+
+### Money2India
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.0.73``
+- **Release Date**: Unknown
+
+### NSDL Jiffy
+
+- **应用包名**：未知
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
+- **开源状态**：安卓桌面应用
+- **开发用途**：并非专为检测环境开发
+- **最新版本**：``v未知``
+- **发布日期**：2024 年 12 月 5 日
+- **注意事项**：应该是最“难过”的
 
 ### Native Root Detector / Native Detector / Native Check
 
@@ -150,30 +296,59 @@
 - **官方链接**：[https://t.me/rootdetector](https://t.me/rootdetector)
 - **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``6.5.9``
-- **发布日期**：2025 年 1 月 2 日
+- **最新版本**：``v6.6.0``
+- **发布日期**：2025 年 1 月 11 日
 
-### Native test / 牛头人
+### Native Test / 牛头人
 
 - **应用包名**：``icu.nullptr.nativetest``
 - **官方链接**：未知
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``30``
+- **最新版本**：``v30``
+- **发布日期**：2024 年 11 月 15 日
 
-### NSDL Jiffy
+### Play Integrity API Checker
 
-- **官方链接**：[https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
-- **开源状态**：安卓桌面应用
-- **开发用途**：并非专为检测环境开发
-- **最新版本**：未知
-- **发布日期**：2024 年 12 月 5 日
-- **注意事项**：应该是最“难过”的
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.2``
+- **Release Date**: Unknown
 
 ### Ruru
 
-- **官方链接**：[https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
-- **开源状态**：开源
-- **开发用途**：环境检测
-- **最新版本**：``1.1.1``
-- **发布日期**：2024 年 4 月 18 日
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.1.1(15)``
+- **Release Date**: Unknown
+
+### Securify
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.3.0``
+- **Release Date**: Unknown
+
+### Simple Play Integrity Checker
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.4.0``
+- **Release Date**: Unknown
+
+### 邮储银行
+
+- **Package Name**: Unknown
+- **Official Link**: Unknown
+- **Source Status**: Unknown
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v10.0.1``
+- **Release Date**: Unknown

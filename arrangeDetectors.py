@@ -10,35 +10,54 @@ EOF = (-1)
 
 class Detector:
 	def __init__(self:object, name:str, **d:str) -> object:
-		self.__name = name if isinstance(name, str) else ""
+		self.__name = self.__title(name) if isinstance(name, str) else ""
 		self.__isEnglish = d["isEnglish"] if "isEnglish" in d and isinstance(d["isEnglish"], bool) else True
 		self.__packageName = d["packageName"] if "packageName" in d and isinstance(d["packageName"], str) else ("Unknown" if self.__isEnglish else "未知")
 		self.__officialLink = d["officialLink"] if "officialLink" in d and isinstance(d["officialLink"], str) else ("Unknown" if self.__isEnglish else "未知")
-		self.__sourceStatus = self.__title(d["sourceStatus"] if "sourceStatus" in d and isinstance(d["sourceStatus"], str) else ("Unknown" if self.__isEnglish else "未知"))
-		self.__developingPurpose = self.__title(d["developingPurpose"] if "developingPurpose" in d and isinstance(d["developingPurpose"], str) else ("Unknown" if self.__isEnglish else "未知"))
+		self.__sourceStatus = self.__title(d["sourceStatus"]) if "sourceStatus" in d and isinstance(d["sourceStatus"], str) else ("Unknown" if self.__isEnglish else "未知")
+		self.__developingPurpose = self.__title(d["developingPurpose"]) if "developingPurpose" in d and isinstance(d["developingPurpose"], str) else ("Environment Detection" if self.__isEnglish else "环境检测")
 		self.__latestVersion = d["latestVersion"] if "latestVersion" in d and isinstance(d["latestVersion"], str) else ("Unknown" if self.__isEnglish else "未知")
 		self.__releaseDate = d["releaseDate"] if "releaseDate" in d and isinstance(d["releaseDate"], str) else ("Unknown" if self.__isEnglish else "未知")
-		self.__figure = d["figure"] if "figure" in d and isinstance(d["figure"], str) else None
 		self.__detectionRemark = d["detectionRemark"] if "detectionRemark" in d and isinstance(d["detectionRemark"], str) else None
+		self.__figure = d["figure"] if "figure" in d and isinstance(d["figure"], str) else None
+		self.__optimize()
 	def __title(self:object, s:str|None) -> str|None:
 		if isinstance(s, str):
 			words = s.split(" ")
 			for i in range(len(words)):
-				words[i] = words[i].title()
+				if words[i]:
+					words[i] = words[i][0].upper() + words[i][1:]
 			return " ".join(words)
 		else:
 			return s
+	def __optimize(self:object) -> bool:
+		bRet = False
+		if not self.__latestVersion.replace("`", "").startswith("v"):
+			self.__latestVersion = "``v{0}``".format(self.__latestVersion.replace("`", ""))
+			bRet = True
+		return bRet
 	def update(self:object, **d:str) -> bool:
 		bRet = False
-		for key in ("packageName", "officialLink", "sourceStatus", "developingPurpose", "latestVersion", "releaseDate", "detectionRemark"):
-			if key in d:
+		for key in ("packageName", "officialLink", "latestVersion", "releaseDate", "detectionRemark", "figure"):
+			if key in d and isinstance(d[key], str):
 				setattr(self, "__{0}".format(key), d[key])
 				bRet = True
+		for key in ("sourceStatus", "developingPurpose"):
+			if key in d and isinstance(d[key], str):
+				setattr(self, "__{0}".format(key), self.__title(d[key]))
+				bRet = True
+		self.__optimize()
 		return bRet
 	def __eq__(self:object, other:object) -> bool:
-		return other == self.__name
+		for token in self.__name.split(" / "):
+			if other == token:
+				return True
+		return False
 	def __ne__(self:object, other:object) -> bool:
-		return other != self.__name
+		for token in self.__name.split(" / "):
+			if other == token:
+				return False
+		return True
 	def __lt__(self:object, other:object) -> bool:
 		return other > self.__name
 	def __le__(self:object, other:object) -> bool:
@@ -136,14 +155,14 @@ def mergeDetectors(folder:str) -> list:
 				if extName in (".apk", ".apks"):
 					if "_v" in mainName:
 						separatorIndex = mainName.index("_v")
-						vector.append({"name":mainName[:separatorIndex], "latestVersion":"``{0}``".format(mainName[separatorIndex + 2:])})
+						vector.append({"name":mainName[:separatorIndex], "latestVersion":"``v{0}``".format(mainName[separatorIndex + 2:])})
 					else:
 						vector.append({"name":mainName})
 				elif fileName.endswith(".zip.001"):
 					mainName = fileName[:-8]
 					if "_v" in mainName:
 						separatorIndex = mainName.index("_v")
-						vector.append({"name":mainName[:separatorIndex], "latestVersion":"``{0}``".format(mainName[separatorIndex + 2:])})
+						vector.append({"name":mainName[:separatorIndex], "latestVersion":"``v{0}``".format(mainName[separatorIndex + 2:])})
 					else:
 						vector.append({"name":mainName})
 		return vector
