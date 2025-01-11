@@ -21,7 +21,7 @@
 
 ### Checker
 
-- **Package Name**: Unknown
+- **Package Name**: ``org.akanework.checker``
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
@@ -197,14 +197,15 @@
 - **发布日期**：2022 年 8 月 12 日
 ![applistDetectorNormal.jpg](applistDetectorNormal.jpg)
 
-### Checker
+### Checker / 校验者
 
-- **应用包名**：未知
+- **应用包名**：``org.akanework.checker``
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：环境检测
 - **最新版本**：``v1.0.9``
 - **发布日期**：未知
+![checkerNormalZH.jpg](checkerNormalZH.jpg)
 
 ### DRM Info
 
