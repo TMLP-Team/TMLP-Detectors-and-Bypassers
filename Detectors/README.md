@@ -95,12 +95,12 @@
 
 ### Money2India
 
-- **Package Name**: Unknown
-- **Official Link**: Unknown
-- **Source Status**: Unknown
-- **Developing Purpose**: Environment Detection
+- **Package Name**: ``com.icicibank.m2i``
+- **Official Link**: [https://play.google.com/store/apps/details?id=com.icicibank.m2i](https://play.google.com/store/apps/details?id=com.icicibank.m2i)
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Not Developed Only For Environment Detection
 - **Latest Version**: ``v1.0.73``
-- **Release Date**: Unknown
+- **Release Date**: December 22nd, 2024
 
 ### NSDL Jiffy
 
@@ -274,12 +274,12 @@
 
 ### Money2India
 
-- **应用包名**：未知
-- **官方链接**：未知
-- **开源状态**：未知
-- **开发用途**：环境检测
+- **应用包名**：``com.icicibank.m2i``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.icicibank.m2i](https://play.google.com/store/apps/details?id=com.icicibank.m2i)
+- **开源状态**：安卓桌面应用
+- **开发用途**：并非专为检测环境开发
 - **最新版本**：``v1.0.73``
-- **发布日期**：未知
+- **发布日期**：2024 年 12 月 22 日
 
 ### NSDL Jiffy
 
