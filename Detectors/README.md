@@ -133,12 +133,12 @@
 
 ### Play Integrity API Checker
 
-- **Package Name**: ``com.henrikherzig.playintegritychecker``
-- **Official Link**: Unknown
-- **Source Status**: Unknown
+- **Package Name**: ``gr.nikolasspyr.integritycheck``
+- **Official Link**: [https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app) and [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
+- **Source Status**: Open-source
 - **Developing Purpose**: Play Integrity Check
 - **Latest Version**: ``v1.2``
-- **Release Date**: Unknown
+- **Release Date**: December 3rd, 2023
 
 ### Ruru
 
@@ -315,12 +315,12 @@
 
 ### Play Integrity API Checker
 
-- **应用包名**：``com.henrikherzig.playintegritychecker``
-- **官方链接**：未知
-- **开源状态**：未知
+- **应用包名**：``gr.nikolasspyr.integritycheck``
+- **官方链接**：[https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app) 和 [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
+- **开源状态**：开源
 - **开发用途**：Play 完整性检验
 - **最新版本**：``v1.2``
-- **发布日期**：未知
+- **发布日期**：2023 年 12 月 3 日
 
 ### Ruru
 
