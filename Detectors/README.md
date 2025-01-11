@@ -264,6 +264,7 @@
 - **开发用途**：面具环境检测
 - **最新版本**：``v3.0``
 - **发布日期**：2022 年 8 月 9 日
+![magiskDetectorNormalZH.jpg](magiskDetectorNormalZH.jpg)
 
 ### Momo
 
