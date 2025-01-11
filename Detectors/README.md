@@ -11,11 +11,11 @@
 
 ### Applist Detector
 
-- **Package Name**: Unknown
+- **Package Name**: ``icu.nullptr.applistdetector``
 - **Official Link**: [https://github.com/Dr-TSNG/ApplistDetector](https://github.com/Dr-TSNG/ApplistDetector)
 - **Source Status**: Open-source
 - **Developing Purpose**: Applist Detection
-- **Latest Version**: ``v1.3.2``
+- **Latest Version**: ``v2.4``
 - **Release Date**: August 12th, 2022
 
 ### Checker
@@ -188,11 +188,11 @@
 
 ### Applist Detector
 
-- **应用包名**：未知
+- **应用包名**：``icu.nullptr.applistdetector``
 - **官方链接**：[https://github.com/Dr-TSNG/ApplistDetector](https://github.com/Dr-TSNG/ApplistDetector)
 - **开源状态**：开源
 - **开发用途**：应用列表检测
-- **最新版本**：``v1.3.2``
+- **最新版本**：``v2.4``
 - **发布日期**：2022 年 8 月 12 日
 
 ### Checker
