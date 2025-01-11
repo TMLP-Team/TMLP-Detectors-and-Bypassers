@@ -33,7 +33,7 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $\forall c \in C$: $c$ should be able to see $\forall x, x \in A \cup \lbrace c\rbrace \cup D$ and be seen by only $\forall x, x \in A \cup B \cup \lbrace c\rbrace$; 
   - $\forall d \in D$: $d$ should be able to see $\forall x, x \in A \cup D$ and be seen by $\forall x, x \in U$ (note that we do not consider the detection between applications caused by enterprises having severe conflicts of interest with each other or detection from home applications to abroad ones). 
 - Accomplishments: 
-  - Library: Gather all the lists in a cloud library and generate configurations based on the library; 
+  - Library: Gather all the lists in a cloud library and generate configurations based on the library (like [https://github.com/TMLP-Team/Bypasser/tree/main/Classification](https://github.com/TMLP-Team/Bypasser/tree/main/Classification)); 
   - Local recognition: It should belong to $A$ when an application contains an Xposed/Edxposed/LSPosed interface. 
 
 ---
@@ -73,5 +73,5 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - $\forall c \in C$：$c$ 应当能够检测到 $\forall x, x \in A \cup \lbrace c\rbrace \cup D$，但仅能够被 $\forall x, x \in A \cup B \cup \lbrace c\rbrace$ 检测到；
   - $\forall d \in D$：$d$ 应当能够检测到 $\forall x, x \in A \cup D$，但能够被 $\forall x, x \in U$ 检测到（此处不考虑由企业利益冲突引发的相互检测以及境内软件对境外软件的检测）。
 - 实现：
-  - 库：将分类上传到云库中基于云库下发配置；
+  - 库：将分类上传到云库中基于云库下发配置（例如 [https://github.com/TMLP-Team/Bypasser/tree/main/Classification](https://github.com/TMLP-Team/Bypasser/tree/main/Classification)）；
   - 本地识别：识别到插件接口时应当自动归类为 $A$。
