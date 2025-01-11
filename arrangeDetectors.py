@@ -32,7 +32,7 @@ class Detector:
 			return s
 	def __optimize(self:object) -> bool:
 		bRet = False
-		if not self.__latestVersion.replace("`", "").startswith("v"):
+		if self.__latestVersion not in ("Unknown", "未知") and not self.__latestVersion.replace("`", "").startswith("v"):
 			self.__latestVersion = "``v{0}``".format(self.__latestVersion.replace("`", ""))
 			bRet = True
 		for k in ("packageName", "officialLink", "developingPurpose", "sourceStatus", "latestVersion", "releaseDate"):
