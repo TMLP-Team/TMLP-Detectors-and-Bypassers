@@ -2,7 +2,7 @@
 
 ### APTest
 
-- **Package Name**: Unknown
+- **Package Name**: ``me.garfieldhan.hiapatch``
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
@@ -179,7 +179,7 @@
 
 ### APTest
 
-- **应用包名**：未知
+- **应用包名**：``me.garfieldhan.hiapatch``
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：环境检测
