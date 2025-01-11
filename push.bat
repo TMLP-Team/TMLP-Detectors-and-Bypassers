@@ -15,11 +15,11 @@ git push
 IF %ERRORLEVEL%==0 (GOTO SUCCESS) ELSE (GOTO FAILURE)
 
 :SUCCESS
-ECHO "Please press any key to exit (0). "
+ECHO Please press any key to exit (0). 
 PAUSE>NUL
 EXIT 0
 
 :FAILURE
-ECHO "Please press any key to exit (1). "
+ECHO Please press any key to exit (1). 
 PAUSE>NUL
 EXIT 1
