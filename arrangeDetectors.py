@@ -49,11 +49,11 @@ class Detector:
 		bRet = False
 		for key in ("packageName", "officialLink", "latestVersion", "releaseDate", "detectionRemark", "figure"):
 			if key in d and isinstance(d[key], str):
-				setattr(self, "__{0}".format(key), d[key])
+				setattr(self, "_Detector__{0}".format(key), d[key])
 				bRet = True
 		for key in ("sourceStatus", "developingPurpose"):
 			if key in d and isinstance(d[key], str):
-				setattr(self, "__{0}".format(key), self.__title(d[key]))
+				setattr(self, "_Detector__{0}".format(key), self.__title(d[key]))
 				bRet = True
 		self.__optimize()
 		return bRet
