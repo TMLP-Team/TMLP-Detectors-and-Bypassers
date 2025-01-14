@@ -56,7 +56,7 @@
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v6.0.6``
-- **Release Date**: Around January 6th, 2025
+- **Release Date**: Before January 8th, 2025
 
 ### IIQE
 
@@ -169,6 +169,15 @@
 - **Latest Version**: ``v1.4.0``
 - **Release Date**: Unknown
 
+### Xposed Checker
+
+- **Package Name**: ``ml.w568w.checkxposed``
+- **Official Link**: [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker)
+- **Source Status**: Open-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v7.1 (9)``
+- **Release Date**: Before February 3rd, 2022
+
 ### 邮储银行
 
 - **Package Name**: ``com.yitong.mbank.psbc``
@@ -237,8 +246,8 @@
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``v6.0.4``
-- **发布日期**：未知
+- **最新版本**：``v6.0.6``
+- **发布日期**：2025 年 1 月 8 日前
 
 ### IIQE / IIQE 一考通
 
@@ -342,7 +351,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v1.3.0``
 - **发布日期**：2024 年 7 月 28 日
-![securifyNormal.jpg](securifyNormal.jpg)
+![securifyNormal.png](securifyNormal.png)
 
 ### Simple Play Integrity Checker
 
@@ -352,6 +361,16 @@
 - **开发用途**：Play 完整性检验
 - **最新版本**：``v1.4.0``
 - **发布日期**：未知
+
+### Xposed Checker / Xposed 
+
+- **应用包名**：``ml.w568w.checkxposed``
+- **官方链接**：[https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker)
+- **开源状态**：开源
+- **开发用途**：环境检测
+- **最新版本**：``v7.1 (9)``
+- **发布日期**：2022 年 2 月 3 日前
+![xposedCheckerNormalZH.png](xposedCheckerNormalZH.png)
 
 ### 邮储银行
 
