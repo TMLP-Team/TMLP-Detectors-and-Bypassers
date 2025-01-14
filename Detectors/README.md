@@ -157,6 +157,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.3.0``
 - **Release Date**: July 28th, 2024
+![securifyNormal.jpg](securifyNormal.jpg)
 
 ### Simple Play Integrity Checker
 
@@ -339,6 +340,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v1.3.0``
 - **发布日期**：2024 年 7 月 28 日
+![securifyNormal.jpg](securifyNormal.jpg)
 
 ### Simple Play Integrity Checker
 
