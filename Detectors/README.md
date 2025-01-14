@@ -151,12 +151,12 @@
 
 ### Securify
 
-- **Package Name**: Unknown
-- **Official Link**: Unknown
-- **Source Status**: Unknown
+- **Package Name**: ``io.github.rabehx.securify``
+- **Official Link**: [https://github.com/RabehX/Securify](https://github.com/RabehX/Securify)
+- **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.3.0``
-- **Release Date**: Unknown
+- **Release Date**: July 28th, 2024
 
 ### Simple Play Integrity Checker
 
@@ -333,12 +333,12 @@
 
 ### Securify
 
-- **应用包名**：未知
-- **官方链接**：未知
-- **开源状态**：未知
+- **应用包名**：``io.github.rabehx.securify``
+- **官方链接**：[https://github.com/RabehX/Securify](https://github.com/RabehX/Securify)
+- **开源状态**：闭源
 - **开发用途**：环境检测
 - **最新版本**：``v1.3.0``
-- **发布日期**：未知
+- **发布日期**：2024 年 7 月 28 日
 
 ### Simple Play Integrity Checker
 
