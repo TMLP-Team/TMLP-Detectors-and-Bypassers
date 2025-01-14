@@ -178,6 +178,15 @@
 - **Latest Version**: ``v7.1 (9)``
 - **Release Date**: Before February 3rd, 2022
 
+### Xposed Detector
+
+- **Package Name**: ``io.github.vvb2060.xposeddetector``
+- **Official Link**: [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector)
+- **Source Status**: Archieved Open-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v2.2 (5)``
+- **Latest Version**: March 27th, 2021
+
 ### 邮储银行
 
 - **Package Name**: ``com.yitong.mbank.psbc``
@@ -371,6 +380,16 @@
 - **最新版本**：``v7.1 (9)``
 - **发布日期**：2022 年 2 月 3 日前
 ![xposedCheckerNormalZH.png](xposedCheckerNormalZH.png)
+
+### Xposed Detector / Xposed 检测应用
+
+- **应用包名**：``io.github.vvb2060.xposeddetector``
+- **官方链接**：[https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector)
+- **开源状态**：开源但已存档
+- **开发用途**：环境检测
+- **最新版本**：``v2.2``
+- **发布日期**：2021 年 3 月 27 日
+![xposedDetectorNormalZH.png](xposedDetectorNormalZH.png)
 
 ### 邮储银行
 
