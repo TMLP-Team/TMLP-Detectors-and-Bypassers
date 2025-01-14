@@ -41,12 +41,12 @@
 
 ### Holmes
 
-- **Package Name**: Unknown
+- **Package Name**: ``me.garfieldhan.holmes``
 - **Official Link**: [https://t.me/app_process64](https://t.me/app_process64)
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.5.1``
-- **Release Date**: Unknown
+- **Release Date**: Before December 26th, 2024
 - **Detection Remark**: Fail passing if the application crashes
 
 ### Hunter
@@ -147,7 +147,7 @@
 - **Official Link**: [https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.1.1(15)``
+- **Latest Version**: ``v1.1.1 (15)``
 - **Release Date**: April 18th, 2024
 
 ### Securify
@@ -232,12 +232,12 @@
 
 ### Holmes
 
-- **应用包名**：未知
+- **应用包名**：``me.garfieldhan.holmes``
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
 - **开源状态**：未知
 - **开发用途**：环境检测
 - **最新版本**：``v1.5.1``
-- **发布日期**：未知
+- **发布日期**：2024 年 12 月 26 日前
 - **注意事项**：闪退或许也是过检失败
 
 ### Hunter
@@ -362,7 +362,7 @@
 - **最新版本**：``v1.4.0``
 - **发布日期**：未知
 
-### Xposed Checker / Xposed 
+### Xposed Checker
 
 - **应用包名**：``ml.w568w.checkxposed``
 - **官方链接**：[https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker)
