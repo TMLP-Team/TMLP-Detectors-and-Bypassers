@@ -1,6 +1,6 @@
 # TMLP-Detectors-and-Bypassers
 
-This project is designed to provide the TMLP environment detectors and bypassers for Android devices. The abbreviation "TMLP" stands for anything related to Twrp, Magisk, LSPosed, and Plugins. 
+This project is designed to provide the TMLP environment detectors and bypassers for Android devices. The abbreviation "TMLP" stands for anything related to TWRP, Magisk, LSPosed, and Plugins. 
 
 We do not own any of the detectors and bypassers here. Thus, please kindly contact us to remove them here if the corresponding owners do not wish them to be distributed here. 
 
