@@ -7,7 +7,7 @@
 - **Source Status**: Unknown
 - **Developing Purpose**: Apatch Detection
 - **Latest Version**: ``v1.0``
-- **Release Date**: Unknown
+- **Release Date**: Before December 27th, 2024
 
 ### Applist Detector
 
@@ -27,7 +27,7 @@
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.0.9``
-- **Release Date**: Unknown
+- **Release Date**: Before January 8th, 2025
 
 ### DRM Info
 
@@ -70,12 +70,11 @@
 ### Key Attestation
 
 - **Package Name**: ``io.github.vvb2060.keyattestation``
-- **Official Link**: [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector)
+- **Official Link**: [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
 - **Source Status**: Open-source
 - **Developing Purpose**: Key Attestation
-- **Latest Version**: ``v1.7.0``
-- **Release Date**: Unknown
-- **Detection Remark**: The version ``v1.7.0`` provided here is from a Telegram channel instead of the official link
+- **Latest Version**: ``v1.6.0``
+- **Release Date**: November 16th, 2023
 
 ### Magisk Detector
 
@@ -93,7 +92,8 @@
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v4.4.1``
-- **Release Date**: Unknown
+- **Release Date**: Before January 7th, 2023
+- **Detection Remark**: Please do not spoof this detector happily to get a happy face since spoofing detectors cannot essentially solve the environment
 
 ### Money2India
 
@@ -141,6 +141,15 @@
 - **Latest Version**: ``v1.2``
 - **Release Date**: December 3rd, 2023
 
+### Postal Savings Bank of China / PSBC
+
+- **Package Name**: ``com.yitong.mbank.psbc``
+- **Official Link**: [https://phone.psbc.com](https://phone.psbc.com)
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Not Developed Only For Environment Detection
+- **Latest Version**: ``v10.0.1``
+- **Release Date**: December 28th, 2024
+
 ### Ruru
 
 - **Package Name**: ``com.byxiaorun.detector``
@@ -160,14 +169,14 @@
 - **Release Date**: July 28th, 2024
 ![securifyNormal.jpg](securifyNormal.jpg)
 
-### Simple Play Integrity Checker
+### Simple Play Integrity Checker / SPIC
 
 - **Package Name**: ``com.henrikherzig.playintegritychecker``
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Play Integrity Check
 - **Latest Version**: ``v1.4.0``
-- **Release Date**: Unknown
+- **Release Date**: Before November 10th, 2024
 
 ### Xposed Checker
 
@@ -187,14 +196,15 @@
 - **Latest Version**: ``v2.2 (5)``
 - **Latest Version**: March 27th, 2021
 
-### 邮储银行
+### Yet Another SafetyNet Attestation Checker / YASNAC
 
-- **Package Name**: ``com.yitong.mbank.psbc``
-- **Official Link**: [https://phone.psbc.com](https://phone.psbc.com)
-- **Source Status**: Android Desktop Application
-- **Developing Purpose**: Not Developed Only For Environment Detection
-- **Latest Version**: ``v10.0.1``
-- **Release Date**: December 28th, 2024
+- **Package Name**: ``rikka.safetynetchecker``
+- **Official Link**: [https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC)
+- **Source Status**: Archieved Open-source
+- **Developing Purpose**: Play Integrity Check
+- **Latest Version**: ``v1.1.5.r65.15110ef310 (65)``
+- **Release Date**: April 4th, 2022
+
 ---
 
 ## 检测工具
@@ -206,7 +216,7 @@
 - **开源状态**：未知
 - **开发用途**：Apatch 环境检测
 - **最新版本**：``v1.0``
-- **发布日期**：未知
+- **发布日期**：2024 年 12 月 27 日前
 
 ### Applist Detector / 应用列表检测器
 
@@ -226,7 +236,7 @@
 - **开源状态**：未知
 - **开发用途**：环境检测
 - **最新版本**：``v1.0.9``
-- **发布日期**：未知
+- **发布日期**：2025 年 1 月 8 日前
 ![checkerNormalZH.jpg](checkerNormalZH.jpg)
 
 ### DRM Info
@@ -273,9 +283,8 @@
 - **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
 - **开源状态**：开源
 - **开发用途**：密钥认证
-- **最新版本**：``v1.7.0``
-- **发布日期**：未知
-- **注意事项**：此处提供的 ``v1.7.0`` 版本源于 Telegram 频道而非源于官方链接
+- **最新版本**：``v1.6.0``
+- **发布日期**：2023 年 11 月 16 日
 
 ### Magisk Detector / Magisk 检测应用
 
@@ -294,7 +303,8 @@
 - **开源状态**：未知
 - **开发用途**：环境检测
 - **最新版本**：``v4.4.1``
-- **发布日期**：未知
+- **发布日期**：2023 年 1 月 7 日前
+- **注意事项**：请不要为了得到一张快乐的脸而高兴地欺骗这个探测器，因为欺骗探测器不能从根本上解决环境问题
 ![momoNormalZH.jpg](momoNormalZH.jpg)
 
 ### Money2India
@@ -343,6 +353,15 @@
 - **最新版本**：``v1.2``
 - **发布日期**：2023 年 12 月 3 日
 
+### Postal Savings Bank of China / PSBC / 邮储银行
+
+- **应用包名**：``com.yitong.mbank.psbc``
+- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
+- **开源状态**：安卓桌面应用
+- **开发用途**：并非专为检测环境开发
+- **最新版本**：``v10.0.1``
+- **发布日期**：2024 年 12 月 28 日
+
 ### Ruru
 
 - **应用包名**：``com.byxiaorun.detector``
@@ -362,14 +381,14 @@
 - **发布日期**：2024 年 7 月 28 日
 ![securifyNormal.png](securifyNormal.png)
 
-### Simple Play Integrity Checker
+### Simple Play Integrity Checker / SPIC
 
 - **应用包名**：``com.henrikherzig.playintegritychecker``
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：Play 完整性检验
 - **最新版本**：``v1.4.0``
-- **发布日期**：未知
+- **发布日期**：2024 年 11 月 10 日前
 
 ### Xposed Checker
 
@@ -391,11 +410,11 @@
 - **发布日期**：2021 年 3 月 27 日
 ![xposedDetectorNormalZH.png](xposedDetectorNormalZH.png)
 
-### 邮储银行
+### Yet Another SafetyNet Attestation Checker / YASNAC
 
-- **应用包名**：``com.yitong.mbank.psbc``
-- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
-- **开源状态**：安卓桌面应用
-- **开发用途**：并非专为检测环境开发
-- **最新版本**：``v10.0.1``
-- **发布日期**：2024 年 12 月 28 日
+- **应用包名**：``rikka.safetynetchecker``
+- **官方链接**：[https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC)
+- **开源状态**：开源但已存档
+- **开发用途**：Play 完整性检验
+- **最新版本**：``v1.1.5.r65.15110ef310 (65)``
+- **发布日期**：April 4th, 2022
