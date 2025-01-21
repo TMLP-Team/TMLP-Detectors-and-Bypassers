@@ -73,8 +73,9 @@
 - **Official Link**: [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
 - **Source Status**: Open-source
 - **Developing Purpose**: Key Attestation
-- **Latest Version**: ``v1.6.0``
-- **Release Date**: November 16th, 2023
+- **Latest Version**: ``v1.7.0``
+- **Release Date**: After November 16th, 2023
+- **Detection Remark**: The ``v1.7.0`` version is not released on the official link while the ``v1.6.0`` version is the latest one on the official link
 
 ### Magisk Detector
 
@@ -283,8 +284,9 @@
 - **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
 - **开源状态**：开源
 - **开发用途**：密钥认证
-- **最新版本**：``v1.6.0``
-- **发布日期**：2023 年 11 月 16 日
+- **最新版本**：``v1.7.0``
+- **发布日期**：2023 年 11 月 16 日后
+- **注意事项**：版本 ``v1.7.0`` 不是从官方链接发布而官方链接的最新版本为 ``v1.6.0``
 
 ### Magisk Detector / Magisk 检测应用
 
