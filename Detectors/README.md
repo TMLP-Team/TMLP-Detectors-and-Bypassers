@@ -55,8 +55,8 @@
 - **Official Link**: Unknown
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v6.0.6``
-- **Release Date**: Before January 8th, 2025
+- **Latest Version**: ``v6.0.7``
+- **Release Date**: January 14th, 2025
 
 ### IIQE
 
@@ -266,8 +266,8 @@
 - **官方链接**：未知
 - **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``v6.0.6``
-- **发布日期**：2025 年 1 月 8 日前
+- **最新版本**：``v6.0.7``
+- **发布日期**：2025 年 1 月 14 日
 
 ### IIQE / IIQE 一考通
 
