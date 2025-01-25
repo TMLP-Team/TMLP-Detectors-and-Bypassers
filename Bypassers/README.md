@@ -27,7 +27,7 @@
     - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use MT the Manager to move it to ``/data/adb/tricky_store/``
     - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Strong integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
     - Please try to generate a ``keybox.xml`` that can pass the Device integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-    - Never buy a ``keybox.xml`` since it will be revoked in a short period usually
+    - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
     - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
@@ -64,7 +64,7 @@
     - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
     - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过强完整性（Strong Integrity），如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
     - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过设备完整性的 ``keybox.xml``
-    - 请不要购买 ``keybox.xml`` 因为它们通常在不久的一段时间内失效
+    - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
