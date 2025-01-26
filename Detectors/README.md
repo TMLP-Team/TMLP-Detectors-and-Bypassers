@@ -1,5 +1,13 @@
 ## Detectors
 
+### Android Integrity Checker
+- **Package Name**: ``com.thend.integritychecker``
+- **Official Link**: [https://play.google.com/store/apps/details?id=com.thend.integritychecker](https://play.google.com/store/apps/details?id=com.thend.integritychecker)
+- **Source Status**: Unknown
+- **Developing Purpose**: Play Integrity Check
+- **Latest Version**: ``v1.0.4 (1000004)``
+- **Release Date**: November 14th, 2023
+
 ### APTest
 
 - **Package Name**: ``me.garfieldhan.hiapatch``
@@ -111,7 +119,7 @@
 - **Official Link**: [https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Not Developed Only For Environment Detection
-- **Latest Version**: ``vUnknown``
+- **Latest Version**: ``Unknown``
 - **Release Date**: December 5th, 2024
 - **Detection Remark**: The most challenging one
 
@@ -209,6 +217,14 @@
 ---
 
 ## 检测工具
+
+### Android Integrity Checker
+- **应用包名**：``com.thend.integritychecker``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.thend.integritychecker](https://play.google.com/store/apps/details?id=com.thend.integritychecker)
+- **开源状态**：未知
+- **开发用途**：Play 完整性检验
+- **最新版本**：``v1.0.4 (1000004)``
+- **发布日期**：2023 年 11 月 14 日
 
 ### APTest
 
@@ -324,7 +340,7 @@
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
 - **开源状态**：安卓桌面应用
 - **开发用途**：并非专为检测环境开发
-- **最新版本**：``v未知``
+- **最新版本**：``未知``
 - **发布日期**：2024 年 12 月 5 日
 - **注意事项**：应该是最“难过”的
 
