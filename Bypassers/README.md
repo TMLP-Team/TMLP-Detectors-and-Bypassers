@@ -135,9 +135,10 @@
 
 #### Native root detector
 
-##### 检测到 GMS 的 odex 文件
+##### 检测到 GMS 或本应用的的 odex 文件中存在 LSPosed 痕迹
 
 临时解决方案：重命名该文件为 *.odex.bak
+永久解决方案：将原有 LSPosed 卸载干净后安装 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中最后一次成功的 Release 版本并依照 [../Bypasser/README.md](../Bypasser/README.md) 中的注意事项重新启动检测
 
 #### 邮储银行
 
