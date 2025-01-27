@@ -132,6 +132,7 @@
 - **Latest Version**: ``v6.6.0``
 - **Release Date**: January 11th, 2025
 - **Detection Remark**: Please always install this detector using the APK file from the official links (instead of the APK file extracted from devices with this detector installed) after this detector is uninstalled totally. 
+![./nativeRootTest.jpg](./nativeRootTest.jpg)
 
 ### Native Test
 
