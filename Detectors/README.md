@@ -176,7 +176,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.3.0``
 - **Release Date**: July 28th, 2024
-![securifyNormal.jpg](securifyNormal.jpg)
+![securifyNormal.jpg](securifyNormal.png)
 
 ### Simple Play Integrity Checker / SPIC
 
