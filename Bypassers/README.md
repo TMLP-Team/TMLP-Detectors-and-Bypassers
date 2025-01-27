@@ -9,7 +9,8 @@
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
   - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the Magisk layer
-    - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable LSPosed taskbar notification $\rightarrow$ Uninstall the LSPosed Manager
+    - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
+    - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
     - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
     - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
     - Reboot the device
@@ -46,7 +47,8 @@
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
   - 在面具层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
-    - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
+    - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
+    - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
     - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
