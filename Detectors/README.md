@@ -131,6 +131,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v6.6.0``
 - **Release Date**: January 11th, 2025
+- **Detection Remark**: Please always install this detector using the APK file from the official links (instead of the APK file extracted from devices with this detector installed) after this detector is uninstalled totally. 
 
 ### Native Test
 
@@ -352,6 +353,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v6.6.0``
 - **发布日期**：2025 年 1 月 11 日
+- **注意事项**：请务必在将已安装版本卸载干净后使用官方链接的安装包（而不是从已安装该检测软件的设备上提取的安装包）安装后进行检测
 
 ### Native Test / 牛头人
 
