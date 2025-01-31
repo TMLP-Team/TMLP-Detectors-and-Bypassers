@@ -78,12 +78,11 @@
 ### Key Attestation
 
 - **Package Name**: ``io.github.vvb2060.keyattestation``
-- **Official Link**: [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
+- **Official Link**: [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation) and [https://t.me/magiskalpha](https://t.me/magiskalpha)
 - **Source Status**: Open-source
 - **Developing Purpose**: Key Attestation
-- **Latest Version**: ``v1.7.0``
-- **Release Date**: After November 16th, 2023
-- **Detection Remark**: The ``v1.7.0`` version is not released on the official link while the ``v1.6.0`` version is the latest one on the official link
+- **Latest Version**: ``v1.8.3``
+- **Release Date**: January 9th, 2025
 
 ### Magisk Detector
 
@@ -299,12 +298,11 @@
 ### Key Attestation / 密钥认证
 
 - **应用包名**：``io.github.vvb2060.keyattestation``
-- **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)
+- **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation) and [https://t.me/magiskalpha](https://t.me/magiskalpha)
 - **开源状态**：开源
 - **开发用途**：密钥认证
-- **最新版本**：``v1.7.0``
-- **发布日期**：2023 年 11 月 16 日后
-- **注意事项**：版本 ``v1.7.0`` 不是从官方链接发布而官方链接的最新版本为 ``v1.6.0``
+- **最新版本**：``v1.8.3``
+- **发布日期**：2025 年 1 月 9 日
 
 ### Magisk Detector / Magisk 检测应用
 
