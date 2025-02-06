@@ -78,11 +78,11 @@
 ### Key Attestation
 
 - **Package Name**: ``io.github.vvb2060.keyattestation``
-- **Official Link**: [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation) and [https://t.me/magiskalpha](https://t.me/magiskalpha)
+- **Official Link**: [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation) & [https://t.me/magiskalpha](https://t.me/magiskalpha) & [https://t.me/playintegrityfix](https://t.me/playintegrityfix) & [https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation)
 - **Source Status**: Open-source
 - **Developing Purpose**: Key Attestation
-- **Latest Version**: ``v1.8.3``
-- **Release Date**: January 9th, 2025
+- **Latest Version**: ``v1.8.4``
+- **Release Date**: February 6th, 2025
 
 ### Magisk Detector
 
@@ -298,11 +298,12 @@
 ### Key Attestation / 密钥认证
 
 - **应用包名**：``io.github.vvb2060.keyattestation``
-- **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation) and [https://t.me/magiskalpha](https://t.me/magiskalpha)
+- **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation) & [https://t.me/magiskalpha](https://t.me/magiskalpha) & [https://t.me/playintegrityfix](https://t.me/playintegrityfix) & [https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation)
 - **开源状态**：开源
 - **开发用途**：密钥认证
-- **最新版本**：``v1.8.3``
-- **发布日期**：2025 年 1 月 9 日
+- **最新版本**：``v1.8.4``
+- **发布日期**：2025 年 2 月 6 日
+![keyAttestationNormalZH.jpg](keyAttestationNormalZH.jpg)
 
 ### Magisk Detector / Magisk 检测应用
 
