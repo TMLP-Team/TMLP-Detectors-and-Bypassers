@@ -101,7 +101,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v4.4.1``
 - **Release Date**: Before January 7th, 2023
-- **Detection Remark**: Please do not spoof this detector happily to get a happy face since spoofing detectors cannot essentially solve the environment
+- **Detection Remark**: Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment
 
 ### Money2India
 
@@ -323,7 +323,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v4.4.1``
 - **发布日期**：2023 年 1 月 7 日前
-- **注意事项**：请不要为了得到一张快乐的脸而高兴地欺骗这个探测器，因为欺骗探测器不能从根本上解决环境问题
+- **注意事项**：请不要为了得到一张快乐的脸而高兴地欺骗该检测软件，因为欺骗检测软件不能从本质上解决环境问题
 ![momoNormalZH.jpg](momoNormalZH.jpg)
 
 ### Money2India
