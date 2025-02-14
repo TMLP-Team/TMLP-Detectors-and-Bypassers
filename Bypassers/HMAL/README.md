@@ -13,9 +13,7 @@ These two operations can be configured dynamically without rebooting, configurin
 - If you want to make an application to be seen or not to be seen, just modify the template or the specified configuration for the specified application in HMA/HMAL. 
 - If you want to make an application able or unable to see other applications, just go to the application manage page in HMA/HMAL. 
 
-In this folder, you may see a JSON configuration file, which includes a blacklist and a whitelist template. In the future, we hope to include all package names of apps that may be detected and those that should not be detected in this configuration. Any pull requests are welcome. 
-
-Nonetheless, faithfully speaking, a plugin that can hide the application list without manual configuration would be better. 
+Faithfully speaking, a plugin that can hide the application list without manual configuration would be better. 
 - Classifications: 
   - Classification $A$: System applications that cannot be launched and system pre-installed applications that can be launched but are not critical; 
   - Classification $B$: TMLP-related applications; 
@@ -36,6 +34,8 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
   - Library: Gather all the lists in a cloud library and generate configurations based on the library (like [https://github.com/TMLP-Team/Bypasser/tree/main/Classification](https://github.com/TMLP-Team/Bypasser/tree/main/Classification)); 
   - Local recognition: It should belong to $A$ when an application contains an Xposed/Edxposed/LSPosed interface. 
 
+If you want to have a JSON configuration file, please refer to configuration generation in [https://github.com/TMLP-Team/Bypasser](https://github.com/TMLP-Team/Bypasser). 
+
 ---
 
 #### 配置 HMA/HMAL 教程
@@ -53,9 +53,7 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
 - 如果您想让应用程序可见或不可见，只需修改 HMA/HMAL 中指定应用程序的模板或指定配置即可。
 - 如果您想让某个应用程序能够或无法看到其他应用程序，只需转到 HMA/HMAL 中的应用程序管理页面。
 
-在这个文件夹中，你或许会看到一个 JSON 配置文件，里面包含一个黑名单和白名单模板。在未来，我们希望将所有可能会发起检测的应用包名和应当不被检测到的应用包名都包含在此配置中。欢迎提交拉取请求。
-
-尽管如此，事实上，或许一个不需要手动配置就能够完成应用列表隐藏的插件会更好。
+事实上，或许一个不需要手动配置就能够完成应用列表隐藏的插件会更好。
 - 分类：
   - 分类 $A$：无法启动的系统应用和可以启动但并非关键的系统预装应用；
   - 分类 $B$：TMLP 相关应用；
@@ -75,3 +73,5 @@ Nonetheless, faithfully speaking, a plugin that can hide the application list wi
 - 实现：
   - 库：将分类上传到云库中基于云库下发配置（例如 [https://github.com/TMLP-Team/Bypasser/tree/main/Classification](https://github.com/TMLP-Team/Bypasser/tree/main/Classification)）；
   - 本地识别：识别到插件接口时应当自动归类为 $A$。
+
+如果你希望拥有一个基于云库的 JSON 配置文件，请参阅 [https://github.com/TMLP-Team/Bypasser](https://github.com/TMLP-Team/Bypasser) 中的配置文件生成。
