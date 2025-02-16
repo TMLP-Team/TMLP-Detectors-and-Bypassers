@@ -53,9 +53,9 @@
 - **Official Link**: [https://t.me/app_process64](https://t.me/app_process64)
 - **Source Status**: Unknown
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.5.1``
-- **Release Date**: Before December 26th, 2024
-- **Detection Remark**: Fail passing if the application crashes
+- **Latest Version**: ``v1.6.d2abf4d (155)``
+- **Release Date**: February 16th, 2025
+- **Detection Remark**: The latest version requires networks and crashing can mean failures of bypassing
 
 ### Hunter
 
@@ -137,7 +137,7 @@
 
 - **Package Name**: ``icu.nullptr.nativetest``
 - **Official Link**: Unknown
-- **Source Status**: Closed-source
+- **Source Status**: Closed-source (Selling source codes)
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v30``
 - **Release Date**: November 15th, 2024
@@ -273,9 +273,9 @@
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
 - **开源状态**：未知
 - **开发用途**：环境检测
-- **最新版本**：``v1.5.1``
-- **发布日期**：2024 年 12 月 26 日前
-- **注意事项**：闪退或许也是过检失败
+- **最新版本**：``v1.6.d2abf4d (155)``
+- **发布日期**：2025 年 2 月 16 日
+- **注意事项**：最新版本需要联网且闪退或许也是过检失败
 
 ### Hunter
 
@@ -360,7 +360,7 @@
 
 - **应用包名**：``icu.nullptr.nativetest``
 - **官方链接**：未知
-- **开源状态**：闭源
+- **开源状态**：闭源（正在售卖源代码）
 - **开发用途**：环境检测
 - **最新版本**：``v30``
 - **发布日期**：2024 年 11 月 15 日
