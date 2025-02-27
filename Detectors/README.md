@@ -51,7 +51,7 @@
 
 - **Package Name**: ``me.garfieldhan.holmes``
 - **Official Link**: [https://t.me/app_process64](https://t.me/app_process64)
-- **Source Status**: Unknown
+- **Source Status**: Closed-source (Selling source codes)
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.6.d2abf4d (155)``
 - **Release Date**: February 16th, 2025
@@ -128,8 +128,8 @@
 - **Official Link**: [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector) and [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v6.6.2 (662)``
-- **Release Date**: February 12th, 2025
+- **Latest Version**: ``v6.6.4 (664)``
+- **Release Date**: February 27th, 2025
 - **Detection Remark**: Please always install this detector using the APK file from the official links (instead of the APK file extracted from devices with this detector installed or backup) after this detector is uninstalled totally and turn on the experimental detection switch. 
 ![./nativeRootDetectorNormal.jpg](./nativeRootDetectorNormal.jpg)
 
@@ -271,7 +271,7 @@
 
 - **应用包名**：``me.garfieldhan.holmes``
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
-- **开源状态**：未知
+- **开源状态**：闭源（正在售卖源代码）
 - **开发用途**：环境检测
 - **最新版本**：``v1.6.d2abf4d (155)``
 - **发布日期**：2025 年 2 月 16 日
@@ -351,8 +351,8 @@
 - **官方链接**：[https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector) 和 [https://t.me/rootdetector](https://t.me/rootdetector)
 - **开源状态**：开源
 - **开发用途**：环境检测
-- **最新版本**：``v6.6.2 (662)``
-- **发布日期**：2025 年 2 月 12 日
+- **最新版本**：``v6.6.4 (664)``
+- **发布日期**：2025 年 2 月 27 日
 - **注意事项**：请务必在将已安装版本卸载干净后使用官方链接的安装包（而不是从已安装该检测软件的设备上或备份中提取的安装包）安装后进行检测并打开实验性检测
 ![./nativeRootDetectorNormal.jpg](./nativeRootDetectorNormal.jpg)
 
