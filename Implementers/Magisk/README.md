@@ -1,0 +1,27 @@
+### Magisk
+
+This folder aims to archive the latest versions of different Magisk, Apatch (AP), and KernelSU (KSU) branches. 
+
+- Magisk: 
+  - Magisk Official / Magisk Canary / Magisk (Debug): [https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
+  - Magisk Alpha: 
+    - [https://github.com/CoderTyn/Magisk-Alpha](https://github.com/CoderTyn/Magisk-Alpha)
+    - [https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
+    - [https://t.me/magiskalpha](https://t.me/magiskalpha)
+  - Magisk Delta / Kitsune Magisk (built-in whitelist mode): [https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
+- Apatch: [https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) and [https://t.me/APatchChannel](https://t.me/APatchChannel)
+
+---
+
+### 面具
+
+本文件夹旨在存储不同  Magisk、Apatch (AP) 和 KernelSU (KSU) 分支的最新版本。
+
+- 面具：
+  - 官方面具 / 金丝雀面具 / Debug 版面具：[https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
+  - 阿尔法面具：
+    - [https://github.com/CoderTyn/Magisk-Alpha](https://github.com/CoderTyn/Magisk-Alpha)
+    - [https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
+    - [https://t.me/magiskalpha](https://t.me/magiskalpha)
+  - 德尔塔面具 / 小狐狸面具（内置白名单模式）：[https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
+- Apatch：[https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) 和 [https://t.me/APatchChannel](https://t.me/APatchChannel)
