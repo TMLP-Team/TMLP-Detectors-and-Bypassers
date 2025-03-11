@@ -8,7 +8,7 @@ We only keep the latest versions for each implementer, detector, and bypasser he
 
 Please see [Implementers](./Implementers/README.md), [Detectors](./Detectors/README.md), and [Bypassers](./Bypassers/README.md) for details. 
 
-The last files are updated at 15:00 on March 9th, 2025 (UTC+8). 
+The last files are updated at 20:00 on March 11th, 2025 (UTC+8). 
 
 ---
 
@@ -22,4 +22,4 @@ The last files are updated at 15:00 on March 9th, 2025 (UTC+8).
 
 详情请查看 [Implementers](./Implementers/README.md)、[Detectors](./Detectors/README.md) 和 [Bypassers](./Bypassers/README.md)。
 
-最后更新时间：2025 年 3 月 9 日 15:00（中国标准时间）。
+最后更新时间：2025 年 3 月 11 日 20:00（中国标准时间）。
