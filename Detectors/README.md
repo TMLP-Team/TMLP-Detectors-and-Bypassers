@@ -53,8 +53,8 @@
 - **Official Link**: [https://t.me/app_process64](https://t.me/app_process64)
 - **Source Status**: Closed-source (Selling source codes)
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.6.d2abf4d (155)``
-- **Release Date**: February 16th, 2025
+- **Latest Version**: ``v1.6.a00fa5c (161)``
+- **Release Date**: March 15th, 2025
 - **Detection Remark**: The latest version requires networks and crashing can mean failures of bypassing
 
 ### Hunter
@@ -273,8 +273,8 @@
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
 - **开源状态**：闭源（正在售卖源代码）
 - **开发用途**：环境检测
-- **最新版本**：``v1.6.d2abf4d (155)``
-- **发布日期**：2025 年 2 月 16 日
+- **最新版本**：``v1.6.a00fa5c (161)``
+- **发布日期**：2025 年 3 月 15 日
 - **注意事项**：最新版本需要联网且闪退或许也是过检失败
 
 ### Hunter
