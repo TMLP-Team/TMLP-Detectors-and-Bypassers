@@ -69,15 +69,14 @@
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
 
-### Using Apatch
+### Using Apatch / KSU / KSU Next
 
 - Install the latest version of [Apatch](https://t.me/APatchChannel)
   - Configure Apatch at the Super User tab
     - Grant root privileges to all applications requiring them
-    - Add applications that do not require to be injected by the LSPosed framework among all the remaining applications to the exclusion list
-  - Install the [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) module in the Apatch layer
-    - Switch to the Web UI of this module at the user-space module tab of Apatch and enforce the deny list
-  - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the Magisk layer
+    - Use the default configurations for all the applications that do not require root privileges
+  - Install the [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
+  - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
     - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
@@ -172,15 +171,14 @@
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
 
-### 正在使用 Apatch
+### 正在使用 Apatch / KSU / KSU Next
 
-- 安装[最新版 Apatch](https://t.me/APatchChannel)
+- 安装最新版 [Apatch](https://t.me/APatchChannel)
   - 在超级用户页配置 Apatch
     - 将所有需要 Root 的应用程序进行授权
     - 将剩余应用中所有不需要被 LSPosed 注入的添加到排除列表
-  - 在 Apatch 层安装 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext) 模块
-    - 重启后在用户模块界面打开该模块的详情页（Web UI）并启用遵守排除列表
-  - 在 Apatch 层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+  - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
+  - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
     - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
