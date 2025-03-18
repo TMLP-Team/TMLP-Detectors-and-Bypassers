@@ -71,8 +71,8 @@
 
 ### Using Apatch / KSU / KSU Next
 
-- Install the latest version of [Apatch](https://t.me/APatchChannel)
-  - Configure Apatch at the Super User tab
+- Install the latest version of [Apatch](https://t.me/APatchChannel), [KSU](https://github.com/tiann/KernelSU), or [KSU Next](https://t.me/ksunext)
+  - Configure in the Super User tab of the root manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
   - Install the [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
@@ -173,8 +173,8 @@
 
 ### 正在使用 Apatch / KSU / KSU Next
 
-- 安装最新版 [Apatch](https://t.me/APatchChannel)
-  - 在超级用户页配置 Apatch
+- 安装最新版 [Apatch](https://t.me/APatchChannel)、[KSU](https://github.com/tiann/KernelSU) 或 [KSU Next](https://t.me/ksunext)
+  - 在 Root 管理器的超级用户页内进行配置
     - 将所有需要 Root 的应用程序进行授权
     - 将剩余应用中所有不需要被 LSPosed 注入的添加到排除列表
   - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
