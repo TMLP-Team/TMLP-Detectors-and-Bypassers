@@ -225,7 +225,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - 安装停更前的最后一个版本的 [Delta 面具](https://github.com/HuskyDG/magisk-files)
   - 由于已在 2024 年初停更未来可能跟不上时代潮流
   - 配置面具
-    - 打开 Zygisk（或使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)）
+    - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
     - 在设置界面启用白名单模式
     - 选定需要 root 权限的应用的包（可以不选定某个应用程序内的所有包）
   - 在面具层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
