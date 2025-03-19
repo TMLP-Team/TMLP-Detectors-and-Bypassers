@@ -1,10 +1,10 @@
 ## Bypassers
 
-### Using Official Magisk or Magisk Alpha
+### Using Official Magisk (Including Release, Canary, and Debug Versions) or Magisk Alpha
 
-- Install the latest Official [Magisk](https://github.com/LSPosed/LSPosed.github.io/releases/) or [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
+- Install the latest Official [Magisk](https://github.com/topjohnwu/Magisk) or [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - Configure the Magisk
-    - Enable Zygisk (or use [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext))
+    - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
     - Disable Denylist
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
@@ -98,15 +98,97 @@
     - Use the MT Manager to write the current date, the date of the 1st day of the current month, or the date of the first day of the second month of the last season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250201``
   - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
 
+### Special Cases
+
+#### Momo
+
+##### Package Management Service Exception
+
+Turn off "Disable package manager signature verification" in Core Patcher by referring to [a post in early 2023](https://zhidao.baidu.com/question/633770792883881924.html)
+
+##### Debug mode is enabled
+
+- Turn off debug mode when not in use
+- It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though injecting the detection application can pass the debug mode (suspicious level)
+
+##### TWRP File Existence
+
+Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
+
+##### Unlocked Bootloader
+
+- Install [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) module
+- It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though the injection of the detected application can pass the debug mode (suspicious level)
+
+#### Ruru
+
+##### syscall finds HMA
+
+- Switch to HMAL
+
+#### Native Test
+
+##### The latest version (about ``26.0``) reports Malicious hook
+
+- No solutions yet (someone says it is a false positive)
+
+#### Native Root Detector
+
+##### LSPosed traces are detected in the ``odex`` file of GMS or this application
+
+- Temporary Solution: Rename the file to ``*.odex.bak``
+- Permanent Solution: Uninstall the original LSPosed and install it The last successful Release version in [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) and restart the detection according to the precautions in [../Detectors/README.md](../Detectors/README.md)
+
+##### Mount inconsistency detected
+
+- Solution: None
+
+##### Risky application detected (bypass HMA/HMAL)
+
+- Temporary solution: random package name or uninstall corresponding application
+- Permanent solution: None
+
+#### Postal Savings Bank
+
+##### Around September 2023, the latest official mask and the latest Shamiko at that time were used, but the crash still occurred
+
+- Historical issues can be updated
+- If you want to continue using the official mask or Alpha mask
+- Update to the latest official mask or Alpha mask
+- Update to the latest Shamiko
+- If you want to switch to the Delta version mask (the Delta version mask at that time would not cause the Postal Savings Bank to crash)
+- The solution at that time: the Delta version mask around September 2023 can be effectively inspected
+- The current solution: Use the last Delta version mask before the suspension
+
+#### Octopus, Bank of China Hong Kong, and other applications
+
+##### Apatch users crash or open a web page after crashing to inform that the phone environment is abnormal
+
+- Solution before March 2025: Add to the exclusion list
+- Solution starting from March 2025: Reset the exclusion list for applications that do not require root and use NeoZygisk to implement Zygisk
+
+#### WeChat
+
+##### Failed to open the fingerprint payment prompt (but other domestic and foreign applications can use fingerprints normally)
+
+- Temporary solution: Use the WeChat Payment module or the WeChat Payment plugin (the principle is to submit the pre-stored password after passing the fingerprint)
+- Essential solution: None
+
+#### QQ
+
+- Solution 1: Hide rooting and injection environments and do not inject the application
+- Solution 2: Hide rooting and injection environments and do not inject the application for automatic check-in purposes
+- Solution 3: Always use the old versions of QQ and hide rooting enironments before it warns
+
 ---
 
 ## 过检方法
 
-### 正在使用官方版或 Alpha 版面具
+### 正在使用官方版（含发行版、金丝雀版和 Debug 版）或 Alpha 版面具
 
-- 安装最新版[官方版面具](https://github.com/LSPosed/LSPosed.github.io/releases/)或 [Alpha 版面具](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
+- 安装最新版[官方版面具](https://github.com/topjohnwu/Magisk)或 [Alpha 版面具](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - 配置面具
-    - 打开 Zygisk（或使用 [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)）
+    - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
     - 关闭“遵守排除列表”开关
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
@@ -206,12 +288,12 @@
 
 ##### 包管理服务异常
 
-参考一篇 2023 年初的问答：[https://zhidao.baidu.com/question/633770792883881924.html](https://zhidao.baidu.com/question/633770792883881924.html)
+在核心破解中关闭“禁用软件包管理器签名验证”（参考自[一篇 2023 年初的问答](https://zhidao.baidu.com/question/633770792883881924.html)）
 
 ##### 已开启调试模式
 
 - 在不使用调试模式时关闭调试模式
-- 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed 注入（确信级别）反而得不偿失
+- 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed/Edxposed/LSPosed 注入/钩子（确信级别）反而得不偿失
 
 ##### 存在 TWRP 文件
 
@@ -220,26 +302,35 @@
 ##### Bootloader 未锁定
 
 - 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
-- 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed 注入（确信级别）反而得不偿失
+- 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed/Edxposed/LSPosed 注入/钩子（确信级别）反而得不偿失
 
 #### Ruru
 
 ##### syscall 找到 HMA
 
-换用 HMAL
+- 换用 HMAL
 
 #### 牛头人
 
 ##### 最近的版本（约 ``26.0`` 开始）报 Malicious hook
 
-暂无解决办法（一说是假阳性）
+- 暂无解决办法（一说是假阳性）
 
 #### Native root detector
 
-##### 检测到 GMS 或本应用的的 odex 文件中存在 LSPosed 痕迹
+##### 检测到 GMS 或本应用的的 ``odex`` 文件中存在 LSPosed 痕迹
 
-临时解决方案：重命名该文件为 *.odex.bak
-永久解决方案：将原有 LSPosed 卸载干净后安装 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中最后一次成功的 Release 版本并依照 [../Detectors/README.md](../Detectors/README.md) 中的注意事项重新启动检测
+- 临时解决方案：重命名该文件为 *.odex.bak
+- 永久解决方案：将原有 LSPosed 卸载干净后安装 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中最后一次成功的 Release 版本并依照 [../Detectors/README.md](../Detectors/README.md) 中的注意事项重新启动检测
+
+##### 检测到挂载不一致
+
+- 解决方案：暂无
+
+##### 检测到风险应用（绕过 HMA/HMAL）
+
+- 临时解决方案：随机包名或卸载对应应用
+- 永久解决方案：暂无
 
 #### 邮储银行
 
@@ -257,7 +348,8 @@
 
 ##### Apatch 用户闪退或闪退后打开一个网页告知手机环境异常
 
-- 添加到排除列表
+- 2025 年 3 月前的解决办法：添加到排除列表
+- 2025 年 3 月开始的解决办法：对无需 Root 的应用重置排除列表并使用 NeoZygisk 实现 Zygisk
 
 #### 微信
 
@@ -265,3 +357,9 @@
 
 - 临时解决方法：使用微信支付模块或微信支付插件（原理是通过指纹后将预先存储的密码进行提交）
 - 本质解决方法：暂无
+
+##### QQ
+
+- 解决方案1：隐藏 Root 和注入环境，不注入应用
+- 解决方案2：隐藏 Root 和注入环境，不注入应用用于自动签到
+- 解决方案3：在收到任何警告之前始终使用旧版 QQ 并隐藏 Root 环境

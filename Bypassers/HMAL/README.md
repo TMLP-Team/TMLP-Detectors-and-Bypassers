@@ -32,7 +32,7 @@ Faithfully speaking, a plugin that can hide the application list without manual 
   - $\forall d \in D$: $d$ should be able to see $\forall x, x \in A \cup D$ and be seen by $\forall x, x \in U$ (note that we do not consider the detection between applications caused by enterprises having severe conflicts of interest with each other or detection from home applications to abroad ones). 
 - Accomplishments: 
   - Library: Gather all the lists in a cloud library and generate configurations based on the library (like [https://github.com/TMLP-Team/Bypasser/tree/main/Classification](https://github.com/TMLP-Team/Bypasser/tree/main/Classification)); 
-  - Local recognition: It should belong to $A$ when an application contains an Xposed/Edxposed/LSPosed interface. 
+  - Local recognition: It should belong to $B$ when an application contains an Xposed/Edxposed/LSPosed interface. 
 
 If you want to have a JSON configuration file, please refer to configuration generation in [https://github.com/TMLP-Team/Bypasser](https://github.com/TMLP-Team/Bypasser). 
 
@@ -72,6 +72,6 @@ If you want to have a JSON configuration file, please refer to configuration gen
   - $\forall d \in D$：$d$ 应当能够检测到 $\forall x, x \in A \cup D$，但能够被 $\forall x, x \in U$ 检测到（此处不考虑由企业利益冲突引发的相互检测以及境内软件对境外软件的检测）。
 - 实现：
   - 库：将分类上传到云库中基于云库下发配置（例如 [https://github.com/TMLP-Team/Bypasser/tree/main/Classification](https://github.com/TMLP-Team/Bypasser/tree/main/Classification)）；
-  - 本地识别：识别到插件接口时应当自动归类为 $A$。
+  - 本地识别：识别到插件接口时应当自动归类为 $B$。
 
 如果你希望拥有一个基于云库的 JSON 配置文件，请参阅 [https://github.com/TMLP-Team/Bypasser](https://github.com/TMLP-Team/Bypasser) 中的配置文件生成。
