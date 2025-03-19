@@ -72,7 +72,7 @@
 ### Using Apatch / KSU / KSU Next
 
 - Install the latest version of [Apatch](https://t.me/APatchChannel), [KSU](https://github.com/tiann/KernelSU), or [KSU Next](https://t.me/ksunext)
-  - Configure in the Super User tab of the root manager (The Apatch Manager Super User page seems to have a bug and you can {directly use the MT Manager to remove all application configurations except ``bin.mt.plus`` from the file ``/data/adb/ap/package_config`` after granting the MT Manager root permissions $rightarrow$ Reboot the device and use Apatch Manager again to grant root permissions to applications that require root permissions})
+  - Configure in the Super User tab of the root manager (The Apatch Manager Super User page seems to have a bug and you can {directly use the MT Manager to remove all application configurations except ``bin.mt.plus`` from the file ``/data/adb/ap/package_config`` after granting the MT Manager root privileges $rightarrow$ Reboot the device and use Apatch Manager again to grant root privileges to applications that require them})
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
   - Install the [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
