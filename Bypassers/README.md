@@ -41,7 +41,7 @@
 - Install the lastest version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
   - It can be out-of-date since it was discontinued in early 2024
   - Configure Magisk Delta
-    - Enable Zygisk (or use [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext))
+    - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
     - Enable whitelist mode on the setting page of the Magisk Delta
     - Select the package of the application that requires root privileges (you can only select the necessary packages in the applications)
   - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the Magisk layer
@@ -72,7 +72,7 @@
 ### Using Apatch / KSU / KSU Next
 
 - Install the latest version of [Apatch](https://t.me/APatchChannel), [KSU](https://github.com/tiann/KernelSU), or [KSU Next](https://t.me/ksunext)
-  - Configure in the Super User tab of the root manager
+  - Configure in the Super User tab of the root manager (The Apatch Manager Super User page seems to have a bug and you can {directly use the MT Manager to remove all application configurations except ``bin.mt.plus`` from the file ``/data/adb/ap/package_config`` after granting the MT Manager root permissions $rightarrow$ Reboot the device and use Apatch Manager again to grant root permissions to applications that require root permissions})
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
   - Install the [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
@@ -256,9 +256,9 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ### 正在使用 Apatch / KSU / KSU Next
 
 - 安装最新版 [Apatch](https://t.me/APatchChannel)、[KSU](https://github.com/tiann/KernelSU) 或 [KSU Next](https://t.me/ksunext)
-  - 在 Root 管理器的超级用户页内进行配置
+  - 在 Root 管理器的超级用户页内进行配置（Apatch 管理器超级用户页面似乎有 bug 可直接在授予 MT 管理器 Root 权限后使用 MT 管理器从文件 ``/data/adb/ap/package_config`` 中移除除 ``bin.mt.plus`` 以外的所有应用配置并在重启设备后再次使用 Apatch 管理器将 Root 权限授予需要 Root 权限的应用）
     - 将所有需要 Root 的应用程序进行授权
-    - 将剩余应用中所有不需要被 LSPosed 注入的添加到排除列表
+    - 让剩余应用中所有不需要 Root 权限的应用使用默认设置（重置设置）
   - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
   - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
