@@ -1,0 +1,160 @@
+import os
+from sys import argv, exit
+from json import load
+try:
+	os.chdir(os.path.abspath(os.path.dirname(__file__)))
+except:
+	pass
+EXIT_SUCCESS = 0
+EXIT_FAILURE = 1
+EOF = (-1)
+
+
+class Detectors:
+	def __init__(self:object) -> object:
+		self.__data = None
+		self.__flag = False
+	def loadJson(self:object, jsonFilePath:str, encoding:str = "utf-8") -> bool:
+		try:
+			with open(jsonFilePath, "r", encoding = encoding) as f:
+				self.__data = load(f)["Detectors"]
+			self.__flag = True
+			return True
+		except BaseException as e:
+			print("Cannot load data from \"{0}\". Details are as follows. \t{1}".format(jsonFilePath, e))
+			return False
+	def checkDetectorFolderPath(self:object, detectorFolderPath:str = ".") -> int:
+		if self.__flag and isinstance(detectorFolderPath, str) and os.path.isdir(detectorFolderPath):
+			issueCnt, fileNames = 0, [obj for obj in os.listdir(detectorFolderPath) if os.path.splitext(obj)[1].lower() not in (".json", ".md", ".py")]
+			for obj in self.__data:
+				if "name" in obj and "latestVersion" in obj:
+					fileNameA = "{0}_{1}.apk".format(obj["name"], obj["latestVersion"])
+					fileNameB = fileNameA + "s"
+					if fileNameA in fileNames:
+						fileNames.remove(fileNameA)
+					elif fileNameB in fileNames:
+						fileNames.remove(fileNameB)
+					else:
+						issueCnt += 1
+						print("File \"{0}\" or File \"{1}\" is not in Folder \"{2}\". ".format(fileNameA, fileNameB, detectorFolderPath))
+				else:
+					issueCnt += 1
+					print("An invalid record {0} is found. ".format(obj))
+				if "image" in obj:
+					for imageName in obj["image"].values():
+						if imageName in fileNames:
+							fileNames.remove(imageName)
+						else:
+							issueCnt += 1
+							print("Image \"{0}\" is not in Folder \"{1}\". ".format(imageName, detectorFolderPath))
+			if fileNames:
+				issueCnt += len(fileNames)
+				print("Extra files {0} are detected. ".format(fileNames) if len(fileNames) > 1 else "An extra file entitled \"{0}\" is detected. ".format(fileNames[0]))
+			return issueCnt
+		else:
+			return -1
+	def __getAlias(self:object, subObj:str|list|dict, language:str) -> list:
+		return []
+	def __getSourceStatus(self:object, codes:str, language:str) -> list:
+		if isinstance(codes, str) and isinstance(language, str):
+			statements = []
+			d = {																																	\
+				"A":{"UN":"Archieved", "CN":"已存档"}, "C":{"UN":"Closed-source", "CN":"闭源"}, "D":{"UN":"Android Desktop Application", "CN":"安卓桌面应用"}, 		\
+				"H":{"UN":"Half-open-source", "CN":"半开源"}, "O":{"UN":"Open-source", "CN":"开源"}, "S":{"UN":"For Sale", "CN":"销售中"}							\
+			}
+			for code in codes:
+				if code in d:
+					statements.append(d[code][language] if language in d[code] else d[code]["UN"])
+				else:
+					print("The code \'{0}\' has no meanings in source status statements. ".format(code))
+			return statements
+		else:
+			return []
+	def __getDevelopingPurpose(self:object, code:str, language:str) -> str:
+		if isinstance(code, str) and isinstance(language, str):
+			d = {																																						\
+				"A":{"UN":"Apatch Detection", "CN":"Apatch 检测"}, "D":{"UN":"Android Desktop Application", "CN":"安卓桌面应用"}, "E":{"UN":"Environment Detection", "CN":"环境检测"}, 	\
+				"I":{"UN":"Information Gathering", "CN":"信息收集"}, "K":{"UN":"Key Attestation", "CN":"密钥认证"}, "L":{"UN":"Applist Detection", "CN":"应用列表检测"}, 					\
+				"M":{"UN":"Magisk Detection", "CN":"面具检测"}, "P":{"UN":"Play Integrity Check", "CN":"Play 完整性检测"}															\
+			}
+			if code in d:
+				return d[code][language] if language in d[code] else d[code]["UN"]
+			else:
+				print("The code \'{0}\' has no meanings in developing purpose statements. ".format(code))
+		else:
+			return ""		
+	def __convertToMarkdown(self:object, language:str) -> str:
+		if self.__flag and isinstance(language, str):
+			if "UK" == language:
+				markdown = "| Name | Package Name | Official Link(s) | Source Status | Developing Purpose | Latest Version | Release Date |\n| - | - | - | - | - | - | - |\n"
+			elif "CN" == language:
+				markdown = "| 名称 | 应用包名 | 官方链接 | 开源状态 | 开发用途 | 最新版本 | 发行日期 |\n| - | - | - | - | - | - | - |\n"
+			else:
+				return language
+			for detector in self.__data:
+				markdown += "| "
+				markdown += detector["name"] + " | " if "name" in detector else "| "
+				markdown += ("; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else detector["packageName"]) + " | " if "packageName" in detector else "| "
+				markdown += ("; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else detector["officialLink"]) + " | " if "officialLink" in detector else "| "
+				markdown += "&".join(self.__getSourceStatus(detector["sourceStatus"], language)) + " | " if "sourceStatus" in detector else "| "
+				markdown += self.__getDevelopingPurpose(detector["developingPurpose"], language) + " | " if "developingPurpose" in detector else "| "
+				markdown += "``{0}`` | ".format(detector["latestVersion"]) if "latestVersion" in detector else "| "
+				markdown += detector["releaseDate"] + " |\n" if "releaseDate" in detector else "|\n"
+			return markdown
+		else:
+			return ""
+	def __handleFolder(self:object, fd:str) -> bool:
+		try:
+			folder = str(fd)
+		except:
+			return False
+		if not folder:
+			return True
+		elif os.path.exists(folder):
+			return os.path.isdir(folder)
+		else:
+			try:
+				os.makedirs(folder)
+				return True
+			except:
+				return False
+	def toMarkdownFile(self:object, markdownFilePath:str = None, languages:tuple|list = ["UK", "\n---\n", "CN"], encoding:str = "utf-8") -> str|bool:
+		if self.__flag:
+			markdown = ""
+			for language in languages:
+				markdown += self.__convertToMarkdown(language)
+			if isinstance(markdownFilePath, str):
+				if self.__handleFolder(os.path.split(markdownFilePath)[0]):
+					try:
+						with open(markdownFilePath, "w", encoding = encoding) as f:
+							f.write(markdown)
+						print("Successfully wrote data in the format of markdown to \"{0}\". ".format(markdownFilePath))
+						return True
+					except BaseException as e:
+						print("Cannot write data in the format of markdown to \"{0}\". Details are as follows. \t{1}".format(markdownFilePath, e))
+				else:
+					print("Cannot write data in the format of markdown to \"{0}\" since the parent folder was not created successfully. ".format(markdownFilePath))
+				return False
+			else:
+				return markdown
+		else:
+			return False
+
+
+def main() -> int:
+	jsonFilePath, detectorFolderPath, markdownFilePath = "README.json", ".", "toBeReviewed.md"
+	detectors = Detectors()
+	bRet = detectors.loadJson(jsonFilePath)
+	detectors.checkDetectorFolderPath(detectorFolderPath = detectorFolderPath)
+	bRet = bRet and detectors.toMarkdownFile(markdownFilePath, languages = ["UK", "\n---\n\n", "CN"])
+	exitCode = EXIT_SUCCESS if bRet else EXIT_FAILURE
+	try:
+		input("Please press the enter key to exit ({0}). ".format(exitCode))
+	except:
+		pass
+	return exitCode
+
+
+
+if "__main__" == __name__:
+	exit(main())
