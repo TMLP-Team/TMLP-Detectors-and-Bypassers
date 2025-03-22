@@ -82,7 +82,30 @@ class Detectors:
 			else:
 				print("The code \'{0}\' has no meanings in developing purpose statements. ".format(code))
 		else:
-			return ""		
+			return ""
+	def __getReleaseDate(self:object, code:str, language:str) -> str:
+		if isinstance(code, str) and isinstance(language, str):
+			if len(code) >= 8 and code[-8:].isdigit():
+				d = {"":"", "=":"", "==":"", "<":{"UN":"Before", "CN":"早于"}, "<=":{"UN":"On or Before", "CN":"不晚于"}, ">":{"UN":"After", "CN":"晚于"}, ">=":{"UN":"On or After", "CN":"不早于"}}
+				symbol = code[:-8].strip()
+				if symbol in d:
+					year, month, day = int(code[-8:-4]), int(code[-4:-2]), int(code[-2:])
+					try:
+						date = datetime(year, month, day)
+					except:
+						print("The date in the code \"{0}\" is invalid in release date statements. ".format(code))
+						return ""
+					if "CN" == language:
+						return "{0} {1} 年 {2} 月 {3} 日".format(d[symbol]["CN"], year, month, day)
+					else:
+						months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+						suffix = "th" if day % 100 in (11, 12, 13) else {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
+						return "{0} {1} {2}{3}, {4}".format(d[symbol]["UK"], months[month - 1], day, suffix, year)
+				else:
+					print("The symbol in the code \"{0}\" has no meanings in release date statements. ".format(code))
+			else:
+				print("The code \"{0}\" has no meanings in release date statements. ".format(code))
+		return ""
 	def __convertToMarkdown(self:object, language:str) -> str:
 		if self.__flag and isinstance(language, str):
 			if "UK" == language:
@@ -94,7 +117,7 @@ class Detectors:
 			for detector in self.__data:
 				markdown += "| "
 				markdown += detector["name"] + " | " if "name" in detector else "| "
-				markdown += ("; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else detector["packageName"]) + " | " if "packageName" in detector else "| "
+				markdown += ("; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "``{0}``".format(detector["packageName"])) + " | " if "packageName" in detector else "| "
 				markdown += ("; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else detector["officialLink"]) + " | " if "officialLink" in detector else "| "
 				markdown += "&".join(self.__getSourceStatus(detector["sourceStatus"], language)) + " | " if "sourceStatus" in detector else "| "
 				markdown += self.__getDevelopingPurpose(detector["developingPurpose"], language) + " | " if "developingPurpose" in detector else "| "
