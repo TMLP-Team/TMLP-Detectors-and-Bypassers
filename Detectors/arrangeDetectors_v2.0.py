@@ -1,6 +1,7 @@
 import os
 from sys import argv, exit
 from json import load
+from datetime import datetime
 try:
 	os.chdir(os.path.abspath(os.path.dirname(__file__)))
 except:
@@ -96,11 +97,11 @@ class Detectors:
 						print("The date in the code \"{0}\" is invalid in release date statements. ".format(code))
 						return ""
 					if "CN" == language:
-						return "{0} {1} 年 {2} 月 {3} 日".format(d[symbol]["CN"], year, month, day)
+						return "{0} {1} 年 {2} 月 {3} 日".format(d[symbol]["CN"] if isinstance(d[symbol], dict) else d[symbol], year, month, day)
 					else:
 						months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 						suffix = "th" if day % 100 in (11, 12, 13) else {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
-						return "{0} {1} {2}{3}, {4}".format(d[symbol]["UK"], months[month - 1], day, suffix, year)
+						return "{0} {1} {2}{3}, {4}".format(d[symbol]["UN"] if isinstance(d[symbol], dict) else d[symbol], months[month - 1], day, suffix, year)
 				else:
 					print("The symbol in the code \"{0}\" has no meanings in release date statements. ".format(code))
 			else:
@@ -122,7 +123,7 @@ class Detectors:
 				markdown += "&".join(self.__getSourceStatus(detector["sourceStatus"], language)) + " | " if "sourceStatus" in detector else "| "
 				markdown += self.__getDevelopingPurpose(detector["developingPurpose"], language) + " | " if "developingPurpose" in detector else "| "
 				markdown += "``{0}`` | ".format(detector["latestVersion"]) if "latestVersion" in detector else "| "
-				markdown += detector["releaseDate"] + " |\n" if "releaseDate" in detector else "|\n"
+				markdown += self.__getReleaseDate(detector["releaseDate"], language) + " |\n" if "releaseDate" in detector else "|\n"
 			return markdown
 		else:
 			return ""
