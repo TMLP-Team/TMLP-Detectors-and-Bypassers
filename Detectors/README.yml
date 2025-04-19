@@ -1,0 +1,235 @@
+- name: Android Integrity Checker
+  packageName: com.thend.integritychecker
+  officialLink: https://play.google.com/store/apps/details?id=com.thend.integritychecker
+  developingPurpose: P
+  latestVersion: v1.0.4 (1000004)
+  releaseDate: = 20231114
+- name: APTest
+  packageName: me.garfieldhan.hiapatch
+  developingPurpose: A
+  latestVersion: v1.0
+  releaseDate: < 20241227
+- name: Applist Detector
+  alias:
+    CN:
+    - 应用列表检测
+    - 检测应用列表
+  packageName:
+  - icu.nullptr.applistdetector
+  - com.tsng.applistdetector
+  officialLink: https://github.com/Dr-TSNG/ApplistDetector
+  sourceStatus: O
+  developingPurpose: L
+  latestVersion: v2.4
+  releaseDate: = 20220812
+  detectionRemark:
+    UK: 'The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). '
+    CN: 包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。
+  image:
+    UN: applistDetectorUN.jpg
+- name: Checker
+  alias:
+    CN: 校验者
+  packageName: org.akanework.checker
+  developingPurpose: E
+  latestVersion: v1.0.9
+  releaseDate: < 20250108
+  image:
+    CN: checkerCN.jpg
+- name: DRM Info
+  packageName: com.androidfung.drminfo
+  officialLink: https://play.google.com/store/apps/details?id=com.androidfung.drminfo
+  developingPurpose: I
+  latestVersion: v1.1.15-240919
+  releaseDate: = 20240919
+  detectionRemark:
+    UK: 'Please check whether the Security Level is Level 1. The smaller the level, the better the device is. '
+    CN: 请检查 Security Level 是否为 L1，等级数值越小越好。
+- name: Hunter
+  packageName: com.zhenxi.hunter
+  developingPurpose: E
+  latestVersion: v6.11 (611)
+  releaseDate: = 20250210
+  detectionRemark:
+    UK: 'Please wait for the complete detection and display. '
+    CN: 请等待应用完成检测和显示。
+- name: IIQE
+  alias:
+    CN: IIQE 一考通
+  packageName: com.prudential.iiqe
+  officialLink: https://iiqe-cms.prudential.com.hk/iiqe/
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v6.4.1
+  releaseDate: = 20240620
+- name: Key Attestation
+  alias:
+    CN: 密钥认证
+  packageName: io.github.vvb2060.keyattestation
+  officialLink:
+  - https://github.com/vvb2060/KeyAttestation
+  - https://t.me/magiskalpha
+  - https://t.me/playintegrityfix
+  - https://github.com/chiteroman/KeyAttestation
+  sourceStatus: O
+  developingPurpose: K
+  latestVersion: v1.8.4
+  releaseDate: = 20250206
+  image:
+    CN: keyAttestationCN.jpg
+- name: Magisk Detector
+  alias:
+    CN: Magisk 检测应用
+  packageName: io.github.vvb2060.magiskdetector
+  officialLink: https://github.com/vvb2060/MagiskDetector
+  sourceStatus: AO
+  developingPurpose: M
+  latestVersion: v3.0
+  releaseDate: = 20220809
+  image:
+    CN: magiskDetectorCN.jpg
+- name: Momo
+  alias:
+    CN: 陌陌
+  packageName: io.github.vvb2060.mahoshojo
+  developingPurpose: E
+  latestVersion: v4.4.1
+  releaseDate: < 20230107
+  detectionRemark:
+    UK: 'Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment. '
+    CN: 请不要为了得到一张笑脸而欺骗该检测软件，因为欺骗某一个检测软件并不能从本质上解决环境问题。
+  image:
+    CN: momoCN.jpg
+- name: Money2India
+  packageName: com.icicibank.m2i
+  officialLink: https://play.google.com/store/apps/details?id=com.icicibank.m2i
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v1.0.73
+  releaseDate: = 20241222
+- name: NSDL Jiffy
+  packageName: com.nsdlpb.jiffy
+  officialLink: https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v3.0.6
+  releaseDate: = 20250207
+  detectionRemark:
+    UK: 'This can be the most challenging one among all the detectors. '
+    CN: 这应该是目前最难以绕过的检测。
+- name: Native Root Detector
+  alias:
+    UN:
+    - Native Detector
+    - Native Check
+  packageName: com.reveny.nativecheck
+  officialLink:
+  - https://github.com/reveny/Android-Native-Root-Detector
+  - https://t.me/rootdetector
+  sourceStatus: O
+  developingPurpose: E
+  latestVersion: v6.7.2 (672)
+  releaseDate: = 20250311
+  detectionRemark:
+    UK: 'After the environment changes or an update of this detector is received, please be sure to completely uninstall the
+      installed version and install it directly using the official original APK file (instead of the one extracted from the
+      devices where this detector is installed or a backup). For the first time, please go to the settings page to enable
+      experimental detection and telemetry, completely terminate the application, and open it again to show a proper detection
+      result. '
+    CN: 在环境更改后或该检测工具有更新时，请务必在将已安装版本卸载干净后直接使用官方的原始安装包（而不是从已安装该检测软件的设备上或备份中提取的安装包）安装。首次使用时请前往设置页面启用实验性检测和遥测，随后彻底关闭该应用，再次打开该应用进行检测。
+- name: Native Test
+  alias:
+    UN:
+    - Holmes
+    CN:
+    - 牛头
+    - 牛头人
+    - 牛头测试
+  packageName:
+  - me.garfieldhan.holmes
+  - icu.nullptr.nativetest
+  - com.android.nativetest
+  officialLink: https://t.me/app_process64
+  sourceStatus: CS
+  developingPurpose: E
+  latestVersion: v30
+  releaseDate: = 20240418
+  detectionRemark:
+    UK: 'Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of
+      Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook),
+      and require network access (recent versions of Holmes). '
+    CN: 此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious
+      Hook）和需要联网权限（Holmes 最近的几个版本）。
+- name: Play Integrity API Checker
+  packageName: gr.nikolasspyr.integritycheck
+  officialLink:
+  - https://github.com/1nikolas/play-integrity-checker-app
+  - https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck
+  sourceStatus: O
+  developingPurpose: P
+  latestVersion: v1.2
+  releaseDate: = 20231203
+- name: 邮储银行
+  alias:
+    UN:
+    - Postal Savings Bank of China
+    - PSBC
+    CN: 中国邮储银行
+  packageName: com.yitong.mbank.psbc
+  officialLink: https://phone.psbc.com
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v10.2.0
+  releaseDate: = 20250303
+- name: Ruru
+  packageName: com.byxiaorun.detector
+  officialLink: https://github.com/byxiaorun/Ruru
+  sourceStatus: O
+  developingPurpose: E
+  latestVersion: v1.1.1 (15)
+  releaseDate: = 20240418
+- name: Securify
+  packageName: io.github.rabehx.securify
+  officialLink: https://github.com/RabehX/Securify
+  sourceStatus: C
+  developingPurpose: E
+  latestVersion: v1.3.0
+  releaseDate: = 20240728
+  image:
+    UN: securify.png
+- name: Simple Play Integrity Checker
+  alias:
+    UN: SPIC
+  packageName: com.henrikherzig.playintegritychecker
+  developingPurpose: P
+  latestVersion: v1.4.0
+  releaseDate: < 20241110
+- name: Xposed Checker
+  packageName: ml.w568w.checkxposed
+  officialLink: https://github.com/w568w/XposedChecker
+  sourceStatus: O
+  developingPurpose: E
+  latestVersion: v7.1 (9)
+  releaseDate: < 20220203
+  image:
+    CN: xposedCheckerCN.png
+- name: Xposed Detector
+  alias:
+    CN: Xposed 检测应用
+  packageName: io.github.vvb2060.xposeddetector
+  officialLink: https://github.com/vvb2060/XposedDetector
+  sourceStatus: AO
+  developingPurpose: E
+  latestVersion: v2.2 (5)
+  releaseDate: = 20210327
+  image:
+    CN: xposedDetectorCN.png
+- name: Yet Another SafetyNet Attestation Checker
+  alias:
+    UN: YASNAC
+  packageName: rikka.safetynetchecker
+  officialLink: https://github.com/RikkaW/YASNAC
+  sourceStatus: AO
+  developingPurpose: P
+  latestVersion: v1.1.5.r65.15110ef310 (65)
+  releaseDate: = 20220404

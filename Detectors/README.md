@@ -11,7 +11,7 @@
 | Magisk Detector | ``io.github.vvb2060.magiskdetector`` | https://github.com/vvb2060/MagiskDetector | Archieved&Open-source | Magisk Detection | ``v3.0`` |  August 9th, 2022 |
 | Momo | ``io.github.vvb2060.mahoshojo`` | | | Environment Detection | ``v4.4.1`` | Before January 7th, 2023 |
 | Money2India | ``com.icicibank.m2i`` | https://play.google.com/store/apps/details?id=com.icicibank.m2i | Android Desktop Application | Android Desktop Application | ``v1.0.73`` |  December 22nd, 2024 |
-| NSDL Jiffy | | https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy | Android Desktop Application | Android Desktop Application | |  February 7th, 2025 |
+| NSDL Jiffy | ``com.nsdlpb.jiffy`` | https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy | Android Desktop Application | Android Desktop Application | ``v3.0.6`` |  February 7th, 2025 |
 | Native Root Detector | ``com.reveny.nativecheck`` | [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector) | Open-source | Environment Detection | ``v6.7.2 (672)`` |  March 11th, 2025 |
 | Native Test | ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest`` | https://t.me/app_process64 | Closed-source&For Sale | Environment Detection | ``v30`` |  April 18th, 2024 |
 | Play Integrity API Checker | ``gr.nikolasspyr.integritycheck`` | [https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app); [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) | Open-source | Play Integrity Check | ``v1.2`` |  December 3rd, 2023 |
@@ -38,7 +38,7 @@
 | Magisk Detector | ``io.github.vvb2060.magiskdetector`` | https://github.com/vvb2060/MagiskDetector | 已存档&开源 | 面具检测 | ``v3.0`` |  2022 年 8 月 9 日 |
 | Momo | ``io.github.vvb2060.mahoshojo`` | | | 环境检测 | ``v4.4.1`` | 早于 2023 年 1 月 7 日 |
 | Money2India | ``com.icicibank.m2i`` | https://play.google.com/store/apps/details?id=com.icicibank.m2i | 安卓桌面应用 | 安卓桌面应用 | ``v1.0.73`` |  2024 年 12 月 22 日 |
-| NSDL Jiffy | | https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy | 安卓桌面应用 | 安卓桌面应用 | |  2025 年 2 月 7 日 |
+| NSDL Jiffy | ``com.nsdlpb.jiffy`` | https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy | 安卓桌面应用 | 安卓桌面应用 | ``v3.0.6`` |  2025 年 2 月 7 日 |
 | Native Root Detector | ``com.reveny.nativecheck`` | [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector) | 开源 | 环境检测 | ``v6.7.2 (672)`` |  2025 年 3 月 11 日 |
 | Native Test | ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest`` | https://t.me/app_process64 | 闭源&销售中 | 环境检测 | ``v30`` |  2024 年 4 月 18 日 |
 | Play Integrity API Checker | ``gr.nikolasspyr.integritycheck`` | [https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app); [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) | 开源 | Play 完整性检测 | ``v1.2`` |  2023 年 12 月 3 日 |

@@ -1,7 +1,17 @@
 import os
 from sys import argv, exit
-from json import load
 from datetime import datetime
+from json import load as loadJson
+try:
+	from yaml import dump as dumpYaml
+except:
+	print("Cannot import ``dump`` from ``yaml``. Please try to install ``yaml`` via ``python -m pip install yaml`` or ``sudo apt-get install python3-yaml``. ")
+	print("Please press the enter key to exit. ")
+	try:
+		input()
+	except:
+		print()
+	exit(-1)
 try:
 	os.chdir(os.path.abspath(os.path.dirname(__file__)))
 except:
@@ -18,7 +28,7 @@ class Detectors:
 	def loadJson(self:object, jsonFilePath:str, encoding:str = "utf-8") -> bool:
 		try:
 			with open(jsonFilePath, "r", encoding = encoding) as f:
-				self.__data = load(f)["Detectors"]
+				self.__data = loadJson(f)["Detectors"]
 			self.__flag = True
 			return True
 		except BaseException as e:
@@ -26,7 +36,7 @@ class Detectors:
 			return False
 	def checkDetectorFolderPath(self:object, detectorFolderPath:str = ".") -> int:
 		if self.__flag and isinstance(detectorFolderPath, str) and os.path.isdir(detectorFolderPath):
-			issueCnt, fileNames = 0, [obj for obj in os.listdir(detectorFolderPath) if os.path.splitext(obj)[1].lower() not in (".json", ".md", ".py")]
+			issueCnt, fileNames = 0, [obj for obj in os.listdir(detectorFolderPath) if os.path.splitext(obj)[0] != "README" and os.path.splitext(obj)[1] != ".py"]
 			for obj in self.__data:
 				if "name" in obj and "latestVersion" in obj:
 					fileNameA = "{0}_{1}.apk".format(obj["name"], obj["latestVersion"])
@@ -54,8 +64,6 @@ class Detectors:
 			return issueCnt
 		else:
 			return -1
-	def __getAlias(self:object, subObj:str|list|dict, language:str) -> list:
-		return []
 	def __getSourceStatus(self:object, codes:str, language:str) -> list:
 		if isinstance(codes, str) and isinstance(language, str):
 			statements = []
@@ -127,6 +135,8 @@ class Detectors:
 			return markdown
 		else:
 			return ""
+	def __convertToYml(self:object) -> str:
+		return dumpYaml(self.__data, allow_unicode = True, sort_keys = False, default_flow_style = False, indent = 2, width = 120) if self.__flag else ""
 	def __handleFolder(self:object, fd:str) -> bool:
 		try:
 			folder = str(fd)
@@ -155,7 +165,7 @@ class Detectors:
 						print("Successfully wrote data in the format of markdown to \"{0}\". ".format(markdownFilePath))
 						return True
 					except BaseException as e:
-						print("Cannot write data in the format of markdown to \"{0}\". Details are as follows. \t{1}".format(markdownFilePath, e))
+						print("Cannot write data in the format of markdown to \"{0}\". Details are as follows. \n\t{1}".format(markdownFilePath, e))
 				else:
 					print("Cannot write data in the format of markdown to \"{0}\" since the parent folder was not created successfully. ".format(markdownFilePath))
 				return False
@@ -163,15 +173,38 @@ class Detectors:
 				return markdown
 		else:
 			return False
+	def toYmlFile(self:object, ymlFilePath:str = None, encoding:str = "utf-8") -> str|bool:
+		if self.__flag:
+			yml = self.__convertToYml()
+			if isinstance(ymlFilePath, str):
+				if self.__handleFolder(os.path.split(ymlFilePath)[0]):
+					try:
+						with open(ymlFilePath, "w", encoding = encoding) as f:
+							f.write(yml)
+						print("Successfully wrote data in the format of yml to \"{0}\". ".format(ymlFilePath))
+						return True
+					except BaseException as e:
+						print("Cannot write data in the format of yml to \"{0}\". Details are as follows. \n\t{1}".format(ymlFilePath, e))
+				else:
+					print("Cannot write data in the format of yml to \"{0}\" since the parent folder was not created successfully. ".format(ymlFilePath))
+				return False
+			else:
+				return yml
+		else:
+			return False
 
 
 def main() -> int:
-	jsonFilePath, detectorFolderPath, markdownFilePath = "README.json", ".", "README.md"
+	jsonFilePath, detectorFolderPath, markdownFilePath, ymlFilePath = "README.json", ".", "README.md", "README.yml"
 	detectors = Detectors()
 	bRet = detectors.loadJson(jsonFilePath)
 	detectors.checkDetectorFolderPath(detectorFolderPath = detectorFolderPath)
-	bRet = bRet and detectors.toMarkdownFile(markdownFilePath, languages = ["UK", "\n---\n\n", "CN"])
-	exitCode = EXIT_SUCCESS if bRet else EXIT_FAILURE
+	if bRet:
+		booleans = [																	\
+			detectors.toMarkdownFile(markdownFilePath, languages = ["UK", "\n---\n\n", "CN"]), 	\
+			detectors.toYmlFile(ymlFilePath)												\
+		]
+	exitCode = EXIT_SUCCESS if bRet and all(booleans) else EXIT_FAILURE
 	try:
 		input("Please press the enter key to exit ({0}). ".format(exitCode))
 	except:

@@ -145,13 +145,15 @@
 		}, 
 		{
 			"name":"NSDL Jiffy", 
+			"packageName":"com.nsdlpb.jiffy", 
 			"officialLink":"https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy", 
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
+			"latestVersion":"v3.0.6", 
 			"releaseDate":"= 20250207", 
 			"detectionRemark":{
 				"UK":"This can be the most challenging one among all the detectors. ", 
-				"CN":"这应该是目前最难”过“的。"
+				"CN":"这应该是目前最难以绕过的检测。"
 			}
 		}, 
 		{
