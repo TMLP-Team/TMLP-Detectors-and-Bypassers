@@ -173,6 +173,9 @@
 			"detectionRemark":{
 				"UK":"After the environment changes or an update of this detector is received, please be sure to completely uninstall the installed version and install it directly using the official original APK file (instead of the one extracted from the devices where this detector is installed or a backup). For the first time, please go to the settings page to enable experimental detection and telemetry, completely terminate the application, and open it again to show a proper detection result. ", 
 				"CN":"在环境更改后或该检测工具有更新时，请务必在将已安装版本卸载干净后直接使用官方的原始安装包（而不是从已安装该检测软件的设备上或备份中提取的安装包）安装。首次使用时请前往设置页面启用实验性检测和遥测，随后彻底关闭该应用，再次打开该应用进行检测。"
+			}, 
+			"image":{
+				"CN":"nativeRootDetectorCN.jpg"
 			}
 		}, 
 		{
@@ -185,7 +188,7 @@
 			"officialLink":"https://t.me/app_process64", 
 			"sourceStatus":"CS", 
 			"developingPurpose":"E", 
-			"latestVersion":"v30", 
+			"latestVersion":"v30 (Pure Minotaur)", 
 			"releaseDate":"= 20240418", 
 			"detectionRemark":{
 				"UK":"Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook), and require network access (recent versions of Holmes). ", 
@@ -247,6 +250,15 @@
 			"developingPurpose":"P", 
 			"latestVersion":"v1.4.0", 
 			"releaseDate":"< 20241110"
+		}, 
+		{
+			"name":"Uber Driver", 
+			"packageName":"com.ubercab.driver", 
+			"officialLink":"https://play.google.com/store/apps/details?id=com.ubercab.driver", 
+			"sourceStatus":"D", 
+			"developingPurpose":"D", 
+			"latestVersion":"v4.522.10000 (224025)", 
+			"releaseDate":"= 20250414"
 		}, 
 		{
 			"name":"Xposed Checker", 

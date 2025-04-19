@@ -13,12 +13,13 @@
 | Money2India | ``com.icicibank.m2i`` | https://play.google.com/store/apps/details?id=com.icicibank.m2i | Android Desktop Application | Android Desktop Application | ``v1.0.73`` |  December 22nd, 2024 |
 | NSDL Jiffy | ``com.nsdlpb.jiffy`` | https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy | Android Desktop Application | Android Desktop Application | ``v3.0.6`` |  February 7th, 2025 |
 | Native Root Detector | ``com.reveny.nativecheck`` | [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector) | Open-source | Environment Detection | ``v6.7.2 (672)`` |  March 11th, 2025 |
-| Native Test | ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest`` | https://t.me/app_process64 | Closed-source&For Sale | Environment Detection | ``v30`` |  April 18th, 2024 |
+| Native Test | ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest`` | https://t.me/app_process64 | Closed-source&For Sale | Environment Detection | ``v30 (Pure Minotaur)`` |  April 18th, 2024 |
 | Play Integrity API Checker | ``gr.nikolasspyr.integritycheck`` | [https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app); [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) | Open-source | Play Integrity Check | ``v1.2`` |  December 3rd, 2023 |
 | 邮储银行 | ``com.yitong.mbank.psbc`` | https://phone.psbc.com | Android Desktop Application | Android Desktop Application | ``v10.2.0`` |  March 3rd, 2025 |
 | Ruru | ``com.byxiaorun.detector`` | https://github.com/byxiaorun/Ruru | Open-source | Environment Detection | ``v1.1.1 (15)`` |  April 18th, 2024 |
 | Securify | ``io.github.rabehx.securify`` | https://github.com/RabehX/Securify | Closed-source | Environment Detection | ``v1.3.0`` |  July 28th, 2024 |
 | Simple Play Integrity Checker | ``com.henrikherzig.playintegritychecker`` | | | Play Integrity Check | ``v1.4.0`` | Before November 10th, 2024 |
+| Uber Driver | ``com.ubercab.driver`` | https://play.google.com/store/apps/details?id=com.ubercab.driver | Android Desktop Application | Android Desktop Application | ``v4.522.10000 (224025)`` |  April 14th, 2025 |
 | Xposed Checker | ``ml.w568w.checkxposed`` | https://github.com/w568w/XposedChecker | Open-source | Environment Detection | ``v7.1 (9)`` | Before February 3rd, 2022 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | https://github.com/vvb2060/XposedDetector | Archieved&Open-source | Environment Detection | ``v2.2 (5)`` |  March 27th, 2021 |
 | Yet Another SafetyNet Attestation Checker | ``rikka.safetynetchecker`` | https://github.com/RikkaW/YASNAC | Archieved&Open-source | Play Integrity Check | ``v1.1.5.r65.15110ef310 (65)`` |  April 4th, 2022 |
@@ -40,12 +41,13 @@
 | Money2India | ``com.icicibank.m2i`` | https://play.google.com/store/apps/details?id=com.icicibank.m2i | 安卓桌面应用 | 安卓桌面应用 | ``v1.0.73`` |  2024 年 12 月 22 日 |
 | NSDL Jiffy | ``com.nsdlpb.jiffy`` | https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy | 安卓桌面应用 | 安卓桌面应用 | ``v3.0.6`` |  2025 年 2 月 7 日 |
 | Native Root Detector | ``com.reveny.nativecheck`` | [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector) | 开源 | 环境检测 | ``v6.7.2 (672)`` |  2025 年 3 月 11 日 |
-| Native Test | ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest`` | https://t.me/app_process64 | 闭源&销售中 | 环境检测 | ``v30`` |  2024 年 4 月 18 日 |
+| Native Test | ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest`` | https://t.me/app_process64 | 闭源&销售中 | 环境检测 | ``v30 (Pure Minotaur)`` |  2024 年 4 月 18 日 |
 | Play Integrity API Checker | ``gr.nikolasspyr.integritycheck`` | [https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app); [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck) | 开源 | Play 完整性检测 | ``v1.2`` |  2023 年 12 月 3 日 |
 | 邮储银行 | ``com.yitong.mbank.psbc`` | https://phone.psbc.com | 安卓桌面应用 | 安卓桌面应用 | ``v10.2.0`` |  2025 年 3 月 3 日 |
 | Ruru | ``com.byxiaorun.detector`` | https://github.com/byxiaorun/Ruru | 开源 | 环境检测 | ``v1.1.1 (15)`` |  2024 年 4 月 18 日 |
 | Securify | ``io.github.rabehx.securify`` | https://github.com/RabehX/Securify | 闭源 | 环境检测 | ``v1.3.0`` |  2024 年 7 月 28 日 |
 | Simple Play Integrity Checker | ``com.henrikherzig.playintegritychecker`` | | | Play 完整性检测 | ``v1.4.0`` | 早于 2024 年 11 月 10 日 |
+| Uber Driver | ``com.ubercab.driver`` | https://play.google.com/store/apps/details?id=com.ubercab.driver | 安卓桌面应用 | 安卓桌面应用 | ``v4.522.10000 (224025)`` |  2025 年 4 月 14 日 |
 | Xposed Checker | ``ml.w568w.checkxposed`` | https://github.com/w568w/XposedChecker | 开源 | 环境检测 | ``v7.1 (9)`` | 早于 2022 年 2 月 3 日 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | https://github.com/vvb2060/XposedDetector | 已存档&开源 | 环境检测 | ``v2.2 (5)`` |  2021 年 3 月 27 日 |
 | Yet Another SafetyNet Attestation Checker | ``rikka.safetynetchecker`` | https://github.com/RikkaW/YASNAC | 已存档&开源 | Play 完整性检测 | ``v1.1.5.r65.15110ef310 (65)`` |  2022 年 4 月 4 日 |
