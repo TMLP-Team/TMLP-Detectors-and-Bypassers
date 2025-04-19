@@ -166,7 +166,7 @@ class Detectors:
 
 
 def main() -> int:
-	jsonFilePath, detectorFolderPath, markdownFilePath = "README.json", ".", "toBeReviewed.md"
+	jsonFilePath, detectorFolderPath, markdownFilePath = "README.json", ".", "README.md"
 	detectors = Detectors()
 	bRet = detectors.loadJson(jsonFilePath)
 	detectors.checkDetectorFolderPath(detectorFolderPath = detectorFolderPath)

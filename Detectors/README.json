@@ -60,19 +60,6 @@
 			}
 		}, 
 		{
-			"name":"Holmes", 
-			"packageName":"me.garfieldhan.holmes", 
-			"officialLink":"https://t.me/app_process64", 
-			"sourceStatus":"CS", 
-			"developingPurpose":"E", 
-			"latestVersion":"v1.6.a00fa5c (161)", 
-			"releaseDate":"= 20250315", 
-			"detectionRemark":{
-				"UK":"This detector requires networks and the official server opened. Additionally, crashing can mean failures of bypassing. ", 
-				"CN":"本检测工具需要联网且官方服务器出于开通状态。另外，应用直接崩溃闪退也可能意味着过检失败。"
-			}
-		}, 
-		{
 			"name":"Hunter", 
 			"packageName":"com.zhenxi.hunter", 
 			"developingPurpose":"E", 
@@ -189,13 +176,19 @@
 		{
 			"name":"Native Test", 
 			"alias":{
+				"UN":["Holmes"], 
 				"CN":["牛头", "牛头人", "牛头测试"]
 			}, 
-			"packageName":"icu.nullptr.nativetest", 
+			"packageName":["me.garfieldhan.holmes", "icu.nullptr.nativetest", "com.android.nativetest"], 
+			"officialLink":"https://t.me/app_process64", 
 			"sourceStatus":"CS", 
 			"developingPurpose":"E", 
-			"latestVersion":"v30-1b29f91", 
-			"releaseDate":"= 20241115"
+			"latestVersion":"v30", 
+			"releaseDate":"= 20240418", 
+			"detectionRemark":{
+				"UK":"Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook), and require network access (recent versions of Holmes). ", 
+				"CN":"此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。"
+			}
 		}, 
 		{
 			"name":"Play Integrity API Checker", 
