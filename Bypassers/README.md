@@ -30,7 +30,7 @@
     - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
     - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
     - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the current date, the date of the 1st day of the current month, or the date of the first day of the second month of the last season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250201``
+    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
   - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
@@ -63,7 +63,7 @@
     - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
     - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
     - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the current date, the date of the 1st day of the current month, or the date of the first day of the second month of the last season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250201``
+    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
   - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
@@ -99,7 +99,7 @@
       - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
       - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
       - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-      - Use the MT Manager to write the current date, the date of the 1st day of the current month, or the date of the first day of the second month of the last season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250201``
+    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
     - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
 
 ### Special Cases
@@ -231,7 +231,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
     - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 将当天的日期、当月的 1 号的日期或上一个季度的第二个月份的 1 号按照 ``20250201`` 的格式写进去
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
   - 如果设备不存在 TEE 损坏的情况，可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
@@ -264,7 +264,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
     - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 将当天的日期、当月的 1 号的日期或上一个季度的第二个月份的 1 号按照 ``20250201`` 的格式写进去
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
   - 如果设备不存在 TEE 损坏的情况，可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
@@ -300,7 +300,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
       - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-      - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 将当天的日期、当月的 1 号的日期或上一个季度的第二个月份的 1 号按照 ``20250201`` 的格式写进去
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
     - 如果设备不存在 TEE 损坏的情况，可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
 
 ### 特殊情况
