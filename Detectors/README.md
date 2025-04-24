@@ -47,7 +47,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v6.18 (618)``
 - **Release Date**:  April 23rd, 2025
-- **Detection Remark**: Please wait for the complete detection and display. 
+- **Detection Remark**: Please wait about 10 seconds to complete the detection and display. 
 
 ### IIQE 一考通
 
@@ -111,7 +111,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v6.8.0 (680)``
 - **Release Date**:  March 24th, 2025
-- **Detection Remark**: After the environment changes or an update of this detector is received, please be sure to completely uninstall the installed version and install it directly using the official original APK file (instead of the one extracted from the devices where this detector is installed or a backup). For the first time, please go to the settings page to enable experimental detection and telemetry, completely terminate the application, and open it again to show a proper detection result. 
+- **Detection Remark**: For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. 
 
 ### Native Test
 
@@ -238,6 +238,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v1.0.9``
 - **发行日期**：早于 2025 年 1 月 8 日
+- ![checkerCN.jpg](checkerCN.jpg)
 
 ### DRM Info
 
@@ -254,7 +255,8 @@
 - **开发用途**：环境检测
 - **最新版本**：``v6.18 (618)``
 - **发行日期**： 2025 年 4 月 23 日
-- **检测备注**：请等待应用完成检测和显示。
+- **检测备注**：请等待 10 秒左右以完成检测和显示。
+- ![hunterCN.jpg](hunterCN.jpg)
 
 ### IIQE 一考通
 
@@ -273,6 +275,7 @@
 - **开发用途**：密钥认证
 - **最新版本**：``v1.8.4``
 - **发行日期**： 2025 年 2 月 6 日
+- ![keyAttestationCN.jpg](keyAttestationCN.jpg)
 
 ### Magisk Detector
 
@@ -282,6 +285,7 @@
 - **开发用途**：面具检测
 - **最新版本**：``v3.0``
 - **发行日期**： 2022 年 8 月 9 日
+- ![magiskDetectorCN.jpg](magiskDetectorCN.jpg)
 
 ### Momo
 
@@ -290,6 +294,7 @@
 - **最新版本**：``v4.4.1``
 - **发行日期**：早于 2023 年 1 月 7 日
 - **检测备注**：请不要为了得到一张笑脸而欺骗该检测软件，因为欺骗某一个检测软件并不能从本质上解决环境问题。
+- ![momoCN.jpg](momoCN.jpg)
 
 ### Money2India
 
@@ -318,7 +323,8 @@
 - **开发用途**：环境检测
 - **最新版本**：``v6.8.0 (680)``
 - **发行日期**： 2025 年 3 月 24 日
-- **检测备注**：在环境更改后或该检测工具有更新时，请务必在将已安装版本卸载干净后直接使用官方的原始安装包（而不是从已安装该检测软件的设备上或备份中提取的安装包）安装。首次使用时请前往设置页面启用实验性检测和遥测，随后彻底关闭该应用，再次打开该应用进行检测。
+- **检测备注**：首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。
+- ![nativeRootDetectorCN.jpg](nativeRootDetectorCN.jpg)
 
 ### Native Test
 
@@ -390,6 +396,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v7.1 (9)``
 - **发行日期**：早于 2022 年 2 月 3 日
+- ![xposedCheckerCN.png](xposedCheckerCN.png)
 
 ### Xposed Detector
 
@@ -399,6 +406,7 @@
 - **开发用途**：环境检测
 - **最新版本**：``v2.2 (5)``
 - **发行日期**： 2021 年 3 月 27 日
+- ![xposedDetectorCN.png](xposedDetectorCN.png)
 
 ### Yet Another SafetyNet Attestation Checker
 

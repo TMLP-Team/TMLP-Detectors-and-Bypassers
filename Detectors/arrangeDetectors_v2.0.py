@@ -154,7 +154,7 @@ class Detectors:
 					txt += "- **Latest Version**: ``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
 					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "UK") + "\n" if "releaseDate" in detector else ""
 					txt += "- **Detection Remark**: " + detector["detectionRemark"]["UK"] + "\n" if "detectionRemark" in detector and "UK" in detector["detectionRemark"] else ""
-					txt += "- ![{0}]({0})\n".format(detector["image"]["UK"]) if "image" in detector["image"] and "UK" in detector["image"] else ""
+					txt += "- ![{0}]({0})\n".format(detector["image"]["UK"]) if "image" in detector and "UK" in detector["image"] else ""
 					txt += "\n"
 				return txt
 			elif "CN" == language:
@@ -171,10 +171,10 @@ class Detectors:
 					txt += "- **开发用途**：" + self.__getDevelopingPurpose(detector["developingPurpose"], "CN") + "\n" if "developingPurpose" in detector else ""
 					txt += "- **最新版本**：``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
 					txt += "- **发行日期**：" + self.__getReleaseDate(detector["releaseDate"], "CN") + "\n" if "releaseDate" in detector else ""
-					txt += (																						\
-						"- **检测备注**：" + detector["detectionRemark"].get("CN", detector["detectionRemark"]["UK"]) + "\n"	\
+					txt += (																															\
+						"- **检测备注**：" + (detector["detectionRemark"]["CN"] if "CN" in detector["detectionRemark"] else detector["detectionRemark"]["UK"]) + "\n"		\
 					) if "detectionRemark" in detector and ("CN" in detector["detectionRemark"] or "UK" in detector["detectionRemark"]) else ""
-					txt += "- ![{0}]({0})\n".format(detector["image"].get("CN", detector["image"]["UK"])) if "image" in detector["image"] and ("CN" in detector["image"] or "UK" in detector["image"]) else ""
+					txt += "- ![{0}]({0})\n".format(detector["image"]["CN"] if "CN" in detector["image"] else detector["image"]["UK"]) if "image" in detector and ("CN" in detector["image"] or "UK" in detector["image"]) else ""
 					txt += "\n"
 				return txt
 			else:
