@@ -24,6 +24,7 @@
 - **Latest Version**: ``v2.4``
 - **Release Date**:  August 12th, 2022
 - **Detection Remark**: The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). 
+- ![applistDetectorUN.jpg](applistDetectorUN.jpg)
 
 ### Checker
 
@@ -51,6 +52,7 @@
 
 ### IIQE 一考通
 
+- **Alias**: IIQE Yikaotong
 - **Package Name**: ``com.prudential.iiqe``
 - **Official Link**: https://iiqe-cms.prudential.com.hk/iiqe/
 - **Source Status**: Android Desktop Application
@@ -82,7 +84,7 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v4.4.1``
 - **Release Date**: Before January 7th, 2023
-- **Detection Remark**: Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment. 
+- **Detection Remark**: Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment issues. 
 
 ### Money2India
 
@@ -105,6 +107,7 @@
 
 ### Native Root Detector
 
+- **Alias**: Native Detector; Native Check
 - **Package Name**: ``com.reveny.nativecheck``
 - **Official Links**: [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Open-source
@@ -115,6 +118,7 @@
 
 ### Native Test
 
+- **Alias**: Holmes
 - **Package Names**: ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest``
 - **Official Link**: https://t.me/app_process64
 - **Source Status**: Closed-source & For Sale
@@ -134,6 +138,7 @@
 
 ### 邮储银行
 
+- **Alias**: Postal Savings Bank of China; PSBC
 - **Package Name**: ``com.yitong.mbank.psbc``
 - **Official Link**: https://phone.psbc.com
 - **Source Status**: Android Desktop Application
@@ -158,9 +163,11 @@
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.3.0``
 - **Release Date**:  July 28th, 2024
+- ![securifyUN.png](securifyUN.png)
 
 ### Simple Play Integrity Checker
 
+- **Alias**: SPIC
 - **Package Name**: ``com.henrikherzig.playintegritychecker``
 - **Developing Purpose**: Play Integrity Check
 - **Latest Version**: ``v1.4.0``
@@ -195,6 +202,7 @@
 
 ### Yet Another SafetyNet Attestation Checker
 
+- **Alias**: YASNAC
 - **Package Name**: ``rikka.safetynetchecker``
 - **Official Link**: https://github.com/RikkaW/YASNAC
 - **Source Status**: Archieved & Open-source
@@ -224,6 +232,7 @@
 
 ### Applist Detector
 
+- **应用别称**：应用列表检测; 检测应用列表
 - **应用包名**：``icu.nullptr.applistdetector``；``com.tsng.applistdetector``
 - **官方链接**：[https://github.com/Dr-TSNG/ApplistDetector](https://github.com/Dr-TSNG/ApplistDetector)
 - **开源状态**：开源
@@ -231,9 +240,11 @@
 - **最新版本**：``v2.4``
 - **发行日期**： 2022 年 8 月 12 日
 - **检测备注**：包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。
+- ![applistDetectorUN.jpg](applistDetectorUN.jpg)
 
 ### Checker
 
+- **应用别称**：校验者
 - **应用包名**：``org.akanework.checker``
 - **开发用途**：环境检测
 - **最新版本**：``v1.0.9``
@@ -269,6 +280,7 @@
 
 ### Key Attestation
 
+- **应用别称**：密钥认证
 - **应用包名**：``io.github.vvb2060.keyattestation``
 - **官方链接**：[https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)；[https://t.me/magiskalpha](https://t.me/magiskalpha)；[https://t.me/playintegrityfix](https://t.me/playintegrityfix)；[https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation)
 - **开源状态**：开源
@@ -279,6 +291,7 @@
 
 ### Magisk Detector
 
+- **应用别称**：Magisk 检测应用
 - **应用包名**：``io.github.vvb2060.magiskdetector``
 - **官方链接**：[https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector)
 - **开源状态**：已存档 & 开源
@@ -289,6 +302,7 @@
 
 ### Momo
 
+- **应用别称**：陌陌
 - **应用包名**：``io.github.vvb2060.mahoshojo``
 - **开发用途**：环境检测
 - **最新版本**：``v4.4.1``
@@ -317,6 +331,7 @@
 
 ### Native Root Detector
 
+- **应用别称**：Native Detector; Native Check
 - **应用包名**：``com.reveny.nativecheck``
 - **官方链接**：[https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)；[https://t.me/rootdetector](https://t.me/rootdetector)
 - **开源状态**：开源
@@ -328,6 +343,7 @@
 
 ### Native Test
 
+- **应用别称**：Holmes; 牛头; 牛头人; 牛头测试; 福尔摩斯
 - **应用包名**：``me.garfieldhan.holmes``；``icu.nullptr.nativetest``；``com.android.nativetest``
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
 - **开源状态**：闭源 & 销售中
@@ -347,6 +363,7 @@
 
 ### 邮储银行
 
+- **应用别称**：中国邮储银行
 - **应用包名**：``com.yitong.mbank.psbc``
 - **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
 - **开源状态**：安卓桌面应用
@@ -371,9 +388,11 @@
 - **开发用途**：环境检测
 - **最新版本**：``v1.3.0``
 - **发行日期**： 2024 年 7 月 28 日
+- ![securifyUN.png](securifyUN.png)
 
 ### Simple Play Integrity Checker
 
+- **应用别称**：SPIC
 - **应用包名**：``com.henrikherzig.playintegritychecker``
 - **开发用途**：Play 完整性检测
 - **最新版本**：``v1.4.0``
@@ -400,6 +419,7 @@
 
 ### Xposed Detector
 
+- **应用别称**：Xposed 检测应用
 - **应用包名**：``io.github.vvb2060.xposeddetector``
 - **官方链接**：[https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector)
 - **开源状态**：已存档 & 开源
@@ -410,6 +430,7 @@
 
 ### Yet Another SafetyNet Attestation Checker
 
+- **应用别称**：YASNAC
 - **应用包名**：``rikka.safetynetchecker``
 - **官方链接**：[https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC)
 - **开源状态**：已存档 & 开源

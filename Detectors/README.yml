@@ -57,7 +57,7 @@
     CN: hunterCN.jpg
 - name: IIQE 一考通
   alias:
-    UN: IIQE Yikaotong
+    UK: IIQE Yikaotong
   packageName: com.prudential.iiqe
   officialLink: https://iiqe-cms.prudential.com.hk/iiqe/
   sourceStatus: D
@@ -98,7 +98,8 @@
   latestVersion: v4.4.1
   releaseDate: < 20230107
   detectionRemark:
-    UK: 'Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment. '
+    UK: 'Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment
+      issues. '
     CN: 请不要为了得到一张笑脸而欺骗该检测软件，因为欺骗某一个检测软件并不能从本质上解决环境问题。
   image:
     CN: momoCN.jpg
@@ -175,7 +176,7 @@
   releaseDate: = 20231203
 - name: 邮储银行
   alias:
-    UN:
+    UK:
     - Postal Savings Bank of China
     - PSBC
     CN: 中国邮储银行
@@ -200,7 +201,7 @@
   latestVersion: v1.3.0
   releaseDate: = 20240728
   image:
-    UN: securify.png
+    UN: securifyUN.png
 - name: Simple Play Integrity Checker
   alias:
     UN: SPIC
