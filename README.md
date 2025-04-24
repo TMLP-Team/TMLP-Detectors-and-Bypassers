@@ -6,9 +6,11 @@ We do not own any of the implementers, detectors, or bypassers here. Thus, pleas
 
 We only keep the latest versions for each implementer, detector, and bypasser here, keeping them as up-to-date as possible. Any pull request (PR) is welcome! 
 
+We call on the open source community to maintain internal unity and harmony. The open source community should not harm the interests of for-profit organizations, and for-profit organizations should not suppress the development of the open source community. 
+
 Please see [Implementers](./Implementers/README.md), [Detectors](./Detectors/README.md), and [Bypassers](./Bypassers/README.md) for details. 
 
-The last files are updated at 22:00 on April 22nd, 2025 (UTC+8). 
+The last update of this repository was updated at 22:30 on April 24th, 2025 (UTC+8). 
 
 ---
 
@@ -20,6 +22,8 @@ The last files are updated at 22:00 on April 22nd, 2025 (UTC+8).
 
 我们仅保留最新的部署、检测和过检工具，并尽可能保持实时更新。欢迎提交任何 Pull Request（PR）！
 
+我们呼吁开源社区保持内部团结与和谐，开源社区不应损害营利性机构的利益，营利性机构也不应抑制开源社区的发展。
+
 详情请查看 [Implementers](./Implementers/README.md)、[Detectors](./Detectors/README.md) 和 [Bypassers](./Bypassers/README.md)。
 
-最后更新时间：2025 年 4 月 22 日 22:00（中国标准时间）。
+本存储库最后一次更新时间为 2025 年 4 月 24 日 23:00（中国标准时间）。
