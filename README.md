@@ -10,7 +10,7 @@ We call on the open source community to maintain internal unity and harmony. The
 
 Please see [Implementers](./Implementers/README.md), [Detectors](./Detectors/README.md), and [Bypassers](./Bypassers/README.md) for details. 
 
-The last update of this repository was updated at 22:30 on April 24th, 2025 (UTC+8). 
+The last update of this repository was at 22:30 on April 24th, 2025 (UTC+8). 
 
 ---
 

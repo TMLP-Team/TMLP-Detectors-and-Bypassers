@@ -154,6 +154,7 @@ class Detectors:
 					txt += "- **Latest Version**: ``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
 					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "UK") + "\n" if "releaseDate" in detector else ""
 					txt += "- **Detection Remark**: " + detector["detectionRemark"]["UK"] + "\n" if "detectionRemark" in detector and "UK" in detector["detectionRemark"] else ""
+					txt += "- ![{0}]({0})\n".format(detector["image"]["UK"]) if "image" in detector["image"] and "UK" in detector["image"] else ""
 					txt += "\n"
 				return txt
 			elif "CN" == language:
@@ -173,6 +174,7 @@ class Detectors:
 					txt += (																						\
 						"- **检测备注**：" + detector["detectionRemark"].get("CN", detector["detectionRemark"]["UK"]) + "\n"	\
 					) if "detectionRemark" in detector and ("CN" in detector["detectionRemark"] or "UK" in detector["detectionRemark"]) else ""
+					txt += "- ![{0}]({0})\n".format(detector["image"].get("CN", detector["image"]["UK"])) if "image" in detector["image"] and ("CN" in detector["image"] or "UK" in detector["image"]) else ""
 					txt += "\n"
 				return txt
 			else:
