@@ -36,7 +36,7 @@ class Detectors:
 			return False
 	def checkDetectorFolderPath(self:object, detectorFolderPath:str = ".") -> int:
 		if self.__flag and isinstance(detectorFolderPath, str) and os.path.isdir(detectorFolderPath):
-			issueCnt, fileNames = 0, [obj for obj in os.listdir(detectorFolderPath) if os.path.splitext(obj)[0] != "README" and os.path.splitext(obj)[1] != ".py"]
+			issueCnt, fileNames = 0, [obj for obj in os.listdir(detectorFolderPath) if os.path.splitext(obj)[0] != "README" and os.path.splitext(obj)[0] != "TABLE" and os.path.splitext(obj)[1] != ".py"]
 			for obj in self.__data:
 				if "name" in obj and "latestVersion" in obj:
 					fileNameA = "{0}_{1}.apk".format(obj["name"], obj["latestVersion"])
@@ -115,24 +115,68 @@ class Detectors:
 			else:
 				print("The code \"{0}\" has no meanings in release date statements. ".format(code))
 		return ""
-	def __convertToMarkdown(self:object, language:str) -> str:
+	def __convertToMarkdownTable(self:object, language:str) -> str:
 		if self.__flag and isinstance(language, str):
 			if "UK" == language:
-				markdown = "| Name | Package Name | Official Link(s) | Source Status | Developing Purpose | Latest Version | Release Date |\n| - | - | - | - | - | - | - |\n"
+				markdown = "## Detectors\n\n| Name | Package Name(s) | Official Link(s) | Source Status | Developing Purpose | Latest Version | Release Date |\n| - | - | - | - | - | - | - |\n"
+				separator = "; "
 			elif "CN" == language:
-				markdown = "| 名称 | 应用包名 | 官方链接 | 开源状态 | 开发用途 | 最新版本 | 发行日期 |\n| - | - | - | - | - | - | - |\n"
+				markdown = "## 检测软件\n\n| 名称 | 应用包名 | 官方链接 | 开源状态 | 开发用途 | 最新版本 | 发行日期 |\n| - | - | - | - | - | - | - |\n"
+				separator = "；"
 			else:
 				return language
 			for detector in self.__data:
 				markdown += "| "
 				markdown += detector["name"] + " | " if "name" in detector else "| "
-				markdown += ("; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "``{0}``".format(detector["packageName"])) + " | " if "packageName" in detector else "| "
-				markdown += ("; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else detector["officialLink"]) + " | " if "officialLink" in detector else "| "
-				markdown += "&".join(self.__getSourceStatus(detector["sourceStatus"], language)) + " | " if "sourceStatus" in detector else "| "
+				markdown += (separator.join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "``{0}``".format(detector["packageName"])) + " | " if "packageName" in detector else "| "
+				markdown += (separator.join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "[{0}]({0})".format(detector["officialLink"])) + " | " if "officialLink" in detector else "| "
+				markdown += " & ".join(self.__getSourceStatus(detector["sourceStatus"], language)) + " | " if "sourceStatus" in detector else "| "
 				markdown += self.__getDevelopingPurpose(detector["developingPurpose"], language) + " | " if "developingPurpose" in detector else "| "
 				markdown += "``{0}`` | ".format(detector["latestVersion"]) if "latestVersion" in detector else "| "
 				markdown += self.__getReleaseDate(detector["releaseDate"], language) + " |\n" if "releaseDate" in detector else "|\n"
 			return markdown
+		else:
+			return ""
+	def __convertToMarkdownText(self:object, language:str) -> str:
+		if self.__flag and isinstance(language, str):
+			if "UK" == language:
+				txt = "## Detectors\n\n"
+				for detector in self.__data:
+					txt += "### " + detector["name"] + "\n\n"
+					txt += (																																												\
+						"- **Package Names**: " + "; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "- **Package Name**: " + "``{0}``".format(detector["packageName"])	\
+					) + "\n" if "packageName" in detector else ""
+					txt += (																																							\
+						"- **Official Links**: " + "; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "- **Official Link**: " + detector["officialLink"]	\
+					) + "\n" if "officialLink" in detector else ""
+					txt += "- **Source Status**: " + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "UK")) + "\n" if "sourceStatus" in detector else ""
+					txt += "- **Developing Purpose**: " + self.__getDevelopingPurpose(detector["developingPurpose"], "UK") + "\n" if "developingPurpose" in detector else ""
+					txt += "- **Latest Version**: ``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
+					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "UK") + "\n" if "releaseDate" in detector else ""
+					txt += "- **Detection Remark**: " + detector["detectionRemark"]["UK"] + "\n" if "detectionRemark" in detector and "UK" in detector["detectionRemark"] else ""
+					txt += "\n"
+				return txt
+			elif "CN" == language:
+				txt = "## 检测软件\n\n"
+				for detector in self.__data:
+					txt += "### " + detector["name"] + "\n\n"
+					txt += (																																									\
+						"- **应用包名**：{0}\n".format("；".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "``{0}``".format(detector["packageName"]))		\
+					) if "packageName" in detector else ""
+					txt += (																																									\
+						"- **官方链接**：{0}\n".format("；".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "[{0}]({0})".format(detector["officialLink"]))		\
+					) if "officialLink" in detector else ""
+					txt += "- **开源状态**：" + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "CN")) + "\n" if "sourceStatus" in detector else ""
+					txt += "- **开发用途**：" + self.__getDevelopingPurpose(detector["developingPurpose"], "CN") + "\n" if "developingPurpose" in detector else ""
+					txt += "- **最新版本**：``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
+					txt += "- **发行日期**：" + self.__getReleaseDate(detector["releaseDate"], "CN") + "\n" if "releaseDate" in detector else ""
+					txt += (																						\
+						"- **检测备注**：" + detector["detectionRemark"].get("CN", detector["detectionRemark"]["UK"]) + "\n"	\
+					) if "detectionRemark" in detector and ("CN" in detector["detectionRemark"] or "UK" in detector["detectionRemark"]) else ""
+					txt += "\n"
+				return txt
+			else:
+				return language
 		else:
 			return ""
 	def __convertToYml(self:object) -> str:
@@ -152,11 +196,11 @@ class Detectors:
 				return True
 			except:
 				return False
-	def toMarkdownFile(self:object, markdownFilePath:str = None, languages:tuple|list = ["UK", "\n---\n", "CN"], encoding:str = "utf-8") -> str|bool:
-		if self.__flag:
+	def toMarkdownFile(self:object, markdownFilePath:str = None, languages:tuple|list = ("UK", "\n---\n", "CN"), isTable:bool = False, encoding:str = "utf-8") -> str|bool:
+		if self.__flag and isinstance(isTable, bool):
 			markdown = ""
 			for language in languages:
-				markdown += self.__convertToMarkdown(language)
+				markdown += self.__convertToMarkdownTable(language) if isTable else self.__convertToMarkdownText(language)
 			if isinstance(markdownFilePath, str):
 				if self.__handleFolder(os.path.split(markdownFilePath)[0]):
 					try:
@@ -195,14 +239,15 @@ class Detectors:
 
 
 def main() -> int:
-	jsonFilePath, detectorFolderPath, markdownFilePath, ymlFilePath = "README.json", ".", "README.md", "README.yml"
+	jsonFilePath, detectorFolderPath, markdownTextFilePath, markdownTableFilePath, ymlFilePath = "README.json", ".", "README.md", "TABLE.md", "README.yml"
 	detectors = Detectors()
 	bRet = detectors.loadJson(jsonFilePath)
 	detectors.checkDetectorFolderPath(detectorFolderPath = detectorFolderPath)
 	if bRet:
-		booleans = [																	\
-			detectors.toMarkdownFile(markdownFilePath, languages = ["UK", "\n---\n\n", "CN"]), 	\
-			detectors.toYmlFile(ymlFilePath)												\
+		booleans = [																					\
+			detectors.toMarkdownFile(markdownTextFilePath, languages = ("UK", "\n---\n\n", "CN"), isTable = False), 	\
+			detectors.toMarkdownFile(markdownTableFilePath, languages = ("UK", "\n---\n\n", "CN"), isTable = True), 	\
+			detectors.toYmlFile(ymlFilePath)																\
 		]
 	exitCode = EXIT_SUCCESS if bRet and all(booleans) else EXIT_FAILURE
 	try:
