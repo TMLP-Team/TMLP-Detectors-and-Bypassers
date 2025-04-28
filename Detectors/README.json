@@ -35,6 +35,18 @@
 			}
 		}, 
 		{
+			"name":"Bank of China (Hong Kong)", 
+			"alias":{
+				"CN":["BOCHK中银香港", "中国银行（香港）", "中银香港"]
+			}, 
+			"packageName":"com.bochk.app.aos", 
+			"officialLink":"https://play.google.com/store/apps/details?id=com.bochk.app.aos", 
+			"sourceStatus":"D", 
+			"developingPurpose":"D", 
+			"latestVersion":"7.2.9 (141)", 
+			"releaseDate":"= 20250409", 
+		}, 
+		{
 			"name":"Checker", 
 			"alias":{
 				"CN":"校验者"
@@ -152,8 +164,8 @@
 			"officialLink":"https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy", 
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
-			"latestVersion":"v3.0.6", 
-			"releaseDate":"= 20250207", 
+			"latestVersion":"v3.0.7", 
+			"releaseDate":"= 20250421", 
 			"detectionRemark":{
 				"UK":"This can be the most challenging one among all the detectors. ", 
 				"CN":"这应该是目前最难以绕过的检测。"
@@ -199,6 +211,18 @@
 			}
 		}, 
 		{
+			"name":"Octopus", 
+			"alias":{
+				"CN":"八达通"
+			}, 
+			"packageName":"com.octopuscards.nfc_reader", 
+			"officialLink":"https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader", 
+			"sourceStatus":"D", 
+			"developingPurpose":"D", 
+			"latestVersion":"v12.16.1 (3181)", 
+			"releaseDate":"= 20240423"
+		}, 
+		{
 			"name":"Play Integrity API Checker", 
 			"packageName":"gr.nikolasspyr.integritycheck", 
 			"officialLink":[
@@ -211,17 +235,13 @@
 			"releaseDate":"= 20231203"
 		}, 
 		{
-			"name":"邮储银行", 
-			"alias":{
-				"UK":["Postal Savings Bank of China", "PSBC"], 
-				"CN":"中国邮储银行"
-			}, 
-			"packageName":"com.yitong.mbank.psbc", 
-			"officialLink":"https://phone.psbc.com", 
+			"name":"Revolut", 
+			"packageName":"com.revolut.revolut", 
+			"officialLink":"https://play.google.com/store/apps/details?id=com.revolut.revolut", 
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
-			"latestVersion":"v10.2.0", 
-			"releaseDate":"= 20250303"
+			"latestVersion":"v10.76.1 (1007605497)", 
+			"releaseDate":"= 20240422"
 		}, 
 		{
 			"name":"Ruru", 
@@ -301,6 +321,19 @@
 			"developingPurpose":"P", 
 			"latestVersion":"v1.1.5.r65.15110ef310 (65)", 
 			"releaseDate":"= 20220404"
+		}, 
+		{
+			"name":"邮储银行", 
+			"alias":{
+				"UK":["Postal Savings Bank of China", "PSBC"], 
+				"CN":"中国邮储银行"
+			}, 
+			"packageName":"com.yitong.mbank.psbc", 
+			"officialLink":"https://phone.psbc.com", 
+			"sourceStatus":"D", 
+			"developingPurpose":"D", 
+			"latestVersion":"v10.2.0", 
+			"releaseDate":"= 20250303"
 		}
 	]
 }
