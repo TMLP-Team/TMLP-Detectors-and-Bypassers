@@ -26,6 +26,15 @@
 - **Detection Remark**: The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). 
 - ![applistDetectorUN.jpg](applistDetectorUN.jpg)
 
+### Bank of China (Hong Kong)
+
+- **Package Name**: ``com.bochk.app.aos``
+- **Official Link**: https://play.google.com/store/apps/details?id=com.bochk.app.aos
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Android Desktop Application
+- **Latest Version**: ``7.2.9 (141)``
+- **Release Date**:  April 9th, 2025
+
 ### Checker
 
 - **Package Name**: ``org.akanework.checker``
@@ -59,6 +68,15 @@
 - **Developing Purpose**: Android Desktop Application
 - **Latest Version**: ``v6.4.3C88``
 - **Release Date**:  March 3rd, 2025
+
+### Luna
+
+- **Package Name**: ``luna.safe.luna``
+- **Official Link**: https://www.54nb.com/lunathanks.html
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Android Desktop Application
+- **Latest Version**: ``v1.4.0.5 (1405)``
+- **Release Date**:  April 28th, 2025
 
 ### Key Attestation
 
@@ -101,8 +119,8 @@
 - **Official Link**: https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v3.0.6``
-- **Release Date**:  February 7th, 2025
+- **Latest Version**: ``v3.0.7``
+- **Release Date**:  April 21st, 2025
 - **Detection Remark**: This can be the most challenging one among all the detectors. 
 
 ### Native Root Detector
@@ -127,6 +145,15 @@
 - **Release Date**:  April 18th, 2024
 - **Detection Remark**: Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook), and require network access (recent versions of Holmes). 
 
+### Octopus
+
+- **Package Name**: ``com.octopuscards.nfc_reader``
+- **Official Link**: https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Android Desktop Application
+- **Latest Version**: ``v12.16.1 (3181)``
+- **Release Date**:  April 23rd, 2024
+
 ### Play Integrity API Checker
 
 - **Package Name**: ``gr.nikolasspyr.integritycheck``
@@ -136,15 +163,14 @@
 - **Latest Version**: ``v1.2``
 - **Release Date**:  December 3rd, 2023
 
-### 邮储银行
+### Revolut
 
-- **Alias**: Postal Savings Bank of China; PSBC
-- **Package Name**: ``com.yitong.mbank.psbc``
-- **Official Link**: https://phone.psbc.com
+- **Package Name**: ``com.revolut.revolut``
+- **Official Link**: https://play.google.com/store/apps/details?id=com.revolut.revolut
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v10.2.0``
-- **Release Date**:  March 3rd, 2025
+- **Latest Version**: ``v10.76.1 (1007605497)``
+- **Release Date**:  April 22nd, 2024
 
 ### Ruru
 
@@ -210,6 +236,16 @@
 - **Latest Version**: ``v1.1.5.r65.15110ef310 (65)``
 - **Release Date**:  April 4th, 2022
 
+### 邮储银行
+
+- **Alias**: Postal Savings Bank of China; PSBC
+- **Package Name**: ``com.yitong.mbank.psbc``
+- **Official Link**: https://phone.psbc.com
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Android Desktop Application
+- **Latest Version**: ``v10.2.0``
+- **Release Date**:  March 3rd, 2025
+
 
 ---
 
@@ -241,6 +277,16 @@
 - **发行日期**： 2022 年 8 月 12 日
 - **检测备注**：包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。
 - ![applistDetectorUN.jpg](applistDetectorUN.jpg)
+
+### Bank of China (Hong Kong)
+
+- **应用别称**：BOCHK中银香港; 中国银行（香港）; 中银香港
+- **应用包名**：``com.bochk.app.aos``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.bochk.app.aos](https://play.google.com/store/apps/details?id=com.bochk.app.aos)
+- **开源状态**：安卓桌面应用
+- **开发用途**：安卓桌面应用
+- **最新版本**：``7.2.9 (141)``
+- **发行日期**： 2025 年 4 月 9 日
 
 ### Checker
 
@@ -277,6 +323,15 @@
 - **开发用途**：安卓桌面应用
 - **最新版本**：``v6.4.3C88``
 - **发行日期**： 2025 年 3 月 3 日
+
+### Luna
+
+- **应用包名**：``luna.safe.luna``
+- **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)
+- **开源状态**：安卓桌面应用
+- **开发用途**：安卓桌面应用
+- **最新版本**：``v1.4.0.5 (1405)``
+- **发行日期**： 2025 年 4 月 28 日
 
 ### Key Attestation
 
@@ -325,8 +380,8 @@
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy](https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v3.0.6``
-- **发行日期**： 2025 年 2 月 7 日
+- **最新版本**：``v3.0.7``
+- **发行日期**： 2025 年 4 月 21 日
 - **检测备注**：这应该是目前最难以绕过的检测。
 
 ### Native Root Detector
@@ -352,6 +407,16 @@
 - **发行日期**： 2024 年 4 月 18 日
 - **检测备注**：此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。
 
+### Octopus
+
+- **应用别称**：八达通
+- **应用包名**：``com.octopuscards.nfc_reader``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader](https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader)
+- **开源状态**：安卓桌面应用
+- **开发用途**：安卓桌面应用
+- **最新版本**：``v12.16.1 (3181)``
+- **发行日期**： 2024 年 4 月 23 日
+
 ### Play Integrity API Checker
 
 - **应用包名**：``gr.nikolasspyr.integritycheck``
@@ -361,15 +426,14 @@
 - **最新版本**：``v1.2``
 - **发行日期**： 2023 年 12 月 3 日
 
-### 邮储银行
+### Revolut
 
-- **应用别称**：中国邮储银行
-- **应用包名**：``com.yitong.mbank.psbc``
-- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
+- **应用包名**：``com.revolut.revolut``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.revolut.revolut](https://play.google.com/store/apps/details?id=com.revolut.revolut)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v10.2.0``
-- **发行日期**： 2025 年 3 月 3 日
+- **最新版本**：``v10.76.1 (1007605497)``
+- **发行日期**： 2024 年 4 月 22 日
 
 ### Ruru
 
@@ -437,4 +501,14 @@
 - **开发用途**：Play 完整性检测
 - **最新版本**：``v1.1.5.r65.15110ef310 (65)``
 - **发行日期**： 2022 年 4 月 4 日
+
+### 邮储银行
+
+- **应用别称**：中国邮储银行
+- **应用包名**：``com.yitong.mbank.psbc``
+- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
+- **开源状态**：安卓桌面应用
+- **开发用途**：安卓桌面应用
+- **最新版本**：``v10.2.0``
+- **发行日期**： 2025 年 3 月 3 日
 

@@ -44,7 +44,7 @@
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
 			"latestVersion":"7.2.9 (141)", 
-			"releaseDate":"= 20250409", 
+			"releaseDate":"= 20250409"
 		}, 
 		{
 			"name":"Checker", 
@@ -96,6 +96,15 @@
 			"developingPurpose":"D", 
 			"latestVersion":"v6.4.3C88", 
 			"releaseDate":"= 20250303"
+		}, 
+		{
+			"name":"Luna", 
+			"packageName":"luna.safe.luna", 
+			"officialLink":"https://www.54nb.com/lunathanks.html", 
+			"sourceStatus":"D", 
+			"developingPurpose":"D", 
+			"latestVersion":"v1.4.0.5 (1405)", 
+			"releaseDate":"= 20250428"
 		}, 
 		{
 			"name":"Key Attestation", 

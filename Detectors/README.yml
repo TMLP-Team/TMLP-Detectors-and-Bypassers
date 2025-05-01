@@ -27,6 +27,18 @@
     CN: 包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。
   image:
     UN: applistDetectorUN.jpg
+- name: Bank of China (Hong Kong)
+  alias:
+    CN:
+    - BOCHK中银香港
+    - 中国银行（香港）
+    - 中银香港
+  packageName: com.bochk.app.aos
+  officialLink: https://play.google.com/store/apps/details?id=com.bochk.app.aos
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: 7.2.9 (141)
+  releaseDate: = 20250409
 - name: Checker
   alias:
     CN: 校验者
@@ -64,6 +76,13 @@
   developingPurpose: D
   latestVersion: v6.4.3C88
   releaseDate: = 20250303
+- name: Luna
+  packageName: luna.safe.luna
+  officialLink: https://www.54nb.com/lunathanks.html
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v1.4.0.5 (1405)
+  releaseDate: = 20250428
 - name: Key Attestation
   alias:
     CN: 密钥认证
@@ -115,8 +134,8 @@
   officialLink: https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy
   sourceStatus: D
   developingPurpose: D
-  latestVersion: v3.0.6
-  releaseDate: = 20250207
+  latestVersion: v3.0.7
+  releaseDate: = 20250421
   detectionRemark:
     UK: 'This can be the most challenging one among all the detectors. '
     CN: 这应该是目前最难以绕过的检测。
@@ -165,6 +184,15 @@
       and require network access (recent versions of Holmes). '
     CN: 此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious
       Hook）和需要联网权限（Holmes 最近的几个版本）。
+- name: Octopus
+  alias:
+    CN: 八达通
+  packageName: com.octopuscards.nfc_reader
+  officialLink: https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v12.16.1 (3181)
+  releaseDate: = 20240423
 - name: Play Integrity API Checker
   packageName: gr.nikolasspyr.integritycheck
   officialLink:
@@ -174,18 +202,13 @@
   developingPurpose: P
   latestVersion: v1.2
   releaseDate: = 20231203
-- name: 邮储银行
-  alias:
-    UK:
-    - Postal Savings Bank of China
-    - PSBC
-    CN: 中国邮储银行
-  packageName: com.yitong.mbank.psbc
-  officialLink: https://phone.psbc.com
+- name: Revolut
+  packageName: com.revolut.revolut
+  officialLink: https://play.google.com/store/apps/details?id=com.revolut.revolut
   sourceStatus: D
   developingPurpose: D
-  latestVersion: v10.2.0
-  releaseDate: = 20250303
+  latestVersion: v10.76.1 (1007605497)
+  releaseDate: = 20240422
 - name: Ruru
   packageName: com.byxiaorun.detector
   officialLink: https://github.com/byxiaorun/Ruru
@@ -245,3 +268,15 @@
   developingPurpose: P
   latestVersion: v1.1.5.r65.15110ef310 (65)
   releaseDate: = 20220404
+- name: 邮储银行
+  alias:
+    UK:
+    - Postal Savings Bank of China
+    - PSBC
+    CN: 中国邮储银行
+  packageName: com.yitong.mbank.psbc
+  officialLink: https://phone.psbc.com
+  sourceStatus: D
+  developingPurpose: D
+  latestVersion: v10.2.0
+  releaseDate: = 20250303

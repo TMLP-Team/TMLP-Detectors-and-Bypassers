@@ -2,13 +2,15 @@
 
 ### Using Official Magisk (Including Release, Canary, and Debug Versions) or Magisk Alpha
 
-- Install the latest Official [Magisk](https://github.com/topjohnwu/Magisk) or [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
+- Install the latest [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - Configure the Magisk
-    - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
+    - Disable built-in Zygisk
     - Disable Denylist
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
-  - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the Magisk layer
+  - Install the [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the Magisk layer
+    - Disable the Denylist in Zygisk Next
+  - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest build in the ``action`` page of the ``Jing Matrix`` GitHub repository) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
     - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
@@ -145,12 +147,20 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ##### LSPosed traces are detected in the ``odex`` file of GMS or this application
 
-- Temporary Solution: Rename the file to ``*.odex.bak``
-- Permanent Solution: Uninstall the original LSPosed and install it The last successful Release version in [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) and restart the detection according to the precautions in [../Detectors/README.md](../Detectors/README.md)
+- Backup your plugin configurations in the LSPosed manager settings
+- Uninstall Native Root Detector totally
+- Disable WeChat and QQ (via Swift Backup or Fridge) if necessary
+- Uninstall the original LSPosed in the root manager and reboot your device
+- Install the lastest build in [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) in the root manager and reboot your device
+- Restore your plugin configurations in the LSPosed manager settings
+- Switch to the plugin tab of the LSPosed manager to check whether the restoration of all plugin configurations is finished
+- Reboot your device
+- Install the latest Native Root Detector for detection (do not restore Native Root Detector from any backup)
+- Enable WeChat and QQ only after the detector shows normal environments (except risky applications detected with Code 3)
 
 ##### Mount inconsistency detected
 
-- Magisk and its branches: Install the Shamiko module
+- Magisk and its branches: Use Magisk Alpha and install the Shamiko module
 - Apatch and its branches: Embed the Cherish Peekaboo module as a kernel module (please check if the ``compat`` version is needed)
 - KSU and its branches: Embed the SUSFS module as a kernel module
 
@@ -187,12 +197,21 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 #### QQ
 
-- Definition of old versions of QQ
+##### Logging out users with no reasons, account login limitations, or temporary account freezing
+
+- Check your mobile QQ version
   - Mobile QQ (Android)
-    - Affected by the risk control in the spring and summer of 2021 (``v8.8.50``, ``v8.8.90``]: Try ``v8.8.50`` or lower (if rollback is still allowed)
-    - Affected by the risk control in the autumn and winter of 2024 and the spring and summer of 2025 (``v9.1.0``, latest): Try ``v9.1.0`` or lower (if rollback is still allowed)
-  - PC QQ (Windows): Always use the nostalgic version instead of the QQNT version
-- Solutions (ranked from radical to conservative on the premise of keeping the root and injection environment of Android devices)
+    - If you are using a QQ version affected by the 2021 spring and summer risk control event (``v8.6.0``, ``v8.8.17``] (the phenomenon is most obvious when using the ``v8.8.0`` version)
+      - Switch to the ``v8.6.0`` or lower version (if rollback is still allowed)
+      - Otherwise
+        - Uninstall the QXposed (QX) plugin and the QQ Repeater plugin
+        - Disable the red envelope grabbing function
+    - If you are using a QQ version affected by the 2024 autumn to 2025 spring risk control event (``v9.1.0``, -) (the phenomenon is most obvious when using the ``v9.1.35`` version)
+      - Uninstall XAutoDaily
+      - Disable the automatic sign-in function (including daily check-in and group sign-in)
+      - Switch to the ``v9.1.0`` or lower versions (if rollback is still allowed)
+  - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version- Solutions (ranked from radical to conservative on the premise of keeping the root and injection environment of Android devices)
+- Check your device environments (sorted from radical to conservative while keeping the Android device root and injection environment)
   - Solution 1: Always use old versions of QQ before receiving any warning or being controlled by the cloud, hide root and injection environments, and do not inject plugins for automatic sign-in or group messaging into QQ
   - Solution 2: Always use old versions of QQ before receiving any warning or being controlled by the cloud, hide root and injection environments, and do not inject any plugins into QQ
   - Solution 3: Always use the latest version of QQ, hide the root and injection environment, and do not inject any plugins into QQ
@@ -203,12 +222,14 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ### 正在使用官方版（含发行版、金丝雀版和 Debug 版）或 Alpha 版面具
 
-- 安装最新版[官方版面具](https://github.com/topjohnwu/Magisk)或 [Alpha 版面具](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
+- 安装最新版 [Alpha 版面具](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - 配置面具
-    - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
+    - 禁用内置 Zygisk
     - 关闭“遵守排除列表”开关
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
+  - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) 模块
+    - 禁用 Zygisk Next 内的遵守排除列表
   - 在面具层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
@@ -273,15 +294,15 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ### 正在使用 Apatch / Apatch Next / KSU / KSU Next
 
 - 安装最新版 [Apatch](https://github.com/bmax121/APatch/actions)、[KSU](https://github.com/tiann/KernelSU) 或 [KSU Next](https://t.me/ksunext)
-  - 在 Root 管理器的超级用户页内进行配置（Apatch 管理器超级用户页面似乎有 bug 可直接在授予 MT 管理器 Root 权限后使用 MT 管理器从文件 ``/data/adb/ap/package_config`` 中移除除 ``bin.mt.plus`` 以外的所有应用配置并在重启设备后再次使用 Apatch 管理器将 Root 权限授予需要 Root 权限的应用）
-    - 将所有需要 Root 的应用程序进行授权
-    - 让剩余应用中所有不需要 Root 权限的应用使用默认设置（重置设置）
-  - 部署 Root 管理器层的内核模块
+  - 在 root 管理器的超级用户页内进行配置（Apatch 管理器超级用户页面似乎有 bug 可直接在授予 MT 管理器 root 权限后使用 MT 管理器从文件 ``/data/adb/ap/package_config`` 中移除除 ``bin.mt.plus`` 以外的所有应用配置并在重启设备后再次使用 Apatch 管理器将 root 权限授予需要 root 权限的应用）
+    - 将所有需要 root 的应用程序进行授权
+    - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
+  - 部署 root 管理器层的内核模块
     - 正在使用 Apatch 系列（在操作前请备份好原始 boot.img 和当前 boot.img）：从 [https://t.me/app_process64](https://t.me/app_process64) 中查找最新版模块 Cherish Peekaboo 并以内核模块的形式进行嵌入（部分机型需要 ``compat`` 版本）
     - 正在使用 KSU 系列：以内核模块的形式嵌入 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
-  - 部署 Root 管理器层的系统模块
-    - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
-    - 在 Root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+  - 部署 root 管理器层的系统模块
+    - 在 root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
+    - 在 root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
       - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
@@ -342,12 +363,20 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 - 请参阅 [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.com/thread-285106-1.htm)
 
-#### Native root detector
+#### Native Root Detector
 
 ##### 检测到 GMS 或本应用的的 ``odex`` 文件中存在 LSPosed 痕迹
 
-- 临时解决方案：重命名该文件为 *.odex.bak
-- 永久解决方案：将原有 LSPosed 卸载干净后安装 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中最后一次成功的 Release 版本并依照 [../Detectors/README.md](../Detectors/README.md) 中的注意事项重新启动检测
+- 在 LSPosed 管理器设置中备份您的插件配置
+- 彻底卸载 Native Root Detector
+- 如有必要请禁用微信和 QQ（可通过 Swift Backup 或冰箱应用）
+- 在 root 管理器中卸载原版 LSPosed 并重启设备
+- 在 root 管理器中安装 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中的最新版本并重启设备
+- 在 LSPosed 管理器设置中恢复您的插件配置
+- 切换到 LSPosed 管理器的“插件”选项卡，检查所有插件配置是否已恢复完成
+- 重启设备
+- 安装最新的 Native Root Detector 进行检测（请勿从任何备份中恢复 Native Root Detector）
+- 仅该检测器显示环境正常（以代码 3 显示的检测到风险应用除外）后才可以重新启用微信和 QQ
 
 ##### 检测到挂载不一致
 
@@ -377,7 +406,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ##### Apatch 用户闪退或闪退后打开一个网页告知手机环境异常
 
 - 2025 年 3 月前的解决办法：添加到排除列表
-- 2025 年 3 月开始的解决办法：使用 NeoZygisk 实现 Zygisk 并对无需 Root 的应用重置排除列表
+- 2025 年 3 月开始的解决办法：使用 NeoZygisk 实现 Zygisk 并对无需 root 的应用重置排除列表
 
 #### 微信
 
@@ -386,14 +415,23 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - 临时解决方法：使用微信支付模块或微信支付插件（原理是通过指纹后将预先存储的密码进行提交）
 - 本质解决方法：暂无
 
-##### QQ
+#### QQ
 
-- 旧版 QQ 定义
+##### 无故下线用户、限制账号登录或临时冻结账号
+
+- 检查 QQ 版本
   - 手机 QQ（安卓）
-    - 受 2021 年春夏季节风控风波影响 (``v8.8.50``, ``v8.8.90``]：可尝试使用 ``v8.8.50`` 或更低版本（如果还允许回滚）
-    - 受 2024 年秋冬季节和 2025 年春夏季节风控风波影响 (``v9.1.0``, -)：可尝试使用 ``v9.1.0`` 或更低版本（如果还允许回滚）
+    - 正在使用受 2021 年春夏季节风控风波影响的 QQ 版本 (``v8.6.0``, ``v8.8.17``]（使用 ``v8.8.0`` 版本时现象最为明显）
+      - 使用 ``v8.6.0`` 或更低版本（如果还允许回滚）
+      - 或
+        - 卸载 QXposed（QX）模块和 QQ 复读机模块
+        - 停用抢红包功能
+    - 正在使用受 2024 年秋季至 2025 年春季风控风波影响的 QQ 版本 (``v9.1.0``, -)（使用 ``v9.1.35`` 版本时现象最为明显）
+      - 卸载 XAutoDaily
+      - 停用自动签到功能（含每日打卡和群签到）
+      - 可尝试使用 ``v9.1.0`` 或更低版本（如果还允许回滚）
   - 电脑 QQ（Windows）：始终使用怀旧版而非 QQNT 版本
-- 解决方案（保留安卓设备 root 和注入环境的前提下从激进到保守排序）
-  - 解决方案 1：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 Root 和注入环境，不向 QQ 注入用于自动签到或群发消息的插件
-  - 解决方案 2：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 Root 和注入环境，不向 QQ 注入任何插件
-  - 解决方案 3：自始至终使用最新版 QQ，隐藏 Root 和注入环境，不向 QQ 注入任何插件
+- 检查环境（保留安卓设备 root 和注入环境的前提下从激进到保守排序）
+  - 解决方案 1：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 root 和注入环境，不向 QQ 注入用于自动签到或群发消息的插件
+  - 解决方案 2：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 root 和注入环境，不向 QQ 注入任何插件
+  - 解决方案 3：自始至终使用最新版 QQ，隐藏 root 和注入环境，不向 QQ 注入任何插件
