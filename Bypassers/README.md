@@ -41,7 +41,7 @@
 ### Using Magisk Delta
 
 - Install the lastest version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
-  - It can be out-of-date since it seemed to be discontinued in early 2024
+  - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024)
   - Configure Magisk Delta
     - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
     - Enable whitelist mode on the setting page of the Magisk Delta
@@ -261,7 +261,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ### 正在使用 Delta 版面具（小狐狸面具）
 
 - 安装停更前的最后一个版本的 [Delta 面具](https://github.com/HuskyDG/magisk-files)
-  - 由于似乎已在 2024 年初停更未来可能跟不上时代潮流
+  - 请考虑使用 Magisk Alpha 因为 Magisk Delta 已在 2024 年初停更
   - 配置面具
     - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
     - 在设置界面启用白名单模式
@@ -380,7 +380,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ##### 检测到挂载不一致
 
-- Magisk 系列：安装 Shamiko 模块
+- Magisk 系列：使用 Magisk Alpha 并安装 Shamiko 模块
 - Apatch 系列：以内核模块的形式嵌入 Cherish Peekaboo 模块（请自行排查是否需要 compat 版本）
 - KSU 系列：以内核模块的形式嵌入 SUSFS 模块
 
