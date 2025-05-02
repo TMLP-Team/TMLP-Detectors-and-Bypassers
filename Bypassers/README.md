@@ -206,10 +206,10 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - Otherwise
         - Uninstall the QXposed (QX) plugin and the QQ Repeater plugin
         - Disable the red envelope grabbing function
-    - If you are using a QQ version affected by the 2024 autumn to 2025 spring risk control event (``v9.1.0``, -) (the phenomenon is most obvious when using the ``v9.1.35`` version)
+    - If you are using a QQ version affected by the 2024 autumn to 2025 spring risk control event (``v8.9.56``, -) (the phenomenon is most obvious when using the ``v9.1.35`` version)
       - Uninstall XAutoDaily
       - Disable the automatic sign-in function (including daily check-in and group sign-in)
-      - Switch to the ``v9.1.0`` or lower versions (if rollback is still allowed)
+      - Switch to the ``v8.9.56`` or lower versions (if rollback is still allowed and accept non-NT architecture)
   - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version- Solutions (ranked from radical to conservative on the premise of keeping the root and injection environment of Android devices)
 - Check your device environments (sorted from radical to conservative while keeping the Android device root and injection environment)
   - Solution 1: Always use old versions of QQ before receiving any warning or being controlled by the cloud, hide root and injection environments, and do not inject plugins for automatic sign-in or group messaging into QQ
@@ -426,10 +426,10 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - 或
         - 卸载 QXposed（QX）模块和 QQ 复读机模块
         - 停用抢红包功能
-    - 正在使用受 2024 年秋季至 2025 年春季风控风波影响的 QQ 版本 (``v9.1.0``, -)（使用 ``v9.1.35`` 版本时现象最为明显）
+    - 正在使用受 2024 年秋季至 2025 年春季风控风波影响的 QQ 版本 (``v8.9.56``, -)（使用 ``v9.1.35`` 版本时现象最为明显）
       - 卸载 XAutoDaily
       - 停用自动签到功能（含每日打卡和群签到）
-      - 可尝试使用 ``v9.1.0`` 或更低版本（如果还允许回滚）
+      - 可尝试使用 ``v8.9.56`` 或更低版本（如果还允许回滚且不介意非 NT 架构）
   - 电脑 QQ（Windows）：始终使用怀旧版而非 QQNT 版本
 - 检查环境（保留安卓设备 root 和注入环境的前提下从激进到保守排序）
   - 解决方案 1：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 root 和注入环境，不向 QQ 注入用于自动签到或群发消息的插件

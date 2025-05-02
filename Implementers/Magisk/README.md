@@ -12,12 +12,15 @@ Please also consider using the latest one generated in the ``action`` tab of the
     - [https://t.me/magiskalpha](https://t.me/magiskalpha)
   - Magisk Delta / Kitsune Magisk (built-in whitelist mode): [https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
 - Apatch: [https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) and [https://t.me/APatchChannel](https://t.me/APatchChannel)
+- KSU: 
+  - KSU: [https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
+  - KSU Next: [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
 
 ---
 
 ### 面具
 
-本文件夹旨在存储不同  Magisk、Apatch (AP) 和 KernelSU (KSU) 分支的最新版本。
+本文件夹旨在存储不同 Magisk、Apatch (AP) 和 KernelSU (KSU) 分支的最新版本。
 
 同时，请考虑使用相应 GitHub 存储库中 ``action`` 选项卡里的最新版本。
 
@@ -29,3 +32,6 @@ Please also consider using the latest one generated in the ``action`` tab of the
     - [https://t.me/magiskalpha](https://t.me/magiskalpha)
   - 德尔塔面具 / 小狐狸面具（内置白名单模式）：[https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
 - Apatch：[https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) 和 [https://t.me/APatchChannel](https://t.me/APatchChannel)
+- KSU：
+  - KSU：[https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
+  - KSU Next：[https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
