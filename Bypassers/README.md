@@ -10,6 +10,9 @@
     - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
   - Install the [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the Magisk layer
     - Disable the Denylist in Zygisk Next
+  - Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
+    - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
+    - Add the package names of the applications that are allowed to obtain root privileges to this file if necessary
   - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest build in the ``action`` page of the ``Jing Matrix`` GitHub repository) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
@@ -21,9 +24,6 @@
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-  - Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
-    - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
-    - Add the package names of the applications that are allowed to obtain root privileges to this file if necessary
   - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
   - Install the [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
     - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
@@ -33,7 +33,7 @@
     - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
     - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
     - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
-  - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
+  - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
@@ -66,7 +66,7 @@
     - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
     - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
     - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
-  - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
+  - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
@@ -102,7 +102,7 @@
       - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
       - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
     - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
-    - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a broken TEE
+    - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
 
 ### Special Cases
 
@@ -199,22 +199,35 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ##### Logging out users with no reasons, account login limitations, or temporary account freezing
 
-- Check your mobile QQ version
-  - Mobile QQ (Android)
-    - If you are using a QQ version affected by the 2021 spring and summer risk control event (``v8.6.0``, ``v8.8.17``] (the phenomenon is most obvious when using the ``v8.8.0`` version)
+- Mobile QQ (Android)
+  - If you are using a QQ version at or below ``v8.6.0``
+    - Never upgrade the QQ until the update is a must
+    - Upgrade to the minimum version above the current version if the update is a must
+  - If you are using a QQ version within the interval (``v8.6.0``, ``v8.8.17``] that is affected by the 2021 spring and summer risk control event (the phenomenon is most obvious when using the ``v8.8.0`` version)
+    - If you want to use the QXposed (QX) plugin or the QQ Repeater plugin while you can still downgrade your QQ
       - Switch to the ``v8.6.0`` or lower version (if rollback is still allowed)
-      - Otherwise
-        - Uninstall the QXposed (QX) plugin and the QQ Repeater plugin
-        - Disable the red envelope grabbing function
-    - If you are using a QQ version affected by the 2024 autumn to 2025 spring risk control event (``v8.9.56``, -) (the phenomenon is most obvious when using the ``v9.1.35`` version)
-      - Uninstall XAutoDaily
-      - Disable the automatic sign-in function (including daily check-in and group sign-in)
-      - Switch to the ``v8.9.56`` or lower versions (if rollback is still allowed and accept non-NT architecture)
-  - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version- Solutions (ranked from radical to conservative on the premise of keeping the root and injection environment of Android devices)
-- Check your device environments (sorted from radical to conservative while keeping the Android device root and injection environment)
-  - Solution 1: Always use old versions of QQ before receiving any warning or being controlled by the cloud, hide root and injection environments, and do not inject plugins for automatic sign-in or group messaging into QQ
-  - Solution 2: Always use old versions of QQ before receiving any warning or being controlled by the cloud, hide root and injection environments, and do not inject any plugins into QQ
-  - Solution 3: Always use the latest version of QQ, hide the root and injection environment, and do not inject any plugins into QQ
+    - Otherwise
+      - Uninstall the QXposed (QX) plugin and the QQ Repeater plugin
+      - Disable the red envelope grabbing, automatic group sign-in, and the group messaging functions
+      - Uninstall any QQ plugin that is not adapted to the Xposed API calling protection of LSPosed
+  - If you are using a QQ version within the interval (``v8.8.17``, ``v8.9.56``]
+    - Never upgrade the QQ until the update is a must
+    - Upgrade to the minimum version above the current version if the update is a must
+    - Uninstall the QXposed (QX) plugin and the QQ Repeater plugin
+    - Disable the red envelope grabbing, automatic group sign-in, and the group messaging functions
+    - Uninstall any QQ plugin that is not adpated to the Xposed API calling protection of LSPosed
+  - If you are using a QQ version above ``v8.9.56`` that is affected by the 2024 autumn to 2025 spring risk control event (the phenomenon is most obvious when using the ``v9.1.35`` version)
+    - Please refer to the issues mentioned in (``v8.8.17``, ``v8.9.56``]
+    - If you want to use the XAutoDaily (XA) plugin or the QAuxiliary (QA) plugin while you can still downgrade your QQ
+      - Switch to the ``v9.1.31`` or lower versions, 
+      - Switch to the ``v9.0.95`` or lower versions, or
+      - Switch to the ``v8.9.56`` or lower versions (if accepting non-NT architecture)
+    - Otherwise
+      - Uninstall the QXposed (QX) plugin, the QQ Repeater plugin, the XAutoDaily (XA), and the QAuxiliary (QA) plugin
+      - Disable the red envelope grabbing, automatic sign-in (including daily sign-in, group sign-in, and mini program sign-in), and the group messaging functions
+      - Uninstall any QQ plugin that is not adapted to the Xposed API calling protection of LSPosed
+      - Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ (remember to disable QQ in advance when switching environments) when using versions above ``v9.1.31``
+- Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version
 
 ---
 
@@ -230,6 +243,9 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
   - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) 模块
     - 禁用 Zygisk Next 内的遵守排除列表
+  - 在面具层安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
+    - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（可直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
+    - 如果需要可以向该文件添加允许获取 root 权限的应用的包名
   - 在面具层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
@@ -241,9 +257,6 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
       - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMAL/README.md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-  - 在面具层安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
-    - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（可直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
-    - 如果需要可以向该文件添加允许获取 root 权限的应用的包名
   - 在面具层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
     - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
@@ -253,7 +266,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
     - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
-  - 如果设备不存在 TEE 损坏的情况，可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+  - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
@@ -286,7 +299,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
     - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
-  - 如果设备不存在 TEE 损坏的情况，可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+  - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
@@ -322,7 +335,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
     - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
-    - 如果设备不存在 TEE 损坏的情况，可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+    - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
 
 ### 特殊情况
 
@@ -419,19 +432,32 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ##### 无故下线用户、限制账号登录或临时冻结账号
 
-- 检查 QQ 版本
-  - 手机 QQ（安卓）
-    - 正在使用受 2021 年春夏季节风控风波影响的 QQ 版本 (``v8.6.0``, ``v8.8.17``]（使用 ``v8.8.0`` 版本时现象最为明显）
-      - 使用 ``v8.6.0`` 或更低版本（如果还允许回滚）
-      - 或
-        - 卸载 QXposed（QX）模块和 QQ 复读机模块
-        - 停用抢红包功能
-    - 正在使用受 2024 年秋季至 2025 年春季风控风波影响的 QQ 版本 (``v8.9.56``, -)（使用 ``v9.1.35`` 版本时现象最为明显）
-      - 卸载 XAutoDaily
-      - 停用自动签到功能（含每日打卡和群签到）
-      - 可尝试使用 ``v8.9.56`` 或更低版本（如果还允许回滚且不介意非 NT 架构）
-  - 电脑 QQ（Windows）：始终使用怀旧版而非 QQNT 版本
-- 检查环境（保留安卓设备 root 和注入环境的前提下从激进到保守排序）
-  - 解决方案 1：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 root 和注入环境，不向 QQ 注入用于自动签到或群发消息的插件
-  - 解决方案 2：在收到任何警告或被云控之前始终使用旧版 QQ，隐藏 root 和注入环境，不向 QQ 注入任何插件
-  - 解决方案 3：自始至终使用最新版 QQ，隐藏 root 和注入环境，不向 QQ 注入任何插件
+- 手机 QQ（安卓版）
+  - 如果您使用的 QQ 版本低于 ``v8.6.0``
+    - 除非被云控强制升级否则请勿升级 QQ
+    - 如被云控强制升级请升级到高于当前版本的最低版本
+  - 如果您使用的 QQ 版本处于 2021 年春夏季节风控事件影响区间 (``v8.6.0``, ``v8.8.17``) 内（此现象在使用 ``v8.8.0`` 版本时最为明显）
+    - 如果您想继续使用 QXposed（QX）插件或 QQ 复读机插件且 QQ 能够降级
+      - 请切换到 ``v8.6.0`` 或更低版本
+    - 否则
+      - 请卸载 QXposed（QX）插件或 QQ 复读机插件
+      - 请禁用抢红包、自动群签到和消息群发功能
+      - 请卸载所有不兼容的 QQ 插件已适配 LSPosed 的 Xposed API 调用保护
+  - 如果您使用的 QQ 版本处于 (``v8.8.17``, ``v8.9.56``] 区间内
+    - 除非被云控强制升级否则请勿升级 QQ
+    - 如被云控强制升级请升级到高于当前版本的最低版本
+    - 请卸载 QXposed（QX）插件或 QQ 复读机插件
+    - 请禁用抢红包、自动群签到和消息群发功能
+    - 请卸载所有不兼容的 QQ 插件已适配 LSPosed 的 Xposed API 调用保护
+  - 如果您使用的 QQ 版本高于 ``v8.9.56`` 且受 2024 年秋季至 2025 年春季风控事件影响（使用 ``v9.1.35`` 版本时现象最为明显）
+    - 请参阅 (``v8.8.17``, ``v8.9.56``]
+    - 如果您想使用 XAutoDaily (XA) 插件或 QAuxiliary (QA) 插件，并且仍然可以降级您的 QQ，请
+      - 切换到 ``v9.1.31`` 或更低版本，
+      - 切换到 ``v9.0.95`` 或更低版本，或者
+      - 切换到 ``v8.9.56`` 或更低版本（如果接受非 NT 架构）
+    - 否则
+      - 卸载 QXposed (QX) 插件、QQ 复读机插件、XAutoDaily (XA) 和 QAuxiliary (QA) 插件
+      - 禁用抢红包、自动签到（包括每日签到、群签到和小程序签到）以及消息群发功能
+      - 卸载任何未适配 LSPosed 的 Xposed API 调用保护的 QQ 插件
+      - 高于 ``v9.1.31`` 版本时切勿向 QQ 暴露（切换环境时记得提前禁用 QQ）任何可疑环境（含 root 和注入环境）或执行任何注入
+- 电脑 QQ (Windows)：始终使用最新怀旧版而非 QQNT 版本
