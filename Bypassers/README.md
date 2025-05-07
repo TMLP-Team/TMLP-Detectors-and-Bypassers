@@ -1,6 +1,6 @@
 ## Bypassers
 
-### Using Official Magisk (Including Release, Canary, and Debug Versions) or Magisk Alpha
+### Using Official Magisk (Including Release, Beta, Canary, and Debug Versions) or Magisk Alpha
 
 - Install the latest [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - Configure the Magisk
@@ -233,7 +233,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ## 过检方法
 
-### 正在使用官方版（含发行版、金丝雀版和 Debug 版）或 Alpha 版面具
+### 正在使用官方版（含发行版、Beta 版、金丝雀版和 Debug 版）或 Alpha 版面具
 
 - 安装最新版 [Alpha 版面具](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - 配置面具
