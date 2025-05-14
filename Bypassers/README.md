@@ -1,5 +1,7 @@
 ## Bypassers
 
+Currently, Magisk Alpha is the best solution since it can bypass inconsistent mounting detection by using Zygisk Next + Shamiko and offer the random package name feature. 
+
 ### Using Official Magisk (Including Release, Beta, Canary, and Debug Versions) or Magisk Alpha
 
 - Install the latest [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
@@ -104,6 +106,8 @@
     - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
     - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
 
+View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
+
 ### Special Cases
 
 #### Momo
@@ -200,6 +204,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ##### Logging out users with no reasons, account login limitations, or temporary account freezing
 
 - Mobile QQ (Android)
+  - The definition of downgrading: Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ and use the core patcher plugin to downgrade QQ after 15 days (and observe for another 15 days)
   - If you are using a QQ version at or below ``v8.6.0``
     - Never upgrade the QQ until the update is a must
     - Upgrade to the minimum version above the current version if the update is a must
@@ -219,12 +224,13 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
   - If you are using a QQ version above ``v8.9.56`` that is affected by the 2024 autumn to 2025 spring risk control event (the phenomenon is most obvious when using the ``v9.1.35`` version)
     - Please refer to the issues mentioned in (``v8.8.17``, ``v8.9.56``]
     - If you want to use the XAutoDaily (XA) plugin or the QAuxiliary (QA) plugin while you can still downgrade your QQ
+      - In the QAuxiliary (QA) plugin, turn on the "disable QQ hot patch" switch and turn off the "environment detection package (trpc.o3.*) interception" switch
       - Switch to the ``v9.1.31`` or lower versions, 
       - Switch to the ``v9.0.95`` or lower versions, or
       - Switch to the ``v8.9.56`` or lower versions (if accepting non-NT architecture)
     - Otherwise
       - Uninstall the QXposed (QX) plugin, the QQ Repeater plugin, the XAutoDaily (XA), and the QAuxiliary (QA) plugin
-      - Disable the red envelope grabbing, automatic sign-in (including daily sign-in, group sign-in, and mini program sign-in), and the group messaging functions
+      - Disable the red envelope grabbing, automatic group sign-in, and the group messaging functions
       - Uninstall any QQ plugin that is not adapted to the Xposed API calling protection of LSPosed
       - Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ (remember to disable QQ in advance when switching environments) when using versions above ``v9.1.31``
 - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version
@@ -232,6 +238,8 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ---
 
 ## 过检方法
+
+目前，Magisk Alpha 是最好的解决方案，因为它可以通过使用 Zygisk Next + Shamiko 绕过不一致的安装检测并提供随机包名称功能。
 
 ### 正在使用官方版（含发行版、Beta 版、金丝雀版和 Debug 版）或 Alpha 版面具
 
@@ -337,6 +345,8 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
     - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
 
+如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
+
 ### 特殊情况
 
 #### Momo
@@ -433,6 +443,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ##### 无故下线用户、限制账号登录或临时冻结账号
 
 - 手机 QQ（安卓版）
+  - 定义降级：不向 QQ 暴露任何可疑环境（含 root 和注入环境）或执行任何注入 15 天后利用核心破解插件降级 QQ（后再观察 15 天）
   - 如果您使用的 QQ 版本低于 ``v8.6.0``
     - 除非被云控强制升级否则请勿升级 QQ
     - 如被云控强制升级请升级到高于当前版本的最低版本
@@ -451,13 +462,14 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
     - 请卸载所有不兼容的 QQ 插件已适配 LSPosed 的 Xposed API 调用保护
   - 如果您使用的 QQ 版本高于 ``v8.9.56`` 且受 2024 年秋季至 2025 年春季风控事件影响（使用 ``v9.1.35`` 版本时现象最为明显）
     - 请参阅 (``v8.8.17``, ``v8.9.56``]
-    - 如果您想使用 XAutoDaily (XA) 插件或 QAuxiliary (QA) 插件，并且仍然可以降级您的 QQ，请
+    - 如果您想使用 XAutoDaily（XA）插件或 QAuxiliary（QA）插件，并且仍然可以降级您的 QQ，请
+      - 在 QAuxiliary（QA）插件中打开禁用 QQ 热补丁开关并关闭环境检测包（trpc.o3.*）拦截开关
       - 切换到 ``v9.1.31`` 或更低版本，
       - 切换到 ``v9.0.95`` 或更低版本，或者
       - 切换到 ``v8.9.56`` 或更低版本（如果接受非 NT 架构）
     - 否则
-      - 卸载 QXposed (QX) 插件、QQ 复读机插件、XAutoDaily (XA) 和 QAuxiliary (QA) 插件
-      - 禁用抢红包、自动签到（包括每日签到、群签到和小程序签到）以及消息群发功能
+      - 卸载 QXposed（QX）插件、QQ 复读机插件、XAutoDaily（XA）和 QAuxiliary（QA）插件
+      - 请禁用抢红包、自动群签到和消息群发功能
       - 卸载任何未适配 LSPosed 的 Xposed API 调用保护的 QQ 插件
       - 高于 ``v9.1.31`` 版本时切勿向 QQ 暴露（切换环境时记得提前禁用 QQ）任何可疑环境（含 root 和注入环境）或执行任何注入
-- 电脑 QQ (Windows)：始终使用最新怀旧版而非 QQNT 版本
+- 电脑 QQ（Windows）：始终使用最新怀旧版而非 QQNT 版本
