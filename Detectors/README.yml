@@ -81,8 +81,8 @@
   officialLink: https://www.54nb.com/lunathanks.html
   sourceStatus: D
   developingPurpose: D
-  latestVersion: v1.4.0.5 (1405)
-  releaseDate: = 20250428
+  latestVersion: v1.4.0.6
+  releaseDate: <=20250516
 - name: Key Attestation
   alias:
     CN: 密钥认证
