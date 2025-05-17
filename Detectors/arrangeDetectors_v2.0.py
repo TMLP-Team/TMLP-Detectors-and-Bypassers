@@ -95,7 +95,7 @@ class Detectors:
 	def __getReleaseDate(self:object, code:str, language:str) -> str:
 		if isinstance(code, str) and isinstance(language, str):
 			if len(code) >= 8 and code[-8:].isdigit():
-				d = {"":"", "=":"", "==":"", "<":{"UN":"Before", "CN":"早于"}, "<=":{"UN":"On or Before", "CN":"不晚于"}, ">":{"UN":"After", "CN":"晚于"}, ">=":{"UN":"On or After", "CN":"不早于"}}
+				d = {"":"", "=":"", "==":"", "<":{"UN":"Before", "CN":"早于"}, "<=":{"UN":"On or Before", "CN":"不晚于"}, ">":{"UN":"After", "CN":"晚于"}, ">=":{"UN":"On or After", "CN":"不早于"}, "!=":{"UN":"Not On", "CN":"不是"}}
 				symbol = code[:-8].strip()
 				if symbol in d:
 					year, month, day = int(code[-8:-4]), int(code[-4:-2]), int(code[-2:])
