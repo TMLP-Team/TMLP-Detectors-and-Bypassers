@@ -103,8 +103,8 @@
 			"officialLink":"https://www.54nb.com/lunathanks.html", 
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
-			"latestVersion":"v1.4.0.6", 
-			"releaseDate":"<=20250516"
+			"latestVersion":"v1.4.1.1", 
+			"releaseDate":"= 20250523"
 		}, 
 		{
 			"name":"Key Attestation", 

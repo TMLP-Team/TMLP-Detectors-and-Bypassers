@@ -10,7 +10,7 @@
 | DRM Info | ``com.androidfung.drminfo`` | [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo) | | Information Gathering | ``v1.1.15-240919`` |  September 19th, 2024 |
 | Hunter | ``com.zhenxi.hunter`` | | | Environment Detection | ``v6.18 (618)`` |  April 23rd, 2025 |
 | IIQE 一考通 | ``com.prudential.iiqe`` | [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/) | Android Desktop Application | Android Desktop Application | ``v6.4.3C88`` |  March 3rd, 2025 |
-| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | Android Desktop Application | Android Desktop Application | ``v1.4.0.6`` | On or Before May 16th, 2025 |
+| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | Android Desktop Application | Android Desktop Application | ``v1.4.1.1`` |  May 23rd, 2025 |
 | Key Attestation | ``io.github.vvb2060.keyattestation`` | [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation); [https://t.me/magiskalpha](https://t.me/magiskalpha); [https://t.me/playintegrityfix](https://t.me/playintegrityfix); [https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation) | Open-source | Key Attestation | ``v1.8.4`` |  February 6th, 2025 |
 | Magisk Detector | ``io.github.vvb2060.magiskdetector`` | [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector) | Archieved & Open-source | Magisk Detection | ``v3.0`` |  August 9th, 2022 |
 | Momo | ``io.github.vvb2060.mahoshojo`` | | | Environment Detection | ``v4.4.1`` | Before January 7th, 2023 |
@@ -44,7 +44,7 @@
 | DRM Info | ``com.androidfung.drminfo`` | [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo) | | 信息收集 | ``v1.1.15-240919`` |  2024 年 9 月 19 日 |
 | Hunter | ``com.zhenxi.hunter`` | | | 环境检测 | ``v6.18 (618)`` |  2025 年 4 月 23 日 |
 | IIQE 一考通 | ``com.prudential.iiqe`` | [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/) | 安卓桌面应用 | 安卓桌面应用 | ``v6.4.3C88`` |  2025 年 3 月 3 日 |
-| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | 安卓桌面应用 | 安卓桌面应用 | ``v1.4.0.6`` | 不晚于 2025 年 5 月 16 日 |
+| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | 安卓桌面应用 | 安卓桌面应用 | ``v1.4.1.1`` |  2025 年 5 月 23 日 |
 | Key Attestation | ``io.github.vvb2060.keyattestation`` | [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)；[https://t.me/magiskalpha](https://t.me/magiskalpha)；[https://t.me/playintegrityfix](https://t.me/playintegrityfix)；[https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation) | 开源 | 密钥认证 | ``v1.8.4`` |  2025 年 2 月 6 日 |
 | Magisk Detector | ``io.github.vvb2060.magiskdetector`` | [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector) | 已存档 & 开源 | 面具检测 | ``v3.0`` |  2022 年 8 月 9 日 |
 | Momo | ``io.github.vvb2060.mahoshojo`` | | | 环境检测 | ``v4.4.1`` | 早于 2023 年 1 月 7 日 |

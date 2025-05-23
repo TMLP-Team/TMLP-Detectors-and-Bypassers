@@ -75,8 +75,8 @@
 - **Official Link**: https://www.54nb.com/lunathanks.html
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v1.4.0.6``
-- **Release Date**: On or Before May 16th, 2025
+- **Latest Version**: ``v1.4.1.1``
+- **Release Date**:  May 23rd, 2025
 
 ### Key Attestation
 
@@ -330,8 +330,8 @@
 - **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v1.4.0.6``
-- **发行日期**：不晚于 2025 年 5 月 16 日
+- **最新版本**：``v1.4.1.1``
+- **发行日期**： 2025 年 5 月 23 日
 
 ### Key Attestation
 

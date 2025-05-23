@@ -120,42 +120,41 @@ View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_
 
 ### Special Cases
 
+#### Luna
+
+##### Found HMA/HMAL when detecting risky application
+
+Change to a different package name according to [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45)
+
+##### Found HMA/HMAL when scanning memory
+
+It may be false positive according to [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45)
+
 #### Momo
 
-##### Package Management Service Exception
+##### Package management service exception
 
 Turn off "Disable package manager signature verification" in Core Patcher by referring to [a post in early 2023](https://zhidao.baidu.com/question/633770792883881924.html)
 
-##### Debug mode is enabled
+##### Debugging mode is enabled
 
-- Turn off debug mode when not in use
+- Turn off the debugging mode when not in use
 - It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though injecting the detection application can pass the debug mode (suspicious level)
 
-##### TWRP File Existence
+##### Detect the existence of TWRP file(s)
 
 Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
-##### Unlocked Bootloader
+##### Unlocked bootloader
 
 - Install [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) module
 - It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though the injection of the detected application can pass the debug mode (suspicious level)
 
 #### Ruru
 
-##### syscall finds HMA
+##### Found HMA in ``syscall``
 
-- Switch to HMAL
-
-#### Native Test
-
-##### Versions from ``v26.0`` to the invitial ``v30.0`` reports "Malicious Hook"
-
-- It can be a false positive since "Malicious Hook" was redefined in these versions
-- Please use the latest version to check the environments. 
-
-##### Others
-
-- Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.com/thread-285106-1.htm)
+Switch to HMAL
 
 #### Native Root Detector
 
@@ -178,10 +177,21 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - Apatch and its branches: Embed the Cherish Peekaboo module as a kernel module (please check if the ``compat`` version is needed)
 - KSU and its branches: Embed the SUSFS module as a kernel module
 
-##### Risky application detected (bypass HMA/HMAL)
+##### Risky application detected (bypassed HMA/HMAL)
 
 - Temporary solution: random package name or uninstall corresponding application
 - Permanent solution: None
+
+#### Native Test
+
+##### Versions from ``v26.0`` to the invitial ``v30.0`` reports "Malicious Hook"
+
+- It can be a false positive since "Malicious Hook" was redefined in these versions
+- Please use the latest version to check the environments. 
+
+##### Others
+
+Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.com/thread-285106-1.htm)
 
 #### Postal Savings Bank
 
@@ -194,20 +204,6 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - If you want to switch to the Delta version mask (the Delta version mask at that time would not cause the Postal Savings Bank to crash)
 - The solution at that time: the Delta version mask around September 2023 can be effectively inspected
 - The current solution: Use the last Delta version mask before the suspension
-
-#### Octopus, Bank of China Hong Kong, and other applications
-
-##### Apatch users crash or open a web page after crashing to inform that the phone environment is abnormal
-
-- Before March 2025: Add to the exclusion list
-- In or after March 2025: Use NeoZygisk to implement Zygisk and reset the exclusion list for applications that do not require root
-
-#### WeChat
-
-##### Failed to open the fingerprint payment prompt (but other domestic and foreign applications can use fingerprints normally)
-
-- Temporary solution: Use the WeChat Payment module or the WeChat Payment plugin (the principle is to submit the pre-stored password after passing the fingerprint)
-- Essential solution: None
 
 #### QQ
 
@@ -234,6 +230,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
   - If you are using a QQ version above ``v8.9.56`` that is affected by the 2024 autumn to 2025 spring risk control event (the phenomenon is most obvious when using the ``v9.1.35`` version)
     - Please refer to the issues mentioned in (``v8.8.17``, ``v8.9.56``]
     - If you want to use the XAutoDaily (XA) plugin or the QAuxiliary (QA) plugin while you can still downgrade your QQ
+      - Make sure that you have already hidden the rooting and injection environments according to the common procedures shown in this page
       - In the QAuxiliary (QA) plugin, turn on the "disable QQ hot patch" switch and turn off the "environment detection package (trpc.o3.*) interception" switch
       - Switch to the ``v9.1.31`` or lower versions, 
       - Switch to the ``v9.0.95`` or lower versions, or
@@ -244,6 +241,13 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - Uninstall any QQ plugin that is not adapted to the Xposed API calling protection of LSPosed
       - Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ (remember to disable QQ in advance when switching environments) when using versions above ``v9.1.31``
 - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version
+
+#### WeChat
+
+##### Failed to open the fingerprint payment prompt (but other domestic and foreign applications can use fingerprints normally)
+
+- Temporary solution: Use the WeChat Payment module or the WeChat Payment plugin (the principle is to submit the pre-stored password after passing the fingerprint)
+- Essential solution: None
 
 ---
 
@@ -369,6 +373,16 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ### 特殊情况
 
+#### Luna
+
+##### 扫描风险应用发现隐藏应用列表
+
+参阅 [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45) 换用不同包名的 HMAL
+
+##### 内存扫描时发现隐藏应用列表
+
+参阅 [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45) 认为是误报
+
 #### Momo
 
 ##### 包管理服务异常
@@ -391,20 +405,9 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 #### Ruru
 
-##### syscall 找到 HMA
+##### ``syscall`` 找到 HMA
 
-- 换用 HMAL
-
-#### 牛头人
-
-##### 从 ``v26.0`` 到 最初的 ``v30.0`` 版本报 Malicious hook
-
-- 由于在这些版本中 Malicious hook 被重新定义因此它很可能是误报
-- 请使用最新版检查环境
-
-##### 其它问题
-
-- 请参阅 [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.com/thread-285106-1.htm)
+换用 HMAL
 
 #### Native Root Detector
 
@@ -432,6 +435,17 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - 临时解决方案：随机包名或卸载对应应用
 - 永久解决方案：暂无
 
+#### 牛头人
+
+##### 从 ``v26.0`` 到 最初的 ``v30.0`` 版本报 Malicious hook
+
+- 由于在这些版本中 Malicious hook 被重新定义因此它很可能是误报
+- 请使用最新版检查环境
+
+##### 其它问题
+
+请参阅 [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.com/thread-285106-1.htm)
+
 #### 邮储银行
 
 ##### 2023 年 9 月左右使用了当时最新版官方面具和最新版 Shamiko 依旧闪退
@@ -443,20 +457,6 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - 如果希望换用 Delta 版面具（当时的 Delta 版面具不会让邮储银行出现闪退）
   - 当时的解决方法：2023 年 9 月左右的 Delta 版面具可以有效过检
   - 现在的解决方法：使用停更前的最后一个 Delta 版面具
-
-#### Octopus、中银香港等应用
-
-##### Apatch 用户闪退或闪退后打开一个网页告知手机环境异常
-
-- 2025 年 3 月前的解决办法：添加到排除列表
-- 2025 年 3 月开始的解决办法：使用 NeoZygisk 实现 Zygisk 并对无需 root 的应用重置排除列表
-
-#### 微信
-
-##### 开启指纹支付提示失败（但其它境内外应用都能正常使用指纹）
-
-- 临时解决方法：使用微信支付模块或微信支付插件（原理是通过指纹后将预先存储的密码进行提交）
-- 本质解决方法：暂无
 
 #### QQ
 
@@ -483,6 +483,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
   - 如果您使用的 QQ 版本高于 ``v8.9.56`` 且受 2024 年秋季至 2025 年春季风控事件影响（使用 ``v9.1.35`` 版本时现象最为明显）
     - 请参阅 (``v8.8.17``, ``v8.9.56``]
     - 如果您想使用 XAutoDaily（XA）插件或 QAuxiliary（QA）插件，并且仍然可以降级您的 QQ，请
+      - 确保您已按照本页的通用流程隐藏 root 和注入环境
       - 在 QAuxiliary（QA）插件中打开禁用 QQ 热补丁开关并关闭环境检测包（trpc.o3.*）拦截开关
       - 切换到 ``v9.1.31`` 或更低版本，
       - 切换到 ``v9.0.95`` 或更低版本，或者
@@ -493,3 +494,10 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
       - 卸载任何未适配 LSPosed 的 Xposed API 调用保护的 QQ 插件
       - 高于 ``v9.1.31`` 版本时切勿向 QQ 暴露（切换环境时记得提前禁用 QQ）任何可疑环境（含 root 和注入环境）或执行任何注入
 - 电脑 QQ（Windows）：始终使用最新怀旧版而非 QQNT 版本
+
+#### 微信
+
+##### 开启指纹支付提示失败（但其它境内外应用都能正常使用指纹）
+
+- 临时解决方法：使用微信支付模块或微信支付插件（原理是通过指纹后将预先存储的密码进行提交）
+- 本质解决方法：暂无
