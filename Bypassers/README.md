@@ -2,6 +2,16 @@
 
 Currently, Magisk Alpha is the best solution since it can bypass inconsistent mounting detection by using Zygisk Next + Shamiko and offer the random package name feature. 
 
+Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
+
+- Hide custom ROMs
+- Hide USB debugging and even developer options
+- Hide accessibility mode (even the affected application cannot detect accessibility mode)
+- Bypass the package name detection that can bypass HMA/HMAL
+- Solve the problem that WeChat fails to enable fingerprint payment while all other applications can use it normally
+- Solve the problem that the STRONG integrity check cannot be passed on devices with the bootloader unlocked when there is no valid keybox
+- Hide injection traces for applications injected at the application level
+
 ### Using Official Magisk (Including Release, Beta, Canary, and Debug Versions) or Magisk Alpha
 
 - Install the latest [Magisk Alpha](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
@@ -239,7 +249,17 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ## 过检方法
 
-目前，Magisk Alpha 是最好的解决方案，因为它可以通过使用 Zygisk Next + Shamiko 绕过不一致的安装检测并提供随机包名称功能。
+目前，Magisk Alpha 是最好的解决方案，因为它可以通过使用 Zygisk Next + Shamiko 绕过不一致的挂载检测并提供随机包名称功能。
+
+目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
+
+- 隐藏自定义 ROM
+- 隐藏 USB 调试甚至开发者选项
+- 隐藏无障碍模式（甚至被作用的应用也无法检测到无障碍模式）
+- 绕过能够绕过隐藏应用列表的应用包名检测
+- 解决微信指纹支付开启失败而其它应用软件都能正常使用的问题
+- 解决无合法 keybox 时无法在已解锁 bootloader 的设备上通过 STRONG 完整性检验
+- 对被应用层注入的应用隐藏注入痕迹
 
 ### 正在使用官方版（含发行版、Beta 版、金丝雀版和 Debug 版）或 Alpha 版面具
 
