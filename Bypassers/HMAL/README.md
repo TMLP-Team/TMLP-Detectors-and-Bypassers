@@ -19,9 +19,9 @@ Faithfully speaking, a plugin that can hide the application list without manual 
 
 - Classifications: 
   - Classification $S$: Unlaunchable system and launchable critical system pre-installed applications; 
-  - Classification $B$: TMLP-related applications; 
-  - Classification $C$: Applications designed for environment detection; and
-  - Classification $D$: Others. 
+  - Classification $B$: TMLP-related applications that need to bypass detection: 
+  - Classification $C$: Applications designed for environment detection (the cat and ~~the~~ mouse); and
+  - Classification $D$: Plain Android desktop applications (that love detecting environments). 
 - Examples: 
   - $S$: ``com.oneplus.coreservice`` and ``com.android.settings``; 
   - $B$: ``io.github.vvb2060.magisk`` and ``com.google.android.hmal``; 
@@ -62,9 +62,9 @@ If you want to have a JSON configuration file generated based on the cloud libra
 
 - 分类：
   - 分类 $S$：无法启动的系统应用和可启动的关键系统预装应用；
-  - 分类 $B$：TMLP 相关应用；
-  - 分类 $C$：用于环境检测的应用；
-  - 分类 $D$：其它。
+  - 分类 $B$：需要过检的 TMLP 相关应用；
+  - 分类 $C$：用于环境检测的应用（既是猫又是老鼠）；
+  - 分类 $D$：（热衷于检测环境的）普通安卓桌面应用。
 - 示例：
   - $S$: ``com.oneplus.coreservice`` 和 ``com.android.settings``；
   - $B$: ``io.github.vvb2060.magisk`` 和 ``com.google.android.hmal``；
