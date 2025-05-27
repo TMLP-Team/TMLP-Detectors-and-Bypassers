@@ -1,6 +1,6 @@
 ## Detectors
 
-Momo $ightarrow$ Native Root Detector $ightarrow$ Native Test $ightarrow$ IIQE
+Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ IIQE
 
 ### Android Integrity Checker
 
@@ -261,7 +261,7 @@ Momo $ightarrow$ Native Root Detector $ightarrow$ Native Test $ightarrow$ IIQ
 
 ## 检测软件
 
-Momo $ightarrow$ Native Root Detector $ightarrow$ 牛头人 $ightarrow$ IIQE 一考通
+Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ IIQE 一考通
 
 ### Android Integrity Checker
 
