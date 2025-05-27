@@ -8,9 +8,9 @@
 | Bank of China (Hong Kong) | ``com.bochk.app.aos`` | [https://play.google.com/store/apps/details?id=com.bochk.app.aos](https://play.google.com/store/apps/details?id=com.bochk.app.aos) | Android Desktop Application | Android Desktop Application | ``7.2.9 (141)`` |  April 9th, 2025 |
 | Checker | ``org.akanework.checker`` | | | Environment Detection | ``v1.0.9`` | Before January 8th, 2025 |
 | DRM Info | ``com.androidfung.drminfo`` | [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo) | | Information Gathering | ``v1.1.15-240919`` |  September 19th, 2024 |
-| Hunter | ``com.zhenxi.hunter`` | | | Environment Detection | ``v6.18 (618)`` |  April 23rd, 2025 |
+| Hunter | ``com.zhenxi.hunter`` | | | Environment Detection | ``v6.21 (621)`` |  April 28th, 2025 |
 | IIQE 一考通 | ``com.prudential.iiqe`` | [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/) | Android Desktop Application | Android Desktop Application | ``v6.4.3C88`` |  March 3rd, 2025 |
-| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | Android Desktop Application | Android Desktop Application | ``v1.4.1.1`` |  May 23rd, 2025 |
+| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | Android Desktop Application | Android Desktop Application | ``v1.4.1.2`` |  May 27th, 2025 |
 | Key Attestation | ``io.github.vvb2060.keyattestation`` | [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation); [https://t.me/magiskalpha](https://t.me/magiskalpha); [https://t.me/playintegrityfix](https://t.me/playintegrityfix); [https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation) | Open-source | Key Attestation | ``v1.8.4`` |  February 6th, 2025 |
 | Magisk Detector | ``io.github.vvb2060.magiskdetector`` | [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector) | Archieved & Open-source | Magisk Detection | ``v3.0`` |  August 9th, 2022 |
 | Momo | ``io.github.vvb2060.mahoshojo`` | | | Environment Detection | ``v4.4.1`` | Before January 7th, 2023 |
@@ -28,6 +28,7 @@
 | Xposed Checker | ``ml.w568w.checkxposed`` | [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker) | Open-source | Environment Detection | ``v7.1 (9)`` | Before February 3rd, 2022 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector) | Archieved & Open-source | Environment Detection | ``v2.2 (5)`` |  March 27th, 2021 |
 | Yet Another SafetyNet Attestation Checker | ``rikka.safetynetchecker`` | [https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC) | Archieved & Open-source | Play Integrity Check | ``v1.1.5.r65.15110ef310 (65)`` |  April 4th, 2022 |
+| 春秋检测 | ``chunqiu.safe`` | | Closed-source | Environment Detection | ``v1.6.0_Beta`` |  May 21st, 2025 |
 | 邮储银行 | ``com.yitong.mbank.psbc`` | [https://phone.psbc.com](https://phone.psbc.com) | Android Desktop Application | Android Desktop Application | ``v10.2.0`` |  March 3rd, 2025 |
 
 ---
@@ -42,9 +43,9 @@
 | Bank of China (Hong Kong) | ``com.bochk.app.aos`` | [https://play.google.com/store/apps/details?id=com.bochk.app.aos](https://play.google.com/store/apps/details?id=com.bochk.app.aos) | 安卓桌面应用 | 安卓桌面应用 | ``7.2.9 (141)`` |  2025 年 4 月 9 日 |
 | Checker | ``org.akanework.checker`` | | | 环境检测 | ``v1.0.9`` | 早于 2025 年 1 月 8 日 |
 | DRM Info | ``com.androidfung.drminfo`` | [https://play.google.com/store/apps/details?id=com.androidfung.drminfo](https://play.google.com/store/apps/details?id=com.androidfung.drminfo) | | 信息收集 | ``v1.1.15-240919`` |  2024 年 9 月 19 日 |
-| Hunter | ``com.zhenxi.hunter`` | | | 环境检测 | ``v6.18 (618)`` |  2025 年 4 月 23 日 |
+| Hunter | ``com.zhenxi.hunter`` | | | 环境检测 | ``v6.21 (621)`` |  2025 年 4 月 28 日 |
 | IIQE 一考通 | ``com.prudential.iiqe`` | [https://iiqe-cms.prudential.com.hk/iiqe/](https://iiqe-cms.prudential.com.hk/iiqe/) | 安卓桌面应用 | 安卓桌面应用 | ``v6.4.3C88`` |  2025 年 3 月 3 日 |
-| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | 安卓桌面应用 | 安卓桌面应用 | ``v1.4.1.1`` |  2025 年 5 月 23 日 |
+| Luna | ``luna.safe.luna`` | [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html) | 安卓桌面应用 | 安卓桌面应用 | ``v1.4.1.2`` |  2025 年 5 月 27 日 |
 | Key Attestation | ``io.github.vvb2060.keyattestation`` | [https://github.com/vvb2060/KeyAttestation](https://github.com/vvb2060/KeyAttestation)；[https://t.me/magiskalpha](https://t.me/magiskalpha)；[https://t.me/playintegrityfix](https://t.me/playintegrityfix)；[https://github.com/chiteroman/KeyAttestation](https://github.com/chiteroman/KeyAttestation) | 开源 | 密钥认证 | ``v1.8.4`` |  2025 年 2 月 6 日 |
 | Magisk Detector | ``io.github.vvb2060.magiskdetector`` | [https://github.com/vvb2060/MagiskDetector](https://github.com/vvb2060/MagiskDetector) | 已存档 & 开源 | 面具检测 | ``v3.0`` |  2022 年 8 月 9 日 |
 | Momo | ``io.github.vvb2060.mahoshojo`` | | | 环境检测 | ``v4.4.1`` | 早于 2023 年 1 月 7 日 |
@@ -62,4 +63,5 @@
 | Xposed Checker | ``ml.w568w.checkxposed`` | [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker) | 开源 | 环境检测 | ``v7.1 (9)`` | 早于 2022 年 2 月 3 日 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector) | 已存档 & 开源 | 环境检测 | ``v2.2 (5)`` |  2021 年 3 月 27 日 |
 | Yet Another SafetyNet Attestation Checker | ``rikka.safetynetchecker`` | [https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC) | 已存档 & 开源 | Play 完整性检测 | ``v1.1.5.r65.15110ef310 (65)`` |  2022 年 4 月 4 日 |
+| 春秋检测 | ``chunqiu.safe`` | | 闭源 | 环境检测 | ``v1.6.0_Beta`` |  2025 年 5 月 21 日 |
 | 邮储银行 | ``com.yitong.mbank.psbc`` | [https://phone.psbc.com](https://phone.psbc.com) | 安卓桌面应用 | 安卓桌面应用 | ``v10.2.0`` |  2025 年 3 月 3 日 |

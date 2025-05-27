@@ -60,8 +60,8 @@
 - name: Hunter
   packageName: com.zhenxi.hunter
   developingPurpose: E
-  latestVersion: v6.18 (618)
-  releaseDate: = 20250423
+  latestVersion: v6.21 (621)
+  releaseDate: = 20250428
   detectionRemark:
     UK: 'Please wait about 10 seconds to complete the detection and display. '
     CN: 请等待 10 秒左右以完成检测和显示。
@@ -81,8 +81,10 @@
   officialLink: https://www.54nb.com/lunathanks.html
   sourceStatus: D
   developingPurpose: D
-  latestVersion: v1.4.1.1
-  releaseDate: = 20250523
+  latestVersion: v1.4.1.2
+  releaseDate: = 20250527
+  image:
+    CN: lunaCN.jpg
 - name: Key Attestation
   alias:
     CN: 密钥认证
@@ -268,6 +270,12 @@
   developingPurpose: P
   latestVersion: v1.1.5.r65.15110ef310 (65)
   releaseDate: = 20220404
+- name: 春秋检测
+  packageName: chunqiu.safe
+  sourceStatus: C
+  developingPurpose: E
+  latestVersion: v1.6.0_Beta
+  releaseDate: = 20250521
 - name: 邮储银行
   alias:
     UK:

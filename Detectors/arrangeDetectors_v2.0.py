@@ -32,7 +32,7 @@ class Detectors:
 			self.__flag = True
 			return True
 		except BaseException as e:
-			print("Cannot load data from \"{0}\". Details are as follows. \t{1}".format(jsonFilePath, e))
+			print("Cannot load data from \"{0}\". Details are as follows. \n\t{1}".format(jsonFilePath, e))
 			return False
 	def checkDetectorFolderPath(self:object, detectorFolderPath:str = ".") -> int:
 		if self.__flag and isinstance(detectorFolderPath, str) and os.path.isdir(detectorFolderPath):

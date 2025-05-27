@@ -55,8 +55,8 @@
 
 - **Package Name**: ``com.zhenxi.hunter``
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v6.18 (618)``
-- **Release Date**:  April 23rd, 2025
+- **Latest Version**: ``v6.21 (621)``
+- **Release Date**:  April 28th, 2025
 - **Detection Remark**: Please wait about 10 seconds to complete the detection and display. 
 
 ### IIQE 一考通
@@ -75,8 +75,8 @@
 - **Official Link**: https://www.54nb.com/lunathanks.html
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v1.4.1.1``
-- **Release Date**:  May 23rd, 2025
+- **Latest Version**: ``v1.4.1.2``
+- **Release Date**:  May 27th, 2025
 
 ### Key Attestation
 
@@ -236,6 +236,14 @@
 - **Latest Version**: ``v1.1.5.r65.15110ef310 (65)``
 - **Release Date**:  April 4th, 2022
 
+### 春秋检测
+
+- **Package Name**: ``chunqiu.safe``
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.6.0_Beta``
+- **Release Date**:  May 21st, 2025
+
 ### 邮储银行
 
 - **Alias**: Postal Savings Bank of China; PSBC
@@ -310,8 +318,8 @@
 
 - **应用包名**：``com.zhenxi.hunter``
 - **开发用途**：环境检测
-- **最新版本**：``v6.18 (618)``
-- **发行日期**： 2025 年 4 月 23 日
+- **最新版本**：``v6.21 (621)``
+- **发行日期**： 2025 年 4 月 28 日
 - **检测备注**：请等待 10 秒左右以完成检测和显示。
 - ![hunterCN.jpg](hunterCN.jpg)
 
@@ -330,8 +338,9 @@
 - **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v1.4.1.1``
-- **发行日期**： 2025 年 5 月 23 日
+- **最新版本**：``v1.4.1.2``
+- **发行日期**： 2025 年 5 月 27 日
+- ![lunaCN.jpg](lunaCN.jpg)
 
 ### Key Attestation
 
@@ -501,6 +510,14 @@
 - **开发用途**：Play 完整性检测
 - **最新版本**：``v1.1.5.r65.15110ef310 (65)``
 - **发行日期**： 2022 年 4 月 4 日
+
+### 春秋检测
+
+- **应用包名**：``chunqiu.safe``
+- **开源状态**：闭源
+- **开发用途**：环境检测
+- **最新版本**：``v1.6.0_Beta``
+- **发行日期**： 2025 年 5 月 21 日
 
 ### 邮储银行
 
