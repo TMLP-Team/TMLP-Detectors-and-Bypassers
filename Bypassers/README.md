@@ -1,13 +1,12 @@
 ## Bypassers
 
-Currently, Magisk Alpha is the best solution since it can bypass inconsistent mounting detection by using Zygisk Next + Shamiko and offer the random package name feature. 
+Currently, Magisk Alpha is the best solution since it can bypass inconsistent mounting detection by using Zygisk Next + Shamiko and offer the random package name feature, followed by KSU Next + SUSFS, Apatch + Cherish Peekaboo, and Magisk Delta. 
 
 Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
 
 - Hide custom ROMs
 - Hide USB debugging and even developer options
 - Hide accessibility mode (even the affected application cannot detect accessibility mode)
-- Bypass the package name detection that can bypass HMA/HMAL
 - Solve the problem that WeChat fails to enable fingerprint payment while all other applications can use it normally
 - Solve the problem that the STRONG integrity check cannot be passed on devices with the bootloader unlocked when there is no valid keybox
 - Hide injection traces for applications injected at the application level
@@ -19,7 +18,7 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
     - Disable built-in Zygisk
     - Disable Denylist
     - Empty Denylist
-    - Launch the applications requiring root privileges like the MT Manager and grant root requests in Magisk
+    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in Magisk
   - Install the [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the Magisk layer
     - Disable the Denylist in Zygisk Next
   - Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
@@ -48,6 +47,86 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
+
+### Using KSU / KSU Next
+
+- Install the latest version of [KSU Next](https://github.com/KernelSU-Next/KernelSU-Next)
+  - Configure in the Super User tab of the KSU Next Manager
+    - Grant root privileges to all applications requiring them
+    - Use the default configurations for all the applications that do not require root privileges
+    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in KSU Next
+  - Deploy the kernel module in the KSU Next layer
+    - Embed the [SUSFS](https://github.com/sidex15/susfs4ksu-module) module as a kernel module
+  - Deploy the system modules in the KSU Next layer
+    - Install the [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the Magisk layer
+      - Disable the Denylist in Zygisk Next
+    - Install the [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the KSU Next layer
+      - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
+    - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the KSU Next layer
+      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
+      - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
+      - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
+      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+      - Reboot the device
+      - Configure the HMAL
+        - Hide HMAL's icon from the launcher in the HMAL's settings page
+        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+        - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
+    - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the KSU Next layer
+    - Install the [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the KSU Next layer
+      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
+      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
+      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
+      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
+      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
+      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
+    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
+    - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the KSU Next layer if the device does not have a proper vbmeta digest
+- View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
+
+### Using Apatch / Apatch Next
+
+- Install the latest version of [Apatch](https://github.com/bmax121/APatch/actions)
+  - Configure in the Super User tab of the Apatch Manager
+    - Grant root privileges to all applications requiring them
+    - Use the default configurations for all the applications that do not require root privileges
+      - The Apatch Manager Super User page seems to have a bug and you can: 
+        - Grant root privileges to the MT Manager
+        - Directly use the MT Manager to remove all application configurations except ``bin.mt.plus`` from the file ``/data/adb/ap/package_config``
+        - Reboot the device and use Apatch Manager again to grant root privileges to applications that require them
+  - Deploy the kernel module in the Apatch layer
+    - Pease back up the original ``boot.img`` and the current ``boot.img`` before operations
+    - Find the latest version of the module Cherish Peekaboo from [https://t.me/app_process64](https://t.me/app_process64)
+    - Embed the non-``compat`` version of the Cherish Peekaboo as a kernel module and reboot
+    - If devices cannot boot, then
+      - Flash the ``boot.img`` that is backed up before in the fastboot mode to restore
+      - Embed the latest ``compat`` version of the Cherish Peekaboo
+      - Reboot
+      - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
+  - Deploy the system modules in the Apatch layer
+    - Install the [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the Apatch layer
+    - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the Apatch layer
+      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
+      - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
+      - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
+      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+      - Reboot the device
+      - Configure the HMAL
+        - Hide HMAL's icon from the launcher in the HMAL's settings page
+        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+        - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
+    - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the Apatch layer
+    - Install the [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Apatch layer
+      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
+      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
+      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
+      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
+      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
+      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
+    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
+    - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Apatch layer if the device does not have a proper vbmeta digest
 
 ### Using Magisk Delta
 
@@ -81,41 +160,6 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
   - Install the [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other module if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
-
-### Using Apatch / Apatch Next / KSU / KSU Next
-
-- Install the latest version of [Apatch](https://github.com/bmax121/APatch/actions), [KSU](https://github.com/tiann/KernelSU), or [KSU Next](https://t.me/ksunext)
-  - Configure in the Super User tab of the root manager (The Apatch Manager Super User page seems to have a bug and you can {directly use the MT Manager to remove all application configurations except ``bin.mt.plus`` from the file ``/data/adb/ap/package_config`` after granting the MT Manager root privileges $rightarrow$ Reboot the device and use Apatch Manager again to grant root privileges to applications that require them})
-    - Grant root privileges to all applications requiring them
-    - Use the default configurations for all the applications that do not require root privileges
-  - Deploy the kernel module in the root manager layer
-    - Using Apatch or one of its branches (please back up the original ``boot.img`` and the current ``boot.img`` before operations): Find the latest version of the module Cherish Peekaboo from [https://t.me/app_process64](https://t.me/app_process64) and embed it as a kernel module (some models require the ``compat`` version)
-    - Using KSU or one of its branches: Embed the [SUSFS](https://github.com/sidex15/susfs4ksu-module) module as a kernel module
-  - Deploy the system module in the root manager layer
-    - Install the [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
-    - Install the [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the Release version in the latest action in the ``Jing Matrix`` fork) in the root manager layer
-      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
-      - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-      - Install the [HMAL](https://github.com/pumPCin/HMAL) plugin in the LSPosed layer
-      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
-      - Reboot the device
-      - Configure the HMAL
-        - Hide HMAL's icon from the launcher in the HMAL's settings page
-        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
-        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
-        - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-    - Install the [Play Integrity FIx](https://github.com/chiteroman/PlayIntegrityFix) module in the Magisk layer
-    - Install the [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
-      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
-      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
-      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
-      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
-      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
-    - Install the [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
-
-View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
 
 ### Special Cases
 
@@ -252,14 +296,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ## 过检方法
 
-目前，Magisk Alpha 是最好的解决方案，因为它可以通过使用 Zygisk Next + Shamiko 绕过不一致的挂载检测并提供随机包名称功能。
+目前，Magisk Alpha 是最好的解决方案，因为它可以通过使用 Zygisk Next + Shamiko 绕过不一致的挂载检测并提供随机包名称功能，其次为 KSU Next + SUSFS、Apatch + Cherish Peekaboo 和 Magisk Delta。
 
 目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
 
 - 隐藏自定义 ROM
 - 隐藏 USB 调试甚至开发者选项
 - 隐藏无障碍模式（甚至被作用的应用也无法检测到无障碍模式）
-- 绕过能够绕过隐藏应用列表的应用包名检测
 - 解决微信指纹支付开启失败而其它应用软件都能正常使用的问题
 - 解决无合法 keybox 时无法在已解锁 bootloader 的设备上通过 STRONG 完整性检验
 - 对被应用层注入的应用隐藏注入痕迹
@@ -301,6 +344,86 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
 
+### 正在使用 KSU / KSU Next
+
+- 安装最新版 [KSU Next](https://github.com/KernelSU-Next/KernelSU-Next)
+  - 在 KSU Next 管理器的超级用户页内进行配置
+    - 将所有需要 root 的应用程序进行授权
+    - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
+    - 启动 MT 管理器和其它需要 root 权限的应用程序并用 KSU Next 管理器进行授权
+  - 在 KSU Next 层部署内核模块
+    - 以内核模块的形式嵌入 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
+  - 在 KSU Next 层部署系统模块
+    - 在 KSU Next 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) 模块
+      - 禁用 Zygisk Next 内的遵守排除列表
+    - 在 KSU Next 层安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
+      - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（可直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
+    - 在 KSU Next 层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+      - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
+      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
+      - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
+      - 设置作用域为仅**系统框架**并启用插件
+      - 重启设备
+      - 配置 HMAL 插件
+        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
+        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+        - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
+    - 在 KSU Next 层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
+    - 在 KSU Next 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
+      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
+      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+      - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+    - 若设备的 vbmeta digest 不正确可在 KSU Next 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+- 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
+
+### 正在使用 Apatch / Apatch Next
+
+- 安装最新版 [Apatch](https://github.com/bmax121/APatch/actions)
+  - 在 Apatch 管理器的超级用户页内进行配置
+    - 将所有需要 root 的应用程序进行授权
+    - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
+      - Apatch 管理器超级用户页面似乎有 bug，若在重置过程中遇到，可：
+        - 直接在授予 MT 管理器 root 权限
+        - 使用 MT 管理器从文件 ``/data/adb/ap/package_config`` 中移除除 ``bin.mt.plus`` 以外的所有应用配置
+        - 在重启设备后再次使用 Apatch 管理器将 root 权限授予需要 root 权限的应用
+- 在 Apatch 层部署内核模块
+  - 请在操作前备份原始的 ``boot.img`` 和当前的 ``boot.img``
+  - 从 [https://t.me/app_process64](https://t.me/app_process64) 查找 Cherish Peekaboo 模块的最新版本
+  - 将非 ``compat`` 版本的 Cherish Peekaboo 以内核模块的形式嵌入并重新启动
+  - 如果设备无法启动，那么
+    - 请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原
+    - 嵌入最新 ``compat`` 版本的 Cherish Peekaboo
+    - 重新启动
+    - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原
+  - 部署 root 管理器层的系统模块
+    - 在 Apatch 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
+    - 在 Apatch 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+      - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
+      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
+      - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
+      - 设置作用域为仅**系统框架**并启用插件
+      - 重启设备
+      - 配置 HMAL 插件
+        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
+        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+        - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
+    - 在 Apatch 层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
+    - 在 Apatch 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
+      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
+      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+      - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+    - 若设备的 vbmeta digest 不正确可在 Apatch 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+
 ### 正在使用 Delta 版面具（小狐狸面具）
 
 - 安装停更前的最后一个版本的 [Delta 面具](https://github.com/HuskyDG/magisk-files)
@@ -333,41 +456,6 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
-
-### 正在使用 Apatch / Apatch Next / KSU / KSU Next
-
-- 安装最新版 [Apatch](https://github.com/bmax121/APatch/actions)、[KSU](https://github.com/tiann/KernelSU) 或 [KSU Next](https://t.me/ksunext)
-  - 在 root 管理器的超级用户页内进行配置（Apatch 管理器超级用户页面似乎有 bug 可直接在授予 MT 管理器 root 权限后使用 MT 管理器从文件 ``/data/adb/ap/package_config`` 中移除除 ``bin.mt.plus`` 以外的所有应用配置并在重启设备后再次使用 Apatch 管理器将 root 权限授予需要 root 权限的应用）
-    - 将所有需要 root 的应用程序进行授权
-    - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
-  - 部署 root 管理器层的内核模块
-    - 正在使用 Apatch 系列（在操作前请备份好原始 boot.img 和当前 boot.img）：从 [https://t.me/app_process64](https://t.me/app_process64) 中查找最新版模块 Cherish Peekaboo 并以内核模块的形式进行嵌入（部分机型需要 ``compat`` 版本）
-    - 正在使用 KSU 系列：以内核模块的形式嵌入 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
-  - 部署 root 管理器层的系统模块
-    - 在 root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) 模块
-    - 在 root 管理器层安装 ``Jing Matrix`` 分支中最后一次 action 生成的 Release 版 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
-      - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
-      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 [HAML](https://github.com/pumPCin/HMAL) 插件
-      - 设置作用域为仅**系统框架**并启用插件
-      - 重启设备
-      - 配置 HMAL 插件
-        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
-        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
-        - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-    - 在 Apatch 层安装 [Play Integrity Fix](https://github.com/chiteroman/PlayIntegrityFix) 模块
-    - 在 Apatch 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
-      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
-      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
-      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
-      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
-      - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
-    - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-
-如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
 
 ### 特殊情况
 
