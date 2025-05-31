@@ -15,6 +15,7 @@ Please also consider using the latest one generated in the ``action`` tab of the
 - KSU: 
   - KSU: [https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
   - KSU Next: [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
+  - SukiSU Ultra: [https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
 
 ---
 
@@ -35,3 +36,4 @@ Please also consider using the latest one generated in the ``action`` tab of the
 - KSU：
   - KSU：[https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
   - KSU Next：[https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
+  - SukiSU Ultra：[https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
