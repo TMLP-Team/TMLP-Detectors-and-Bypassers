@@ -10,7 +10,7 @@ We call on the open source community to maintain internal unity and harmony. The
 
 Please see [Implementers](./Implementers/README.md), [Detectors](./Detectors/README.md), and [Bypassers](./Bypassers/README.md) for details. 
 
-The last update of this repository was at 1:45 on June 1st, 2025 (UTC+8). 
+The last update of this repository was at 3:00 on June 5th, 2025 (UTC+8). 
 
 ---
 
@@ -26,4 +26,4 @@ The last update of this repository was at 1:45 on June 1st, 2025 (UTC+8).
 
 详情请查看 [Implementers](./Implementers/README.md)、[Detectors](./Detectors/README.md) 和 [Bypassers](./Bypassers/README.md)。
 
-本存储库最后一次更新时间为 2025 年 6 月 1 日 1:45（中国标准时间）。
+本存储库最后一次更新时间为 2025 年 6 月 5 日 3:00（中国标准时间）。

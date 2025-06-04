@@ -197,9 +197,20 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 
 - **Alias**: SPIC
 - **Package Name**: ``com.henrikherzig.playintegritychecker``
+- **Source Status**: Closed-source
 - **Developing Purpose**: Play Integrity Check
 - **Latest Version**: ``v1.4.0``
 - **Release Date**: Before November 10th, 2024
+
+### TamJiGi
+
+- **Alias**: xka wl rl
+- **Package Name**: ````
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v0.1.0 (46)``
+- **Release Date**:  November 22nd, 2024
+- ![tamJiGiUN.jpg](tamJiGiUN.jpg)
 
 ### Uber Driver
 
@@ -471,9 +482,20 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 
 - **应用别称**：SPIC
 - **应用包名**：``com.henrikherzig.playintegritychecker``
+- **开源状态**：闭源
 - **开发用途**：Play 完整性检测
 - **最新版本**：``v1.4.0``
 - **发行日期**：早于 2024 年 11 月 10 日
+
+### TamJiGi
+
+- **应用别称**：xka wl rl
+- **应用包名**：````
+- **开源状态**：闭源
+- **开发用途**：环境检测
+- **最新版本**：``v0.1.0 (46)``
+- **发行日期**： 2024 年 11 月 22 日
+- ![tamJiGiUN.jpg](tamJiGiUN.jpg)
 
 ### Uber Driver
 

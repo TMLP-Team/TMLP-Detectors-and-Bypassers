@@ -231,9 +231,22 @@
   alias:
     UN: SPIC
   packageName: com.henrikherzig.playintegritychecker
+  sourceStatus: C
   developingPurpose: P
   latestVersion: v1.4.0
   releaseDate: < 20241110
+- name: TamJiGi
+  packageName: ''
+  alias:
+    UN: xka wl rl
+    ZH: 探知君
+    JP: 探知機（탐지기）
+  sourceStatus: C
+  developingPurpose: E
+  latestVersion: v0.1.0 (46)
+  releaseDate: = 20241122
+  image:
+    UN: tamJiGiUN.jpg
 - name: Uber Driver
   packageName: com.ubercab.driver
   officialLink: https://play.google.com/store/apps/details?id=com.ubercab.driver

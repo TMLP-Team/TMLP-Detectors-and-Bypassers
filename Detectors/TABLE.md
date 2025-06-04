@@ -23,7 +23,8 @@
 | Revolut | ``com.revolut.revolut`` | [https://play.google.com/store/apps/details?id=com.revolut.revolut](https://play.google.com/store/apps/details?id=com.revolut.revolut) | Android Desktop Application | Android Desktop Application | ``v10.76.1 (1007605497)`` |  April 22nd, 2024 |
 | Ruru | ``com.byxiaorun.detector`` | [https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru) | Open-source | Environment Detection | ``v1.1.1 (15)`` |  April 18th, 2024 |
 | Securify | ``io.github.rabehx.securify`` | [https://github.com/RabehX/Securify](https://github.com/RabehX/Securify) | Closed-source | Environment Detection | ``v1.3.0`` |  July 28th, 2024 |
-| Simple Play Integrity Checker | ``com.henrikherzig.playintegritychecker`` | | | Play Integrity Check | ``v1.4.0`` | Before November 10th, 2024 |
+| Simple Play Integrity Checker | ``com.henrikherzig.playintegritychecker`` | | Closed-source | Play Integrity Check | ``v1.4.0`` | Before November 10th, 2024 |
+| TamJiGi | ```` | | Closed-source | Environment Detection | ``v0.1.0 (46)`` |  November 22nd, 2024 |
 | Uber Driver | ``com.ubercab.driver`` | [https://play.google.com/store/apps/details?id=com.ubercab.driver](https://play.google.com/store/apps/details?id=com.ubercab.driver) | Android Desktop Application | Android Desktop Application | ``v4.522.10000 (224025)`` |  April 14th, 2025 |
 | Xposed Checker | ``ml.w568w.checkxposed`` | [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker) | Open-source | Environment Detection | ``v7.1 (9)`` | Before February 3rd, 2022 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector) | Archieved & Open-source | Environment Detection | ``v2.2 (5)`` |  March 27th, 2021 |
@@ -58,7 +59,8 @@
 | Revolut | ``com.revolut.revolut`` | [https://play.google.com/store/apps/details?id=com.revolut.revolut](https://play.google.com/store/apps/details?id=com.revolut.revolut) | 安卓桌面应用 | 安卓桌面应用 | ``v10.76.1 (1007605497)`` |  2024 年 4 月 22 日 |
 | Ruru | ``com.byxiaorun.detector`` | [https://github.com/byxiaorun/Ruru](https://github.com/byxiaorun/Ruru) | 开源 | 环境检测 | ``v1.1.1 (15)`` |  2024 年 4 月 18 日 |
 | Securify | ``io.github.rabehx.securify`` | [https://github.com/RabehX/Securify](https://github.com/RabehX/Securify) | 闭源 | 环境检测 | ``v1.3.0`` |  2024 年 7 月 28 日 |
-| Simple Play Integrity Checker | ``com.henrikherzig.playintegritychecker`` | | | Play 完整性检测 | ``v1.4.0`` | 早于 2024 年 11 月 10 日 |
+| Simple Play Integrity Checker | ``com.henrikherzig.playintegritychecker`` | | 闭源 | Play 完整性检测 | ``v1.4.0`` | 早于 2024 年 11 月 10 日 |
+| TamJiGi | ```` | | 闭源 | 环境检测 | ``v0.1.0 (46)`` |  2024 年 11 月 22 日 |
 | Uber Driver | ``com.ubercab.driver`` | [https://play.google.com/store/apps/details?id=com.ubercab.driver](https://play.google.com/store/apps/details?id=com.ubercab.driver) | 安卓桌面应用 | 安卓桌面应用 | ``v4.522.10000 (224025)`` |  2025 年 4 月 14 日 |
 | Xposed Checker | ``ml.w568w.checkxposed`` | [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker) | 开源 | 环境检测 | ``v7.1 (9)`` | 早于 2022 年 2 月 3 日 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector) | 已存档 & 开源 | 环境检测 | ``v2.2 (5)`` |  2021 年 3 月 27 日 |
