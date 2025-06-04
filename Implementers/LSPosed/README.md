@@ -6,10 +6,10 @@ Compared to the other branches, the ``Jing Matrix``, ``it``, and ``Irena`` versi
 
 - Official LSPosed: [https://github.com/LSPosed/LSPosed](https://github.com/LSPosed/LSPosed)
 - Jing Matrix: [https://github.com/JingMatrix/LSPosed](https://github.com/JingMatrix/LSPosed)
-- it: This branch is private. If necessary, please apply for joining according to [https://t.me/RootDetected/138/510](https://t.me/RootDetected/138/510) and keep internal information confidential. The two versions here are leaked ones. 
+- it: This branch is private. If necessary, please apply for joining according to [https://t.me/RootDetected/138/510](https://t.me/RootDetected/138/510) and keep internal information confidential. The version here is the lastest leaked one. 
 - Irena: [https://github.com/re-zero001/LSPosed-Irena](https://github.com/re-zero001/LSPosed-Irena)
 - mod: [https://github.com/mywalkb/LSPosed_mod](https://github.com/mywalkb/LSPosed_mod)
-- npm: No public official GitHub repositories are found. 
+- npm: No public official GitHub repositories are found. A possible publisher Telegram channel should be [https://t.me/rormzhstjxm](https://t.me/rormzhstjxm). 
 
 ---
 
@@ -24,4 +24,4 @@ Compared to the other branches, the ``Jing Matrix``, ``it``, and ``Irena`` versi
 - it：该分支暂不公开。如有需要，可根据 [https://t.me/RootDetected/138/510](https://t.me/RootDetected/138/510) 申请加入并对内部信息保密。此处放置的为已泄露的两个版本。
 - Irena：[https://github.com/re-zero001/LSPosed-Irena](https://github.com/re-zero001/LSPosed-Irena)
 - mod：[https://github.com/mywalkb/LSPosed_mod](https://github.com/mywalkb/LSPosed_mod)
-- npm：暂未找到公开的 npm 分支官方 GitHub 链接。
+- npm：暂未找到公开的 npm 分支官方 GitHub 链接。一个可能的电报发布频道为 [https://t.me/rormzhstjxm](https://t.me/rormzhstjxm)。
