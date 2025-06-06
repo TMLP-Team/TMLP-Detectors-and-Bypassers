@@ -254,8 +254,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Package Name**: ``chunqiu.safe``
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.6.0_Beta``
-- **Release Date**:  May 21st, 2025
+- **Latest Version**: ``v1.8.7_beta``
+- **Release Date**:  June 6th, 2025
 
 ### 邮储银行
 
@@ -542,8 +542,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **应用包名**：``chunqiu.safe``
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v1.6.0_Beta``
-- **发行日期**： 2025 年 5 月 21 日
+- **最新版本**：``v1.8.7_beta``
+- **发行日期**： 2025 年 6 月 6 日
 
 ### 邮储银行
 

@@ -29,7 +29,7 @@
 | Xposed Checker | ``ml.w568w.checkxposed`` | [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker) | Open-source | Environment Detection | ``v7.1 (9)`` | Before February 3rd, 2022 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector) | Archieved & Open-source | Environment Detection | ``v2.2 (5)`` |  March 27th, 2021 |
 | Yet Another SafetyNet Attestation Checker | ``rikka.safetynetchecker`` | [https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC) | Archieved & Open-source | Play Integrity Check | ``v1.1.5.r65.15110ef310 (65)`` |  April 4th, 2022 |
-| 春秋检测 | ``chunqiu.safe`` | | Closed-source | Environment Detection | ``v1.6.0_Beta`` |  May 21st, 2025 |
+| 春秋检测 | ``chunqiu.safe`` | | Closed-source | Environment Detection | ``v1.8.7_beta`` |  June 6th, 2025 |
 | 邮储银行 | ``com.yitong.mbank.psbc`` | [https://phone.psbc.com](https://phone.psbc.com) | Android Desktop Application | Android Desktop Application | ``v10.2.0`` |  March 3rd, 2025 |
 
 ---
@@ -65,5 +65,5 @@
 | Xposed Checker | ``ml.w568w.checkxposed`` | [https://github.com/w568w/XposedChecker](https://github.com/w568w/XposedChecker) | 开源 | 环境检测 | ``v7.1 (9)`` | 早于 2022 年 2 月 3 日 |
 | Xposed Detector | ``io.github.vvb2060.xposeddetector`` | [https://github.com/vvb2060/XposedDetector](https://github.com/vvb2060/XposedDetector) | 已存档 & 开源 | 环境检测 | ``v2.2 (5)`` |  2021 年 3 月 27 日 |
 | Yet Another SafetyNet Attestation Checker | ``rikka.safetynetchecker`` | [https://github.com/RikkaW/YASNAC](https://github.com/RikkaW/YASNAC) | 已存档 & 开源 | Play 完整性检测 | ``v1.1.5.r65.15110ef310 (65)`` |  2022 年 4 月 4 日 |
-| 春秋检测 | ``chunqiu.safe`` | | 闭源 | 环境检测 | ``v1.6.0_Beta`` |  2025 年 5 月 21 日 |
+| 春秋检测 | ``chunqiu.safe`` | | 闭源 | 环境检测 | ``v1.8.7_beta`` |  2025 年 6 月 6 日 |
 | 邮储银行 | ``com.yitong.mbank.psbc`` | [https://phone.psbc.com](https://phone.psbc.com) | 安卓桌面应用 | 安卓桌面应用 | ``v10.2.0`` |  2025 年 3 月 3 日 |

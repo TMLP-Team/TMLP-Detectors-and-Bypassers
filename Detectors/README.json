@@ -357,8 +357,8 @@
 			"packageName":"chunqiu.safe", 
 			"sourceStatus":"C", 
 			"developingPurpose":"E", 
-			"latestVersion":"v1.6.0_Beta", 
-			"releaseDate":"= 20250521"
+			"latestVersion":"v1.8.7_beta", 
+			"releaseDate":"= 20250606"
 		}, 
 		{
 			"name":"邮储银行", 
