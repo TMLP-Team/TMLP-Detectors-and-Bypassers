@@ -41,10 +41,15 @@ class Detectors:
 				if "name" in obj and "latestVersion" in obj:
 					fileNameA = "{0}_{1}.apk".format(obj["name"], obj["latestVersion"])
 					fileNameB = fileNameA + "s"
+					fileNameC, fileNameD = fileNameA + ".nomedia", fileNameB + ".nomedia"
 					if fileNameA in fileNames:
 						fileNames.remove(fileNameA)
 					elif fileNameB in fileNames:
 						fileNames.remove(fileNameB)
+					elif fileNameC in fileNames:
+						fileNames.remove(fileNameC)
+					elif fileNameD in fileNames:
+						fileNames.remove(fileNameD)
 					else:
 						issueCnt += 1
 						print("File \"{0}\" or File \"{1}\" is not in Folder \"{2}\". ".format(fileNameA, fileNameB, detectorFolderPath))

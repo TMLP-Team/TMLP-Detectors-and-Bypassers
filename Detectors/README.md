@@ -13,6 +13,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 ### APTest
 
 - **Package Name**: ``me.garfieldhan.hiapatch``
+- **Source Status**: Closed-source
 - **Developing Purpose**: Apatch Detection
 - **Latest Version**: ``v1.0``
 - **Release Date**: Before December 27th, 2024
@@ -34,8 +35,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: https://play.google.com/store/apps/details?id=com.bochk.app.aos
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``7.2.9 (141)``
-- **Release Date**:  April 9th, 2025
+- **Latest Version**: ``v7.3.1 (145)``
+- **Release Date**:  May 28th, 2025
 
 ### Checker
 
@@ -74,11 +75,11 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 ### Luna
 
 - **Package Name**: ``luna.safe.luna``
-- **Official Link**: https://www.54nb.com/lunathanks.html
+- **Official Links**: [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v1.4.1.2``
-- **Release Date**:  May 27th, 2025
+- **Latest Version**: ``v1.4.1.3``
+- **Release Date**:  June 9th, 2025
 
 ### Key Attestation
 
@@ -153,8 +154,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v12.16.1 (3181)``
-- **Release Date**:  April 23rd, 2024
+- **Latest Version**: ``v12.19.1 (3213)``
+- **Release Date**:  June 6th, 2025
 
 ### Play Integrity API Checker
 
@@ -171,8 +172,17 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: https://play.google.com/store/apps/details?id=com.revolut.revolut
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v10.76.1 (1007605497)``
-- **Release Date**:  April 22nd, 2024
+- **Latest Version**: ``v10.82 (1008204677)``
+- **Release Date**:  June 2nd, 2025
+
+### Rookie Detector
+
+- **Package Name**: ``wu.Rookie.Detector``
+- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.2 (10)``
+- **Release Date**:  June 9th, 2025
 
 ### Ruru
 
@@ -218,8 +228,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: https://play.google.com/store/apps/details?id=com.ubercab.driver
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v4.522.10000 (224025)``
-- **Release Date**:  April 14th, 2025
+- **Latest Version**: ``v4.529.10000 (230434)``
+- **Release Date**:  June 2nd, 2025
 
 ### Xposed Checker
 
@@ -252,10 +262,11 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 ### 春秋检测
 
 - **Package Name**: ``chunqiu.safe``
+- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.8.7_beta``
-- **Release Date**:  June 6th, 2025
+- **Latest Version**: ``v1.9``
+- **Release Date**:  June 9th, 2025
 
 ### 邮储银行
 
@@ -264,8 +275,17 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: https://phone.psbc.com
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v10.2.0``
-- **Release Date**:  March 3rd, 2025
+- **Latest Version**: ``v10.5.2 (188)``
+- **Release Date**:  June 4th, 2025
+
+### 橘子环境检测内测
+
+- **Package Name**: ``com.OrangeEnvironment.Detector``
+- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v3.0``
+- **Release Date**:  June 9th, 2025
 
 
 ---
@@ -285,6 +305,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 ### APTest
 
 - **应用包名**：``me.garfieldhan.hiapatch``
+- **开源状态**：闭源
 - **开发用途**：Apatch 检测
 - **最新版本**：``v1.0``
 - **发行日期**：早于 2024 年 12 月 27 日
@@ -308,8 +329,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.bochk.app.aos](https://play.google.com/store/apps/details?id=com.bochk.app.aos)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``7.2.9 (141)``
-- **发行日期**： 2025 年 4 月 9 日
+- **最新版本**：``v7.3.1 (145)``
+- **发行日期**： 2025 年 5 月 28 日
 
 ### Checker
 
@@ -350,11 +371,11 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 ### Luna
 
 - **应用包名**：``luna.safe.luna``
-- **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)
+- **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v1.4.1.2``
-- **发行日期**： 2025 年 5 月 27 日
+- **最新版本**：``v1.4.1.3``
+- **发行日期**： 2025 年 6 月 9 日
 - ![lunaCN.jpg](lunaCN.jpg)
 
 ### Key Attestation
@@ -438,8 +459,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader](https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v12.16.1 (3181)``
-- **发行日期**： 2024 年 4 月 23 日
+- **最新版本**：``v12.19.1 (3213)``
+- **发行日期**： 2025 年 6 月 6 日
 
 ### Play Integrity API Checker
 
@@ -456,8 +477,17 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.revolut.revolut](https://play.google.com/store/apps/details?id=com.revolut.revolut)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v10.76.1 (1007605497)``
-- **发行日期**： 2024 年 4 月 22 日
+- **最新版本**：``v10.82 (1008204677)``
+- **发行日期**： 2025 年 6 月 2 日
+
+### Rookie Detector
+
+- **应用包名**：``wu.Rookie.Detector``
+- **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
+- **开源状态**：闭源
+- **开发用途**：环境检测
+- **最新版本**：``v1.2 (10)``
+- **发行日期**： 2025 年 6 月 9 日
 
 ### Ruru
 
@@ -503,8 +533,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.ubercab.driver](https://play.google.com/store/apps/details?id=com.ubercab.driver)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v4.522.10000 (224025)``
-- **发行日期**： 2025 年 4 月 14 日
+- **最新版本**：``v4.529.10000 (230434)``
+- **发行日期**： 2025 年 6 月 2 日
 
 ### Xposed Checker
 
@@ -539,11 +569,13 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 
 ### 春秋检测
 
+- **应用别称**：春秋
 - **应用包名**：``chunqiu.safe``
+- **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v1.8.7_beta``
-- **发行日期**： 2025 年 6 月 6 日
+- **最新版本**：``v1.9``
+- **发行日期**： 2025 年 6 月 9 日
 
 ### 邮储银行
 
@@ -552,6 +584,16 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v10.2.0``
-- **发行日期**： 2025 年 3 月 3 日
+- **最新版本**：``v10.5.2 (188)``
+- **发行日期**： 2025 年 6 月 4 日
+
+### 橘子环境检测内测
+
+- **应用别称**：橘子
+- **应用包名**：``com.OrangeEnvironment.Detector``
+- **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
+- **开源状态**：闭源
+- **开发用途**：环境检测
+- **最新版本**：``v3.0``
+- **发行日期**： 2025 年 6 月 9 日
 
