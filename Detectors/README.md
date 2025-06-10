@@ -76,10 +76,11 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 
 - **Package Name**: ``luna.safe.luna``
 - **Official Links**: [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
-- **Source Status**: Android Desktop Application
-- **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v1.4.1.3``
-- **Release Date**:  June 9th, 2025
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.4.1.4``
+- **Release Date**:  June 10th, 2025
+- **Detection Remark**: This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. 
 
 ### Key Attestation
 
@@ -154,7 +155,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v12.19.1 (3213)``
+- **Latest Version**: ``v12.20.0 (3228)``
 - **Release Date**:  June 6th, 2025
 
 ### Play Integrity API Checker
@@ -262,11 +263,12 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 ### 春秋检测
 
 - **Package Name**: ``chunqiu.safe``
-- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
+- **Official Links**: [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258); [https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98](https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.9``
-- **Release Date**:  June 9th, 2025
+- **Latest Version**: ``v2.0``
+- **Release Date**:  June 10th, 2025
+- **Detection Remark**: Misreporting may exist. Use the tools provided in the official link(s) to bypass if necessary. 
 
 ### 邮储银行
 
@@ -372,10 +374,11 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 
 - **应用包名**：``luna.safe.luna``
 - **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
-- **开源状态**：安卓桌面应用
-- **开发用途**：安卓桌面应用
-- **最新版本**：``v1.4.1.3``
-- **发行日期**： 2025 年 6 月 9 日
+- **开源状态**：闭源
+- **开发用途**：环境检测
+- **最新版本**：``v1.4.1.4``
+- **发行日期**： 2025 年 6 月 10 日
+- **检测备注**：该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。
 - ![lunaCN.jpg](lunaCN.jpg)
 
 ### Key Attestation
@@ -459,7 +462,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader](https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v12.19.1 (3213)``
+- **最新版本**：``v12.20.0 (3228)``
 - **发行日期**： 2025 年 6 月 6 日
 
 ### Play Integrity API Checker
@@ -571,11 +574,12 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 
 - **应用别称**：春秋
 - **应用包名**：``chunqiu.safe``
-- **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
+- **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258)；[https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98](https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v1.9``
-- **发行日期**： 2025 年 6 月 9 日
+- **最新版本**：``v2.0``
+- **发行日期**： 2025 年 6 月 10 日
+- **检测备注**：可能存在误报。如有需要，请使用官方链接中提供的工具。
 
 ### 邮储银行
 

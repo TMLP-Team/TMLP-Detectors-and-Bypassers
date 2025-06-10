@@ -163,16 +163,6 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
 
 ### Special Cases
 
-#### Luna
-
-##### Found HMA/HMAL when detecting risky application
-
-Change to a different package name according to [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45)
-
-##### Found HMA/HMAL when scanning memory
-
-It may be false positive according to [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45)
-
 #### Momo
 
 ##### Package management service exception
@@ -458,16 +448,6 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
 
 ### 特殊情况
-
-#### Luna
-
-##### 扫描风险应用发现隐藏应用列表
-
-参阅 [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45) 换用不同包名的 HMAL
-
-##### 内存扫描时发现隐藏应用列表
-
-参阅 [https://github.com/pumPCin/HMAL/issues/45](https://github.com/pumPCin/HMAL/issues/45) 认为是误报
 
 #### Momo
 
