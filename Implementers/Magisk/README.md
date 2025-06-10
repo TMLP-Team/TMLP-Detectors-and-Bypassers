@@ -4,6 +4,8 @@ This folder aims to archive the latest versions of different Magisk, Apatch (AP)
 
 Please also consider using the latest one generated in the ``action`` tab of the corresponding GitHub repository. 
 
+As there are many kernel files in KSU and its branches, they would not be stored here. 
+
 - Magisk: 
   - Magisk Official / Magisk Beta / Magisk Canary / Magisk Debug: [https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
   - Magisk Alpha: 
@@ -24,6 +26,8 @@ Please also consider using the latest one generated in the ``action`` tab of the
 本文件夹旨在存储不同 Magisk、Apatch (AP) 和 KernelSU (KSU) 分支的最新版本。
 
 同时，请考虑使用相应 GitHub 存储库中 ``action`` 选项卡里的最新版本。
+
+由于 KSU 及其分支的内核文件太多，此处不存储此类文件。
 
 - 面具：
   - 官方面具 / Beta 版面具 / 金丝雀面具 / Debug 版面具：[https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
