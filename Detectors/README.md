@@ -260,6 +260,16 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Latest Version**: ``v1.1.5.r65.15110ef310 (65)``
 - **Release Date**:  April 4th, 2022
 
+### 凌卿检测
+
+- **Alias**: LingQing Detector; Lingqing Detector
+- **Package Name**: ``com.lingqing.detector``
+- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v1.6_fix``
+- **Release Date**:  June 6th, 2025
+
 ### 春秋检测
 
 - **Package Name**: ``chunqiu.safe``
@@ -270,6 +280,15 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Release Date**:  June 10th, 2025
 - **Detection Remark**: Misreporting may exist. Use the tools provided in the official link(s) to bypass if necessary. 
 
+### 橘子环境检测内测
+
+- **Package Name**: ``com.OrangeEnvironment.Detector``
+- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
+- **Source Status**: Closed-source
+- **Developing Purpose**: Environment Detection
+- **Latest Version**: ``v3.0``
+- **Release Date**:  June 9th, 2025
+
 ### 邮储银行
 
 - **Alias**: Postal Savings Bank of China; PSBC
@@ -279,15 +298,6 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Developing Purpose**: Android Desktop Application
 - **Latest Version**: ``v10.5.2 (188)``
 - **Release Date**:  June 4th, 2025
-
-### 橘子环境检测内测
-
-- **Package Name**: ``com.OrangeEnvironment.Detector``
-- **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
-- **Source Status**: Closed-source
-- **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v3.0``
-- **Release Date**:  June 9th, 2025
 
 
 ---
@@ -570,6 +580,16 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **最新版本**：``v1.1.5.r65.15110ef310 (65)``
 - **发行日期**： 2022 年 4 月 4 日
 
+### 凌卿检测
+
+- **应用别称**：凌卿
+- **应用包名**：``com.lingqing.detector``
+- **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
+- **开源状态**：闭源
+- **开发用途**：环境检测
+- **最新版本**：``v1.6_fix``
+- **发行日期**： 2025 年 6 月 6 日
+
 ### 春秋检测
 
 - **应用别称**：春秋
@@ -581,16 +601,6 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **发行日期**： 2025 年 6 月 10 日
 - **检测备注**：可能存在误报。如有需要，请使用官方链接中提供的工具。
 
-### 邮储银行
-
-- **应用别称**：中国邮储银行
-- **应用包名**：``com.yitong.mbank.psbc``
-- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
-- **开源状态**：安卓桌面应用
-- **开发用途**：安卓桌面应用
-- **最新版本**：``v10.5.2 (188)``
-- **发行日期**： 2025 年 6 月 4 日
-
 ### 橘子环境检测内测
 
 - **应用别称**：橘子
@@ -600,4 +610,14 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **开发用途**：环境检测
 - **最新版本**：``v3.0``
 - **发行日期**： 2025 年 6 月 9 日
+
+### 邮储银行
+
+- **应用别称**：中国邮储银行
+- **应用包名**：``com.yitong.mbank.psbc``
+- **官方链接**：[https://phone.psbc.com](https://phone.psbc.com)
+- **开源状态**：安卓桌面应用
+- **开发用途**：安卓桌面应用
+- **最新版本**：``v10.5.2 (188)``
+- **发行日期**： 2025 年 6 月 4 日
 

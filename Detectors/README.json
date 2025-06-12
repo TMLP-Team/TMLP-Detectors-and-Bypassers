@@ -370,6 +370,19 @@
 			"releaseDate":"= 20220404"
 		}, 
 		{
+			"name":"凌卿检测", 
+			"alias":{
+				"UK":["LingQing Detector", "Lingqing Detector"], 
+				"CN":"凌卿"
+			}, 
+			"packageName":"com.lingqing.detector", 
+			"officialLink":"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824", 
+			"sourceStatus":"C", 
+			"developingPurpose":"E", 
+			"latestVersion":"v1.6_fix", 
+			"releaseDate":"= 20250606"
+		}, 
+		{
 			"name":"春秋检测", 
 			"alias":{
 				"CN":"春秋"
@@ -390,6 +403,18 @@
 			}
 		}, 
 		{
+			"name":"橘子环境检测内测", 
+			"alias":{
+				"CN":"橘子"
+			}, 
+			"packageName":"com.OrangeEnvironment.Detector", 
+			"officialLink":"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824", 
+			"sourceStatus":"C", 
+			"developingPurpose":"E", 
+			"latestVersion":"v3.0", 
+			"releaseDate":"= 20250609"
+		}, 
+		{
 			"name":"邮储银行", 
 			"alias":{
 				"UK":["Postal Savings Bank of China", "PSBC"], 
@@ -401,18 +426,6 @@
 			"developingPurpose":"D", 
 			"latestVersion":"v10.5.2 (188)", 
 			"releaseDate":"= 20250604"
-		}, 
-		{
-			"name":"橘子环境检测内测", 
-			"alias":{
-				"CN":"橘子"
-			}, 
-			"packageName":"com.OrangeEnvironment.Detector", 
-			"officialLink":"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824", 
-			"sourceStatus":"C", 
-			"developingPurpose":"E", 
-			"latestVersion":"v3.0", 
-			"releaseDate":"= 20250609"
 		}
 	]
 }
