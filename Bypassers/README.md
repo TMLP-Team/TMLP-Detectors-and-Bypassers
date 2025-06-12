@@ -63,7 +63,7 @@ While following the tutorials, please also consider referring to the documentati
 
 ### Using KSU / KSU Next / SukiSU
 
-- Install the latest version of [SukiSU](https://github.com/KernelSU-Next/KernelSU-Next)
+- Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository)
   - Configure in the Super User tab of the SukiSU Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
@@ -100,7 +100,7 @@ While following the tutorials, please also consider referring to the documentati
 
 ### Using Apatch / Apatch Next
 
-- Install the latest version of [Apatch](https://github.com/bmax121/APatch/actions)
+- Install the latest [Apatch](https://github.com/bmax121/APatch/actions) (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository)
   - Configure in the Super User tab of the Apatch Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
@@ -146,7 +146,7 @@ While following the tutorials, please also consider referring to the documentati
 
 ### Using Magisk Delta
 
-- Install the lastest version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
+- Install the last version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
   - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024)
   - Configure Magisk Delta
     - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
@@ -364,10 +364,10 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 禁用 Zygisk Next 内的遵守排除列表
   - 在面具层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
     - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
-  - 在面具层安装 ``Jing Matrix`` 分支的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+  - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-    - 在 LSPosed 层安装 HMAL 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
     - 配置 HMAL 插件
@@ -391,7 +391,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ### 正在使用 KSU / KSU Next / SukiSU
 
-- 安装最新版 [SukiSU](https://github.com/KernelSU-Next/KernelSU-Next)
+- 安装 SukiSU GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
   - 在 SukiSU 管理器的超级用户页内进行配置
     - 将所有需要 root 的应用程序进行授权
     - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
@@ -403,10 +403,10 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
       - 禁用 Zygisk Next 内的遵守排除列表
     - 在 SukiSU 层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
       - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
-    - 在 SukiSU 层安装 ``Jing Matrix`` 分支的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+    - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
       - 配置 HMAL 插件
@@ -428,7 +428,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ### 正在使用 Apatch / Apatch Next
 
-- 安装最新版 [Apatch](https://github.com/bmax121/APatch/actions)
+- 安装 Apatch GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [Apatch](https://github.com/bmax121/APatch/actions)
   - 在 Apatch 管理器的超级用户页内进行配置
     - 将所有需要 root 的应用程序进行授权
     - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
@@ -449,10 +449,10 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
       - 禁用 Zygisk Next 内的遵守排除列表
     - 在 Apatch 层安装最新版 [NoHello](https://github.com/MhmRdd/NoHello) 模块
       - 使用 MT 管理器在 ``/data/adb/nohello/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/nohello/whitelist`` 命令）
-    - 在 Apatch 层安装 ``Jing Matrix`` 分支的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+    - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
       - 配置 HMAL 插件
@@ -479,10 +479,10 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
     - 在设置界面启用白名单模式
     - 选定需要 root 权限的应用的包（可以不选定某个应用程序内的所有包）
-  - 在面具层安装 ``Jing Matrix`` 分支的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+  - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-    - 在 LSPosed 层安装 HMAL 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
     - 配置 HMAL 插件
