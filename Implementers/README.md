@@ -74,7 +74,7 @@ The compatibility analysis of some implementations and modules is as follows, wh
 | NoHello | Y | Y | Y | Y | N | N | - | N |
 | Zygisk Assistant | Y | Y | Y | Y | Y | Y | N | - |
 
-Therefore, there are the following collocations (parts), where P means pass and F means fail. For detailed steps of bypassing, please refer to [Bypassers](../Bypassers/README.md). 
+Therefore, there are the following collocations (parts), where "P" means passed and "F" means failed. For detailed steps of bypassing, please refer to [Bypassers](../Bypassers/README.md). 
 
 | Combination | Native Root Detector | Native Test |
 | - | - | - |
