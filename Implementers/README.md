@@ -54,12 +54,41 @@ Among them, rebooting means rebooting into the normal mode by default. For the i
     - Run ``adb reboot bootloader`` on the computer to restart to fastboot mode
   - Through advanced reboot
     - Some Android devices (such as OnePlus) can enable the function of adding advanced reboot options to the long-press of the power button in the developer options
-    - Enable this function and long press the power button to reboot to the bootloader
+    - Enable this function and long-press the power button to reboot to the bootloader
   - Through the combination of keys in the off state
     - Turn off the Android device
     - Disconnect the Android device from the USB connection with the computer
     - Long press the combination of keys according to the phone model (for example, long press the power button and two volume buttons together) to enter the bootloader (if it fails, please wait patiently for the screen to be unlocked after the power is turned on and then turn it off and try again)
     - Reconnect the Android device to the computer through USB
+
+The compatibility analysis of some implementations and modules is as follows, where "Y" means compatible and "N" means incompatible. 
+
+| Compatibility | All branches of KSU and Magisk | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
+| - | - | - | - | - | - | - | - | - |
+| All branches of KSU and Magisk | - | Y | Y | Y | Y | Y | Y | Y |
+| Apatch | Y | - | Y | Y | Y | N | Y | Y |
+| Zygisk Next | Y | Y | - | N | N | Y | Y | Y |
+| ReZygisk | Y | Y | N | - | N | Y | Y | Y |
+| NeoZygisk | Y | Y | N | N | - | N | N | Y |
+| Shamiko | Y | N | Y | Y | N | - | N | Y |
+| NoHello | Y | Y | Y | Y | N | N | - | N |
+| Zygisk Assistant | Y | Y | Y | Y | Y | Y | N | - |
+
+Therefore, there are the following collocations (parts), where P means pass and F means fail. For detailed steps of bypassing, please refer to [Bypassers](../Bypassers/README.md). 
+
+| Combination | Native Root Detector | Native Test |
+| - | - | - |
+| Magisk Alpha + Zygisk Next + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + Zygisk Next + NoHello + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + Zygisk Next + Shamiko + PIF + TS + VBMeta Fixer | P | P |
+| Magisk Alpha + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | P |
+| Magisk + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + ReZygisk + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + ReZygisk + NoHello + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + ReZygisk + Shamiko + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + ReZygisk + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + NeoZygisk + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + NeoZygisk + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
 
 ---
 
@@ -126,3 +155,31 @@ Among them, rebooting means rebooting into the normal mode by default. For the i
     - 根据手机型号长按组合键（例如电源键与两个音量键一起长按）进入 bootloader（如果失败请耐心等待开机解锁屏幕后关机再来一次）
     - 重新将安卓设备与计算机进行 USB 连接
 
+一些实现和模块之间的兼容性分析如下，其中 Y 表示兼容，N 表示不兼容。
+
+| 兼容性 | KSU 和 Magisk 的所有分支 | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
+|-|-|-|-|-|-|-|-|-|
+| KSU 和 Magisk 的所有分支 | - | Y | Y | Y | Y | Y | Y | Y |
+| Apatch | Y | - | Y | Y | Y | N | Y | Y |
+| Zygisk Next | Y | Y | - | N | N | Y | Y | Y |
+| ReZygisk | Y | Y | N | - | N | Y | Y | Y |
+| NeoZygisk | Y | Y | N | N | - | N | N | Y |
+| Shamiko | Y | N | Y | Y | N | - | N | Y |
+| NoHello | Y | Y | Y | Y | N | N | - | N |
+| Zygisk Assistant | Y | Y | Y | Y | Y | Y | N | - |
+
+因此，存在以下搭配（部分），其中 P 表示通过，F 表示失败。有关过检的详细步骤，请参阅 [Bypassers](../Bypassers/README.md)。
+
+| Combination | Native Root Detector | Native Test |
+| - | - | - |
+| Magisk Alpha + Zygisk Next + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + Zygisk Next + NoHello + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + Zygisk Next + Shamiko + PIF + TS + VBMeta Fixer | P | P |
+| Magisk Alpha + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | P |
+| Magisk + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + ReZygisk + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + ReZygisk + NoHello + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + ReZygisk + Shamiko + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + ReZygisk + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + NeoZygisk + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + NeoZygisk + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
