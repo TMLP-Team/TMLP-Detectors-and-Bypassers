@@ -89,7 +89,7 @@
 		{
 			"name":"IIQE 一考通", 
 			"alias":{
-				"UK":"IIQE Yikaotong"
+				"UK":"IIQE YiKaoTong"
 			}, 
 			"packageName":"com.prudential.iiqe", 
 			"officialLink":"https://iiqe-cms.prudential.com.hk/iiqe/", 
@@ -214,17 +214,17 @@
 			}
 		}, 
 		{
-			"name":"Native Test", 
+			"name":"Native Test ++", 
 			"alias":{
-				"UN":["Holmes"], 
+				"UN":["Native Test", "Holmes"], 
 				"CN":["牛头", "牛头人", "牛头测试", "福尔摩斯"]
 			}, 
 			"packageName":["me.garfieldhan.holmes", "icu.nullptr.nativetest", "com.android.nativetest"], 
 			"officialLink":"https://t.me/app_process64", 
 			"sourceStatus":"CS", 
 			"developingPurpose":"E", 
-			"latestVersion":"v30 (Pure Minotaur)", 
-			"releaseDate":"= 20240418", 
+			"latestVersion":"v32 (Mean Minotaur)", 
+			"releaseDate":"<= 20250615", 
 			"detectionRemark":{
 				"UK":"Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook), and require network access (recent versions of Holmes). ", 
 				"CN":"此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。"

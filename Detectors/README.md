@@ -1,6 +1,6 @@
 ## Detectors
 
-Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ IIQE
+Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ IIQE YiKaoTong
 
 ### Android Integrity Checker
 
@@ -64,7 +64,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 
 ### IIQE 一考通
 
-- **Alias**: IIQE Yikaotong
+- **Alias**: IIQE YiKaoTong
 - **Package Name**: ``com.prudential.iiqe``
 - **Official Link**: https://iiqe-cms.prudential.com.hk/iiqe/
 - **Source Status**: Android Desktop Application
@@ -138,15 +138,15 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Release Date**:  June 11th, 2025
 - **Detection Remark**: For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. 
 
-### Native Test
+### Native Test ++
 
-- **Alias**: Holmes
+- **Alias**: Native Test; Holmes
 - **Package Names**: ``me.garfieldhan.holmes``; ``icu.nullptr.nativetest``; ``com.android.nativetest``
 - **Official Link**: https://t.me/app_process64
 - **Source Status**: Closed-source & For Sale
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v30 (Pure Minotaur)``
-- **Release Date**:  April 18th, 2024
+- **Latest Version**: ``v32 (Mean Minotaur)``
+- **Release Date**: On or Before June 15th, 2025
 - **Detection Remark**: Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook), and require network access (recent versions of Holmes). 
 
 ### Octopus
@@ -182,8 +182,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test $\rightarrow$ 
 - **Official Link**: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.2 (10)``
-- **Release Date**:  June 9th, 2025
+- **Latest Version**: ``v1.22 (12)``
+- **Release Date**:  May 15th, 2025
 
 ### Ruru
 
@@ -454,15 +454,15 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **检测备注**：首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。
 - ![nativeRootDetectorCN.jpg](nativeRootDetectorCN.jpg)
 
-### Native Test
+### Native Test ++
 
-- **应用别称**：Holmes; 牛头; 牛头人; 牛头测试; 福尔摩斯
+- **应用别称**：Native Test; Holmes; 牛头; 牛头人; 牛头测试; 福尔摩斯
 - **应用包名**：``me.garfieldhan.holmes``；``icu.nullptr.nativetest``；``com.android.nativetest``
 - **官方链接**：[https://t.me/app_process64](https://t.me/app_process64)
 - **开源状态**：闭源 & 销售中
 - **开发用途**：环境检测
-- **最新版本**：``v30 (Pure Minotaur)``
-- **发行日期**： 2024 年 4 月 18 日
+- **最新版本**：``v32 (Mean Minotaur)``
+- **发行日期**：不晚于 2025 年 6 月 15 日
 - **检测备注**：此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。
 
 ### Octopus
@@ -499,8 +499,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人 $\rightarrow$ II
 - **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v1.2 (10)``
-- **发行日期**： 2025 年 6 月 9 日
+- **最新版本**：``v1.22 (12)``
+- **发行日期**： 2025 年 5 月 15 日
 
 ### Ruru
 
