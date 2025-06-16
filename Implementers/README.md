@@ -63,16 +63,17 @@ Among them, rebooting means rebooting into the normal mode by default. For the i
 
 The compatibility analysis of some implementations and modules is as follows, where "Y" means compatible and "N" means incompatible. 
 
-| Compatibility | All branches of KSU and Magisk | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
+| Compatibility | Official Magisk and All branches of KSU | Magisk Alpha | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
 | - | - | - | - | - | - | - | - | - |
-| All branches of KSU and Magisk | - | Y | Y | Y | Y | Y | Y | Y |
-| Apatch | Y | - | Y | Y | Y | N | Y | Y |
-| Zygisk Next | Y | Y | - | N | N | Y | Y | Y |
-| ReZygisk | Y | Y | N | - | N | Y | Y | Y |
-| NeoZygisk | Y | Y | N | N | - | N | N | Y |
-| Shamiko | Y | N | Y | Y | N | - | N | Y |
-| NoHello | Y | Y | Y | Y | N | N | - | N |
-| Zygisk Assistant | Y | Y | Y | Y | Y | Y | N | - |
+| Official Magisk and All branches of KSU | - | N | N | Y | Y | Y | Y | Y | Y |
+| Magisk Alpha | N | - | N | Y | N | Y | Y | Y | Y |
+| Apatch | N | N | - | Y | Y | Y | N | Y | Y |
+| Zygisk Next | Y | Y | Y | - | N | N | Y | Y | Y |
+| ReZygisk | Y | N | Y | N | - | N | Y | Y | Y |
+| NeoZygisk | Y | Y | Y | N | N | - | N | N | Y |
+| Shamiko | Y | Y | N | Y | Y | N | - | N | Y |
+| NoHello | Y | Y | Y | Y | Y | N | N | - | N |
+| Zygisk Assistant | Y | Y | Y | Y | Y | Y | Y | N | - |
 
 Therefore, there are the following collocations (parts), where "P" means passed and "F" means failed. For detailed steps of bypassing, please refer to [Bypassers](../Bypassers/README.md). 
 
@@ -81,14 +82,14 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 | Magisk Alpha + Zygisk Next + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + Zygisk Next + NoHello + PIF + TS + VBMeta Fixer | P | F |
 | Magisk Alpha + Zygisk Next + Shamiko + PIF + TS + VBMeta Fixer | P | P |
-| Magisk Alpha + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | P |
-| Magisk + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | F | F |
-| Magisk Alpha + ReZygisk + PIF + TS + VBMeta Fixer | F | F |
-| Magisk Alpha + ReZygisk + NoHello + PIF + TS + VBMeta Fixer | P | F |
-| Magisk Alpha + ReZygisk + Shamiko + PIF + TS + VBMeta Fixer | P | F |
-| Magisk Alpha + ReZygisk + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + Zygisk Next + Shamiko + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
+| Magisk + Zygisk Next + Shamiko + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + built-in Zygisk + Shamiko + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + built-in Zygisk + Shamiko + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + built-in Zygisk + NoHello + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + built-in Zygisk + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + NeoZygisk + PIF + TS + VBMeta Fixer | F | F |
-| Magisk Alpha + NeoZygisk + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + NeoZygisk + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
 
 ---
 
@@ -157,16 +158,18 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 
 一些实现和模块之间的兼容性分析如下，其中 Y 表示兼容，N 表示不兼容。
 
-| 兼容性 | KSU 和 Magisk 的所有分支 | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
-|-|-|-|-|-|-|-|-|-|
-| KSU 和 Magisk 的所有分支 | - | Y | Y | Y | Y | Y | Y | Y |
-| Apatch | Y | - | Y | Y | Y | N | Y | Y |
-| Zygisk Next | Y | Y | - | N | N | Y | Y | Y |
-| ReZygisk | Y | Y | N | - | N | Y | Y | Y |
-| NeoZygisk | Y | Y | N | N | - | N | N | Y |
-| Shamiko | Y | N | Y | Y | N | - | N | Y |
-| NoHello | Y | Y | Y | Y | N | N | - | N |
-| Zygisk Assistant | Y | Y | Y | Y | Y | Y | N | - |
+| 兼容性 | 官方 Magisk 和 KSU 的所有分支 | Magisk Alpha | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
+| - | - | - | - | - | - | - | - | - |
+| 官方 Magisk 和 KSU 的所有分支 | - | N | N | Y | Y | Y | Y | Y | Y |
+| Magisk Alpha | N | - | N | Y | N | Y | Y | Y | Y |
+| Apatch | N | N | - | Y | Y | Y | N | Y | Y |
+| Zygisk Next | Y | Y | Y | - | N | N | Y | Y | Y |
+| ReZygisk | Y | N | Y | N | - | N | Y | Y | Y |
+| NeoZygisk | Y | Y | Y | N | N | - | N | N | Y |
+| Shamiko | Y | Y | N | Y | Y | N | - | N | Y |
+| NoHello | Y | Y | Y | Y | Y | N | N | - | N |
+| Zygisk Assistant | Y | Y | Y | Y | Y | Y | Y | N | - |
+
 
 因此，存在以下搭配（部分），其中 P 表示通过，F 表示失败。有关过检的详细步骤，请参阅 [Bypassers](../Bypassers/README.md)。
 
@@ -175,11 +178,11 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 | Magisk Alpha + Zygisk Next + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + Zygisk Next + NoHello + PIF + TS + VBMeta Fixer | P | F |
 | Magisk Alpha + Zygisk Next + Shamiko + PIF + TS + VBMeta Fixer | P | P |
-| Magisk Alpha + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | P |
-| Magisk + Zygisk Next + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | F | F |
-| Magisk Alpha + ReZygisk + PIF + TS + VBMeta Fixer | F | F |
-| Magisk Alpha + ReZygisk + NoHello + PIF + TS + VBMeta Fixer | P | F |
-| Magisk Alpha + ReZygisk + Shamiko + PIF + TS + VBMeta Fixer | P | F |
-| Magisk Alpha + ReZygisk + Shamiko + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + Zygisk Next + Shamiko + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
+| Magisk + Zygisk Next + Shamiko + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | F | F |
+| Magisk Alpha + built-in Zygisk + Shamiko + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + built-in Zygisk + Shamiko + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + built-in Zygisk + NoHello + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + built-in Zygisk + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + NeoZygisk + PIF + TS + VBMeta Fixer | F | F |
-| Magisk Alpha + NeoZygisk + Zygisk Assistant + PIF + TS + VBMeta Fixer | P | F |
+| Magisk Alpha + NeoZygisk + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |

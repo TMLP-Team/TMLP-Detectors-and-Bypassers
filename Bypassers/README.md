@@ -114,8 +114,7 @@ While following the tutorials, please also consider referring to the documentati
       - Reboot
       - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
   - Deploy the system modules in the Apatch layer
-    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the Apatch layer
-      - Disable the Denylist in Zygisk Next
+    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the Apatch layer
     - Install the latest [NoHello](https://github.com/MhmRdd/NoHello) module in the Apatch layer
       - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/nohello/`` (or execute the command ``touch /data/adb/nohello/whitelist`` as root)
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
@@ -436,8 +435,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 重启进入系统后在 Apatch 管理器中嵌入最新 ``compat`` 版本的 Cherish Peekaboo 并重启设备
     - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原并放弃内核模块部署
   - 在 Apatch 层部署系统模块
-    - 在 Apatch 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) 模块
-      - 禁用 Zygisk Next 内的遵守排除列表
+    - 在 Apatch 层安装 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
     - 在 Apatch 层安装最新版 [NoHello](https://github.com/MhmRdd/NoHello) 模块
       - 使用 MT 管理器在 ``/data/adb/nohello/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/nohello/whitelist`` 命令）
     - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
