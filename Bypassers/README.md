@@ -1,6 +1,6 @@
 ## Bypassers
 
-Currently, Magisk Alpha is the best solution since it can bypass inconsistent mounting detection by using Zygisk Next + Shamiko and offer the random package name feature, followed by SukiSU + SUSFS, Apatch + Cherish Peekaboo, and Magisk Delta. 
+Currently, SukiSU + ReZygisk + SUSFS is the optimal solution, follwed by Magisk Alpha + Zygisk Next + Shamiko, Apatch + Cherish Peekaboo + NoHello, and Magisk Delta. 
 
 By defining Magisk fork as rooting solutions including Magisk, KSU, Apatch, and their branches, the development of bypassing can be briefly described as follows. 
 
@@ -11,18 +11,51 @@ By defining Magisk fork as rooting solutions including Magisk, KSU, Apatch, and 
 - Magisk Fork + LSPosed (2022), 
 - Magisk Fork + LSPosed + Shamiko (2023), 
 - Magisk Fork + LSPosed + Shamiko + PIF + TS (2024), and
-- Magisk Fork + LSPosed + Shamiko/NoHello + PIF + TS + VBMeta Fixer + Cleaning up (2025). 
+- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Cleaning up (2025). 
 
 Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
 
 - Hide custom ROMs
-- Hide USB debugging and even developer options
-- Hide accessibility mode (even the affected application cannot detect accessibility mode)
+- Hide USB debugging and even developer options without injection traces detected
+- Hide accessibility mode (even the affected application cannot detect accessibility mode) without injection traces detected
 - Solve the problem that WeChat fails to enable fingerprint payment while all other applications can use it normally
 - Solve the problem that the STRONG integrity check cannot be passed on devices with the bootloader unlocked when there is no valid keybox
 - Hide injection traces for applications injected at the application level
 
 While following the tutorials, please also consider referring to the documentation and the ``action`` page of the GitHub repositories for each rooting solution, module, and plugin, if there are. 
+
+### Using KSU / KSU Next / SukiSU
+
+- Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository)
+  - Configure in the Super User tab of the SukiSU Manager
+    - Grant root privileges to all applications requiring them
+    - Use the default configurations for all the applications that do not require root privileges
+    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in SukiSU
+  - Deploy the system modules in the SukiSU layer
+    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the SukiSU layer
+    - Install the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU layer
+    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU layer
+      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
+      - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
+      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the LSPosed layer
+      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+      - Reboot the device
+      - Configure the HMAL
+        - Hide HMAL's icon from the launcher in the HMAL's settings page
+        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+        - Except for the SukiSU Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
+    - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU layer
+      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
+      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
+      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
+      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
+      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
+      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
+    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
+    - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU layer if the device does not have a proper vbmeta digest
+- View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
 
 ### Using Official Magisk (Including Release, Beta, Canary, Debug, and Nightly Versions) or Magisk Alpha
 
@@ -60,43 +93,6 @@ While following the tutorials, please also consider referring to the documentati
   - Install the latest [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
     - Please remove the other one if one is selected to be used since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
-
-### Using KSU / KSU Next / SukiSU
-
-- Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository)
-  - Configure in the Super User tab of the SukiSU Manager
-    - Grant root privileges to all applications requiring them
-    - Use the default configurations for all the applications that do not require root privileges
-    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in SukiSU
-  - Deploy the kernel module in the SukiSU layer
-    - Embed the [SUSFS](https://github.com/sidex15/susfs4ksu-module) module as a kernel module
-  - Deploy the system modules in the SukiSU layer
-    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the SukiSU layer
-      - Disable the Denylist in Zygisk Next
-    - Install the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the SukiSU layer
-      - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
-    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU layer
-      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
-      - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the LSPosed layer
-      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
-      - Reboot the device
-      - Configure the HMAL
-        - Hide HMAL's icon from the launcher in the HMAL's settings page
-        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
-        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
-        - Except for the SukiSU Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-    - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
-    - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU layer
-      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
-      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
-      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
-      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
-      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
-    - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU layer if the device does not have a proper vbmeta digest
-- View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
 
 ### Using Apatch / Apatch Next
 
@@ -147,7 +143,7 @@ While following the tutorials, please also consider referring to the documentati
 ### Using Magisk Delta
 
 - Install the last version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
-  - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024)
+  - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024) and the versions before Magisk 27007 have a privilege escalation vulnerability
   - Configure Magisk Delta
     - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
     - Enable whitelist mode on the setting page of the Magisk Delta
@@ -220,11 +216,11 @@ Switch to HMAL
 - Install the latest Native Root Detector for detection (do not restore Native Root Detector from any backup)
 - Enable WeChat and QQ only after the detector shows normal environments (except risky applications detected with Code 3)
 
-##### Mount inconsistency detected
+##### Mount inconsistency detected / Magic Mount Detected
 
-- Magisk and its branches: Use Magisk Alpha and install the Shamiko module
+- Magisk and its branches: Use Magisk Alpha and install the latest Shamiko module
 - Apatch and its branches: Embed the Cherish Peekaboo module as a kernel module (please check if the ``compat`` version is needed)
-- KSU and its branches: Embed the SUSFS module as a kernel module
+- KSU and its branches: Use SukiSU and Install the latest SUSFS module as a system module
 
 ##### Risky application detected (bypassed HMAL/HMA with Code 3)
 
@@ -272,13 +268,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ##### Around September 2023, the latest official mask and the latest Shamiko at that time were used, but the crash still occurred
 
-- Historical issues can be updated
-- If you want to continue using the official mask or Alpha mask
-- Update to the latest official mask or Alpha mask
-- Update to the latest Shamiko
-- If you want to switch to the Delta version mask (the Delta version mask at that time would not cause the Postal Savings Bank to crash)
-- The solution at that time: the Delta version mask around September 2023 can be effectively inspected
-- The current solution: Use the last Delta version mask before the suspension
+- Caused by historical issues, updating can solve the problem
+- Using the official Magisk or Magisk Alpha
+  - If you were using the official Magisk or Magisk Alpha in around September 2023, please switch to the latest Magisk Delta
+  - If you are using the official Magisk or Magisk Alpha today, please install the latest Magisk Alpha and the latest Shamiko module
+- Using the Magisk Delta
+  - If you were using the Magisk Delta in around September 2023, please install the latest Magisk Delta (the Magisk Delta at that time would not cause the Postal Savings Bank to crash)
+  - If you are using the Magisk Delta today, please switch to the latest Magisk Alpha and install the latest Shamiko module
 
 #### QQ
 
@@ -311,9 +307,8 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
       - Switch to the ``v9.0.95`` or lower versions, or
       - Switch to the ``v8.9.56`` or lower versions (if accepting non-NT architecture)
     - Otherwise
-      - Uninstall the QXposed (QX) plugin, the QQ Repeater plugin, the XAutoDaily (XA), and the QAuxiliary (QA) plugin
+      - Uninstall all the QQ plugins
       - Disable the red envelope grabbing, automatic group sign-in, and the group messaging functions
-      - Uninstall any QQ plugin that is not adapted to the Xposed API calling protection of LSPosed
       - Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ (remember to disable QQ in advance when switching environments) when using versions above ``v9.1.31``
 - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version
 
@@ -328,7 +323,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ## 过检方法
 
-目前，Magisk Alpha 是最好的解决方案，因为它可以通过使用 Zygisk Next + Shamiko 绕过不一致的挂载检测并提供随机包名称功能，其次为 SukiSU + SUSFS、Apatch + Cherish Peekaboo 和 Magisk Delta。
+目前，SukiSU + ReZygisk + SUSFS 是最好的解决方案，其次为 Magisk Alpha + Zygisk Next + Shamiko、Apatch + Cherish Peekaboo + NoHello 和 Magisk Delta。
 
 通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，过检的发展历程可以简要描述如下。
 
@@ -339,7 +334,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 - Magisk Fork + LSPosed（2022 年）；
 - Magisk Fork + LSPosed + Shamiko（2023 年）；
 - Magisk Fork + LSPosed + Shamiko + PIF + TS（2024 年）；以及
-- Magisk Fork + LSPosed + Shamiko/NoHello + PIF + TS + VBMeta Fixer + 残留清理（2025 年）。
+- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + 残留清理（2025 年）。
 
 目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
 
@@ -351,6 +346,39 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 - 对被应用层注入的应用隐藏注入痕迹
 
 在遵循教程的同时，还请考虑参考每个 root 方案、模块和插件的使用文档和 GitHub 存储库的 ``action`` 页面（如有）。
+
+### 正在使用 KSU / KSU Next / SukiSU
+
+- 安装 SukiSU GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
+  - 在 SukiSU 管理器的超级用户页内进行配置
+    - 将所有需要 root 的应用程序进行授权
+    - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
+    - 启动 MT 管理器和其它需要 root 权限的应用程序并用 SukiSU 管理器进行授权
+  - 在 SukiSU 层部署系统模块
+    - 在 SukiSU 层安装 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
+    - 在 SukiSU 层安装最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
+    - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+      - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
+      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
+      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 设置作用域为仅**系统框架**并启用插件
+      - 重启设备
+      - 配置 HMAL 插件
+        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
+        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+        - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
+    - 在 SukiSU 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
+    - 在 SukiSU 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
+      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
+      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+      - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+    - 若设备的 vbmeta digest 不正确可在 SukiSU 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+- 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
 
 ### 正在使用官方版（含发行版、Beta 版、金丝雀版、Debug 版和每夜版）或 Alpha 版面具
 
@@ -388,43 +416,6 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
-
-### 正在使用 KSU / KSU Next / SukiSU
-
-- 安装 SukiSU GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
-  - 在 SukiSU 管理器的超级用户页内进行配置
-    - 将所有需要 root 的应用程序进行授权
-    - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
-    - 启动 MT 管理器和其它需要 root 权限的应用程序并用 SukiSU 管理器进行授权
-  - 在 SukiSU 层部署内核模块
-    - 以内核模块的形式嵌入 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
-  - 在 SukiSU 层部署系统模块
-    - 在 SukiSU 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) 模块
-      - 禁用 Zygisk Next 内的遵守排除列表
-    - 在 SukiSU 层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
-      - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
-    - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
-      - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
-      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
-      - 设置作用域为仅**系统框架**并启用插件
-      - 重启设备
-      - 配置 HMAL 插件
-        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
-        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
-        - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-    - 在 SukiSU 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
-    - 在 SukiSU 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
-      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
-      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
-      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
-      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
-      - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
-    - 若设备的 vbmeta digest 不正确可在 SukiSU 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-- 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
 
 ### 正在使用 Apatch / Apatch Next
 
@@ -474,7 +465,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 ### 正在使用 Delta 版面具（小狐狸面具）
 
 - 安装停更前的最后一个版本的 [Delta 面具](https://github.com/HuskyDG/magisk-files)
-  - 请考虑使用 Magisk Alpha 因为 Magisk Delta 已在 2024 年初停更
+  - 请考虑使用 Magisk Alpha 因为 Magisk Delta 已在 2024 年初停更且面具 27007 之前的版本存在提权漏洞
   - 配置面具
     - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
     - 在设置界面启用白名单模式
@@ -547,11 +538,11 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 - 安装最新的 Native Root Detector 进行检测（请勿从任何备份中恢复 Native Root Detector）
 - 仅该检测器显示环境正常（以代码 3 显示的检测到风险应用除外）后才可以重新启用微信和 QQ
 
-##### 检测到挂载不一致
+##### 检测到挂载不一致 / 检测到 Magic Mount
 
-- Magisk 系列：使用 Magisk Alpha 并安装 Shamiko 模块
+- Magisk 系列：使用 Magisk Alpha 并安装最新版 Shamiko 模块
 - Apatch 系列：以内核模块的形式嵌入 Cherish Peekaboo 模块（请自行排查是否需要 compat 版本）
-- KSU 系列：以内核模块的形式嵌入 SUSFS 模块
+- KSU 系列：使用 SukiSU 并安装最新版 SUSFS 模块
 
 ##### 检测到风险应用（绕过 HMAL/HMA 的代码 3）
 
@@ -599,13 +590,13 @@ exit ${exitCode}
 
 ##### 2023 年 9 月左右使用了当时最新版官方面具和最新版 Shamiko 依旧闪退
 
-- 历史问题更新即可
-- 如果希望继续使用官方面具或 Alpha 面具
-  - 更新至最新版官方面具或 Alpha 面具
-  - 更新至最新版 Shamiko
-- 如果希望换用 Delta 版面具（当时的 Delta 版面具不会让邮储银行出现闪退）
-  - 当时的解决方法：2023 年 9 月左右的 Delta 版面具可以有效过检
-  - 现在的解决方法：使用停更前的最后一个 Delta 版面具
+- 由历史问题引起，更新即可解决问题
+- 使用官方 Magisk 或 Magisk Alpha
+  - 如果您在 2023 年 9 月左右使用官方 Magisk 或 Magisk Alpha，请切换到最新的 Magisk Delta
+  - 如果您现在正在使用官方 Magisk 或 Magisk Alpha，请安装最新的 Magisk Alpha 和最新的 Shamiko 模块
+- 使用 Magisk Delta
+  - 如果您在 2023 年 9 月左右使用 Magisk Delta，请安装最新的 Magisk Delta（当时的 Magisk Delta 不会导致邮政储蓄银行闪退）
+  - 如果您现在正在使用 Magisk Delta，请切换到最新的 Magisk Alpha 并安装最新的 Shamiko 模块
 
 #### QQ
 
@@ -622,13 +613,13 @@ exit ${exitCode}
     - 否则
       - 请卸载 QXposed（QX）插件或 QQ 复读机插件
       - 请禁用抢红包、自动群签到和消息群发功能
-      - 请卸载所有不兼容的 QQ 插件已适配 LSPosed 的 Xposed API 调用保护
+      - 请卸载所有不适配 LSPosed 的 Xposed API 调用保护的 QQ 插件
   - 如果您使用的 QQ 版本处于 (``v8.8.17``, ``v8.9.56``] 区间内
     - 除非被云控强制升级否则请勿升级 QQ
     - 如被云控强制升级请升级到高于当前版本的最低版本
     - 请卸载 QXposed（QX）插件或 QQ 复读机插件
     - 请禁用抢红包、自动群签到和消息群发功能
-    - 请卸载所有不兼容的 QQ 插件已适配 LSPosed 的 Xposed API 调用保护
+    - 请卸载所有不适配 LSPosed 的 Xposed API 调用保护的 QQ 插件
   - 如果您使用的 QQ 版本高于 ``v8.9.56`` 且受 2024 年秋季至 2025 年春季风控事件影响（使用 ``v9.1.35`` 版本时现象最为明显）
     - 请参阅 (``v8.8.17``, ``v8.9.56``]
     - 如果您想使用 XAutoDaily（XA）插件或 QAuxiliary（QA）插件，并且仍然可以降级您的 QQ，请
@@ -638,9 +629,8 @@ exit ${exitCode}
       - 切换到 ``v9.0.95`` 或更低版本，或者
       - 切换到 ``v8.9.56`` 或更低版本（如果接受非 NT 架构）
     - 否则
-      - 卸载 QXposed（QX）插件、QQ 复读机插件、XAutoDaily（XA）和 QAuxiliary（QA）插件
+      - 请卸载所有 QQ 插件
       - 请禁用抢红包、自动群签到和消息群发功能
-      - 卸载任何未适配 LSPosed 的 Xposed API 调用保护的 QQ 插件
       - 高于 ``v9.1.31`` 版本时切勿向 QQ 暴露（切换环境时记得提前禁用 QQ）任何可疑环境（含 root 和注入环境）或执行任何注入
 - 电脑 QQ（Windows）：始终使用最新怀旧版而非 QQNT 版本
 
