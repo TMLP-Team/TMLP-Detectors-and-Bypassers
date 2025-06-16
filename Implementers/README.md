@@ -64,7 +64,7 @@ Among them, rebooting means rebooting into the normal mode by default. For the i
 The compatibility analysis of some implementations and modules is as follows, where "Y" means compatible and "N" means incompatible. 
 
 | Compatibility | Official Magisk and All branches of KSU | Magisk Alpha | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
-| - | - | - | - | - | - | - | - | - |
+| - | - | - | - | - | - | - | - | - | - |
 | Official Magisk and All branches of KSU | - | N | N | Y | Y | Y | Y | Y | Y |
 | Magisk Alpha | N | - | N | Y | N | Y | Y | Y | Y |
 | Apatch | N | N | - | Y | Y | Y | N | Y | Y |
@@ -159,7 +159,7 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 一些实现和模块之间的兼容性分析如下，其中 Y 表示兼容，N 表示不兼容。
 
 | 兼容性 | 官方 Magisk 和 KSU 的所有分支 | Magisk Alpha | Apatch | Zygisk Next | ReZygisk | NeoZygisk | Shamiko | NoHello | Zygisk Assistant |
-| - | - | - | - | - | - | - | - | - |
+| - | - | - | - | - | - | - | - | - | - |
 | 官方 Magisk 和 KSU 的所有分支 | - | N | N | Y | Y | Y | Y | Y | Y |
 | Magisk Alpha | N | - | N | Y | N | Y | Y | Y | Y |
 | Apatch | N | N | - | Y | Y | Y | N | Y | Y |
