@@ -145,7 +145,7 @@ class Detectors:
 	def __convertToMarkdownText(self:object, language:str) -> str:
 		if self.__flag and isinstance(language, str):
 			if "UK" == language:
-				txt = "## Detectors\n\nMomo $\\rightarrow$ Native Root Detector $\\rightarrow$ Native Test $\\rightarrow$ IIQE YiKaoTong\n\n"
+				txt = "## Detectors\n\nMomo $\\rightarrow$ Native Root Detector $\\rightarrow$ Native Test ++\n\n"
 				for detector in self.__data:
 					txt += "### " + detector["name"] + "\n\n"
 					if "alias" in detector and ("UN" in detector["alias"] or "UK" in detector["alias"]):
@@ -180,7 +180,7 @@ class Detectors:
 					txt += "\n"
 				return txt
 			elif "CN" == language:
-				txt = "## 检测软件\n\nMomo $\\rightarrow$ Native Root Detector $\\rightarrow$ 牛头人 $\\rightarrow$ IIQE 一考通\n\n"
+				txt = "## 检测软件\n\nMomo $\\rightarrow$ Native Root Detector $\\rightarrow$ 牛头人\n\n"
 				for detector in self.__data:
 					txt += "### " + detector["name"] + "\n\n"
 					if "alias" in detector and ("UN" in detector["alias"] or "CN" in detector["alias"]):

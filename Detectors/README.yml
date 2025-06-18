@@ -77,6 +77,9 @@
   developingPurpose: D
   latestVersion: v6.4.3C88
   releaseDate: = 20250303
+  detectionRemark:
+    UK: 'This desktop application will detect the Developer Mode. '
+    CN: 该桌面应用会检测开发者模式。
 - name: Luna
   packageName: luna.safe.luna
   officialLink:
@@ -84,8 +87,8 @@
   - http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
   sourceStatus: C
   developingPurpose: E
-  latestVersion: v1.4.1.4
-  releaseDate: = 20250610
+  latestVersion: v1.4.1.5
+  releaseDate: < 20250618
   detectionRemark:
     UK: 'This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in
       the official link(s) to clean up. Since some plugins require specific directories to store their configurations without

@@ -96,7 +96,11 @@
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
 			"latestVersion":"v6.4.3C88", 
-			"releaseDate":"= 20250303"
+			"releaseDate":"= 20250303", 
+			"detectionRemark":{
+				"UK":"This desktop application will detect the Developer Mode. ", 
+				"CN":"该桌面应用会检测开发者模式。"
+			}
 		}, 
 		{
 			"name":"Luna", 
@@ -107,8 +111,8 @@
 			], 
 			"sourceStatus":"C", 
 			"developingPurpose":"E", 
-			"latestVersion":"v1.4.1.4", 
-			"releaseDate":"= 20250610", 
+			"latestVersion":"v1.4.1.5", 
+			"releaseDate":"< 20250618", 
 			"detectionRemark":{
 				"UK":"This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. ", 
 				"CN":"该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。"
