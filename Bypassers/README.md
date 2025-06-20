@@ -22,22 +22,22 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
 - Solve the problem that the STRONG integrity check cannot be passed on devices with the bootloader unlocked when there is no valid keybox
 - Hide injection traces for applications injected at the application level
 
-While following the tutorials, please also consider referring to the documentation and the ``action`` page of the GitHub repositories for each rooting solution, module, and plugin, if there are. 
+While following the tutorials, please also consider referring to the documentation and the ``Actions`` tab of the GitHub repositories for each rooting solution, module, and plugin, if there are. 
 
 ### Using KSU / KSU Next / SukiSU
 
-- Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository)
+- Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
   - Configure in the Super User tab of the SukiSU Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
     - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in SukiSU
   - Deploy the system modules in the SukiSU layer
-    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the SukiSU layer
+    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the SukiSU layer
     - Install the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU layer
-    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU layer
+    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the LSPosed layer
+      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
       - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
       - Reboot the device
       - Configure the HMAL
@@ -69,10 +69,10 @@ While following the tutorials, please also consider referring to the documentati
     - Disable the Denylist in Zygisk Next
   - Install the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
     - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
-  - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
+  - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-    - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the LSPosed layer
+    - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
     - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
     - Reboot the device
     - Configure the HMAL
@@ -96,7 +96,7 @@ While following the tutorials, please also consider referring to the documentati
 
 ### Using Apatch / Apatch Next
 
-- Install the latest [Apatch](https://github.com/bmax121/APatch/actions) (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository)
+- Install the latest [Apatch](https://github.com/bmax121/APatch/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
   - Configure in the Super User tab of the Apatch Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
@@ -114,13 +114,13 @@ While following the tutorials, please also consider referring to the documentati
       - Reboot
       - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
   - Deploy the system modules in the Apatch layer
-    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the Apatch layer
+    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the Apatch layer
     - Install the latest [NoHello](https://github.com/MhmRdd/NoHello) module in the Apatch layer
       - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/nohello/`` (or execute the command ``touch /data/adb/nohello/whitelist`` as root)
-    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
+    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the LSPosed layer
+      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
       - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
       - Reboot the device
       - Configure the HMAL
@@ -147,10 +147,10 @@ While following the tutorials, please also consider referring to the documentati
     - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
     - Enable whitelist mode on the setting page of the Magisk Delta
     - Select the package of the application that requires root privileges (you can only select the necessary packages in the applications)
-  - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``action`` page of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
+  - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-    - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``action`` page of its GitHub repository) in the LSPosed layer
+    - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
     - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
     - Reboot the device
     - Configure the HMAL
@@ -344,22 +344,22 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 - 解决无合法 keybox 时无法在已解锁 bootloader 的设备上通过 STRONG 完整性检验
 - 对被应用层注入的应用隐藏注入痕迹
 
-在遵循教程的同时，还请考虑参考每个 root 方案、模块和插件的使用文档和 GitHub 存储库的 ``action`` 页面（如有）。
+在遵循教程的同时，还请考虑参考每个 root 方案、模块和插件的使用文档和 GitHub 存储库的 ``Actions`` 选项卡（如有）。
 
 ### 正在使用 KSU / KSU Next / SukiSU
 
-- 安装 SukiSU GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
+- 安装 SukiSU GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
   - 在 SukiSU 管理器的超级用户页内进行配置
     - 将所有需要 root 的应用程序进行授权
     - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 SukiSU 管理器进行授权
   - 在 SukiSU 层部署系统模块
-    - 在 SukiSU 层安装 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
+    - 在 SukiSU 层安装 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
     - 在 SukiSU 层安装最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
-    - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+    - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
       - 配置 HMAL 插件
@@ -391,10 +391,10 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 禁用 Zygisk Next 内的遵守排除列表
   - 在面具层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
     - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
-  - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+  - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
     - 配置 HMAL 插件
@@ -418,7 +418,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ### 正在使用 Apatch / Apatch Next
 
-- 安装 Apatch GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [Apatch](https://github.com/bmax121/APatch/actions)
+- 安装 Apatch GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [Apatch](https://github.com/bmax121/APatch/actions)
   - 在 Apatch 管理器的超级用户页内进行配置
     - 将所有需要 root 的应用程序进行授权
     - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
@@ -435,13 +435,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 重启进入系统后在 Apatch 管理器中嵌入最新 ``compat`` 版本的 Cherish Peekaboo 并重启设备
     - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原并放弃内核模块部署
   - 在 Apatch 层部署系统模块
-    - 在 Apatch 层安装 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
+    - 在 Apatch 层安装 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
     - 在 Apatch 层安装最新版 [NoHello](https://github.com/MhmRdd/NoHello) 模块
       - 使用 MT 管理器在 ``/data/adb/nohello/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/nohello/whitelist`` 命令）
-    - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+    - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
       - 配置 HMAL 插件
@@ -468,10 +468,10 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
     - 在设置界面启用白名单模式
     - 选定需要 root 权限的应用的包（可以不选定某个应用程序内的所有包）
-  - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+  - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``action`` 页面中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
     - 配置 HMAL 插件
