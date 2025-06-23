@@ -164,8 +164,8 @@
   - https://t.me/rootdetector
   sourceStatus: O
   developingPurpose: E
-  latestVersion: v7.0.1 (701)
-  releaseDate: = 20250611
+  latestVersion: v7.1.0 (710)
+  releaseDate: = 20250623
   detectionRemark:
     UK: 'For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently,
       re-launch the detector to show proper detection results. After changing environments or updating this detector, please

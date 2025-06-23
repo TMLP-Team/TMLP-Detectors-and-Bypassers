@@ -135,8 +135,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v7.0.1 (701)``
-- **Release Date**:  June 11th, 2025
+- **Latest Version**: ``v7.1.0 (710)``
+- **Release Date**:  June 23rd, 2025
 - **Detection Remark**: For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. 
 
 ### Native Test ++
@@ -451,8 +451,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)；[https://t.me/rootdetector](https://t.me/rootdetector)
 - **开源状态**：开源
 - **开发用途**：环境检测
-- **最新版本**：``v7.0.1 (701)``
-- **发行日期**： 2025 年 6 月 11 日
+- **最新版本**：``v7.1.0 (710)``
+- **发行日期**： 2025 年 6 月 23 日
 - **检测备注**：首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。
 - ![nativeRootDetectorCN.jpg](nativeRootDetectorCN.jpg)
 
