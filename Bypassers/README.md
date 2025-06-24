@@ -24,7 +24,7 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
 
 While following the tutorials, please also consider referring to the documentation and the ``Actions`` tab of the GitHub repositories for each rooting solution, module, and plugin, if there are. 
 
-### Using KSU / KSU Next / SukiSU
+### Using KernelSU (KSU) / KSU Next (KSUN) / SukiSU
 
 - Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
   - Configure in the Super User tab of the SukiSU Manager
@@ -37,13 +37,13 @@ While following the tutorials, please also consider referring to the documentati
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
-      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+      - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
+      - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
       - Reboot the device
-      - Configure the HMAL
-        - Hide HMAL's icon from the launcher in the HMAL's settings page
-        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
-        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+      - Configure the HMA
+        - Hide HMA's icon from the launcher in the HMA's settings page
+        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
         - Except for the SukiSU Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU layer
@@ -72,13 +72,13 @@ While following the tutorials, please also consider referring to the documentati
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-    - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
-    - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+    - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
+    - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
     - Reboot the device
-    - Configure the HMAL
-      - Hide HMAL's icon from the launcher in the HMAL's settings page
-      - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
-      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+    - Configure the HMA
+      - Hide HMA's icon from the launcher in the HMA's settings page
+      - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
+      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
@@ -120,13 +120,13 @@ While following the tutorials, please also consider referring to the documentati
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-      - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
-      - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+      - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
+      - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
       - Reboot the device
-      - Configure the HMAL
-        - Hide HMAL's icon from the launcher in the HMAL's settings page
-        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
-        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+      - Configure the HMA
+        - Hide HMA's icon from the launcher in the HMA's settings page
+        - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
+        - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
         - Except for the Apatch Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Apatch layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Apatch layer
@@ -150,13 +150,13 @@ While following the tutorials, please also consider referring to the documentati
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed parasite $\rightarrow$ Create a desktop shortcut to the LSPosed parasite $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed parasite $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) to open the LSPosed parasite if necessary (in case the desktop shortcut is missing)
-    - Install the latest [HMAL](https://github.com/pumPCin/HMAL/actions) plugin (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the LSPosed layer
-    - Set the target scope of the HMAL plugin to **System Framework** only and enable the HMAL plugin in the LSPosed Manager
+    - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
+    - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
     - Reboot the device
-    - Configure the HMAL
-      - Hide HMAL's icon from the launcher in the HMAL's settings page
-      - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMAL's settings page (may require root privileges)
-      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMAL/README.md))
+    - Configure the HMA
+      - Hide HMA's icon from the launcher in the HMA's settings page
+      - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
+      - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
@@ -198,7 +198,8 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ##### Found HMA in ``syscall``
 
-Switch to HMAL
+- Before June 24th, 2025: Switch to HMAL
+- On or after June 24th, 2025: Install the latest HMA plugin
 
 #### Native Root Detector
 
@@ -221,12 +222,11 @@ Switch to HMAL
 - Apatch and its branches: Embed the Cherish Peekaboo module as a kernel module (please check if the ``compat`` version is needed)
 - KSU and its branches: Use SukiSU and Install the latest SUSFS module as a system module
 
-##### Risky application detected (bypassed HMAL/HMA with Code 3)
+##### Risky application detected (bypassed HMA(L) with Code 3)
 
-- Temporary solution: random package name or uninstall corresponding application
-- Permanent solution: None
+The logic of this detection is to start an activity of the target application under Android 13. This detection is handled by ``HMA_v3.5`` from June 24th, 2025. 
 
-##### Risky application detected (bypassed HMAL/HMA with Code 4)
+##### Risky application detected (bypassed HMA(L) with Code 4)
 
 The logic of this detection is to find folders named by the application package names recorded in the library under certain specific directories. Please try to check whether there is a folder named by the listed package names found by the detector in ``/sdcard/Android/data``. If the folder is empty, you can try to delete it. 
 If necessary, please assign the listed application package names found by the detector to the variable ``packageNames`` with a space character as the separator. Subsequently, execute the following script as a non-root user to observe which folders named by the package names can be detected by applications without root permissions. 
@@ -346,7 +346,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 在遵循教程的同时，还请考虑参考每个 root 方案、模块和插件的使用文档和 GitHub 存储库的 ``Actions`` 选项卡（如有）。
 
-### 正在使用 KSU / KSU Next / SukiSU
+### 正在使用 KernelSU (KSU) / KSU Next (KSUN) / SukiSU
 
 - 安装 SukiSU GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
   - 在 SukiSU 管理器的超级用户页内进行配置
@@ -359,13 +359,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 在 LSPosed 层安装 HMA 官方 Telegram 发布的最新版 [HMA](https://t.me/HideMyApplist) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
-      - 配置 HMAL 插件
-        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
-        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+      - 配置 HMA 插件
+        - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
+        - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 SukiSU 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
     - 在 SukiSU 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -394,13 +394,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
   - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+    - 在 LSPosed 层安装 HMA 官方 Telegram 发布的最新版 [HMA](https://t.me/HideMyApplist) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
-    - 配置 HMAL 插件
-      - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
-      - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMAL/README.md)）
+    - 配置 HMA 插件
+      - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
+      - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -441,13 +441,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-      - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+      - 在 LSPosed 层安装 HMA 官方 Telegram 发布的最新版 [HMA](https://t.me/HideMyApplist) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
-      - 配置 HMAL 插件
-        - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
-        - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+      - 配置 HMA 插件
+        - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
+        - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+        - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 Apatch 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
     - 在 Apatch 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -471,13 +471,13 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
   - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不用呼叫）打开 LSPosed 寄生器（例如在桌面快捷方式丢失的情况下）
-    - 在 LSPosed 层安装 HMAL GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [HMAL](https://github.com/pumPCin/HMAL/actions) 插件
+    - 在 LSPosed 层安装 HMA 官方 Telegram 发布的最新版 [HMA](https://t.me/HideMyApplist) 插件
     - 设置作用域为仅**系统框架**并启用插件
     - 重启设备
-    - 配置 HMAL 插件
-      - 在 HMAL 的设置页面将 HMAL 的图标从启动器中隐藏
-      - 在 HMAL 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
-      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板
+    - 配置 HMA 插件
+      - 在 HMA 的设置页面将 HMA 的图标从启动器中隐藏
+      - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
+      - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
@@ -519,7 +519,8 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ##### ``syscall`` 找到 HMA
 
-换用 HMAL
+- 2025 年 6 月 24 日前：换用 HMAL
+- 2025 年 6 月 25 日及之后：安装最新版 HMA 插件
 
 #### Native Root Detector
 
@@ -542,12 +543,11 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 - Apatch 系列：以内核模块的形式嵌入 Cherish Peekaboo 模块（请自行排查是否需要 compat 版本）
 - KSU 系列：使用 SukiSU 并安装最新版 SUSFS 模块
 
-##### 检测到风险应用（绕过 HMAL/HMA 的代码 3）
+##### 检测到风险应用（绕过 HMA(L) 的代码 3）
 
-- 临时解决方案：随机包名或卸载对应应用
-- 永久解决方案：暂无
+该检测适用于安卓 13 以下的操作系统，通过启动目标应用的 Activity 实现检测，已于 2025 年 6 月 25 日在 ``HMA_v3.5.r449.1d951a3 (449)`` 中得到修复。
 
-##### 检测到风险应用（绕过 HMAL/HMA 的代码 4）
+##### 检测到风险应用（绕过 HMA(L) 的代码 4）
 
 该检测原理为找到了某些特定目录下存在以与库中记录的应用包名命名的文件夹，请尝试查看 ``/sdcard/Android/data`` 下是否存在以所列出包名命名的文件夹，如果该文件夹为空可尝试将其删除；
 如有必要，请将所列出的应用包名以空格为分隔符赋值为变量 ``packageNames``，随后以普通用户身份执行以下脚本观察无 root 权限的应用可以检测到哪些以包名命名的文件夹。
