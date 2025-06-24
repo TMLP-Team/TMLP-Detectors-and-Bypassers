@@ -79,8 +79,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.4.1.5``
-- **Release Date**: Before June 18th, 2025
+- **Latest Version**: ``v1.4.1.6``
+- **Release Date**: On or Before June 24th, 2025
 - **Detection Remark**: This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. 
 
 ### Key Attestation
@@ -135,8 +135,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v7.1.0 (710)``
-- **Release Date**:  June 23rd, 2025
+- **Latest Version**: ``v7.1.1 (711)``
+- **Release Date**:  June 24th, 2025
 - **Detection Remark**: For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. 
 
 ### Native Test ++
@@ -388,8 +388,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v1.4.1.5``
-- **发行日期**：早于 2025 年 6 月 18 日
+- **最新版本**：``v1.4.1.6``
+- **发行日期**：不晚于 2025 年 6 月 24 日
 - **检测备注**：该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。
 - ![lunaCN.jpg](lunaCN.jpg)
 
@@ -451,8 +451,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)；[https://t.me/rootdetector](https://t.me/rootdetector)
 - **开源状态**：开源
 - **开发用途**：环境检测
-- **最新版本**：``v7.1.0 (710)``
-- **发行日期**： 2025 年 6 月 23 日
+- **最新版本**：``v7.1.1 (711)``
+- **发行日期**： 2025 年 6 月 24 日
 - **检测备注**：首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。
 - ![nativeRootDetectorCN.jpg](nativeRootDetectorCN.jpg)
 

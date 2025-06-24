@@ -111,8 +111,8 @@
 			], 
 			"sourceStatus":"C", 
 			"developingPurpose":"E", 
-			"latestVersion":"v1.4.1.5", 
-			"releaseDate":"< 20250618", 
+			"latestVersion":"v1.4.1.6", 
+			"releaseDate":"<= 20250624", 
 			"detectionRemark":{
 				"UK":"This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. ", 
 				"CN":"该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。"
@@ -207,8 +207,8 @@
 			], 
 			"sourceStatus":"O", 
 			"developingPurpose":"E", 
-			"latestVersion":"v7.1.0 (710)", 
-			"releaseDate":"= 20250623", 
+			"latestVersion":"v7.1.1 (711)", 
+			"releaseDate":"= 20250624", 
 			"detectionRemark":{
 				"UK":"For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. ", 
 				"CN":"首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。"
