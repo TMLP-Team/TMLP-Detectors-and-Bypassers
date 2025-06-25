@@ -238,6 +238,8 @@
   developingPurpose: E
   latestVersion: v1.1.1 (15)
   releaseDate: = 20240418
+  image:
+    CN: ruruCN.jpg
 - name: Securify
   packageName: io.github.rabehx.securify
   officialLink: https://github.com/RabehX/Securify

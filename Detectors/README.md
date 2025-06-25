@@ -512,6 +512,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **开发用途**：环境检测
 - **最新版本**：``v1.1.1 (15)``
 - **发行日期**： 2024 年 4 月 18 日
+- ![ruruCN.jpg](ruruCN.jpg)
 
 ### Securify
 
