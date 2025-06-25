@@ -6,7 +6,7 @@ This project remains free and open-source in the past, present, and future. Plea
 
 We only keep the latest versions for each implementer, detector, and bypasser here, keeping them as up-to-date as possible. We do not own any of the implementers, detectors, or bypassers here. Thus, please kindly contact us to remove them here if the corresponding owners do not wish them to be distributed here. 
 
-The open source community should be a community with a high spirit of contribution. Nevertheless, in recent years, some [events](./Events/README.md) have occurred frequently, where we felt heartbroken on the unfriendly ones. We call on the open source community to maintain internal unity and harmony, respecting developers and open source licenses. The open source community should not harm the interests of for-profit organizations, and for-profit organizations should not suppress the development of the open source community. 
+The open source community should be a community with a high spirit of contribution. Nevertheless, in recent years, some [events](./Events/README.md) have occurred frequently, where we felt heartbroken about the unfriendly ones. We call on the open source community to maintain internal unity and harmony, respecting developers and open source licenses. The open source community should not harm the interests of for-profit organizations, and for-profit organizations should not suppress the development of the open source community. 
 
 The last update of this repository was at 11:00 on June 25th, 2025 (UTC+8). 
 
