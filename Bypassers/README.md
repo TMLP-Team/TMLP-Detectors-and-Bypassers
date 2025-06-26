@@ -237,7 +237,7 @@ readonly EXIT_SUCCESS=0
 readonly EXIT_FAILURE=1
 exitCode=${EXIT_SUCCESS}
 folders="/data/data /data/user/0 /data/user_de/0 /sdcard/Android/data"
-packageNames="bin.mt.plus bin.mt.termex com.rifsxd.ksunext com.sukisu.ultra com.topjohnwu.magisk io.github.huskydg.magisk io.github.vvb2060.magisk me.bmax.apatch me.garfieldhan.apatch.next me.weishu.kernelsu"
+packageNames="com.rifsxd.ksunext com.sukisu.ultra com.topjohnwu.magisk io.github.huskydg.magisk io.github.vvb2060.magisk me.bmax.apatch me.garfieldhan.apatch.next me.weishu.kernelsu"
 for packageName in ${packageNames}
 do
 	for folder in ${folders}
@@ -254,10 +254,9 @@ exit ${exitCode}
 
 #### Native Test
 
-##### Versions from ``v26.0`` to the invitial ``v30.0`` reports "Malicious Hook"
+##### Native Test reports "Malicious Hook" even though there are no rooting or injection environments
 
-- It can be a false positive since "Malicious Hook" was redefined in these versions
-- Please use the latest version to check the environments. 
+It is said by many people that this is a false negative. 
 
 ##### Others
 
@@ -558,7 +557,7 @@ readonly EXIT_SUCCESS=0
 readonly EXIT_FAILURE=1
 exitCode=${EXIT_SUCCESS}
 folders="/data/data /data/user/0 /data/user_de/0 /sdcard/Android/data"
-packageNames="bin.mt.plus bin.mt.termex com.rifsxd.ksunext com.sukisu.ultra com.topjohnwu.magisk io.github.huskydg.magisk io.github.vvb2060.magisk me.bmax.apatch me.garfieldhan.apatch.next me.weishu.kernelsu"
+packageNames="com.rifsxd.ksunext com.sukisu.ultra com.topjohnwu.magisk io.github.huskydg.magisk io.github.vvb2060.magisk me.bmax.apatch me.garfieldhan.apatch.next me.weishu.kernelsu"
 for packageName in ${packageNames}
 do
 	for folder in ${folders}
@@ -575,10 +574,9 @@ exit ${exitCode}
 
 #### 牛头人
 
-##### 从 ``v26.0`` 到 最初的 ``v30.0`` 版本报 Malicious hook
+##### Native Test 在无 root 或注入环境的设备上报 "Malicious Hook"
 
-- 由于在这些版本中 Malicious hook 被重新定义因此它很可能是误报
-- 请使用最新版检查环境
+大多数人认为这是误报。
 
 ##### 其它问题
 
