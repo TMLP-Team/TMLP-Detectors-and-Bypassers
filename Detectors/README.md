@@ -135,8 +135,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector); [https://t.me/rootdetector](https://t.me/rootdetector)
 - **Source Status**: Open-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v7.1.1 (711)``
-- **Release Date**:  June 24th, 2025
+- **Latest Version**: ``v7.2.0 (720)``
+- **Release Date**:  June 26th, 2025
 - **Detection Remark**: For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. 
 
 ### Native Test ++
@@ -148,7 +148,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v32 (Mean Minotaur)``
 - **Release Date**: On or Before June 15th, 2025
-- **Detection Remark**: Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook), and require network access (recent versions of Holmes). 
+- **Detection Remark**: Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test non-pure versions may mis-report Malicious Hook on some unrooted devices), and require network access (recent versions of Holmes). 
 
 ### Octopus
 
@@ -451,8 +451,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://github.com/reveny/Android-Native-Root-Detector](https://github.com/reveny/Android-Native-Root-Detector)；[https://t.me/rootdetector](https://t.me/rootdetector)
 - **开源状态**：开源
 - **开发用途**：环境检测
-- **最新版本**：``v7.1.1 (711)``
-- **发行日期**： 2025 年 6 月 24 日
+- **最新版本**：``v7.2.0 (720)``
+- **发行日期**： 2025 年 6 月 26 日
 - **检测备注**：首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。
 - ![nativeRootDetectorCN.jpg](nativeRootDetectorCN.jpg)
 
@@ -465,7 +465,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **开发用途**：环境检测
 - **最新版本**：``v32 (Mean Minotaur)``
 - **发行日期**：不晚于 2025 年 6 月 15 日
-- **检测备注**：此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。
+- **检测备注**：此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 非 Pure 版本在某些没有 root 或注入环境的设备上误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。
 
 ### Octopus
 

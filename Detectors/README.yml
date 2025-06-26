@@ -164,8 +164,8 @@
   - https://t.me/rootdetector
   sourceStatus: O
   developingPurpose: E
-  latestVersion: v7.1.1 (711)
-  releaseDate: = 20250624
+  latestVersion: v7.2.0 (720)
+  releaseDate: = 20250626
   detectionRemark:
     UK: 'For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently,
       re-launch the detector to show proper detection results. After changing environments or updating this detector, please
@@ -195,9 +195,9 @@
   releaseDate: <= 20250615
   detectionRemark:
     UK: 'Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of
-      Holmes), report false positives (Native Test from ``v26`` to the initial ``v30`` versions may mis-report Malicious Hook),
+      Holmes), report false positives (Native Test non-pure versions may mis-report Malicious Hook on some unrooted devices),
       and require network access (recent versions of Holmes). '
-    CN: 此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 从 ``v26.0`` 到最初的 ``v30.0`` 版本误报 Malicious
+    CN: 此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 非 Pure 版本在某些没有 root 或注入环境的设备上误报 Malicious
       Hook）和需要联网权限（Holmes 最近的几个版本）。
 - name: Octopus
   alias:
