@@ -5,7 +5,7 @@ from json import load as loadJson
 try:
 	from yaml import dump as dumpYaml
 except:
-	print("Cannot import ``dump`` from ``yaml``. Please try to install ``yaml`` via ``python -m pip install yaml`` or ``sudo apt-get install python3-yaml``. ")
+	print("Cannot import ``dump`` from ``yaml``. Please try to install ``yaml`` via ``python -m pip install pyyaml`` or ``sudo apt-get install python3-yaml``. ")
 	print("Please press the enter key to exit. ")
 	try:
 		input()

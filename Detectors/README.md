@@ -277,9 +277,9 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258); [https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98](https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v2.0``
-- **Release Date**:  June 10th, 2025
-- **Detection Remark**: Misreporting may exist. Use the tools provided in the official link(s) to bypass if necessary. 
+- **Latest Version**: ``v2.2``
+- **Release Date**: On or Before June 28th, 2025
+- **Detection Remark**: This detector only supports Android 12 or above since ``v2.2``. Use the tools provided in the official link(s) to bypass if necessary. 
 
 ### 橘子环境检测内测
 
@@ -600,9 +600,9 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=sHROUm50OrgL5Ko16n5-jfl5sFwr-nbi&authKey=dXMNZRNFvGYMTF6GsDWHb2if5guBnkWOIuRyCAIA9OHf6wsntiMW%2BFJK6v5L6uGE&noverify=0&group_code=738834258)；[https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98](https://pan.xunlei.com/s/VOSCXZEqHQ_1l5vJgWWrulefA1?pwd=pdg6&path=%2F%E6%98%A5%E7%A7%8B%E6%A3%80%E6%B5%8B%E5%AE%98%E6%96%B9%E7%BD%91%E7%9B%98)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v2.0``
-- **发行日期**： 2025 年 6 月 10 日
-- **检测备注**：可能存在误报。如有需要，请使用官方链接中提供的工具。
+- **最新版本**：``v2.2``
+- **发行日期**：不晚于 2025 年 6 月 28 日
+- **检测备注**：从 ``v2.2`` 版本开始仅支持安卓 12 及以上。如有需要，请使用官方链接中提供的工具。
 
 ### 橘子环境检测内测
 
