@@ -73,12 +73,12 @@ class Detectors:
 		if isinstance(codes, str) and isinstance(language, str):
 			statements = []
 			d = {																																	\
-				"A":{"UN":"Archieved", "CN":"已存档"}, "C":{"UN":"Closed-source", "CN":"闭源"}, "D":{"UN":"Android Desktop Application", "CN":"安卓桌面应用"}, 		\
-				"H":{"UN":"Half-open-source", "CN":"半开源"}, "O":{"UN":"Open-source", "CN":"开源"}, "S":{"UN":"For Sale", "CN":"销售中"}							\
+				"A":{"*":"Archieved", "zh-CN":"已存档"}, "C":{"*":"Closed-source", "zh-CN":"闭源"}, "D":{"*":"Android Desktop Application", "zh-CN":"安卓桌面应用"}, 		\
+				"H":{"*":"Half-open-source", "zh-CN":"半开源"}, "O":{"*":"Open-source", "zh-CN":"开源"}, "S":{"*":"For Sale", "zh-CN":"销售中"}							\
 			}
 			for code in codes:
 				if code in d:
-					statements.append(d[code][language] if language in d[code] else d[code]["UN"])
+					statements.append(d[code][language] if language in d[code] else d[code]["*"])
 				else:
 					print("The code \'{0}\' has no meanings in source status statements. ".format(code))
 			return statements
@@ -87,12 +87,12 @@ class Detectors:
 	def __getDevelopingPurpose(self:object, code:str, language:str) -> str:
 		if isinstance(code, str) and isinstance(language, str):
 			d = {																																						\
-				"A":{"UN":"Apatch Detection", "CN":"Apatch 检测"}, "D":{"UN":"Android Desktop Application", "CN":"安卓桌面应用"}, "E":{"UN":"Environment Detection", "CN":"环境检测"}, 	\
-				"I":{"UN":"Information Gathering", "CN":"信息收集"}, "K":{"UN":"Key Attestation", "CN":"密钥认证"}, "L":{"UN":"Applist Detection", "CN":"应用列表检测"}, 					\
-				"M":{"UN":"Magisk Detection", "CN":"面具检测"}, "P":{"UN":"Play Integrity Check", "CN":"Play 完整性检测"}															\
+				"A":{"*":"Apatch Detection", "zh-CN":"Apatch 检测"}, "D":{"*":"Android Desktop Application", "zh-CN":"安卓桌面应用"}, "E":{"*":"Environment Detection", "zh-CN":"环境检测"}, 	\
+				"I":{"*":"Information Gathering", "zh-CN":"信息收集"}, "K":{"*":"Key Attestation", "zh-CN":"密钥认证"}, "L":{"*":"Applist Detection", "zh-CN":"应用列表检测"}, 					\
+				"M":{"*":"Magisk Detection", "zh-CN":"面具检测"}, "P":{"*":"Play Integrity Check", "zh-CN":"Play 完整性检测"}															\
 			}
 			if code in d:
-				return d[code][language] if language in d[code] else d[code]["UN"]
+				return d[code][language] if language in d[code] else d[code]["*"]
 			else:
 				print("The code \'{0}\' has no meanings in developing purpose statements. ".format(code))
 		else:
@@ -100,7 +100,7 @@ class Detectors:
 	def __getReleaseDate(self:object, code:str, language:str) -> str:
 		if isinstance(code, str) and isinstance(language, str):
 			if len(code) >= 8 and code[-8:].isdigit():
-				d = {"":"", "=":"", "==":"", "<":{"UN":"Before", "CN":"早于"}, "<=":{"UN":"On or Before", "CN":"不晚于"}, ">":{"UN":"After", "CN":"晚于"}, ">=":{"UN":"On or After", "CN":"不早于"}, "!=":{"UN":"Not On", "CN":"不是"}}
+				d = {"":"", "=":"", "==":"", "<":{"*":"Before", "zh-CN":"早于"}, "<=":{"*":"On or Before", "zh-CN":"不晚于"}, ">":{"*":"After", "zh-CN":"晚于"}, ">=":{"*":"On or After", "zh-CN":"不早于"}, "!=":{"*":"Not On", "zh-CN":"不是"}}
 				symbol = code[:-8].strip()
 				if symbol in d:
 					year, month, day = int(code[-8:-4]), int(code[-4:-2]), int(code[-2:])
@@ -109,12 +109,12 @@ class Detectors:
 					except:
 						print("The date in the code \"{0}\" is invalid in release date statements. ".format(code))
 						return ""
-					if "CN" == language:
-						return "{0} {1} 年 {2} 月 {3} 日".format(d[symbol]["CN"] if isinstance(d[symbol], dict) else d[symbol], year, month, day)
+					if "zh-CN" == language:
+						return "{0} {1} 年 {2} 月 {3} 日".format(d[symbol]["zh-CN"] if isinstance(d[symbol], dict) else d[symbol], year, month, day)
 					else:
 						months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 						suffix = "th" if day % 100 in (11, 12, 13) else {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
-						return "{0} {1} {2}{3}, {4}".format(d[symbol]["UN"] if isinstance(d[symbol], dict) else d[symbol], months[month - 1], day, suffix, year)
+						return "{0} {1} {2}{3}, {4}".format(d[symbol]["*"] if isinstance(d[symbol], dict) else d[symbol], months[month - 1], day, suffix, year)
 				else:
 					print("The symbol in the code \"{0}\" has no meanings in release date statements. ".format(code))
 			else:
@@ -122,7 +122,7 @@ class Detectors:
 		return ""
 	def __convertToMarkdownTable(self:object, language:str) -> str:
 		if self.__flag and isinstance(language, str):
-			if "CN" == language:
+			if "zh-CN" == language:
 				markdown = "## 检测软件\n\n| 名称 | 应用包名 | 官方链接 | 开源状态 | 开发用途 | 最新版本 | 发行日期 |\n| - | - | - | - | - | - | - |\n"
 				separator = "；"
 			elif len(language) == 2 and "A" <= language[0] <= "Z" and "A" <= language[1] <= "Z":
@@ -144,17 +144,17 @@ class Detectors:
 			return ""
 	def __convertToMarkdownText(self:object, language:str) -> str:
 		if self.__flag and isinstance(language, str):
-			if "UK" == language:
+			if "en" == language:
 				txt = "## Detectors\n\nMomo $\\rightarrow$ Native Root Detector $\\rightarrow$ Native Test ++\n\n"
 				for detector in self.__data:
 					txt += "### " + detector["name"] + "\n\n"
-					if "alias" in detector and ("UN" in detector["alias"] or "UK" in detector["alias"]):
+					if "alias" in detector and ("*" in detector["alias"] or "en" in detector["alias"]):
 						txt += "- **Alias**: "
 						aliasVector = []
-						if "UN" in detector["alias"]:
-							aliasVector += detector["alias"]["UN"] if isinstance(detector["alias"]["UN"], (tuple, list)) else [detector["alias"]["UN"]]
-						if "UK" in detector["alias"]:
-							aliasVector += detector["alias"]["UK"] if isinstance(detector["alias"]["UK"], (tuple, list)) else [detector["alias"]["UK"]]
+						if "*" in detector["alias"]:
+							aliasVector += detector["alias"]["*"] if isinstance(detector["alias"]["*"], (tuple, list)) else [detector["alias"]["*"]]
+						if "en" in detector["alias"]:
+							aliasVector += detector["alias"]["en"] if isinstance(detector["alias"]["en"], (tuple, list)) else [detector["alias"]["en"]]
 						txt += "; ".join(aliasVector) + "\n"
 					txt += (																																												\
 						"- **Package Names**: " + "; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "- **Package Name**: " + "``{0}``".format(detector["packageName"])	\
@@ -162,34 +162,34 @@ class Detectors:
 					txt += (																																							\
 						"- **Official Links**: " + "; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "- **Official Link**: " + detector["officialLink"]	\
 					) + "\n" if "officialLink" in detector else ""
-					txt += "- **Source Status**: " + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "UK")) + "\n" if "sourceStatus" in detector else ""
-					txt += "- **Developing Purpose**: " + self.__getDevelopingPurpose(detector["developingPurpose"], "UK") + "\n" if "developingPurpose" in detector else ""
+					txt += "- **Source Status**: " + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "en")) + "\n" if "sourceStatus" in detector else ""
+					txt += "- **Developing Purpose**: " + self.__getDevelopingPurpose(detector["developingPurpose"], "en") + "\n" if "developingPurpose" in detector else ""
 					txt += "- **Latest Version**: ``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
-					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "UK") + "\n" if "releaseDate" in detector else ""
-					if "detectionRemark" in detector and ("UN" in detector["detectionRemark"] or "UK" in detector["detectionRemark"]):
+					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "en") + "\n" if "releaseDate" in detector else ""
+					if "detectionRemark" in detector and ("*" in detector["detectionRemark"] or "en" in detector["detectionRemark"]):
 						txt += "- **Detection Remark**: "
-						if "UN" in detector["detectionRemark"]:
-							txt += detector["detectionRemark"]["UN"]
-						if "UK" in detector["detectionRemark"]:
-							txt += detector["detectionRemark"]["UK"]
+						if "*" in detector["detectionRemark"]:
+							txt += detector["detectionRemark"]["*"]
+						if "en" in detector["detectionRemark"]:
+							txt += detector["detectionRemark"]["en"]
 						txt += "\n"
-					if "image" in detector and "UN" in detector["image"]:
-						txt += "- ![{0}]({0})\n".format(detector["image"]["UN"])
-					if "image" in detector and "UK" in detector["image"]:
-						txt += "- ![{0}]({0})\n".format(detector["image"]["UK"])
+					if "image" in detector and "*" in detector["image"]:
+						txt += "- ![{0}]({0})\n".format(detector["image"]["*"])
+					if "image" in detector and "en" in detector["image"]:
+						txt += "- ![{0}]({0})\n".format(detector["image"]["en"])
 					txt += "\n"
 				return txt
-			elif "CN" == language:
+			elif "zh-CN" == language:
 				txt = "## 检测软件\n\nMomo $\\rightarrow$ Native Root Detector $\\rightarrow$ 牛头人\n\n"
 				for detector in self.__data:
 					txt += "### " + detector["name"] + "\n\n"
-					if "alias" in detector and ("UN" in detector["alias"] or "CN" in detector["alias"]):
+					if "alias" in detector and ("*" in detector["alias"] or "zh-CN" in detector["alias"]):
 						txt += "- **应用别称**："
 						aliasVector = []
-						if "UN" in detector["alias"]:
-							aliasVector += detector["alias"]["UN"] if isinstance(detector["alias"]["UN"], (tuple, list)) else [detector["alias"]["UN"]]
-						if "CN" in detector["alias"]:
-							aliasVector += detector["alias"]["CN"] if isinstance(detector["alias"]["CN"], (tuple, list)) else [detector["alias"]["CN"]]
+						if "*" in detector["alias"]:
+							aliasVector += detector["alias"]["*"] if isinstance(detector["alias"]["*"], (tuple, list)) else [detector["alias"]["*"]]
+						if "zh-CN" in detector["alias"]:
+							aliasVector += detector["alias"]["zh-CN"] if isinstance(detector["alias"]["zh-CN"], (tuple, list)) else [detector["alias"]["zh-CN"]]
 						txt += "; ".join(aliasVector) + "\n"
 					txt += (																																									\
 						"- **应用包名**：{0}\n".format("；".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "``{0}``".format(detector["packageName"]))		\
@@ -197,32 +197,32 @@ class Detectors:
 					txt += (																																									\
 						"- **官方链接**：{0}\n".format("；".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "[{0}]({0})".format(detector["officialLink"]))		\
 					) if "officialLink" in detector else ""
-					txt += "- **开源状态**：" + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "CN")) + "\n" if "sourceStatus" in detector else ""
-					txt += "- **开发用途**：" + self.__getDevelopingPurpose(detector["developingPurpose"], "CN") + "\n" if "developingPurpose" in detector else ""
+					txt += "- **开源状态**：" + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "zh-CN")) + "\n" if "sourceStatus" in detector else ""
+					txt += "- **开发用途**：" + self.__getDevelopingPurpose(detector["developingPurpose"], "zh-CN") + "\n" if "developingPurpose" in detector else ""
 					txt += "- **最新版本**：``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
-					txt += "- **发行日期**：" + self.__getReleaseDate(detector["releaseDate"], "CN") + "\n" if "releaseDate" in detector else ""
-					if "detectionRemark" in detector and ("UN" in detector["detectionRemark"] or "CN" in detector["detectionRemark"]):
+					txt += "- **发行日期**：" + self.__getReleaseDate(detector["releaseDate"], "zh-CN") + "\n" if "releaseDate" in detector else ""
+					if "detectionRemark" in detector and ("*" in detector["detectionRemark"] or "zh-CN" in detector["detectionRemark"]):
 						txt += "- **检测备注**："
-						if "UN" in detector["detectionRemark"]:
-							txt += detector["detectionRemark"]["UN"]
-						if "CN" in detector["detectionRemark"]:
-							txt += detector["detectionRemark"]["CN"]
+						if "*" in detector["detectionRemark"]:
+							txt += detector["detectionRemark"]["*"]
+						if "zh-CN" in detector["detectionRemark"]:
+							txt += detector["detectionRemark"]["zh-CN"]
 						txt += "\n"
-					if "image" in detector and "UN" in detector["image"]:
-						txt += "- ![{0}]({0})\n".format(detector["image"]["UN"])
-					if "image" in detector and "CN" in detector["image"]:
-						txt += "- ![{0}]({0})\n".format(detector["image"]["CN"])
+					if "image" in detector and "*" in detector["image"]:
+						txt += "- ![{0}]({0})\n".format(detector["image"]["*"])
+					if "image" in detector and "zh-CN" in detector["image"]:
+						txt += "- ![{0}]({0})\n".format(detector["image"]["zh-CN"])
 					txt += "\n"
 				return txt
 			elif len(language) == 2 and "A" <= language[0] <= "Z" and "A" <= language[1] <= "Z":
 				txt = "## Detectors\n\n"
 				for detector in self.__data:
 					txt += "### " + detector["name"] + "\n\n"
-					if "alias" in detector and "UN" in detector["alias"]:
+					if "alias" in detector and "*" in detector["alias"]:
 						txt += "- **Alias**: "
 						aliasVector = []
-						if "UN" in detector["alias"]:
-							aliasVector += detector["alias"]["UN"] if isinstance(detector["alias"]["UN"], (tuple, list)) else [detector["alias"]["UN"]]
+						if "*" in detector["alias"]:
+							aliasVector += detector["alias"]["*"] if isinstance(detector["alias"]["*"], (tuple, list)) else [detector["alias"]["*"]]
 						txt += "; ".join(aliasVector) + "\n"
 					txt += (																																												\
 						"- **Package Names**: " + "; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "- **Package Name**: " + "``{0}``".format(detector["packageName"])	\
@@ -230,17 +230,17 @@ class Detectors:
 					txt += (																																							\
 						"- **Official Links**: " + "; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "- **Official Link**: " + detector["officialLink"]	\
 					) + "\n" if "officialLink" in detector else ""
-					txt += "- **Source Status**: " + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "UN")) + "\n" if "sourceStatus" in detector else ""
-					txt += "- **Developing Purpose**: " + self.__getDevelopingPurpose(detector["developingPurpose"], "UN") + "\n" if "developingPurpose" in detector else ""
+					txt += "- **Source Status**: " + " & ".join(self.__getSourceStatus(detector["sourceStatus"], "*")) + "\n" if "sourceStatus" in detector else ""
+					txt += "- **Developing Purpose**: " + self.__getDevelopingPurpose(detector["developingPurpose"], "*") + "\n" if "developingPurpose" in detector else ""
 					txt += "- **Latest Version**: ``{0}``\n".format(detector["latestVersion"]) if "latestVersion" in detector else ""
-					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "UN") + "\n" if "releaseDate" in detector else ""
-					if "detectionRemark" in detector and "UN" in detector["detectionRemark"]:
+					txt += "- **Release Date**: " + self.__getReleaseDate(detector["releaseDate"], "*") + "\n" if "releaseDate" in detector else ""
+					if "detectionRemark" in detector and "*" in detector["detectionRemark"]:
 						txt += "- **Detection Remark**: "
-						if "UN" in detector["detectionRemark"]:
-							txt += detector["detectionRemark"]["UN"]
+						if "*" in detector["detectionRemark"]:
+							txt += detector["detectionRemark"]["*"]
 						txt += "\n"
-					if "image" in detector and "UN" in detector["image"]:
-						txt += "- ![{0}]({0})\n".format(detector["image"]["UN"])
+					if "image" in detector and "*" in detector["image"]:
+						txt += "- ![{0}]({0})\n".format(detector["image"]["*"])
 					txt += "\n"
 				return txt
 			else:
@@ -264,7 +264,7 @@ class Detectors:
 				return True
 			except:
 				return False
-	def toMarkdownFile(self:object, markdownFilePath:str = None, languages:tuple|list = ("UK", "\n---\n", "CN"), isTable:bool = False, encoding:str = "utf-8") -> str|bool:
+	def toMarkdownFile(self:object, markdownFilePath:str = None, languages:tuple|list = ("en", "\n---\n", "zh-CN"), isTable:bool = False, encoding:str = "utf-8") -> str|bool:
 		if self.__flag and isinstance(isTable, bool):
 			markdown = ""
 			for language in languages:
@@ -313,8 +313,8 @@ def main() -> int:
 	detectors.checkDetectorFolderPath(detectorFolderPath = detectorFolderPath)
 	if bRet:
 		booleans = [																					\
-			detectors.toMarkdownFile(markdownTextFilePath, languages = ("UK", "\n---\n\n", "CN"), isTable = False), 	\
-			detectors.toMarkdownFile(markdownTableFilePath, languages = ("UK", "\n---\n\n", "CN"), isTable = True), 	\
+			detectors.toMarkdownFile(markdownTextFilePath, languages = ("en", "\n---\n\n", "zh-CN"), isTable = False), 	\
+			detectors.toMarkdownFile(markdownTableFilePath, languages = ("en", "\n---\n\n", "zh-CN"), isTable = True), 	\
 			detectors.toYmlFile(ymlFilePath)																\
 		]
 	exitCode = EXIT_SUCCESS if bRet and all(booleans) else EXIT_FAILURE

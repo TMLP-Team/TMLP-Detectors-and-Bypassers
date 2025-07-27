@@ -19,7 +19,7 @@
 		{
 			"name":"Applist Detector", 
 			"alias":{
-				"CN":["应用列表检测", "检测应用列表"]
+				"zh-CN":["应用列表检测", "检测应用列表"]
 			}, 
 			"packageName":["icu.nullptr.applistdetector", "com.tsng.applistdetector"], 
 			"officialLink":"https://github.com/Dr-TSNG/ApplistDetector", 
@@ -28,17 +28,17 @@
 			"latestVersion":"v2.4", 
 			"releaseDate":"= 20220812", 
 			"detectionRemark":{
-				"UK":"The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). ", 
-				"CN":"包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。"
+				"en":"The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). ", 
+				"zh-CN":"包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。"
 			}, 
 			"image":{
-				"UN":"applistDetectorUN.jpg"
+				"*":"applistDetectorUN.jpg"
 			}
 		}, 
 		{
 			"name":"Bank of China (Hong Kong)", 
 			"alias":{
-				"CN":["BOCHK中银香港", "中国银行（香港）", "中银香港"]
+				"zh-CN":["BOCHK中银香港", "中国银行（香港）", "中银香港"]
 			}, 
 			"packageName":"com.bochk.app.aos", 
 			"officialLink":"https://play.google.com/store/apps/details?id=com.bochk.app.aos", 
@@ -50,14 +50,14 @@
 		{
 			"name":"Checker", 
 			"alias":{
-				"CN":"校验者"
+				"zh-CN":"校验者"
 			}, 
 			"packageName":"org.akanework.checker", 
 			"developingPurpose":"E", 
 			"latestVersion":"v1.0.9", 
 			"releaseDate":"< 20250108", 
 			"image":{
-				"CN":"checkerCN.jpg"
+				"zh-CN":"checkerCN.jpg"
 			}
 		}, 
 		{
@@ -68,8 +68,8 @@
 			"latestVersion":"v1.1.15-240919", 
 			"releaseDate":"= 20240919", 
 			"detectionRemark":{
-				"UK":"Please check whether the Security Level is Level 1. The smaller the level, the better the device is. ", 
-				"CN":"请检查 Security Level 是否为 L1，等级数值越小越好。"
+				"en":"Please check whether the Security Level is Level 1. The smaller the level, the better the device is. ", 
+				"zh-CN":"请检查 Security Level 是否为 L1，等级数值越小越好。"
 			}
 		}, 
 		{
@@ -79,17 +79,17 @@
 			"latestVersion":"v6.21 (621)", 
 			"releaseDate":"= 20250428", 
 			"detectionRemark":{
-				"UK":"Please wait about 10 seconds to complete the detection and display. ", 
-				"CN":"请等待 10 秒左右以完成检测和显示。"
+				"en":"Please wait about 10 seconds to complete the detection and display. ", 
+				"zh-CN":"请等待 10 秒左右以完成检测和显示。"
 			}, 
 			"image":{
-				"CN":"hunterCN.jpg"
+				"zh-CN":"hunterCN.jpg"
 			}
 		}, 
 		{
 			"name":"IIQE 一考通", 
 			"alias":{
-				"UK":"IIQE YiKaoTong"
+				"en":"IIQE YiKaoTong"
 			}, 
 			"packageName":"com.prudential.iiqe", 
 			"officialLink":"https://iiqe-cms.prudential.com.hk/iiqe/", 
@@ -98,8 +98,8 @@
 			"latestVersion":"v6.4.3C88", 
 			"releaseDate":"= 20250303", 
 			"detectionRemark":{
-				"UK":"This desktop application will detect the Developer Mode. ", 
-				"CN":"该桌面应用会检测开发者模式。"
+				"en":"This desktop application will detect the Developer Mode. ", 
+				"zh-CN":"该桌面应用会检测开发者模式。"
 			}
 		}, 
 		{
@@ -114,17 +114,17 @@
 			"latestVersion":"v1.4.1.6", 
 			"releaseDate":"<= 20250624", 
 			"detectionRemark":{
-				"UK":"This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. ", 
-				"CN":"该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。"
+				"en":"This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. ", 
+				"zh-CN":"该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。"
 			}, 
 			"image":{
-				"CN":"lunaCN.jpg"
+				"zh-CN":"lunaCN.jpg"
 			}
 		}, 
 		{
 			"name":"Key Attestation", 
 			"alias":{
-				"CN":"密钥认证"
+				"zh-CN":"密钥认证"
 			}, 
 			"packageName":"io.github.vvb2060.keyattestation", 
 			"officialLink":[
@@ -138,13 +138,13 @@
 			"latestVersion":"v1.8.4", 
 			"releaseDate":"= 20250206", 
 			"image":{
-				"CN":"keyAttestationCN.jpg"
+				"zh-CN":"keyAttestationCN.jpg"
 			}
 		}, 
 		{
 			"name":"Magisk Detector", 
 			"alias":{
-				"CN":"Magisk 检测应用"
+				"zh-CN":"Magisk 检测应用"
 			}, 
 			"packageName":"io.github.vvb2060.magiskdetector", 
 			"officialLink":"https://github.com/vvb2060/MagiskDetector", 
@@ -153,24 +153,24 @@
 			"latestVersion":"v3.0", 
 			"releaseDate":"= 20220809", 
 			"image":{
-				"CN":"magiskDetectorCN.jpg"
+				"zh-CN":"magiskDetectorCN.jpg"
 			}
 		}, 
 		{
 			"name":"Momo", 
 			"alias":{
-				"CN":"陌陌"
+				"zh-CN":"陌陌"
 			}, 
 			"packageName":"io.github.vvb2060.mahoshojo", 
 			"developingPurpose":"E", 
 			"latestVersion":"v4.4.1", 
 			"releaseDate":"< 20230107", 
 			"detectionRemark":{
-				"UK":"Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment issues. ", 
-				"CN":"请不要为了得到一张笑脸而欺骗该检测软件，因为欺骗某一个检测软件并不能从本质上解决环境问题。"
+				"en":"Please do not spoof this detector to get a happy face since spoofing detectors cannot essentially solve the environment issues. ", 
+				"zh-CN":"请不要为了得到一张笑脸而欺骗该检测软件，因为欺骗某一个检测软件并不能从本质上解决环境问题。"
 			}, 
 			"image":{
-				"CN":"momoCN.jpg"
+				"zh-CN":"momoCN.jpg"
 			}
 		}, 
 		{
@@ -191,14 +191,14 @@
 			"latestVersion":"v3.0.7", 
 			"releaseDate":"= 20250421", 
 			"detectionRemark":{
-				"UK":"This can be the most challenging one among all the detectors. ", 
-				"CN":"这应该是目前最难以绕过的检测。"
+				"en":"This can be the most challenging one among all the detectors. ", 
+				"zh-CN":"这应该是目前最难以绕过的检测。"
 			}
 		}, 
 		{
 			"name":"Native Root Detector", 
 			"alias":{
-				"UN":["Native Detector", "Native Check"]
+				"*":["Native Detector", "Native Check"]
 			}, 
 			"packageName":"com.reveny.nativecheck", 
 			"officialLink":[
@@ -210,18 +210,18 @@
 			"latestVersion":"v7.2.0 (720)", 
 			"releaseDate":"= 20250626", 
 			"detectionRemark":{
-				"UK":"For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. ", 
-				"CN":"首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。"
+				"en":"For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently, re-launch the detector to show proper detection results. After changing environments or updating this detector, please be sure to completely uninstall the installed version before installing the detector to avoid the previous ``.odex`` affecting the detection results. ", 
+				"zh-CN":"首次使用时请前往设置页面启用实验性检测和遥测，随后重新启动该检测工具进行检测。在更改环境或更新该检测工具后，请务必在将已安装版本卸载干净后重新安装该检测工具以避免原有的 ``.odex`` 文件影响检测结果。"
 			}, 
 			"image":{
-				"CN":"nativeRootDetectorCN.jpg"
+				"zh-CN":"nativeRootDetectorCN.jpg"
 			}
 		}, 
 		{
 			"name":"Native Test ++", 
 			"alias":{
-				"UN":["Native Test", "Holmes"], 
-				"CN":["牛头", "牛头人", "牛头测试", "福尔摩斯"]
+				"*":["Native Test", "Holmes"], 
+				"zh-CN":["牛头", "牛头人", "牛头测试", "福尔摩斯"]
 			}, 
 			"packageName":["me.garfieldhan.holmes", "icu.nullptr.nativetest", "com.android.nativetest"], 
 			"officialLink":"https://t.me/app_process64", 
@@ -230,14 +230,14 @@
 			"latestVersion":"v32 (Mean Minotaur)", 
 			"releaseDate":"<= 20250615", 
 			"detectionRemark":{
-				"UK":"Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test non-pure versions may mis-report Malicious Hook on some unrooted devices), and require network access (recent versions of Holmes). ", 
-				"CN":"此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 非 Pure 版本在某些没有 root 或注入环境的设备上误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。"
+				"en":"Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test non-pure versions may mis-report Malicious Hook on some unrooted devices), and require network access (recent versions of Holmes). ", 
+				"zh-CN":"此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 非 Pure 版本在某些没有 root 或注入环境的设备上误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。"
 			}
 		}, 
 		{
 			"name":"Octopus", 
 			"alias":{
-				"CN":"八达通"
+				"zh-CN":"八达通"
 			}, 
 			"packageName":"com.octopuscards.nfc_reader", 
 			"officialLink":"https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader", 
@@ -285,7 +285,7 @@
 			"latestVersion":"v1.1.1 (15)", 
 			"releaseDate":"= 20240418", 
 			"image":{
-				"CN":"ruruCN.jpg"
+				"zh-CN":"ruruCN.jpg"
 			}
 		}, 
 		{
@@ -297,13 +297,13 @@
 			"latestVersion":"v1.3.0", 
 			"releaseDate":"= 20240728", 
 			"image":{
-				"UN":"securifyUN.png"
+				"*":"securifyUN.png"
 			}
 		}, 
 		{
 			"name":"Simple Play Integrity Checker", 
 			"alias":{
-				"UN":"SPIC"
+				"*":"SPIC"
 			}, 
 			"packageName":"com.henrikherzig.playintegritychecker", 
 			"sourceStatus":"C", 
@@ -315,7 +315,7 @@
 			"name":"TamJiGi", 
 			"packageName":"id.my.pjm.qbcd_okr_dvii", 
 			"alias":{
-				"UN":"xka wl rl", 
+				"*":"xka wl rl", 
 				"ZH":"探知君", 
 				"JP":"探知機（탐지기）"
 			}, 
@@ -325,7 +325,7 @@
 			"latestVersion":"v0.1.0 (46)", 
 			"releaseDate":"= 20241122", 
 			"image":{
-				"UN":"tamJiGiUN.jpg"
+				"*":"tamJiGiUN.jpg"
 			}
 		}, 
 		{
@@ -346,13 +346,13 @@
 			"latestVersion":"v7.1 (9)", 
 			"releaseDate":"< 20220203", 
 			"image":{
-				"CN":"xposedCheckerCN.png"
+				"zh-CN":"xposedCheckerCN.png"
 			}
 		}, 
 		{
 			"name":"Xposed Detector", 
 			"alias":{
-				"CN":"Xposed 检测应用"
+				"zh-CN":"Xposed 检测应用"
 			}, 
 			"packageName":"io.github.vvb2060.xposeddetector", 
 			"officialLink":"https://github.com/vvb2060/XposedDetector", 
@@ -361,13 +361,13 @@
 			"latestVersion":"v2.2 (5)", 
 			"releaseDate":"= 20210327", 
 			"image":{
-				"CN":"xposedDetectorCN.png"
+				"zh-CN":"xposedDetectorCN.png"
 			}
 		}, 
 		{
 			"name":"Yet Another SafetyNet Attestation Checker", 
 			"alias":{
-				"UN":"YASNAC"
+				"*":"YASNAC"
 			}, 
 			"packageName":"rikka.safetynetchecker", 
 			"officialLink":"https://github.com/RikkaW/YASNAC", 
@@ -379,8 +379,8 @@
 		{
 			"name":"凌卿检测", 
 			"alias":{
-				"UK":["LingQing Detector", "Lingqing Detector"], 
-				"CN":"凌卿"
+				"en":["LingQing Detector", "Lingqing Detector"], 
+				"zh-CN":"凌卿"
 			}, 
 			"packageName":"com.lingqing.detector", 
 			"officialLink":"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824", 
@@ -392,7 +392,7 @@
 		{
 			"name":"春秋检测", 
 			"alias":{
-				"CN":"春秋"
+				"zh-CN":"春秋"
 			}, 
 			"packageName":"chunqiu.safe", 
 			"officialLink":[
@@ -405,14 +405,14 @@
 			"latestVersion":"v2.2", 
 			"releaseDate":"<= 20250628", 
 			"detectionRemark":{
-				"UK":"This detector only supports Android 12 or above since ``v2.2``. Use the tools provided in the official link(s) to bypass if necessary. ", 
-				"CN":"从 ``v2.2`` 版本开始仅支持安卓 12 及以上。如有需要，请使用官方链接中提供的工具。"
+				"en":"This detector only supports Android 12 or above since ``v2.2``. Use the tools provided in the official link(s) to bypass if necessary. ", 
+				"zh-CN":"从 ``v2.2`` 版本开始仅支持安卓 12 及以上。如有需要，请使用官方链接中提供的工具。"
 			}
 		}, 
 		{
 			"name":"橘子环境检测内测", 
 			"alias":{
-				"CN":"橘子"
+				"zh-CN":"橘子"
 			}, 
 			"packageName":"com.OrangeEnvironment.Detector", 
 			"officialLink":"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824", 
@@ -424,8 +424,8 @@
 		{
 			"name":"邮储银行", 
 			"alias":{
-				"UK":["Postal Savings Bank of China", "PSBC"], 
-				"CN":"中国邮储银行"
+				"en":["Postal Savings Bank of China", "PSBC"], 
+				"zh-CN":"中国邮储银行"
 			}, 
 			"packageName":"com.yitong.mbank.psbc", 
 			"officialLink":"https://phone.psbc.com", 
