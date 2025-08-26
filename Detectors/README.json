@@ -111,8 +111,8 @@
 			], 
 			"sourceStatus":"C", 
 			"developingPurpose":"E", 
-			"latestVersion":"v1.4.1.6", 
-			"releaseDate":"<= 20250624", 
+			"latestVersion":"v1.4.1.8", 
+			"releaseDate":"<= 20250826", 
 			"detectionRemark":{
 				"en":"This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. ", 
 				"zh-CN":"该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。"
