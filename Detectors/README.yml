@@ -27,7 +27,7 @@
     en: 'The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). '
     zh-CN: 包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。
   image:
-    '*': applistDetectorUN.jpg
+    '*': applistDetector.jpg
 - name: Bank of China (Hong Kong)
   alias:
     zh-CN:
@@ -248,7 +248,7 @@
   latestVersion: v1.3.0
   releaseDate: = 20240728
   image:
-    '*': securifyUN.png
+    '*': securify.png
 - name: Simple Play Integrity Checker
   alias:
     '*': SPIC
@@ -268,7 +268,7 @@
   latestVersion: v0.1.0 (46)
   releaseDate: = 20241122
   image:
-    '*': tamJiGiUN.jpg
+    '*': tamJiGi.jpg
 - name: Uber Driver
   packageName: com.ubercab.driver
   officialLink: https://play.google.com/store/apps/details?id=com.ubercab.driver

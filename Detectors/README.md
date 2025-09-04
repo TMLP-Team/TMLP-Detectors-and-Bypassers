@@ -27,7 +27,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Latest Version**: ``v2.4``
 - **Release Date**:  August 12th, 2022
 - **Detection Remark**: The package name ``com.tsng.applistdetector`` is a history name (about ``v1.3.2``). 
-- ![applistDetectorUN.jpg](applistDetectorUN.jpg)
+- ![applistDetector.jpg](applistDetector.jpg)
 
 ### Bank of China (Hong Kong)
 
@@ -203,7 +203,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v1.3.0``
 - **Release Date**:  July 28th, 2024
-- ![securifyUN.png](securifyUN.png)
+- ![securify.png](securify.png)
 
 ### Simple Play Integrity Checker
 
@@ -222,7 +222,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Developing Purpose**: Environment Detection
 - **Latest Version**: ``v0.1.0 (46)``
 - **Release Date**:  November 22nd, 2024
-- ![tamJiGiUN.jpg](tamJiGiUN.jpg)
+- ![tamJiGi.jpg](tamJiGi.jpg)
 
 ### Uber Driver
 
@@ -333,7 +333,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **最新版本**：``v2.4``
 - **发行日期**： 2022 年 8 月 12 日
 - **检测备注**：包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。
-- ![applistDetectorUN.jpg](applistDetectorUN.jpg)
+- ![applistDetector.jpg](applistDetector.jpg)
 
 ### Bank of China (Hong Kong)
 
@@ -522,7 +522,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **开发用途**：环境检测
 - **最新版本**：``v1.3.0``
 - **发行日期**： 2024 年 7 月 28 日
-- ![securifyUN.png](securifyUN.png)
+- ![securify.png](securify.png)
 
 ### Simple Play Integrity Checker
 
@@ -541,7 +541,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **开发用途**：环境检测
 - **最新版本**：``v0.1.0 (46)``
 - **发行日期**： 2024 年 11 月 22 日
-- ![tamJiGiUN.jpg](tamJiGiUN.jpg)
+- ![tamJiGi.jpg](tamJiGi.jpg)
 
 ### Uber Driver
 
