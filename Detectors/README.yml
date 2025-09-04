@@ -87,8 +87,8 @@
   - http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824
   sourceStatus: C
   developingPurpose: E
-  latestVersion: v1.4.1.6
-  releaseDate: <= 20250624
+  latestVersion: v1.4.1.8
+  releaseDate: <= 20250826
   detectionRemark:
     en: 'This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in
       the official link(s) to clean up. Since some plugins require specific directories to store their configurations without
@@ -164,8 +164,8 @@
   - https://t.me/rootdetector
   sourceStatus: O
   developingPurpose: E
-  latestVersion: v7.2.0 (720)
-  releaseDate: = 20250626
+  latestVersion: v7.4.0 (740)
+  releaseDate: = 20250904
   detectionRemark:
     en: 'For the first time, please go to the settings page to enable experimental detection and telemetry. Subsequently,
       re-launch the detector to show proper detection results. After changing environments or updating this detector, please
