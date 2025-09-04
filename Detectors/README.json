@@ -32,7 +32,7 @@
 				"zh-CN":"包名 ``com.tsng.applistdetector`` 是历史版本包名（约 ``v1.3.2``）。"
 			}, 
 			"image":{
-				"*":"applistDetectorUN.jpg"
+				"*":"applistDetector.jpg"
 			}
 		}, 
 		{
@@ -297,7 +297,7 @@
 			"latestVersion":"v1.3.0", 
 			"releaseDate":"= 20240728", 
 			"image":{
-				"*":"securifyUN.png"
+				"*":"securify.png"
 			}
 		}, 
 		{
@@ -325,7 +325,7 @@
 			"latestVersion":"v0.1.0 (46)", 
 			"releaseDate":"= 20241122", 
 			"image":{
-				"*":"tamJiGiUN.jpg"
+				"*":"tamJiGi.jpg"
 			}
 		}, 
 		{
