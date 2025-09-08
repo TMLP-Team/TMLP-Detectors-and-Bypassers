@@ -11,7 +11,7 @@ By defining Magisk fork as rooting solutions including Magisk, KSU, Apatch, and 
 - Magisk Fork + LSPosed (2022), 
 - Magisk Fork + LSPosed + Shamiko (2023), 
 - Magisk Fork + LSPosed + Shamiko + PIF + TS (2024), and
-- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Cleaning up (2025). 
+- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + Cleaning up (2025). 
 
 Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
 
