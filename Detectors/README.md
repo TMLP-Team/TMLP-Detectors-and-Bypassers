@@ -290,6 +290,15 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Latest Version**: ``v3.0``
 - **Release Date**:  June 9th, 2025
 
+### 禁用安全标志检测器
+
+- **Package Name**: ``io.github.a13e300.dsf_detector``
+- **Official Links**: [https://github.com/a13e300/dsf_detector](https://github.com/a13e300/dsf_detector); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
+- **Source Status**: Closed-source
+- **Developing Purpose**: Flag Detection
+- **Latest Version**: ``v1.0.3 (5)``
+- **Release Date**:  June 9th, 2025
+
 ### 邮储银行
 
 - **Alias**: Postal Savings Bank of China; PSBC
@@ -612,6 +621,15 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **开源状态**：闭源
 - **开发用途**：环境检测
 - **最新版本**：``v3.0``
+- **发行日期**： 2025 年 6 月 9 日
+
+### 禁用安全标志检测器
+
+- **应用包名**：``io.github.a13e300.dsf_detector``
+- **官方链接**：[https://github.com/a13e300/dsf_detector](https://github.com/a13e300/dsf_detector)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
+- **开源状态**：闭源
+- **开发用途**：安全标志检测
+- **最新版本**：``v1.0.3 (5)``
 - **发行日期**： 2025 年 6 月 9 日
 
 ### 邮储银行

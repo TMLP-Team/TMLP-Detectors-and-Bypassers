@@ -73,8 +73,8 @@ class Detectors:
 		if isinstance(codes, str) and isinstance(language, str):
 			statements = []
 			d = {																																	\
-				"A":{"*":"Archieved", "zh-CN":"已存档"}, "C":{"*":"Closed-source", "zh-CN":"闭源"}, "D":{"*":"Android Desktop Application", "zh-CN":"安卓桌面应用"}, 		\
-				"H":{"*":"Half-open-source", "zh-CN":"半开源"}, "O":{"*":"Open-source", "zh-CN":"开源"}, "S":{"*":"For Sale", "zh-CN":"销售中"}							\
+				"A":{"*":"Archieved", "zh-CN":"已存档"}, "C":{"*":"Closed-source", "zh-CN":"闭源"}, "D":{"*":"Android Desktop Application", "zh-CN":"安卓桌面应用"}, 	\
+				"H":{"*":"Half-open-source", "zh-CN":"半开源"}, "O":{"*":"Open-source", "zh-CN":"开源"}, "S":{"*":"For Sale", "zh-CN":"销售中"}						\
 			}
 			for code in codes:
 				if code in d:
@@ -88,8 +88,8 @@ class Detectors:
 		if isinstance(code, str) and isinstance(language, str):
 			d = {																																						\
 				"A":{"*":"Apatch Detection", "zh-CN":"Apatch 检测"}, "D":{"*":"Android Desktop Application", "zh-CN":"安卓桌面应用"}, "E":{"*":"Environment Detection", "zh-CN":"环境检测"}, 	\
-				"I":{"*":"Information Gathering", "zh-CN":"信息收集"}, "K":{"*":"Key Attestation", "zh-CN":"密钥认证"}, "L":{"*":"Applist Detection", "zh-CN":"应用列表检测"}, 					\
-				"M":{"*":"Magisk Detection", "zh-CN":"面具检测"}, "P":{"*":"Play Integrity Check", "zh-CN":"Play 完整性检测"}															\
+				"F":{"*":"Flag Detection", "zh-CN":"安全标志检测"}, "I":{"*":"Information Gathering", "zh-CN":"信息收集"}, "K":{"*":"Key Attestation", "zh-CN":"密钥认证"}, 					\
+				"L":{"*":"Applist Detection", "zh-CN":"应用列表检测"}, "M":{"*":"Magisk Detection", "zh-CN":"面具检测"}, "P":{"*":"Play Integrity Check", "zh-CN":"Play 完整性检测"}			\
 			}
 			if code in d:
 				return d[code][language] if language in d[code] else d[code]["*"]
@@ -224,8 +224,8 @@ class Detectors:
 						if "*" in detector["alias"]:
 							aliasVector += detector["alias"]["*"] if isinstance(detector["alias"]["*"], (tuple, list)) else [detector["alias"]["*"]]
 						txt += "; ".join(aliasVector) + "\n"
-					txt += (																																												\
-						"- **Package Names**: " + "; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "- **Package Name**: " + "``{0}``".format(detector["packageName"])	\
+					txt += (																																													\
+						"- **Package Names**: " + "; ".join(["``{0}``".format(pkg) for pkg in detector["packageName"]]) if isinstance(detector["packageName"], list) else "- **Package Name**: " + "``{0}``".format(detector["packageName"])		\
 					) + "\n" if "packageName" in detector else ""
 					txt += (																																							\
 						"- **Official Links**: " + "; ".join(["[{0}]({0})".format(link) for link in detector["officialLink"]]) if isinstance(detector["officialLink"], list) else "- **Official Link**: " + detector["officialLink"]	\
@@ -312,10 +312,10 @@ def main() -> int:
 	bRet = detectors.loadJson(jsonFilePath)
 	detectors.checkDetectorFolderPath(detectorFolderPath = detectorFolderPath)
 	if bRet:
-		booleans = [																					\
-			detectors.toMarkdownFile(markdownTextFilePath, languages = ("en", "\n---\n\n", "zh-CN"), isTable = False), 	\
-			detectors.toMarkdownFile(markdownTableFilePath, languages = ("en", "\n---\n\n", "zh-CN"), isTable = True), 	\
-			detectors.toYmlFile(ymlFilePath)																\
+		booleans = [																						\
+			detectors.toMarkdownFile(markdownTextFilePath, languages = ("en", "\n---\n\n", "zh-CN"), isTable = False), 		\
+			detectors.toMarkdownFile(markdownTableFilePath, languages = ("en", "\n---\n\n", "zh-CN"), isTable = True), 		\
+			detectors.toYmlFile(ymlFilePath)																	\
 		]
 	exitCode = EXIT_SUCCESS if bRet and all(booleans) else EXIT_FAILURE
 	try:

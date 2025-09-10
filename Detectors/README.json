@@ -422,6 +422,18 @@
 			"releaseDate":"= 20250609"
 		}, 
 		{
+			"name":"禁用安全标志检测器", 
+			"packageName":"io.github.a13e300.dsf_detector", 
+			"officialLink":[
+				"https://github.com/a13e300/dsf_detector", 
+				"http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824"
+			], 
+			"sourceStatus":"C", 
+			"developingPurpose":"F", 
+			"latestVersion":"v1.0.3 (5)", 
+			"releaseDate":"= 20250609"
+		}, 
+		{
 			"name":"邮储银行", 
 			"alias":{
 				"en":["Postal Savings Bank of China", "PSBC"], 
