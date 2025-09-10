@@ -76,11 +76,11 @@
 			"name":"Hunter", 
 			"packageName":"com.zhenxi.hunter", 
 			"developingPurpose":"E", 
-			"latestVersion":"v6.21 (621)", 
-			"releaseDate":"= 20250428", 
+			"latestVersion":"v6.41 (641)", 
+			"releaseDate":"= 20250910", 
 			"detectionRemark":{
-				"en":"Please wait about 10 seconds to complete the detection and display. ", 
-				"zh-CN":"请等待 10 秒左右以完成检测和显示。"
+				"en":"Please wait about 20 seconds to complete the detection and display. ", 
+				"zh-CN":"请等待 20 秒左右以完成检测和显示。"
 			}, 
 			"image":{
 				"zh-CN":"hunterCN.jpg"
