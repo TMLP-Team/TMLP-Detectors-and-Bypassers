@@ -47,13 +47,24 @@ While following the tutorials, please also consider referring to the documentati
         - Except for the SukiSU Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU layer
-      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
-      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
-      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
-      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
-      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
+      - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
+        - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
+        - Obtain an alternative ``keybox.xml``
+          - Method 1: Search for a free recent ``keybox.xml`` (that can pass the Device (old Strong) integrity) in Telegram (like [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)) $rightarrow$ Download the file $rightarrow$ Rename the file to ``keybox.xml`` $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+          - Method 2: Generate a ``keybox.xml`` (that can pass the Basic (old Device) integrity) in a Linux operating system (via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator)) $rightarrow$ Copy the generated file entitled ``keybox.xml`` to the Android device $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+          - Method 3: Buy a ``keybox.xml`` (that can at least pass the Device (old Strong) integrity) (However, never buy a ``keybox.xml`` unless you can ensure that the bought ``keybox.xml`` is always valid or a new valid one will be offered for free once the previous one is revoked in the future, since each non-exclusive ``keybox.xml`` will be revoked by Google in a short period usually)
+          - Method 4: Use root certificates recognized by Google to generate ``keybox.xml`` (nearly impossible since most of us are plain people)
+          - Method 5: Design methods (including a brute-force algorithm that can succeed in a short time) to break the cryptography scheme (impossible since you can publish a paper in the top cryptography conference and make cryptography systems throughout the world in danger if you succeed)
+        - Check the integrity if you wish to
+          - Google APIs: Use [Key Attestation](https://github.com/vvb2060/KeyAttestation)
+            - Your ``keybox.xml`` is announced or expected to at least pass the Device (old Strong) integrity before checking
+              - Your ``keybox.xml`` is private and you will not share it publicly: Feel free to check, since Google will most likely not revoke your ``keybox.xml`` as long as there are no multiple Android devices sharing the same ``keybox.xml``
+              - Your ``keybox.xml`` is obtained from a public channel or you want to share it publicly: It is acceptable $\leftarrow$ Checking based on the Google APIs will accelerate its revocation by Google as long as your ``keybox.xml`` is checked on multiple Android devices $\leftarrow$ However, if you do not check it manually, you can hardly trust its integrity, and applications that need to check the integrity will sooner or later based on the Google APIs, which will also accelerate its revocation $\leftarrow$ Just use the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves is sufficient if there is no such applications on your Android device
+            - Your ``keybox.xml`` is announced or expected to pass the Basic (old Device) integrity before checking: Feel free to check, since the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves can also pass the Basic (old Device) integrity, and they are quite easy to obtain
+          - Others: Some other checkers in [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) check the revoked ``keybox.xml`` based on their own cloud libraries instead of the Google ones
+        - Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if the ``keybox.xml`` is revoked or the integrity provided is even worse than that provided by the default ``keybox.xml`` brought from the Tricky Store module
+      - Use the MT Manager to extract the installation package names of the target applications and the detectors (long press to copy) $rightarrow$ add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode) line by line
+      - Use the MT Manager to write the date of the 1st day of the current month or the current season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250901``
     - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU layer if the device does not have a proper vbmeta digest
     - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the SukiSU layer if necessary for vulnerability fixes
 - View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
@@ -83,13 +94,24 @@ While following the tutorials, please also consider referring to the documentati
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
-    - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
-    - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
-    - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
-    - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-    - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
-    - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
+    - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
+      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
+      - Obtain an alternative ``keybox.xml``
+        - Method 1: Search for a free recent ``keybox.xml`` (that can pass the Device (old Strong) integrity) in Telegram (like [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)) $rightarrow$ Download the file $rightarrow$ Rename the file to ``keybox.xml`` $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+        - Method 2: Generate a ``keybox.xml`` (that can pass the Basic (old Device) integrity) in a Linux operating system (via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator)) $rightarrow$ Copy the generated file entitled ``keybox.xml`` to the Android device $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+        - Method 3: Buy a ``keybox.xml`` (that can at least pass the Device (old Strong) integrity) (However, never buy a ``keybox.xml`` unless you can ensure that the bought ``keybox.xml`` is always valid or a new valid one will be offered for free once the previous one is revoked in the future, since each non-exclusive ``keybox.xml`` will be revoked by Google in a short period usually)
+        - Method 4: Use root certificates recognized by Google to generate ``keybox.xml`` (nearly impossible since most of us are plain people)
+        - Method 5: Design methods (including a brute-force algorithm that can succeed in a short time) to break the cryptography scheme (impossible since you can publish a paper in the top cryptography conference and make cryptography systems throughout the world in danger if you succeed)
+      - Check the integrity if you wish to
+        - Google APIs: Use [Key Attestation](https://github.com/vvb2060/KeyAttestation)
+          - Your ``keybox.xml`` is announced or expected to at least pass the Device (old Strong) integrity before checking
+            - Your ``keybox.xml`` is private and you will not share it publicly: Feel free to check, since Google will most likely not revoke your ``keybox.xml`` as long as there are no multiple Android devices sharing the same ``keybox.xml``
+            - Your ``keybox.xml`` is obtained from a public channel or you want to share it publicly: It is acceptable $\leftarrow$ Checking based on the Google APIs will accelerate its revocation by Google as long as your ``keybox.xml`` is checked on multiple Android devices $\leftarrow$ However, if you do not check it manually, you can hardly trust its integrity, and applications that need to check the integrity will sooner or later based on the Google APIs, which will also accelerate its revocation $\leftarrow$ Just use the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves is sufficient if there is no such applications on your Android device
+          - Your ``keybox.xml`` is announced or expected to pass the Basic (old Device) integrity before checking: Feel free to check, since the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves can also pass the Basic (old Device) integrity, and they are quite easy to obtain
+        - Others: Some other checkers in [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) check the revoked ``keybox.xml`` based on their own cloud libraries instead of the Google ones
+      - Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if the ``keybox.xml`` is revoked or the integrity provided is even worse than that provided by the default ``keybox.xml`` brought from the Tricky Store module
+    - Use the MT Manager to extract the installation package names of the target applications and the detectors (long press to copy) $rightarrow$ add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode) line by line
+    - Use the MT Manager to write the date of the 1st day of the current month or the current season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250901``
   - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
   - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the Magisk layer if necessary for vulnerability fixes
   - Install the latest [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
@@ -132,13 +154,24 @@ While following the tutorials, please also consider referring to the documentati
         - Except for the Apatch Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
     - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Apatch layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Apatch layer
-      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
-      - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
-      - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
-      - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-      - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
-      - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250501``
+      - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
+        - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
+        - Obtain an alternative ``keybox.xml``
+          - Method 1: Search for a free recent ``keybox.xml`` (that can pass the Device (old Strong) integrity) in Telegram (like [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)) $rightarrow$ Download the file $rightarrow$ Rename the file to ``keybox.xml`` $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+          - Method 2: Generate a ``keybox.xml`` (that can pass the Basic (old Device) integrity) in a Linux operating system (via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator)) $rightarrow$ Copy the generated file entitled ``keybox.xml`` to the Android device $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+          - Method 3: Buy a ``keybox.xml`` (that can at least pass the Device (old Strong) integrity) (However, never buy a ``keybox.xml`` unless you can ensure that the bought ``keybox.xml`` is always valid or a new valid one will be offered for free once the previous one is revoked in the future, since each non-exclusive ``keybox.xml`` will be revoked by Google in a short period usually)
+          - Method 4: Use root certificates recognized by Google to generate ``keybox.xml`` (nearly impossible since most of us are plain people)
+          - Method 5: Design methods (including a brute-force algorithm that can succeed in a short time) to break the cryptography scheme (impossible since you can publish a paper in the top cryptography conference and make cryptography systems throughout the world in danger if you succeed)
+        - Check the integrity if you wish to
+          - Google APIs: Use [Key Attestation](https://github.com/vvb2060/KeyAttestation)
+            - Your ``keybox.xml`` is announced or expected to at least pass the Device (old Strong) integrity before checking
+              - Your ``keybox.xml`` is private and you will not share it publicly: Feel free to check, since Google will most likely not revoke your ``keybox.xml`` as long as there are no multiple Android devices sharing the same ``keybox.xml``
+              - Your ``keybox.xml`` is obtained from a public channel or you want to share it publicly: It is acceptable $\leftarrow$ Checking based on the Google APIs will accelerate its revocation by Google as long as your ``keybox.xml`` is checked on multiple Android devices $\leftarrow$ However, if you do not check it manually, you can hardly trust its integrity, and applications that need to check the integrity will sooner or later based on the Google APIs, which will also accelerate its revocation $\leftarrow$ Just use the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves is sufficient if there is no such applications on your Android device
+            - Your ``keybox.xml`` is announced or expected to pass the Basic (old Device) integrity before checking: Feel free to check, since the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves can also pass the Basic (old Device) integrity, and they are quite easy to obtain
+          - Others: Some other checkers in [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) check the revoked ``keybox.xml`` based on their own cloud libraries instead of the Google ones
+        - Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if the ``keybox.xml`` is revoked or the integrity provided is even worse than that provided by the default ``keybox.xml`` brought from the Tricky Store module
+      - Use the MT Manager to extract the installation package names of the target applications and the detectors (long press to copy) $rightarrow$ add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode) line by line
+      - Use the MT Manager to write the date of the 1st day of the current month or the current season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250901``
     - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Apatch layer if the device does not have a proper vbmeta digest
     - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the Apatch layer if necessary for vulnerability fixes
 
@@ -163,13 +196,24 @@ While following the tutorials, please also consider referring to the documentati
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
   - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
-    - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``)
-    - Search for a free recent ``keybox.xml`` in the Telegram channel [FreeKeyboxShare](https://t.me/FreeKeyboxShare) and use the MT Manager to move it to ``/data/adb/tricky_store/``
-    - Use [Key Attestation](https://github.com/vvb2060/KeyAttestation) to check if it passes the Device (old Strong) integrity $\rightarrow$ Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if not
-    - Please try to generate a ``keybox.xml`` that can pass the Basic (old Device) integrity via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) if the free ``keybox.xml`` does not work or the ``keybox.xml`` signed based on the root certificate from the AOSP is not wished to be used
-    - Never buy a ``keybox.xml`` unless the seller guarantees to offer you a new valid one once the previous one is revoked since each ``keybox.xml`` will be revoked by Google in a short period usually
-    - Use the MT Manager to extract the installation package names of the detectors (long press to copy) and add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode)
-    - Use the MT Manager to write the date of the 1st day of the current month to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250401``
+    - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
+      - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
+      - Obtain an alternative ``keybox.xml``
+        - Method 1: Search for a free recent ``keybox.xml`` (that can pass the Device (old Strong) integrity) in Telegram (like [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)) $rightarrow$ Download the file $rightarrow$ Rename the file to ``keybox.xml`` $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+        - Method 2: Generate a ``keybox.xml`` (that can pass the Basic (old Device) integrity) in a Linux operating system (via a Python script from [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator)) $rightarrow$ Copy the generated file entitled ``keybox.xml`` to the Android device $rightarrow$ Use the MT Manager to move it to ``/data/adb/tricky_store/``
+        - Method 3: Buy a ``keybox.xml`` (that can at least pass the Device (old Strong) integrity) (However, never buy a ``keybox.xml`` unless you can ensure that the bought ``keybox.xml`` is always valid or a new valid one will be offered for free once the previous one is revoked in the future, since each non-exclusive ``keybox.xml`` will be revoked by Google in a short period usually)
+        - Method 4: Use root certificates recognized by Google to generate ``keybox.xml`` (nearly impossible since most of us are plain people)
+        - Method 5: Design methods (including a brute-force algorithm that can succeed in a short time) to break the cryptography scheme (impossible since you can publish a paper in the top cryptography conference and make cryptography systems throughout the world in danger if you succeed)
+      - Check the integrity if you wish to
+        - Google APIs: Use [Key Attestation](https://github.com/vvb2060/KeyAttestation)
+          - Your ``keybox.xml`` is announced or expected to at least pass the Device (old Strong) integrity before checking
+            - Your ``keybox.xml`` is private and you will not share it publicly: Feel free to check, since Google will most likely not revoke your ``keybox.xml`` as long as there are no multiple Android devices sharing the same ``keybox.xml``
+            - Your ``keybox.xml`` is obtained from a public channel or you want to share it publicly: It is acceptable $\leftarrow$ Checking based on the Google APIs will accelerate its revocation by Google as long as your ``keybox.xml`` is checked on multiple Android devices $\leftarrow$ However, if you do not check it manually, you can hardly trust its integrity, and applications that need to check the integrity will sooner or later based on the Google APIs, which will also accelerate its revocation $\leftarrow$ Just use the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves is sufficient if there is no such applications on your Android device
+          - Your ``keybox.xml`` is announced or expected to pass the Basic (old Device) integrity before checking: Feel free to check, since the default ``keybox.xml`` brought from the Tricky Store module or the ``keybox.xml`` generated by yourselves can also pass the Basic (old Device) integrity, and they are quite easy to obtain
+        - Others: Some other checkers in [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) check the revoked ``keybox.xml`` based on their own cloud libraries instead of the Google ones
+      - Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if the ``keybox.xml`` is revoked or the integrity provided is even worse than that provided by the default ``keybox.xml`` brought from the Tricky Store module
+    - Use the MT Manager to extract the installation package names of the target applications and the detectors (long press to copy) $rightarrow$ add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode) line by line
+    - Use the MT Manager to write the date of the 1st day of the current month or the current season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250901``
   - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
   - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the Magisk layer if necessary for vulnerability fixes
   - Install the latest [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
@@ -336,7 +380,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 - Magisk Fork + LSPosed（2022 年）；
 - Magisk Fork + LSPosed + Shamiko（2023 年）；
 - Magisk Fork + LSPosed + Shamiko + PIF + TS（2024 年）；以及
-- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + 残留清理（2025 年）。
+- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年）。
 
 目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
 
@@ -372,13 +416,24 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 SukiSU 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
     - 在 SukiSU 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
-      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
-      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
-      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
-      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+      - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
+        - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+        - 获取 ``keybox.xml``
+          - 方法 1：在电报（Telegram）中搜索一个免费的、较近的 ``keybox.xml``（可以通过 Device（旧 Strong）完整性检验）（例如 [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)）$rightarrow$ 下载文件 $rightarrow$ 将文件重命名为``keybox.xml`` $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+          - 方法 2：在 Linux 操作系统中（通过 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本）生成一个 ``keybox.xml``（可以通过 Basic（旧 Device）完整性检验）$rightarrow$ 将生成的名为 ``keybox.xml`` 的文件复制到 Android 设备 $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+          - 方法 3：购买一个 ``keybox.xml``（至少可以通过 Device（旧设备）完整性检验）（但是，除非您能确保购买的 ``keybox.xml`` 始终有效，或者将来旧密钥被撤销后售家会立即免费提供新的有效密钥，否则切勿购买 ``keybox.xml``，因为每个不是独享的 ``keybox.xml`` 都会在短时间内被 Google 吊销）
+          - 方法 4：使用 Google 认可的根证书生成 ``keybox.xml``（几乎不可能，因为我们大多数人都是普通人）
+          - 方法 5：设计方法（包括可以在短时间内成功的暴破算法）来破解密码学方案（不可能，因为如果成功了，您可以在最顶级的密码学顶会上发表论文且使得全世界的相当一部分密码系统陷入危机）
+        - 如果需要，请检验完整性
+          - Google 应用程序接口：使用 [密钥认证](https://github.com/vvb2060/KeyAttestation)
+            - 您的 ``keybox.xml`` 在进行检验前被宣布或预计至少通过 Device（旧 Strong）完整性检验
+              - 您的 ``keybox.xml`` 是私有的且您不会公开分享：请随意进行完整性检验，因为只要没有多个 Android 设备共享同一个 ``keybox.xml``，Google 很可能不会吊销您的 ``keybox.xml``
+              - 您的 ``keybox.xml`` 是从公共渠道获取的或者您想公开分享它：这是可以接受的 $\leftarrow$ 但只要您的 ``keybox.xml`` 在多台 Android 设备上进行检查，基于 Google 应用程序接口的完整性检验将加速 Google 对其吊销 $\leftarrow$ 但是，如果您不手动进行完整性检验，您将难以信任它的完整性，而需要完整性检验的应用程序迟早会基于 Google 应用程序接口进行检查，这也会加速它的吊销 $\leftarrow$ 如果您的 Android 设备上没有这样的应用程序，只需使用 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 即可
+            - 您的 ``keybox.xml`` 在检查之前已宣布或预计会通过 Basic（旧 Device）完整性检查：请随意检查，因为从 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 也可以通过 Basic（旧 Device）完整性检验，而且获取它们相当容易
+          - 其它完整性检验应用程序：[https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) 中的一些完整性检验应用程序会根据自己的云库（而非 Google 的云库）检查 ``keybox.xml`` 是否已被吊销
+        - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+      - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
     - 若设备的 vbmeta digest 不正确可在 SukiSU 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
     - 如有修复漏洞需要可在 SukiSU 层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
 - 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
@@ -408,13 +463,24 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-    - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
-    - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
-    - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
-    - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
-    - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+    - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
+      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+      - 获取 ``keybox.xml``
+        - 方法 1：在电报（Telegram）中搜索一个免费的、较近的 ``keybox.xml``（可以通过 Device（旧 Strong）完整性检验）（例如 [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)）$rightarrow$ 下载文件 $rightarrow$ 将文件重命名为``keybox.xml`` $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+        - 方法 2：在 Linux 操作系统中（通过 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本）生成一个 ``keybox.xml``（可以通过 Basic（旧 Device）完整性检验）$rightarrow$ 将生成的名为 ``keybox.xml`` 的文件复制到 Android 设备 $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+        - 方法 3：购买一个 ``keybox.xml``（至少可以通过 Device（旧设备）完整性检验）（但是，除非您能确保购买的 ``keybox.xml`` 始终有效，或者将来旧密钥被撤销后售家会立即免费提供新的有效密钥，否则切勿购买 ``keybox.xml``，因为每个不是独享的 ``keybox.xml`` 都会在短时间内被 Google 吊销）
+        - 方法 4：使用 Google 认可的根证书生成 ``keybox.xml``（几乎不可能，因为我们大多数人都是普通人）
+        - 方法 5：设计方法（包括可以在短时间内成功的暴破算法）来破解密码学方案（不可能，因为如果成功了，您可以在最顶级的密码学顶会上发表论文且使得全世界的相当一部分密码系统陷入危机）
+      - 如果需要，请检验完整性
+        - Google 应用程序接口：使用 [密钥认证](https://github.com/vvb2060/KeyAttestation)
+          - 您的 ``keybox.xml`` 在进行检验前被宣布或预计至少通过 Device（旧 Strong）完整性检验
+            - 您的 ``keybox.xml`` 是私有的且您不会公开分享：请随意进行完整性检验，因为只要没有多个 Android 设备共享同一个 ``keybox.xml``，Google 很可能不会吊销您的 ``keybox.xml``
+            - 您的 ``keybox.xml`` 是从公共渠道获取的或者您想公开分享它：这是可以接受的 $\leftarrow$ 但只要您的 ``keybox.xml`` 在多台 Android 设备上进行检查，基于 Google 应用程序接口的完整性检验将加速 Google 对其吊销 $\leftarrow$ 但是，如果您不手动进行完整性检验，您将难以信任它的完整性，而需要完整性检验的应用程序迟早会基于 Google 应用程序接口进行检查，这也会加速它的吊销 $\leftarrow$ 如果您的 Android 设备上没有这样的应用程序，只需使用 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 即可
+          - 您的 ``keybox.xml`` 在检查之前已宣布或预计会通过 Basic（旧 Device）完整性检查：请随意检查，因为从 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 也可以通过 Basic（旧 Device）完整性检验，而且获取它们相当容易
+        - 其它完整性检验应用程序：[https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) 中的一些完整性检验应用程序会根据自己的云库（而非 Google 的云库）检查 ``keybox.xml`` 是否已被吊销
+      - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
   - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
   - 如有修复漏洞需要可在面具层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
@@ -456,13 +522,24 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
     - 在 Apatch 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
     - 在 Apatch 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
-      - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
-      - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
-      - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
-      - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+      - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
+        - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+        - 获取 ``keybox.xml``
+          - 方法 1：在电报（Telegram）中搜索一个免费的、较近的 ``keybox.xml``（可以通过 Device（旧 Strong）完整性检验）（例如 [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)）$rightarrow$ 下载文件 $rightarrow$ 将文件重命名为``keybox.xml`` $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+          - 方法 2：在 Linux 操作系统中（通过 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本）生成一个 ``keybox.xml``（可以通过 Basic（旧 Device）完整性检验）$rightarrow$ 将生成的名为 ``keybox.xml`` 的文件复制到 Android 设备 $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+          - 方法 3：购买一个 ``keybox.xml``（至少可以通过 Device（旧设备）完整性检验）（但是，除非您能确保购买的 ``keybox.xml`` 始终有效，或者将来旧密钥被撤销后售家会立即免费提供新的有效密钥，否则切勿购买 ``keybox.xml``，因为每个不是独享的 ``keybox.xml`` 都会在短时间内被 Google 吊销）
+          - 方法 4：使用 Google 认可的根证书生成 ``keybox.xml``（几乎不可能，因为我们大多数人都是普通人）
+          - 方法 5：设计方法（包括可以在短时间内成功的暴破算法）来破解密码学方案（不可能，因为如果成功了，您可以在最顶级的密码学顶会上发表论文且使得全世界的相当一部分密码系统陷入危机）
+        - 如果需要，请检验完整性
+          - Google 应用程序接口：使用 [密钥认证](https://github.com/vvb2060/KeyAttestation)
+            - 您的 ``keybox.xml`` 在进行检验前被宣布或预计至少通过 Device（旧 Strong）完整性检验
+              - 您的 ``keybox.xml`` 是私有的且您不会公开分享：请随意进行完整性检验，因为只要没有多个 Android 设备共享同一个 ``keybox.xml``，Google 很可能不会吊销您的 ``keybox.xml``
+              - 您的 ``keybox.xml`` 是从公共渠道获取的或者您想公开分享它：这是可以接受的 $\leftarrow$ 但只要您的 ``keybox.xml`` 在多台 Android 设备上进行检查，基于 Google 应用程序接口的完整性检验将加速 Google 对其吊销 $\leftarrow$ 但是，如果您不手动进行完整性检验，您将难以信任它的完整性，而需要完整性检验的应用程序迟早会基于 Google 应用程序接口进行检查，这也会加速它的吊销 $\leftarrow$ 如果您的 Android 设备上没有这样的应用程序，只需使用 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 即可
+            - 您的 ``keybox.xml`` 在检查之前已宣布或预计会通过 Basic（旧 Device）完整性检查：请随意检查，因为从 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 也可以通过 Basic（旧 Device）完整性检验，而且获取它们相当容易
+          - 其它完整性检验应用程序：[https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) 中的一些完整性检验应用程序会根据自己的云库（而非 Google 的云库）检查 ``keybox.xml`` 是否已被吊销
+        - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+      - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
     - 若设备的 vbmeta digest 不正确可在 Apatch 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
     - 如有修复漏洞需要可在 Apatch 层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
 
@@ -487,13 +564,24 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
   - 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
   - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
-    - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录下的 ``keybox.xml`` 文件重命名为 ``keybox.xml.bak``（``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
-    - 在电报频道 [FreeKeyboxShare](https://t.me/FreeKeyboxShare) 搜索一个最近的免费 ``keybox.xml`` 并使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
-    - 使用 [Key Attestation](https://github.com/vvb2060/KeyAttestation) 检验是否通过 Device（旧 Strong）完整性等级，如果不是，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 并恢复备份
-    - 如果免费 ``keybox.xml`` 无效或不希望使用基于安卓开源项目根证书签署的 ``keybox.xml``，请尝试使用来自 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本来生成一个 可以通过 Basic（旧 Device）完整性等级的 ``keybox.xml``
-    - 永远不要购买 ``keybox.xml``，除非卖家保证在之前的 ``keybox.xml`` 被撤销后立即为您提供一个新的且有效的 ``keybox.xml`` 因为每个 ``keybox.xml`` 通常会在短时间内被 Google 撤销
+    - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
+      - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
+      - 获取 ``keybox.xml``
+        - 方法 1：在电报（Telegram）中搜索一个免费的、较近的 ``keybox.xml``（可以通过 Device（旧 Strong）完整性检验）（例如 [https://t.me/waenhancer/9102/198171](https://t.me/waenhancer/9102/198171)）$rightarrow$ 下载文件 $rightarrow$ 将文件重命名为``keybox.xml`` $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+        - 方法 2：在 Linux 操作系统中（通过 [https://github.com/TMLP-Team/keyboxGenerator](https://github.com/TMLP-Team/keyboxGenerator) 的 Python 脚本）生成一个 ``keybox.xml``（可以通过 Basic（旧 Device）完整性检验）$rightarrow$ 将生成的名为 ``keybox.xml`` 的文件复制到 Android 设备 $rightarrow$ 使用 MT 管理器将其移动到 ``/data/adb/tricky_store/`` 目录下
+        - 方法 3：购买一个 ``keybox.xml``（至少可以通过 Device（旧设备）完整性检验）（但是，除非您能确保购买的 ``keybox.xml`` 始终有效，或者将来旧密钥被撤销后售家会立即免费提供新的有效密钥，否则切勿购买 ``keybox.xml``，因为每个不是独享的 ``keybox.xml`` 都会在短时间内被 Google 吊销）
+        - 方法 4：使用 Google 认可的根证书生成 ``keybox.xml``（几乎不可能，因为我们大多数人都是普通人）
+        - 方法 5：设计方法（包括可以在短时间内成功的暴破算法）来破解密码学方案（不可能，因为如果成功了，您可以在最顶级的密码学顶会上发表论文且使得全世界的相当一部分密码系统陷入危机）
+      - 如果需要，请检验完整性
+        - Google 应用程序接口：使用 [密钥认证](https://github.com/vvb2060/KeyAttestation)
+          - 您的 ``keybox.xml`` 在进行检验前被宣布或预计至少通过 Device（旧 Strong）完整性检验
+            - 您的 ``keybox.xml`` 是私有的且您不会公开分享：请随意进行完整性检验，因为只要没有多个 Android 设备共享同一个 ``keybox.xml``，Google 很可能不会吊销您的 ``keybox.xml``
+            - 您的 ``keybox.xml`` 是从公共渠道获取的或者您想公开分享它：这是可以接受的 $\leftarrow$ 但只要您的 ``keybox.xml`` 在多台 Android 设备上进行检查，基于 Google 应用程序接口的完整性检验将加速 Google 对其吊销 $\leftarrow$ 但是，如果您不手动进行完整性检验，您将难以信任它的完整性，而需要完整性检验的应用程序迟早会基于 Google 应用程序接口进行检查，这也会加速它的吊销 $\leftarrow$ 如果您的 Android 设备上没有这样的应用程序，只需使用 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 即可
+          - 您的 ``keybox.xml`` 在检查之前已宣布或预计会通过 Basic（旧 Device）完整性检查：请随意检查，因为从 Tricky Store 模块带来的默认 ``keybox.xml`` 或您自己生成的 ``keybox.xml`` 也可以通过 Basic（旧 Device）完整性检验，而且获取它们相当容易
+        - 其它完整性检验应用程序：[https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Detectors) 中的一些完整性检验应用程序会根据自己的云库（而非 Google 的云库）检查 ``keybox.xml`` 是否已被吊销
+      - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
-    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月的 1 号的日期按照 ``20250401`` 的格式写入该文件
+    - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
   - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
   - 如有修复漏洞需要可在面具层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
   - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
