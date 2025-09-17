@@ -11,6 +11,7 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20250606: The author of the Play Integrity Fix module announces to discontinue in Telegram. 
 - 20250609: WX Repair Tool_v2.0 is published. After downloading core files and FKZ_WX_DATA files, the WechatXposed plugin can be used again. 
 - 20250624: HMA supported the interception of the application list detection by launching activities below Android 13. 
+- 20250917: There is a large-scale account blocking phenomenon in WeChat. Most blocked accounts are 8.0.56 or above, especially 8.0.62. 
 
 ---
 
@@ -27,3 +28,4 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20250606：Play Integrity Fix 模块作者在 Telegram 宣布停更。
 - 20250609：WX Repair Tool_v2.0 发布，下载核心文件和 FKZ_WX_DATA 后可继续使用微 X 模块。
 - 20250624：HMA 支持拦截 Android 13 以下通过启动活动来实现应用程序列表检测的检测。
+- 20250917：微信出现大规模封号现象，集中于 8.0.56 及以上版本，在8.0.62 版本尤为突出。
