@@ -322,9 +322,9 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
   - If you were using the Magisk Delta in around September 2023, please install the latest Magisk Delta (the Magisk Delta at that time would not cause the Postal Savings Bank to crash)
   - If you are using the Magisk Delta today, please switch to the latest Magisk Alpha and install the latest Shamiko module
 
-#### QQ
+#### WeChat and QQ
 
-##### Logging out users with no reasons, account login limitations, or temporary account freezing
+##### Sending device risk alerts, deactivating users, restricting social features, or freezing accounts
 
 - Mobile QQ (Android)
   - The definition of downgrading: Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ and use the core patcher plugin to downgrade QQ after 15 days (and observe for another 15 days)
@@ -358,12 +358,18 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
       - Do not expose any suspicious environment (including root and injection environment) or perform any injection to QQ (remember to disable QQ in advance when switching environments) when using versions above ``v9.1.31``
 - Computer QQ (Windows): Always use the nostalgic version instead of the QQNT version
 
-#### WeChat
-
 ##### Failed to open the fingerprint payment prompt (but other domestic and foreign applications can use fingerprints normally)
 
 - Temporary solution: Use the WeChat Payment module or the WeChat Payment plugin (the principle is to submit the pre-stored password after passing the fingerprint)
 - Essential solution: None
+
+##### Speculations about social media applications sending device risk alerts, deactivating users, restricting social features, or freezing accounts
+
+Although some "TMLP" enthusiasts claim that WeChat and QQ restrictions are unrelated to their versions, with a detailed quantitative computation method proposed, our personal perspective is that the higher the version, the more "cold" code there is locally for environment detection, and the richer the support for "hot" code sent from the cloud for environment detection.
+
+For a long time, members of our team were often deactivated and restricted the next day after upgrading to a certain version during the major risk control periods. Downgrading to a version below that level only resulted in a warning, and downgrading to an even lower version or below eliminated any warnings.
+
+Furthermore, Android application-layer injection has been proven impossible to bypass by any third-party means. As long as the injected application wants to detect the injection, it can succeed. Secure bypassing is only possible by "controlling" all environment detection-related code within the target application while injecting. This requires plugin developers to conduct in-depth reverse engineering of the target application and make bold assumptions about the cloud.
 
 ---
 
@@ -690,9 +696,9 @@ exit ${exitCode}
   - 如果您在 2023 年 9 月左右使用 Magisk Delta，请安装最新的 Magisk Delta（当时的 Magisk Delta 不会导致邮政储蓄银行闪退）
   - 如果您现在正在使用 Magisk Delta，请切换到最新的 Magisk Alpha 并安装最新的 Shamiko 模块
 
-#### QQ
+#### 微信和 QQ
 
-##### 无故下线用户、限制账号登录或临时冻结账号
+##### QQ 无故发送设备风险提醒、下线用户、限制社交功能或冻结账号
 
 - 手机 QQ（安卓版）
   - 定义降级：不向 QQ 暴露任何可疑环境（含 root 和注入环境）或执行任何注入 15 天后利用核心破解插件降级 QQ（后再观察 15 天）
@@ -726,9 +732,15 @@ exit ${exitCode}
       - 高于 ``v9.1.31`` 版本时切勿向 QQ 暴露（切换环境时记得提前禁用 QQ）任何可疑环境（含 root 和注入环境）或执行任何注入
 - 电脑 QQ（Windows）：始终使用最新怀旧版而非 QQNT 版本
 
-#### 微信
-
-##### 开启指纹支付提示失败（但其它境内外应用都能正常使用指纹）
+##### 微信开启指纹支付提示失败（但其它境内外应用都能正常使用指纹）
 
 - 临时解决方法：使用微信支付模块或微信支付插件（原理是通过指纹后将预先存储的密码进行提交）
 - 本质解决方法：暂无
+
+##### 关于社交软件发送设备风险提醒、下线用户、限制社交功能或冻结账号的猜测
+
+虽然部分“TMLP”爱好者表示微信和 QQ 的限制与版本无关，并总结出了一套详细的量化的计算公式，但个人感觉是版本越高，本地用于检测环境的“冷”代码就越多，对云端下发的用于检测环境的“热”代码的支持就越丰富。
+
+长期以来，本团队中的成员经常在大型风控期间一越过某个版本第二天就被下线和限制，而降级至该版本以下就只会收到警告，再降级到某个更低的版本或以下就不再收到任何警告。
+
+另外，安卓应用层注入已被证明无法通过任何第三方手段对被注入的应用程序进行隐藏，只要被注入的应用程序想检测，就有手段检测到；只有在注入目标应用时将目标应用内所有与环境检测有关的代码“控制”住才可能实现安全的隐藏，而这，需要插件的开发人员对目标应用进行极为深入的逆向分析以及对云端的大胆揣测。
