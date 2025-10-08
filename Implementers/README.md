@@ -75,7 +75,7 @@ The compatibility analysis of some implementations and modules is as follows, wh
 | NoHello | Y | Y | Y | Y | Y | N | N | - | N |
 | Zygisk Assistant | Y | Y | Y | Y | Y | Y | Y | N | - |
 
-Therefore, there are the following collocations (parts), where "P" means passed and "F" means failed. For detailed steps of bypassing, please refer to [Bypassers](../Bypassers/README.md). 
+Therefore, there are the following collocations (partly), where "P" means passed and "F" means failed. For detailed steps of bypassing, please refer to [Bypassers](../Bypassers/README.md). 
 
 | Combination | Native Root Detector | Native Test |
 | - | - | - |
@@ -90,6 +90,8 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 | Magisk Alpha + built-in Zygisk + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + NeoZygisk + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + NeoZygisk + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
+
+It is worth noting that Zygisk Next integrates most of Shamiko's functionalities starting from version 1.3.0 and is compatible with all root implementations. Currently, SukiSU Ultra or Magisk Alpha, with Zygisk Next 1.3.0 or higher versions, may be the optimal upstream setup. 
 
 ---
 
@@ -170,7 +172,6 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 | NoHello | Y | Y | Y | Y | Y | N | N | - | N |
 | Zygisk Assistant | Y | Y | Y | Y | Y | Y | Y | N | - |
 
-
 因此，存在以下搭配（部分），其中 P 表示通过，F 表示失败。有关过检的详细步骤，请参阅 [Bypassers](../Bypassers/README.md)。
 
 | Combination | Native Root Detector | Native Test |
@@ -186,3 +187,5 @@ Therefore, there are the following collocations (parts), where "P" means passed 
 | Magisk Alpha + built-in Zygisk + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + NeoZygisk + PIF + TS + VBMeta Fixer | F | F |
 | Magisk Alpha + NeoZygisk + Zygisk Assistant (Denylist configured) + PIF + TS + VBMeta Fixer | P | F |
+
+值得注意的是，Zygisk Next 自 1.3.0 版本起集成了 Shamiko 大部分的功能，且适用于所有的 root 实现。目前，SukiSU Ultra 或 Magisk Alpha，搭配 Zygisk Next 1.3.0 及更高的版本，可能是最好的上游组合。

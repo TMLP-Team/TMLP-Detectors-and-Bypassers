@@ -44,8 +44,8 @@
 			"officialLink":"https://play.google.com/store/apps/details?id=com.bochk.app.aos", 
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
-			"latestVersion":"v7.3.1 (145)", 
-			"releaseDate":"= 20250528"
+			"latestVersion":"v7.3.5 (156)", 
+			"releaseDate":"= 20250920"
 		}, 
 		{
 			"name":"Checker", 
@@ -183,6 +183,18 @@
 			"releaseDate":"= 20241222"
 		}, 
 		{
+			"name":"MyLink", 
+			"alias":{
+				"zh-CN":"八达通"
+			}, 
+			"packageName":"com.ChinaMobile", 
+			"officialLink":"https://play.google.com/store/apps/details?id=com.ChinaMobile", 
+			"sourceStatus":"D", 
+			"developingPurpose":"D", 
+			"latestVersion":"v11.7.0 (465)", 
+			"releaseDate":"= 20251003"
+		}, 
+		{
 			"name":"NSDL Jiffy", 
 			"packageName":"com.nsdlpb.jiffy", 
 			"officialLink":"https://play.google.com/store/apps/details?id=com.nsdlpb.jiffy", 
@@ -243,8 +255,8 @@
 			"officialLink":"https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader", 
 			"sourceStatus":"D", 
 			"developingPurpose":"D", 
-			"latestVersion":"v12.20.0 (3228)", 
-			"releaseDate":"= 20250606"
+			"latestVersion":"v12.29.0 (3302)", 
+			"releaseDate":"= 20251002"
 		}, 
 		{
 			"name":"Play Integrity API Checker", 

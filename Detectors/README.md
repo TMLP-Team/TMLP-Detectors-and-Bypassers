@@ -35,8 +35,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Link**: https://play.google.com/store/apps/details?id=com.bochk.app.aos
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v7.3.1 (145)``
-- **Release Date**:  May 28th, 2025
+- **Latest Version**: ``v7.3.5 (156)``
+- **Release Date**:  September 20th, 2025
 
 ### Checker
 
@@ -79,8 +79,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html); [http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **Source Status**: Closed-source
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v1.4.1.8``
-- **Release Date**: On or Before August 26th, 2025
+- **Latest Version**: ``v1.4.2.5``
+- **Release Date**: On or Before September 18th, 2025
 - **Detection Remark**: This detector will detect the existence of a specific file or folder. You can use the cleanup script provided in the official link(s) to clean up. Since some plugins require specific directories to store their configurations without being able to specify custom directories, cleaning may result in configuration loss. Please use this detection software as appropriate. 
 
 ### Key Attestation
@@ -117,6 +117,15 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Developing Purpose**: Android Desktop Application
 - **Latest Version**: ``v1.0.73``
 - **Release Date**:  December 22nd, 2024
+
+### MyLink
+
+- **Package Name**: ``com.ChinaMobile``
+- **Official Link**: https://play.google.com/store/apps/details?id=com.ChinaMobile
+- **Source Status**: Android Desktop Application
+- **Developing Purpose**: Android Desktop Application
+- **Latest Version**: ``v11.7.0 (465)``
+- **Release Date**:  October 3rd, 2025
 
 ### NSDL Jiffy
 
@@ -156,8 +165,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Link**: https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader
 - **Source Status**: Android Desktop Application
 - **Developing Purpose**: Android Desktop Application
-- **Latest Version**: ``v12.20.0 (3228)``
-- **Release Date**:  June 6th, 2025
+- **Latest Version**: ``v12.29.0 (3302)``
+- **Release Date**:  October 2nd, 2025
 
 ### Play Integrity API Checker
 
@@ -351,8 +360,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.bochk.app.aos](https://play.google.com/store/apps/details?id=com.bochk.app.aos)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v7.3.1 (145)``
-- **发行日期**： 2025 年 5 月 28 日
+- **最新版本**：``v7.3.5 (156)``
+- **发行日期**： 2025 年 9 月 20 日
 
 ### Checker
 
@@ -397,8 +406,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://www.54nb.com/lunathanks.html](https://www.54nb.com/lunathanks.html)；[http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=59DJwD_gUpDYerkoGXf8hLg4X-opZImm&authKey=KZCWgoCQMOhN5M80g8%2Bq3L%2FIJvITTMAKTSevEQbahYSW5YwlW8Vq8v6JQ4hcivfp&noverify=0&group_code=1022646824)
 - **开源状态**：闭源
 - **开发用途**：环境检测
-- **最新版本**：``v1.4.1.8``
-- **发行日期**：不晚于 2025 年 8 月 26 日
+- **最新版本**：``v1.4.2.5``
+- **发行日期**：不晚于 2025 年 9 月 18 日
 - **检测备注**：该应用会检测特定文件或文件夹是否存在，可以使用官方链接中提供的清理脚本进行清理。由于某些插件需要使用特定目录来存放配置数据且未提供自定义目录功能，清理可能会导致配置丢失，请酌情使用本检测软件。
 - ![lunaCN.jpg](lunaCN.jpg)
 
@@ -443,6 +452,16 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **最新版本**：``v1.0.73``
 - **发行日期**： 2024 年 12 月 22 日
 
+### MyLink
+
+- **应用别称**：八达通
+- **应用包名**：``com.ChinaMobile``
+- **官方链接**：[https://play.google.com/store/apps/details?id=com.ChinaMobile](https://play.google.com/store/apps/details?id=com.ChinaMobile)
+- **开源状态**：安卓桌面应用
+- **开发用途**：安卓桌面应用
+- **最新版本**：``v11.7.0 (465)``
+- **发行日期**： 2025 年 10 月 3 日
+
 ### NSDL Jiffy
 
 - **应用包名**：``com.nsdlpb.jiffy``
@@ -483,8 +502,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader](https://play.google.com/store/apps/details?id=com.octopuscards.nfc_reader)
 - **开源状态**：安卓桌面应用
 - **开发用途**：安卓桌面应用
-- **最新版本**：``v12.20.0 (3228)``
-- **发行日期**： 2025 年 6 月 6 日
+- **最新版本**：``v12.29.0 (3302)``
+- **发行日期**： 2025 年 10 月 2 日
 
 ### Play Integrity API Checker
 
