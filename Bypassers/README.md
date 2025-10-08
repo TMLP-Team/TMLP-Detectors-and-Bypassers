@@ -1,8 +1,8 @@
 ## Bypassers
 
-Currently, SukiSU + ReZygisk + SUSFS is the optimal solution, follwed by Magisk Alpha + Zygisk Next + Shamiko, Apatch + Cherish Peekaboo + NoHello, and Magisk Delta. 
+Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal solution, follwed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta. 
 
-By defining Magisk fork as rooting solutions including Magisk, KSU, Apatch, and their branches, the development of bypassing can be briefly described as follows. 
+By defining Magisk Fork as rooting solutions including Magisk, KSU, Apatch, and their branches and LSPosed Fork as LSPosed and their branches, the development of bypassing can be briefly described as follows. 
 
 - Magisk + Xposed (2018 and before), 
 - Magisk + Edxposed (2019), 
@@ -10,8 +10,11 @@ By defining Magisk fork as rooting solutions including Magisk, KSU, Apatch, and 
 - Magisk + LSPosed (2021), 
 - Magisk Fork + LSPosed (2022), 
 - Magisk Fork + LSPosed + Shamiko (2023), 
-- Magisk Fork + LSPosed + Shamiko + PIF + TS (2024), and
-- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + Cleaning up (2025). 
+- Magisk Fork + LSPosed Fork + Shamiko + PIF + TS (2024), 
+- Magisk Fork + LSPosed Fork + SUSFS/Shamiko + PIF + TS (the first season in 2025), 
+- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Cleanup (the second season in 2025), 
+- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the third season in 2025), and
+- Magisk Fork + LSPosed Fork + SUSFS + Zygisk Next (v1.3.0 and later) + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the fourth season in 2025). 
 
 Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
 
@@ -24,19 +27,24 @@ Currently, even with the state-of-the-art bypassing techniques, the following pr
 
 While following the tutorials, please also consider referring to the documentation and the ``Actions`` tab of the GitHub repositories for each rooting solution, module, and plugin, if there are. 
 
-### Using KernelSU (KSU) / KSU Next (KSUN) / SukiSU
+### Using KernelSU (KSU) / KSU Next (KSUN) / SukiSU Ultra
 
-- Install the latest [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
-  - Configure in the Super User tab of the SukiSU Manager
+- Install the latest [SukiSU Ultra](https://github.com/SukiSU Ultra-Ultra/SukiSU Ultra-Ultra/actions) (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository)
+  - Configure in the Super User tab of the SukiSU Ultra Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
-    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in SukiSU
-  - Deploy the system modules in the SukiSU layer
-    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the SukiSU layer
-    - Install the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU layer
-    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU layer
+    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in SukiSU Ultra
+  - Deploy the SUSFS module in the SukiSU Ultra layer
+    -  Embed (as a kernel module) or install (as a system module) the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU Ultra layer
+  - Deploy the system modules in the SukiSU Ultra layer
+    - Install the latest [Zygisk Next](https://t.me/real5ec1cff) module in the SukiSU Ultra layer
+      - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
+      - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
+      - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
+      - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
+    - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU Ultra layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
-      - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the SukiSU manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
+      - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the SukiSU Ultra manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
       - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
       - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
       - Reboot the device
@@ -44,9 +52,9 @@ While following the tutorials, please also consider referring to the documentati
         - Hide HMA's icon from the launcher in the HMA's settings page
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
-        - Except for the SukiSU Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-    - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
-    - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU layer
+        - Except for the SukiSU Ultra Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
+    - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU Ultra layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU Ultra layer
       - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
         - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
         - Obtain an alternative ``keybox.xml``
@@ -65,8 +73,8 @@ While following the tutorials, please also consider referring to the documentati
         - Click ``/data/adb/tricky_store/keybox.xml.bak`` in the MT Manager and restore the backup if the ``keybox.xml`` is revoked or the integrity provided is even worse than that provided by the default ``keybox.xml`` brought from the Tricky Store module
       - Use the MT Manager to extract the installation package names of the target applications and the detectors (long press to copy) $rightarrow$ add them to ``/data/adb/tricky_store/target.txt`` (blacklist mode) line by line
       - Use the MT Manager to write the date of the 1st day of the current month or the current season to ``/data/adb/tricky_store/security_patch.txt`` in the form of ``20250901``
-    - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU layer if the device does not have a proper vbmeta digest
-    - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the SukiSU layer if necessary for vulnerability fixes
+    - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the SukiSU Ultra layer if the device does not have a proper vbmeta digest
+    - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the SukiSU Ultra layer if necessary for vulnerability fixes
 - View [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/) in English if necessary. 
 
 ### Using Official Magisk (Including Release, Beta, Canary, Debug, and Nightly Versions) or Magisk Alpha
@@ -77,10 +85,11 @@ While following the tutorials, please also consider referring to the documentati
     - Disable Denylist
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in Magisk
-  - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) module in the Magisk layer
-    - Disable the Denylist in Zygisk Next
-  - Install the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer
-    - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/shamiko/`` (or execute the command ``touch /data/adb/shamiko/whitelist`` as root)
+  - Install the latest [Zygisk Next](https://t.me/real5ec1cff) module in the Magisk layer
+    - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
+    - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
+    - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
+    - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the Magisk manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
@@ -138,9 +147,11 @@ While following the tutorials, please also consider referring to the documentati
       - Reboot
       - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
   - Deploy the system modules in the Apatch layer
-    - Install the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) module (the latest build in the last successful CI construction action in the ``Actions`` tab of its GitHub repository) in the Apatch layer
-    - Install the latest [NoHello](https://github.com/MhmRdd/NoHello) module in the Apatch layer
-      - Use the MT Manager to create an empty file named ``whitelist`` under ``/data/adb/nohello/`` (or execute the command ``touch /data/adb/nohello/whitelist`` as root)
+    - Install the latest [Zygisk Next](https://t.me/real5ec1cff) module in the Apatch layer
+      - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
+      - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
+      - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
+      - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the Apatch manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
@@ -180,7 +191,7 @@ While following the tutorials, please also consider referring to the documentati
 - Install the last version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
   - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024) and the versions before Magisk 27007 have a privilege escalation vulnerability
   - Configure Magisk Delta
-    - Enable Zygisk (or use [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions))
+    - Enable Zygisk (or use alternative Zygisk implementations that can be used)
     - Enable whitelist mode on the setting page of the Magisk Delta
     - Select the package of the application that requires root privileges (you can only select the necessary packages in the applications)
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
@@ -268,7 +279,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 - Magisk and its branches: Use Magisk Alpha and install the latest Shamiko module
 - Apatch and its branches: Embed the Cherish Peekaboo module as a kernel module (please check if the ``compat`` version is needed)
-- KSU and its branches: Use SukiSU and Install the latest SUSFS module as a system module
+- KSU and its branches: Use SukiSU Ultra and Install the latest SUSFS module as a system module
 
 ##### Risky application detected (bypassed HMA(L) with Code 3)
 
@@ -365,19 +376,19 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
 
 ##### Speculations about social media applications sending device risk alerts, deactivating users, restricting social features, or freezing accounts
 
-Although some "TMLP" enthusiasts claim that WeChat and QQ restrictions are unrelated to their versions, with a detailed quantitative computation method proposed, our personal perspective is that the higher the version, the more "cold" code there is locally for environment detection, and the richer the support for "hot" code sent from the cloud for environment detection.
+Although some "TMLP" enthusiasts claim that WeChat and QQ restrictions are unrelated to their versions, with a detailed quantitative computation method proposed, our personal perspective is that the higher the version, the more "cold" code there is locally for environment detection, and the richer the support for "hot" code sent from the cloud for environment detection. 
 
-For a long time, members of our team were often deactivated and restricted the next day after upgrading to a certain version during the major risk control periods. Downgrading to a version below that level only resulted in a warning, and downgrading to an even lower version or below eliminated any warnings.
+For a long time, members of our team were often deactivated and restricted the next day after upgrading to a certain version during the major risk control periods. Downgrading to a version below that level only resulted in a warning, and downgrading to an even lower version or below eliminated any warnings, where, if the warnings were caused by the device ID being previously uploaded to the cloud, replacing the device is necessary. 
 
-Furthermore, Android application-layer injection has been proven impossible to bypass by any third-party means. As long as the injected application wants to detect the injection, it can succeed. Secure bypassing is only possible by "controlling" all environment detection-related code within the target application while injecting. This requires plugin developers to conduct in-depth reverse engineering of the target application and make bold assumptions about the cloud.
+Furthermore, Android application-layer injection has been proven impossible to bypass by any third-party means. As long as the injected application wants to detect the injection, it can succeed. Secure bypassing is only possible by "controlling" all environment detection-related code within the target application while injecting. This requires plugin developers to conduct in-depth reverse engineering of the target application and make bold assumptions about the cloud. 
 
 ---
 
 ## 过检方法
 
-目前，SukiSU + ReZygisk + SUSFS 是最好的解决方案，其次为 Magisk Alpha + Zygisk Next + Shamiko、Apatch + Cherish Peekaboo + NoHello 和 Magisk Delta。
+目前，SukiSU Ultra + SUSFS + Zygisk Next（v1.3.0 及更高版本）是最好的解决方案，其次为 Magisk Alpha + Zygisk Next（v1.3.0 及更高版本）、Apatch + Cherish Peekaboo + Zygisk Next（v1.3.0 及更高版本）和 Magisk Delta + Zygisk Next（v1.3.0 及更高版本）。
 
-通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，过检的发展历程可以简要描述如下。
+通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，将 LSPosed Fork 定义为 LSPosed 及其分支，过检的发展历程可以简要描述如下。
 
 - Magisk + Xposed（2018 年及之前版本）；
 - Magisk + Edxposed（2019 年）；
@@ -385,8 +396,11 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - Magisk + LSPosed（2021 年）；
 - Magisk Fork + LSPosed（2022 年）；
 - Magisk Fork + LSPosed + Shamiko（2023 年）；
-- Magisk Fork + LSPosed + Shamiko + PIF + TS（2024 年）；以及
-- Magisk Fork + LSPosed + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年）。
+- Magisk Fork + LSPosed Fork + Shamiko + PIF + TS（2024 年）；
+- Magisk Fork + LSPosed Fork + SUSFS/Shamiko + PIF + TS（2025 年第一季度）；
+- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + 残留清理（2025 年第二季度）；
+- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第三季度）以及；
+- Magisk Fork + LSPosed Fork + SUSFS + Zygisk Next (v1.3.0 and later) + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第四季度）。
 
 目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
 
@@ -399,19 +413,24 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 在遵循教程的同时，还请考虑参考每个 root 方案、模块和插件的使用文档和 GitHub 存储库的 ``Actions`` 选项卡（如有）。
 
-### 正在使用 KernelSU (KSU) / KSU Next (KSUN) / SukiSU
+### 正在使用 KernelSU (KSU) / KSU Next (KSUN) / SukiSU Ultra
 
-- 安装 SukiSU GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [SukiSU](https://github.com/SukiSU-Ultra/SukiSU-Ultra/actions)
-  - 在 SukiSU 管理器的超级用户页内进行配置
+- 安装 SukiSU Ultra GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [SukiSU Ultra](https://github.com/SukiSU Ultra-Ultra/SukiSU Ultra-Ultra/actions)
+  - 在 SukiSU Ultra 管理器的超级用户页内进行配置
     - 将所有需要 root 的应用程序进行授权
     - 让剩余应用中所有不需要 root 权限的应用使用默认设置（重置设置）
-    - 启动 MT 管理器和其它需要 root 权限的应用程序并用 SukiSU 管理器进行授权
-  - 在 SukiSU 层部署系统模块
-    - 在 SukiSU 层安装 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
-    - 在 SukiSU 层安装最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
-    - 在 SukiSU 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
+    - 启动 MT 管理器和其它需要 root 权限的应用程序并用 SukiSU Ultra 管理器进行授权
+  - 在 SukiSU Ultra 层部署 SUSFS
+    - 在 SukiSU Ultra 层嵌入（作为内核模块）或安装（作为系统模块）最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
+  - 在 SukiSU Ultra 层部署系统模块
+    - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://t.me/real5ec1cff) 模块
+      - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
+      - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
+      - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
+      - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
+    - 在 SukiSU Ultra 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
-      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不要呼出）或点击 SukiSU 管理器中 LSPosed 模块详情中的操作（播放）按钮打开 LSPosed 寄生器（或是在桌面快捷方式丢失的情况下）
+      - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不要呼出）或点击 SukiSU Ultra 管理器中 LSPosed 模块详情中的操作（播放）按钮打开 LSPosed 寄生器（或是在桌面快捷方式丢失的情况下）
       - 在 LSPosed 层安装 HMA 官方 Telegram 发布的最新版 [HMA](https://t.me/HideMyApplist) 插件
       - 设置作用域为仅**系统框架**并启用插件
       - 重启设备
@@ -420,8 +439,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
         - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-    - 在 SukiSU 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
-    - 在 SukiSU 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+    - 在 SukiSU Ultra 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
+    - 在 SukiSU Ultra 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
       - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
         - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
         - 获取 ``keybox.xml``
@@ -440,8 +459,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
       - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
-    - 若设备的 vbmeta digest 不正确可在 SukiSU 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-    - 如有修复漏洞需要可在 SukiSU 层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
+    - 若设备的 vbmeta digest 不正确可在 SukiSU Ultra 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+    - 如有修复漏洞需要可在 SukiSU Ultra 层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
 - 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
 
 ### 正在使用官方版（含发行版、Beta 版、金丝雀版、Debug 版和每夜版）或 Alpha 版面具
@@ -452,10 +471,11 @@ Furthermore, Android application-layer injection has been proven impossible to b
     - 关闭“遵守排除列表”开关
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
-  - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) 模块
-    - 禁用 Zygisk Next 内的遵守排除列表
-  - 在面具层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块
-    - 使用 MT 管理器在 ``/data/adb/shamiko/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/shamiko/whitelist`` 命令）
+  - 在面具层安装最新版 [Zygisk Next](https://t.me/real5ec1cff) 模块
+    - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
+    - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
+    - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
+    - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
   - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
     - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不要呼出）或点击面具管理器中 LSPosed 模块详情中的操作（播放）按钮打开 LSPosed 寄生器（或是在桌面快捷方式丢失的情况下）
@@ -503,18 +523,20 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 直接在授予 MT 管理器 root 权限
         - 使用 MT 管理器从文件 ``/data/adb/ap/package_config`` 中移除除 ``bin.mt.plus`` 以外的所有应用配置
         - 在重启设备后再次使用 Apatch 管理器将 root 权限授予需要 root 权限的应用
-- 在 Apatch 层部署内核模块
-  - 请在操作前备份原始的 ``boot.img`` 和当前的 ``boot.img``
-  - 从 [https://t.me/app_process64](https://t.me/app_process64) 查找 Cherish Peekaboo 模块的最新版本
-  - 将非 ``compat`` 版本的 Cherish Peekaboo 以内核模块的形式嵌入并重新启动
-  - 如果设备无法启动，那么
-    - 请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原
-    - 重启进入系统后在 Apatch 管理器中嵌入最新 ``compat`` 版本的 Cherish Peekaboo 并重启设备
-    - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原并放弃内核模块部署
+  - 在 Apatch 层部署内核模块
+    - 请在操作前备份原始的 ``boot.img`` 和当前的 ``boot.img``
+    - 从 [https://t.me/app_process64](https://t.me/app_process64) 查找 Cherish Peekaboo 模块的最新版本
+    - 将非 ``compat`` 版本的 Cherish Peekaboo 以内核模块的形式嵌入并重新启动
+    - 如果设备无法启动，那么
+      - 请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原
+      - 重启进入系统后在 Apatch 管理器中嵌入最新 ``compat`` 版本的 Cherish Peekaboo 并重启设备
+      - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原并放弃内核模块部署
   - 在 Apatch 层部署系统模块
-    - 在 Apatch 层安装 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 模块
-    - 在 Apatch 层安装最新版 [NoHello](https://github.com/MhmRdd/NoHello) 模块
-      - 使用 MT 管理器在 ``/data/adb/nohello/`` 目录下创建一个名为 ``whitelist`` 的空文件（或直接在 root 下执行 ``touch /data/adb/nohello/whitelist`` 命令）
+    - 在 Apatch 层安装最新版 [Zygisk Next](https://t.me/real5ec1cff) 模块
+      - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
+      - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
+      - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
+      - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
     - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
       - 如有需要可使用拨号键拨号 ``*#*#5776733#*#*``（不要呼出）或点击 Apatch 管理器中 LSPosed 模块详情中的操作（播放）按钮打开 LSPosed 寄生器（或是在桌面快捷方式丢失的情况下）
@@ -554,7 +576,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - 安装停更前的最后一个版本的 [Delta 面具](https://github.com/HuskyDG/magisk-files)
   - 请考虑使用 Magisk Alpha 因为 Magisk Delta 已在 2024 年初停更且面具 27007 之前的版本存在提权漏洞
   - 配置面具
-    - 打开 Zygisk（或使用 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)）
+    - 打开 Zygisk（或使用其它支持的 Zygisk 实现）
     - 在设置界面启用白名单模式
     - 选定需要 root 权限的应用的包（可以不选定某个应用程序内的所有包）
   - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
@@ -642,7 +664,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 - Magisk 系列：使用 Magisk Alpha 并安装最新版 Shamiko 模块
 - Apatch 系列：以内核模块的形式嵌入 Cherish Peekaboo 模块（请自行排查是否需要 compat 版本）
-- KSU 系列：使用 SukiSU 并安装最新版 SUSFS 模块
+- KSU 系列：使用 SukiSU Ultra 并安装最新版 SUSFS 模块
 
 ##### 检测到风险应用（绕过 HMA(L) 的代码 3）
 
@@ -741,6 +763,6 @@ exit ${exitCode}
 
 虽然部分“TMLP”爱好者表示微信和 QQ 的限制与版本无关，并总结出了一套详细的量化的计算公式，但个人感觉是版本越高，本地用于检测环境的“冷”代码就越多，对云端下发的用于检测环境的“热”代码的支持就越丰富。
 
-长期以来，本团队中的成员经常在大型风控期间一越过某个版本第二天就被下线和限制，而降级至该版本以下就只会收到警告，再降级到某个更低的版本或以下就不再收到任何警告。
+长期以来，本团队中的成员经常在大型风控期间一越过某个版本第二天就被下线和限制，而降级至该版本以下就只会收到警告，再降级到某个更低的版本或以下就不再收到任何警告（当然如果之前是因为设备 ID 已经被上传到了云端而收到不断下发的警告则需要更换设备后警告才会被消除）。
 
 另外，安卓应用层注入已被证明无法通过任何第三方手段对被注入的应用程序进行隐藏，只要被注入的应用程序想检测，就有手段检测到；只有在注入目标应用时将目标应用内所有与环境检测有关的代码“控制”住才可能实现安全的隐藏，而这，需要插件的开发人员对目标应用进行极为深入的逆向分析以及对云端的大胆揣测。
