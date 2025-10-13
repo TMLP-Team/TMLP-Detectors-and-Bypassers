@@ -1,6 +1,6 @@
 ## Bypassers
 
-Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal solution, follwed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta. 
+Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal root and Zygisk bypassing combination, follwed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta. 
 
 By defining 
 
@@ -17,7 +17,7 @@ the development of bypassing can be briefly described as follows.
 - Magisk + Zygisk + Shamiko + LSPosed (2022), 
 - Magisk Fork + Zygisk Fork + Shamiko + LSPosed (2023), 
 - Magisk Fork + Zygisk Fork + Shamiko + LSPosed Fork + PIF + TS (2024), 
-- Magisk Fork + Zygisk Fork + SUSFS/Shamiko + LSPosed Fork + PIF + TS (the first season in 2025), 
+- Magisk Fork + Zygisk Fork + SUSFS/Shamiko/Zygisk Assistant + LSPosed Fork + PIF + TS (the first season in 2025), 
 - Magisk Fork + Zygisk Fork + SUSFS/Shamiko/NoHello + LSPosed Fork + PIF + TS + VBMeta Fixer + Cleanup (the second season in 2025), 
 - SukiSU Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the third season in 2025), and
 - SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the fourth season in 2025). 
@@ -43,11 +43,12 @@ While following the tutorials, please also consider referring to the documentati
   - Deploy the SUSFS module in the SukiSU Ultra layer
     -  Embed (as a kernel module) or install (as a system module) the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU Ultra layer
   - Deploy the system modules in the SukiSU Ultra layer
-    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the SukiSU Ultra layer
+    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the SukiSU Ultra layer (If you are using Zygisk Next version ``1.2.9.1`` or lower, please also consider installing the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the SukiSU Ultra layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
       - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
       - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
-      - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
+      - Remove the Shamiko, NoHello, and Zygisk Assistant modules, as well as their related folders in ``/data/adb``
+      - Reboot the device
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU Ultra layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the SukiSU Ultra manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
@@ -59,7 +60,7 @@ While following the tutorials, please also consider referring to the documentati
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
         - Except for the SukiSU Ultra Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-    - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the SukiSU Ultra layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the SukiSU Ultra layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the SukiSU Ultra layer
       - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
         - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -91,7 +92,7 @@ While following the tutorials, please also consider referring to the documentati
     - Disable Denylist
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in Magisk
-  - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Magisk layer
+  - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Magisk layer (If you are using Zygisk Next ``1.2.9.1`` or lower, please also install the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
     - Enable whitelist mode (Treat non-root apps as denylist)
     - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
     - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
@@ -108,7 +109,7 @@ While following the tutorials, please also consider referring to the documentati
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-  - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
+  - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
     - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
       - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -154,7 +155,7 @@ While following the tutorials, please also consider referring to the documentati
       - Reboot
       - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
   - Deploy the system modules in the Apatch layer
-    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Apatch layer
+    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Apatch layer (If you do not wish to use Zygisk Next, you can use the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) or the latest [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) instead, install the latest [NoHello](https://github.com/MhmRdd/NoHello) module in the Apatch layer, and then create an empty file named ``whitelist`` in ``/data/adb/nohello/``, or execute the command ``touch /data/adb/nohello/whitelist`` as root, but these may be more detectable than only using Zygisk Next 1.3.0 and higher)
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
       - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
       - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
@@ -170,7 +171,7 @@ While following the tutorials, please also consider referring to the documentati
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
         - Except for the Apatch Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-    - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Apatch layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
+    - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Apatch layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
     - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Apatch layer
       - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
         - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -212,7 +213,7 @@ While following the tutorials, please also consider referring to the documentati
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
-  - Install the latest [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
+  - Install the latest [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module in the Magisk layer (See [https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others](https://github.com/TMLP-Team/TMLP-Detectors-and-Bypassers/tree/main/Implementers/Others) if the original repository is unavailable)
   - Install the latest [Tricky Store](https://github.com/5ec1cff/TrickyStore) module in the Magisk layer
     - Use an alternative ``keybox.xml`` that is not brought from the Tricky Store module by default if you wish to
       - Use the MT Manager to rename the ``keybox.xml`` file in the ``/data/adb/tricky_store/`` directory to ``keybox.xml.bak`` (or execute ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak`` with root privileges)
@@ -257,7 +258,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 
 ##### Unlocked bootloader
 
-- Install [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) module
+- Install [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module
 - It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though the injection of the detected application can pass the debug mode (suspicious level)
 
 #### Ruru
@@ -402,7 +403,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 ## 过检方法
 
-目前，SukiSU Ultra + SUSFS + Zygisk Next（v1.3.0 及更高版本）是最好的解决方案，其次为 Magisk Alpha + Zygisk Next（v1.3.0 及更高版本）、Apatch + Cherish Peekaboo + Zygisk Next（v1.3.0 及更高版本）和 Magisk Delta + Zygisk Next（v1.3.0 及更高版本）。
+目前，SukiSU Ultra + SUSFS + Zygisk Next（v1.3.0 及更高版本）是最好的 root + Zygisk 隐藏组合，其次为 Magisk Alpha + Zygisk Next（v1.3.0 及更高版本）、Apatch + Cherish Peekaboo + Zygisk Next（v1.3.0 及更高版本）和 Magisk Delta + 内置 Zygisk。
 
 通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，将 Zygisk Fork 定义为内置 Zygisk 和其它 Zygisk 实现，将 LSPosed Fork 定义为 LSPosed 及其分支，过检的发展历程可以简要描述如下。
 
@@ -439,7 +440,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
   - 在 SukiSU Ultra 层部署 SUSFS
     - 在 SukiSU Ultra 层嵌入（作为内核模块）或安装（作为系统模块）最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
   - 在 SukiSU Ultra 层部署系统模块
-    - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块
+    - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您使用的 Zygisk Next 版本不高于 ``1.2.9.1``，请考虑在 SukiSU Ultra 层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块，并在 ``/data/adb/shamiko/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/shamiko/whitelist``）
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
       - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
       - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
@@ -455,8 +456,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
         - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-    - 在 SukiSU Ultra 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
-    - 在 SukiSU Ultra 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+    - 在 SukiSU Ultra 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+    - 在 SukiSU Ultra 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
       - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
         - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
         - 获取 ``keybox.xml``
@@ -475,8 +476,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
       - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
-    - 若设备的 vbmeta digest 不正确可在 SukiSU Ultra 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-    - 如有修复漏洞需要可在 SukiSU Ultra 层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
+    - 若设备的 vbmeta digest 不正确可在 SukiSU Ultra 层安装最新版 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+    - 如有修复漏洞需要可在 SukiSU Ultra 层安装最新版 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
 - 如有需要，请参阅英文帖子 [https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/](https://www.reddit.com/r/Magisk/comments/1i7sowe/tutorial_susfs_best_root_hiding_method_currently/)。
 
 ### 正在使用官方版（含发行版、Beta 版、金丝雀版、Debug 版和每夜版）或 Alpha 版面具
@@ -487,7 +488,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
     - 关闭“遵守排除列表”开关（如有需要可开启但 Tricky Store 模块等可能无法修改目标应用以实施其它方面的过检）
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
-  - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块
+  - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您使用的 Zygisk Next 版本不高于 ``1.2.9.1``，请在面具层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块，并在 ``/data/adb/shamiko/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/shamiko/whitelist``）
     - 启用白名单模式（将非 Root 应用视为排除列表）
     - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
     - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
@@ -504,8 +505,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
       - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-  - 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
-  - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+  - 在面具层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+  - 在面具层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
     - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
       - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
       - 获取 ``keybox.xml``
@@ -524,9 +525,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
     - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
-  - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-  - 如有修复漏洞需要可在面具层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
-  - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
+  - 若设备的 vbmeta digest 不正确可在面具层安装最新版 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+  - 如有修复漏洞需要可在面具层安装最新版 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
+  - 在面具层安装最新版 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
 
@@ -549,7 +550,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 重启进入系统后在 Apatch 管理器中嵌入最新 ``compat`` 版本的 Cherish Peekaboo 并重启设备
       - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原并放弃内核模块部署
   - 在 Apatch 层部署系统模块
-    - 在 Apatch 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块
+    - 在 Apatch 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您不希望使用 Zygisk Next，可使用最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 或最新版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)，但它们的隐藏效果可能亚于 ``1.3.0`` 及更高版本的 Zygisk Next，随后在 Apatch 层安装最新版 [NoHello](https://github.com/MhmRdd/NoHello) 模块，并在 ``/data/adb/nohello/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/nohello/whitelist``）
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
       - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
       - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
@@ -565,8 +566,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
         - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
         - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-    - 在 Apatch 层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
-    - 在 Apatch 层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+    - 在 Apatch 层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+    - 在 Apatch 层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
       - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
         - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
         - 获取 ``keybox.xml``
@@ -585,8 +586,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
         - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
       - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
       - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
-    - 若设备的 vbmeta digest 不正确可在 Apatch 层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-    - 如有修复漏洞需要可在 Apatch 层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
+    - 若设备的 vbmeta digest 不正确可在 Apatch 层安装最新版 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+    - 如有修复漏洞需要可在 Apatch 层安装最新版 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
 
 ### 正在使用 Delta 版面具（小狐狸面具）
 
@@ -607,8 +608,8 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 在 HMA 的设置页面将数据隔离中的三个开关依次设置为开、关、开（部分修改需要 root 权限）
       - 构建适当的白名单（只想让检测软件检测到哪些应用）或黑名单（让检测软件不能检测到哪些应用）模板（可参照[该教程](./HMA(L).md)）
       - 对除面具和插件之外的一切用户应用和系统预装的非关键应用启用隐藏并应用模板
-  - 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
-  - 在面具层安装 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
+  - 在面具层安装最新版 [Play Integrity Fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
+  - 在面具层安装最新版 [Tricky Store](https://github.com/5ec1cff/TrickyStore) 模块
     - 如有需要可以不使用 Tricky Store 模块自带的 ``keybox.xml``
       - 使用 MT 管理器将 ``/data/adb/tricky_store/`` 目录中的 ``keybox.xml`` 并将其重命名为 ``keybox.xml.bak``（或在 root 权限下执行命令 ``mv /data/adb/tricky_store/keybox.xml /data/adb/tricky_store/keybox.xml.bak``）
       - 获取 ``keybox.xml``
@@ -627,9 +628,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 如果 ``keybox.xml`` 已被吊销，或者其完整性比 Tricky Store 模块提供的默认 ``keybox.xml`` 更差，请在 MT 管理器中单击 ``/data/adb/tricky_store/keybox.xml.bak`` 以恢复备份
     - 使用 MT 管理器提取检测应用的安装包包名（可以长按复制）并编辑 ``/data/adb/tricky_store/target.txt`` 将所有目标应用的包名添加进去（黑名单模式）
     - 使用 MT 管理器编辑 ``/data/adb/tricky_store/security_patch.txt`` 并将当月或当季度的 1 号的日期按照 ``20250901`` 的格式写入该文件
-  - 若设备的 vbmeta digest 不正确可在面具层安装 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
-  - 如有修复漏洞需要可在面具层安装 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
-  - 在面具层安装 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
+  - 若设备的 vbmeta digest 不正确可在面具层安装最新版 [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) 模块
+  - 如有修复漏洞需要可在面具层安装最新版 [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) 模块
+  - 在面具层安装最新版 [bindhosts](https://github.com/backslashxx/bindhosts) 或内置的 Systemless hosts 模块
     - 由于两者不兼容，如果决定使用两者中的某一个模块，请移除另一个模块
     - 如果使用 bindhosts，请在重启设备后在面具管理器中点击一次或多次该模块的“操作”按钮使其显示 ``reset`` 后再点一次“操作”按钮使其应用最新规则
 
@@ -652,7 +653,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 ##### Bootloader 未锁定
 
-- 在面具层安装 [Play Integrity FIx](https://github.com/KOWX712/PlayIntegrityFix) 模块
+- 在面具层安装最新版 [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) 模块
 - 不建议使用插件进行过检因为对检测应用注入虽然能够过检掉调试模式（可疑级别）但会暴露 Xposed/Edxposed/LSPosed 注入/钩子（确信级别）反而得不偿失
 
 #### Ruru
@@ -679,7 +680,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - 彻底卸载 Native Root Detector
 - 如有必要请禁用微信和 QQ（可通过 Swift Backup 或冰箱应用）
 - 在 root 管理器中卸载原版 LSPosed 并重启设备
-- 在 root 管理器中安装 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中的最新版本并重启设备
+- 在 root 管理器中安装最新版 [https://github.com/JingMatrix/LSPosed/actions](https://github.com/JingMatrix/LSPosed/actions) 中的最新版本并重启设备
 - 在 LSPosed 管理器设置中恢复您的插件配置
 - 切换到 LSPosed 管理器的“插件”选项卡，检查所有插件配置是否已恢复完成
 - 重启设备
