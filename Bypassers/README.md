@@ -2,19 +2,25 @@
 
 Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal solution, follwed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta. 
 
-By defining Magisk Fork as rooting solutions including Magisk, KSU, Apatch, and their branches and LSPosed Fork as LSPosed and their branches, the development of bypassing can be briefly described as follows. 
+By defining 
+
+1) Magisk Fork as rooting solutions including Magisk, KSU, Apatch, and their branches; 
+2) Zygisk Fork as built-in Zygisk and alternative Zygisk implementations; and
+3) LSPosed Fork as LSPosed and their branches; 
+
+the development of bypassing can be briefly described as follows. 
 
 - Magisk + Xposed (2018 and before), 
 - Magisk + Edxposed (2019), 
-- Magisk + Edxposed + Anti-blocking plugins (2020), 
+- Magisk + Edxposed + Anti-detection plugins (2020), 
 - Magisk + LSPosed (2021), 
-- Magisk Fork + LSPosed (2022), 
-- Magisk Fork + LSPosed + Shamiko (2023), 
-- Magisk Fork + LSPosed Fork + Shamiko + PIF + TS (2024), 
-- Magisk Fork + LSPosed Fork + SUSFS/Shamiko + PIF + TS (the first season in 2025), 
-- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Cleanup (the second season in 2025), 
-- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the third season in 2025), and
-- Magisk Fork + LSPosed Fork + SUSFS + Zygisk Next (v1.3.0 and later) + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the fourth season in 2025). 
+- Magisk + Zygisk + Shamiko + LSPosed (2022), 
+- Magisk Fork + Zygisk Fork + Shamiko + LSPosed (2023), 
+- Magisk Fork + Zygisk Fork + Shamiko + LSPosed Fork + PIF + TS (2024), 
+- Magisk Fork + Zygisk Fork + SUSFS/Shamiko + LSPosed Fork + PIF + TS (the first season in 2025), 
+- Magisk Fork + Zygisk Fork + SUSFS/Shamiko/NoHello + LSPosed Fork + PIF + TS + VBMeta Fixer + Cleanup (the second season in 2025), 
+- SukiSU Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the third season in 2025), and
+- SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + Cleanup (the fourth season in 2025). 
 
 Currently, even with the state-of-the-art bypassing techniques, the following problems still cannot be solved with appropriate solutions. 
 
@@ -37,7 +43,7 @@ While following the tutorials, please also consider referring to the documentati
   - Deploy the SUSFS module in the SukiSU Ultra layer
     -  Embed (as a kernel module) or install (as a system module) the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU Ultra layer
   - Deploy the system modules in the SukiSU Ultra layer
-    - Install the latest [Zygisk Next](https://t.me/real5ec1cff) module in the SukiSU Ultra layer
+    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the SukiSU Ultra layer
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
       - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
       - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
@@ -85,7 +91,8 @@ While following the tutorials, please also consider referring to the documentati
     - Disable Denylist
     - Empty Denylist
     - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in Magisk
-  - Install the latest [Zygisk Next](https://t.me/real5ec1cff) module in the Magisk layer
+  - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Magisk layer
+    - Enable whitelist mode (Treat non-root apps as denylist)
     - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
     - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
     - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
@@ -147,7 +154,7 @@ While following the tutorials, please also consider referring to the documentati
       - Reboot
       - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
   - Deploy the system modules in the Apatch layer
-    - Install the latest [Zygisk Next](https://t.me/real5ec1cff) module in the Apatch layer
+    - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Apatch layer
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
       - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
       - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
@@ -261,6 +268,15 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - On or after June 24th, 2025: Install the latest HMA plugin
 
 #### Native Root Detector
+
+##### Detected Abnormal Environment (with a number with six decimal places as the detail)
+
+- Update the Zygisk Next module to 1.3.0 and later. 
+- Enable both anonymous memory and the Zygisk Next linker, or disable both of them in the Zygisk Next module. 
+
+##### Detected Zygisk (4)
+
+Update the Zygisk Next module to 1.3.0 and later. 
 
 ##### LSPosed traces are detected in the ``odex`` file of GMS or this application
 
@@ -388,19 +404,19 @@ Furthermore, Android application-layer injection has been proven impossible to b
 
 目前，SukiSU Ultra + SUSFS + Zygisk Next（v1.3.0 及更高版本）是最好的解决方案，其次为 Magisk Alpha + Zygisk Next（v1.3.0 及更高版本）、Apatch + Cherish Peekaboo + Zygisk Next（v1.3.0 及更高版本）和 Magisk Delta + Zygisk Next（v1.3.0 及更高版本）。
 
-通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，将 LSPosed Fork 定义为 LSPosed 及其分支，过检的发展历程可以简要描述如下。
+通过将 Magisk Fork 定义为包括 Magisk、KSU、Apatch 及其分支在内的 root 方案，将 Zygisk Fork 定义为内置 Zygisk 和其它 Zygisk 实现，将 LSPosed Fork 定义为 LSPosed 及其分支，过检的发展历程可以简要描述如下。
 
 - Magisk + Xposed（2018 年及之前版本）；
 - Magisk + Edxposed（2019 年）；
 - Magisk + Edxposed + 各系防封检测插件（2020 年）；
 - Magisk + LSPosed（2021 年）；
-- Magisk Fork + LSPosed（2022 年）；
-- Magisk Fork + LSPosed + Shamiko（2023 年）；
-- Magisk Fork + LSPosed Fork + Shamiko + PIF + TS（2024 年）；
-- Magisk Fork + LSPosed Fork + SUSFS/Shamiko + PIF + TS（2025 年第一季度）；
-- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + 残留清理（2025 年第二季度）；
-- Magisk Fork + LSPosed Fork + SUSFS/Shamiko/NoHello + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第三季度）以及；
-- Magisk Fork + LSPosed Fork + SUSFS + Zygisk Next (v1.3.0 and later) + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第四季度）。
+- Magisk + Zygisk + Shamiko + LSPosed（2022 年）；
+- Magisk Fork + Zygisk Fork + Shamiko + LSPosed（2023 年）；
+- Magisk Fork + Zygisk Fork + Shamiko + LSPosed Fork + PIF + TS（2024 年）；
+- Magisk Fork + Zygisk Fork + SUSFS/Shamiko + LSPosed Fork + PIF + TS（2025 年第一季度）；
+- Magisk Fork + Zygisk Fork + SUSFS/Shamiko/NoHello + LSPosed Fork + PIF + TS + VBMeta Fixer + 残留清理（2025 年第二季度）；
+- SukiSU Ultra + SUSFS + Zygisk Next (v1.2.9.1 and before) + Shamiko + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第三季度）以及；
+- SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) + LSPosed Fork + PIF + TS + VBMeta Fixer + Audit Patch + 残留清理（2025 年第四季度）。
 
 目前，即使使用了最先进的过检技术，以下问题依旧无法使用合适的方案解决。
 
@@ -423,7 +439,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
   - 在 SukiSU Ultra 层部署 SUSFS
     - 在 SukiSU Ultra 层嵌入（作为内核模块）或安装（作为系统模块）最新版 [SUSFS](https://github.com/sidex15/susfs4ksu-module) 模块
   - 在 SukiSU Ultra 层部署系统模块
-    - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://t.me/real5ec1cff) 模块
+    - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
       - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
       - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
@@ -468,10 +484,11 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - 安装最新版 [Alpha 版面具](https://install.appcenter.ms/users/vvb2060/apps/magisk/distribution_groups/public)
   - 配置面具
     - 禁用内置 Zygisk
-    - 关闭“遵守排除列表”开关
+    - 关闭“遵守排除列表”开关（如有需要可开启但 Tricky Store 模块等可能无法修改目标应用以实施其它方面的过检）
     - 清空“配置排除列表”列表
     - 启动 MT 管理器和其它需要 root 权限的应用程序并用 Magisk 管理器进行授权
-  - 在面具层安装最新版 [Zygisk Next](https://t.me/real5ec1cff) 模块
+  - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块
+    - 启用白名单模式（将非 Root 应用视为排除列表）
     - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
     - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
     - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
@@ -532,7 +549,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
       - 重启进入系统后在 Apatch 管理器中嵌入最新 ``compat`` 版本的 Cherish Peekaboo 并重启设备
       - 如果设备无法启动，请在 fastboot 模式下刷入先前备份的 ``boot.img`` 进行还原并放弃内核模块部署
   - 在 Apatch 层部署系统模块
-    - 在 Apatch 层安装最新版 [Zygisk Next](https://t.me/real5ec1cff) 模块
+    - 在 Apatch 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
       - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
       - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
@@ -646,6 +663,15 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - 2025 年 6 月 25 日及之后：安装最新版 HMA 插件
 
 #### Native Root Detector
+
+##### 检测到环境异常（以一个包含六个小数位的数字作为详情）
+
+- 将 Zygisk Next 模块升级至 1.3.0 或更高。
+- 在 Zygisk Next 模块中同时启用或同时禁用匿名内存和 Zygisk Next linker。
+
+##### 以代码 4 检测到 Zygisk
+
+将 Zygisk Next 模块升级至 1.3.0 或更高。
 
 ##### 检测到 GMS 或本应用的的 ``odex`` 文件中存在 LSPosed 痕迹
 
