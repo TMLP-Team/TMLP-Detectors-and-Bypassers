@@ -1,14 +1,12 @@
 ## Bypassers
 
-Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal root and Zygisk bypassing combination, follwed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta. 
+Currently, SukiSU Ultra + SUSFS + Zygisk Next (v1.3.0 and later) is the optimal root and Zygisk bypassing combination, followed by Magisk Alpha + Zygisk Next (v1.3.0 and later), Apatch + Cherish Peekaboo + Zygisk Next (v1.3.0 and later), and Magisk Delta + built-in Zygisk. 
 
-By defining 
+Given the following definitions, the development of bypassing can be briefly described as follows. 
 
-1) Magisk Fork as rooting solutions including Magisk, KSU, Apatch, and their branches; 
-2) Zygisk Fork as built-in Zygisk and alternative Zygisk implementations; and
-3) LSPosed Fork as LSPosed and their branches; 
-
-the development of bypassing can be briefly described as follows. 
+1) We define Magisk Fork as rooting solutions, including Magisk, KSU, Apatch, and their branches. 
+2) We define Zygisk Fork as built-in Zygisk and alternative Zygisk implementations. 
+3) We define LSPosed Fork as LSPosed and its branches. 
 
 - Magisk + Xposed (2018 and before), 
 - Magisk + Edxposed (2019), 
@@ -39,7 +37,7 @@ While following the tutorials, please also consider referring to the documentati
   - Configure in the Super User tab of the SukiSU Ultra Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
-    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in SukiSU Ultra
+    - Launch the applications requiring root privileges, such as the MT Manager, and grant requests for root privileges in SukiSU Ultra
   - Deploy the SUSFS module in the SukiSU Ultra layer
     -  Embed (as a kernel module) or install (as a system module) the latest [SUSFS](https://github.com/sidex15/susfs4ksu-module) module in the SukiSU Ultra layer
   - Deploy the system modules in the SukiSU Ultra layer
@@ -50,13 +48,13 @@ While following the tutorials, please also consider referring to the documentati
       - Remove the Shamiko, NoHello, and Zygisk Assistant modules, as well as their related folders in ``/data/adb``
       - Reboot the device
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU Ultra layer
-      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
+      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the SukiSU Ultra manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
       - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
       - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
       - Reboot the device
       - Configure the HMA
-        - Hide HMA's icon from the launcher in the HMA's settings page
+        - Hide HMA's icon from the launcher in HMA's settings page
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
         - Except for the SukiSU Ultra Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
@@ -91,7 +89,7 @@ While following the tutorials, please also consider referring to the documentati
     - Disable built-in Zygisk
     - Disable Denylist
     - Empty Denylist
-    - Launch the applications requiring root privileges like the MT Manager and grant requests for root privileges in Magisk
+    - Launch the applications requiring root privileges, such as the MT Manager, and grant requests for root privileges in Magisk
   - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Magisk layer (If you are using Zygisk Next ``1.2.9.1`` or lower, please also install the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
     - Enable whitelist mode (Treat non-root apps as denylist)
     - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
@@ -99,13 +97,13 @@ While following the tutorials, please also consider referring to the documentati
     - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
     - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
-    - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
+    - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the Magisk manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
     - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
     - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
     - Reboot the device
     - Configure the HMA
-      - Hide HMA's icon from the launcher in the HMA's settings page
+      - Hide HMA's icon from the launcher in HMA's settings page
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
@@ -132,7 +130,7 @@ While following the tutorials, please also consider referring to the documentati
   - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
   - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the Magisk layer if necessary for vulnerability fixes
   - Install the latest [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
-    - Please remove the other one if one is selected to be used since they are not compatible
+    - Please remove the other one if one is selected to be used, since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
 
 ### Using Apatch / Apatch Next
@@ -141,7 +139,7 @@ While following the tutorials, please also consider referring to the documentati
   - Configure in the Super User tab of the Apatch Manager
     - Grant root privileges to all applications requiring them
     - Use the default configurations for all the applications that do not require root privileges
-      - The Apatch Manager Super User page seems to have a bug and you can: 
+      - The Apatch Manager Super User page seems to have a bug, and you can: 
         - Grant root privileges to the MT Manager
         - Directly use the MT Manager to remove all application configurations except ``bin.mt.plus`` from the file ``/data/adb/ap/package_config``
         - Reboot the device and use Apatch Manager again to grant root privileges to applications that require them
@@ -150,10 +148,10 @@ While following the tutorials, please also consider referring to the documentati
     - Find the latest version of the module Cherish Peekaboo from [https://t.me/app_process64](https://t.me/app_process64)
     - Embed the non-``compat`` version of the Cherish Peekaboo as a kernel module and reboot
     - If devices cannot boot, then
-      - Flash the ``boot.img`` that is backed up before in the fastboot mode to restore
+      - Flash the ``boot.img`` that was backed up before in the fastboot mode to restore
       - Embed the latest ``compat`` version of the Cherish Peekaboo
       - Reboot
-      - If devices cannot boot, then flash the ``boot.img`` that is backed up before in the fastboot mode to restore
+      - If devices cannot boot, then flash the ``boot.img`` that was backed up before in the fastboot mode to restore
   - Deploy the system modules in the Apatch layer
     - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Apatch layer (If you do not wish to use Zygisk Next, you can use the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) or the latest [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) instead, install the latest [NoHello](https://github.com/MhmRdd/NoHello) module in the Apatch layer, and then create an empty file named ``whitelist`` in ``/data/adb/nohello/``, or execute the command ``touch /data/adb/nohello/whitelist`` as root, but these may be more detectable than only using Zygisk Next 1.3.0 and higher)
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
@@ -161,13 +159,13 @@ While following the tutorials, please also consider referring to the documentati
       - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
       - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
-      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
+      - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
       - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the Apatch manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
       - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
       - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
       - Reboot the device
       - Configure the HMA
-        - Hide HMA's icon from the launcher in the HMA's settings page
+        - Hide HMA's icon from the launcher in HMA's settings page
         - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
         - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
         - Except for the Apatch Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
@@ -197,19 +195,19 @@ While following the tutorials, please also consider referring to the documentati
 ### Using Magisk Delta
 
 - Install the last version of [Magisk Delta](https://github.com/HuskyDG/magisk-files) before it was discontinued
-  - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024) and the versions before Magisk 27007 have a privilege escalation vulnerability
+  - Please consider switching to Magisk Alpha since it is already out-of-date (discontinued in early 2024), and the versions before Magisk 27007 have a privilege escalation vulnerability
   - Configure Magisk Delta
     - Enable Zygisk (or use alternative Zygisk implementations that can be used)
-    - Enable whitelist mode on the setting page of the Magisk Delta
+    - Enable whitelist mode on the settings page of the Magisk Delta
     - Select the package of the application that requires root privileges (you can only select the necessary packages in the applications)
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
-    - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs which could make LSPosed being detected and the LSPosed taskbar notification in the setting page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
+    - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
     - Input ``*#*#5776733#*#*`` in the dialer (do not call) or click the ``action`` button in the module detail in the Magisk manager to open the LSPosed daemon if necessary (or in case the desktop shortcut is missing)
     - Install the latest [HMA](https://t.me/HideMyApplist) plugin (the latest build in its Telegram) in the LSPosed layer
     - Set the target scope of the HMA plugin to **System Framework** only and enable the HMA plugin in the LSPosed Manager
     - Reboot the device
     - Configure the HMA
-      - Hide HMA's icon from the launcher in the HMA's settings page
+      - Hide HMA's icon from the launcher in HMA's settings page
       - Set the three switches in Data Isolation to ``On``, ``Off``, and ``On`` in sequence in the HMA's settings page (may require root privileges)
       - Build appropriate whitelist (what applications the detectors can see) or blacklist (what applications the detectors cannot see) templates (can refer to [this tutorial](./HMA(L).md))
       - Except for the Magisk Manager and the plugins, enable hiding for all user applications and system-pre-installed non-critical applications with suitable templates applied
@@ -236,7 +234,7 @@ While following the tutorials, please also consider referring to the documentati
   - Install the latest [VBMeta Fixer](https://github.com/reveny/Android-VBMeta-Fixer) module in the Magisk layer if the device does not have a proper vbmeta digest
   - Install the latest [Audit Patch](https://github.com/aviraxp/ZN-AuditPatch) module in the Magisk layer if necessary for vulnerability fixes
   - Install the latest [bindhosts](https://github.com/backslashxx/bindhosts) or the built-in ``Systemless hosts`` module in the Magisk layer
-    - Please remove the other one if one is selected to be used since they are not compatible
+    - Please remove the other one if one is selected to be used, since they are not compatible
     - After rebooting, click the "Action" button of this module one or more times in the Magisk Manager to make it display "reset" and then click the "Action" button again to apply the latest rules if using the bindhosts module
 
 ### Special Cases
@@ -250,7 +248,7 @@ Turn off "Disable package manager signature verification" in Core Patcher by ref
 ##### Debugging mode is enabled
 
 - Turn off the debugging mode when not in use
-- It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though injecting the detection application can pass the debug mode (suspicious level)
+- It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confidence level), which is not worth the loss, though injecting the detection application can pass the debug mode (suspicious level)
 
 ##### Detect the existence of TWRP file(s)
 
@@ -259,7 +257,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 ##### Unlocked bootloader
 
 - Install [Play Integrity fix](https://github.com/KOWX712/PlayIntegrityFix/actions) module
-- It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confident level), which is not worth the loss though the injection of the detected application can pass the debug mode (suspicious level)
+- It is not recommended to use plugins for bypassing because it will expose Xposed/Edxposed/LSPosed injection/hooks (confidence level), which is not worth the loss, though the injection of the detected application can pass the debug mode (suspicious level)
 
 #### Ruru
 
@@ -371,7 +369,7 @@ Please refer to [https://bbs.kanxue.com/thread-285106-1.htm](https://bbs.kanxue.
     - Upgrade to the minimum version above the current version if the update is a must
     - Uninstall the QXposed (QX) plugin and the QQ Repeater plugin
     - Disable the red envelope grabbing, automatic group sign-in, and the group messaging functions
-    - Uninstall any QQ plugin that is not adpated to the Xposed API calling protection of LSPosed
+    - Uninstall any QQ plugin that is not adapted to the Xposed API calling protection of LSPosed
   - If you are using a QQ version above ``v8.9.56`` that is affected by the 2024 autumn to 2025 spring risk control event (the phenomenon is most obvious when using the ``v9.1.35`` version)
     - Please refer to the issues mentioned in (``v8.8.17``, ``v8.9.56``]
     - If you want to use the XAutoDaily (XA) plugin or the QAuxiliary (QA) plugin while you can still downgrade your QQ
@@ -793,3 +791,4 @@ exit ${exitCode}
 长期以来，本团队中的成员经常在大型风控期间一越过某个版本第二天就被下线和限制，而降级至该版本以下就只会收到警告，再降级到某个更低的版本或以下就不再收到任何警告（当然如果之前是因为设备 ID 已经被上传到了云端而收到不断下发的警告则需要更换设备后警告才会被消除）。
 
 另外，安卓应用层注入已被证明无法通过任何第三方手段对被注入的应用程序进行隐藏，只要被注入的应用程序想检测，就有手段检测到；只有在注入目标应用时将目标应用内所有与环境检测有关的代码“控制”住才可能实现安全的隐藏，而这，需要插件的开发人员对目标应用进行极为深入的逆向分析以及对云端的大胆揣测。
+
