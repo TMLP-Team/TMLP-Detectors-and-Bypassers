@@ -43,8 +43,9 @@ While following the tutorials, please also consider referring to the documentati
   - Deploy the system modules in the SukiSU Ultra layer
     - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the SukiSU Ultra layer (If you are using Zygisk Next version ``1.2.9.1`` or lower, please also consider installing the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the SukiSU Ultra layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
-      - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
-      - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
+      - To prevent some applications from not running properly, it is recommended to disable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``0``) (this configuration takes effect after rebooting)
+      - To prevent some applications from not running properly, it is recommended to disable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker system``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``0``) (this configuration takes effect after rebooting)
+      - Please keep the switches of ``Use anonymous memory`` and ``Use Zygisk Next linker`` in the same state to avoid being detected
       - Remove the Shamiko, NoHello, and Zygisk Assistant modules, as well as their related folders in ``/data/adb``
       - Reboot the device
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the SukiSU Ultra layer
@@ -93,8 +94,9 @@ While following the tutorials, please also consider referring to the documentati
   - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Magisk layer (If you are using Zygisk Next ``1.2.9.1`` or lower, please also install the latest [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) module in the Magisk layer, and then create an empty file named ``whitelist`` under ``/data/adb/shamiko/``, or execute the command ``touch /data/adb/shamiko/whitelist`` with root privileges)
     - Enable whitelist mode (Treat non-root apps as denylist)
     - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
-    - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
-    - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
+    - To prevent some applications from not running properly, it is recommended to disable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``0``) (this configuration takes effect after rebooting)
+    - To prevent some applications from not running properly, it is recommended to disable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker system``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``0``) (this configuration takes effect after rebooting)
+    - Please keep the switches of ``Use anonymous memory`` and ``Use Zygisk Next linker`` in the same state to avoid being detected
     - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
   - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Magisk layer
     - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
@@ -155,8 +157,9 @@ While following the tutorials, please also consider referring to the documentati
   - Deploy the system modules in the Apatch layer
     - Install the latest [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) module in the Apatch layer (If you do not wish to use Zygisk Next, you can use the latest [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) or the latest [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions) instead, install the latest [NoHello](https://github.com/MhmRdd/NoHello) module in the Apatch layer, and then create an empty file named ``whitelist`` in ``/data/adb/nohello/``, or execute the command ``touch /data/adb/nohello/whitelist`` as root, but these may be more detectable than only using Zygisk Next 1.3.0 and higher)
       - Set the denylist policy to ``Unmount Only`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount`` with root privileges) (finally make the content of ``/data/adb/zygisksu/denylist_enforce`` to ``2``)
-      - Optional: Enable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``1``)
-      - Optional: Enable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``1``)
+      - To prevent some applications from not running properly, it is recommended to disable ``Use anonymous memory`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default`` with root privileges) (finally make the content of ``/data/adb/zygisksu/memory_type`` to ``0``) (this configuration takes effect after rebooting)
+      - To prevent some applications from not running properly, it is recommended to disable ``Use Zygisk Next linker`` (or execute ``/data/adb/modules/zygisksu/bin/zygiskd linker system``) (finally make the content of ``/data/adb/zygisksu/linker`` to ``0``) (this configuration takes effect after rebooting)
+      - Please keep the switches of ``Use anonymous memory`` and ``Use Zygisk Next linker`` in the same state to avoid being detected
       - Remove the Shamiko and the NoHello modules, remove their related folders in ``/data/adb``, and reboot the device
     - Install the latest [LSPosed](https://github.com/JingMatrix/LSPosed/actions) module (the latest Release version in the last successful CI construction action in the ``Actions`` tab of the GitHub repository of the ``Jing Matrix`` fork) in the Apatch layer
       - Reboot $\rightarrow$ Open the LSPosed Manager $\rightarrow$ Create the LSPosed daemon $\rightarrow$ Create a desktop shortcut to the LSPosed daemon $\rightarrow$ Disable the logs, which could make the LSPosed detectable $\rightarrow$ Disable the LSPosed taskbar notification in the settings page of the LSPosed daemon $\rightarrow$ Uninstall the LSPosed Manager
@@ -440,8 +443,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
   - 在 SukiSU Ultra 层部署系统模块
     - 在 SukiSU Ultra 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您使用的 Zygisk Next 版本不高于 ``1.2.9.1``，请考虑在 SukiSU Ultra 层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块，并在 ``/data/adb/shamiko/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/shamiko/whitelist``）
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
-      - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
-      - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
+      - 为避免某些应用程序无法正确运行，推荐禁用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``0``）（此选项在设备重启后才会生效）
+      - 为避免某些应用程序无法正确运行，推荐禁用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker system``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``0``）（此选项在设备重启后才会生效）
+      - 请保持“使用匿名内存”和“使用 Zygisk Next 链接器”同开同关以免被检测到
       - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
     - 在 SukiSU Ultra 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
@@ -489,8 +493,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
   - 在面具层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您使用的 Zygisk Next 版本不高于 ``1.2.9.1``，请在面具层安装最新版 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases/) 模块，并在 ``/data/adb/shamiko/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/shamiko/whitelist``）
     - 启用白名单模式（将非 Root 应用视为排除列表）
     - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
-    - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
-    - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
+    - 为避免某些应用程序无法正确运行，推荐禁用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``0``）（此选项在设备重启后才会生效）
+    - 为避免某些应用程序无法正确运行，推荐禁用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker system``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``0``）（此选项在设备重启后才会生效）
+    - 请保持“使用匿名内存”和“使用 Zygisk Next 链接器”同开同关以免被检测到
     - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
   - 在面具层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
     - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
@@ -550,8 +555,9 @@ Furthermore, Android application-layer injection has been proven impossible to b
   - 在 Apatch 层部署系统模块
     - 在 Apatch 层安装最新版 [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext/releases) 模块（如果您不希望使用 Zygisk Next，可使用最新版 [ReZygisk](https://github.com/PerformanC/ReZygisk/actions) 或最新版 [NeoZygisk](https://github.com/JingMatrix/NeoZygisk/actions)，但它们的隐藏效果可能亚于 ``1.3.0`` 及更高版本的 Zygisk Next，随后在 Apatch 层安装最新版 [NoHello](https://github.com/MhmRdd/NoHello) 模块，并在 ``/data/adb/nohello/`` 下创建一个名为 ``whitelist`` 的空文件，或在 root 权限下执行命令 ``touch /data/adb/nohello/whitelist``）
       - 设置排除列表策略为``仅还原挂载``（或在 root 下执行``/data/adb/modules/zygisksu/bin/zygiskd enforce-denylist just_umount``）（最终使得文件 ``/data/adb/zygisksu/denylist_enforce`` 的内容为 ``2``）
-      - 如有需要可以启用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type anonymous``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``1``）
-      - 如有需要可以使用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker builtin``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``1``）
+      - 为避免某些应用程序无法正确运行，推荐禁用匿名内存（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd memory-type default``）（最终使得文件 ``/data/adb/zygisksu/memory_type`` 的内容为 ``0``）（此选项在设备重启后才会生效）
+      - 为避免某些应用程序无法正确运行，推荐禁用 Zygisk Next 链接器（或在 root 下执行 ``/data/adb/modules/zygisksu/bin/zygiskd linker system``）（最终使得文件 ``/data/adb/zygisksu/linker`` 的内容为 ``0``）（此选项在设备重启后才会生效）
+      - 请保持“使用匿名内存”和“使用 Zygisk Next 链接器”同开同关以免被检测到
       - 移除 Shamiko 和 NoHello 模块，清理 ``/data/adb`` 下的痕迹并重启设备
     - 在 Apatch 层安装 ``Jing Matrix`` 分支 GitHub 存储库的 ``Actions`` 选项卡中最后一次成功生成构建的 action 内生成的最新 Release 版的 [LSPosed](https://github.com/JingMatrix/LSPosed/actions) 模块
       - 重启设备 $\rightarrow$ 打开 LSPosed 管理器 $\rightarrow$ 创建 LSPosed 寄生器 $\rightarrow$ 创建寄生器快捷方式 $\rightarrow$ 关闭可能导致 LSPosed 被检测到的日志功能和 LSPosed 的任务栏通知 $\rightarrow$ 卸载 LSPosed 管理器
