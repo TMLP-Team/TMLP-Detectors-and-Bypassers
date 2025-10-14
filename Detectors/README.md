@@ -58,7 +58,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 
 - **Package Name**: ``com.zhenxi.hunter``
 - **Developing Purpose**: Environment Detection
-- **Latest Version**: ``v6.41 (641)``
+- **Latest Version**: ``v6.42 (642)``
 - **Release Date**:  September 10th, 2025
 - **Detection Remark**: Please wait about 20 seconds to complete the detection and display. 
 
@@ -385,7 +385,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 
 - **应用包名**：``com.zhenxi.hunter``
 - **开发用途**：环境检测
-- **最新版本**：``v6.41 (641)``
+- **最新版本**：``v6.42 (642)``
 - **发行日期**： 2025 年 9 月 10 日
 - **检测备注**：请等待 20 秒左右以完成检测和显示。
 - ![hunterCN.jpg](hunterCN.jpg)

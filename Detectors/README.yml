@@ -61,7 +61,7 @@
 - name: Hunter
   packageName: com.zhenxi.hunter
   developingPurpose: E
-  latestVersion: v6.41 (641)
+  latestVersion: v6.42 (642)
   releaseDate: = 20250910
   detectionRemark:
     en: 'Please wait about 20 seconds to complete the detection and display. '
