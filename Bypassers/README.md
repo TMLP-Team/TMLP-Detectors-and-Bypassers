@@ -276,7 +276,7 @@ Rename the TWRP folder under ``/sdcard/`` (for example, .TWRP)
 - Update the Zygisk Next module to 1.3.0 and later. 
 - Enable both anonymous memory and the Zygisk Next linker, or disable both of them in the Zygisk Next module. 
 
-##### Detected Zygisk (4)
+##### Detected Zygisk
 
 Update the Zygisk Next module to 1.3.0 and later. 
 
@@ -674,7 +674,7 @@ Furthermore, Android application-layer injection has been proven impossible to b
 - 将 Zygisk Next 模块升级至 1.3.0 或更高。
 - 在 Zygisk Next 模块中同时启用或同时禁用匿名内存和 Zygisk Next linker。
 
-##### 以代码 4 检测到 Zygisk
+##### 检测到 Zygisk
 
 将 Zygisk Next 模块升级至 1.3.0 或更高。
 
