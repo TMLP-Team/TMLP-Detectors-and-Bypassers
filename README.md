@@ -8,7 +8,7 @@ We only keep the latest versions for each implementer, detector, and bypasser he
 
 The open source community should be a community with a high spirit of contribution. Nevertheless, in recent years, some [events](./Events/README.md) have occurred frequently, where we felt heartbroken about the unfriendly ones. We call on the open source community to maintain internal unity and harmony, respecting developers and open source licenses. The open source community should not harm the interests of for-profit organizations, and for-profit organizations should not suppress the development of the open source community. 
 
-The last update of this repository was at 16:30 on November 7th, 2025 (UTC+8). 
+The last update of this repository was at 10:30 on November 11th, 2025 (UTC+8). 
 
 ---
 
@@ -22,4 +22,4 @@ The last update of this repository was at 16:30 on November 7th, 2025 (UTC+8).
 
 开源社区应当是一个具有高贡献精神的社区，近年来，一些[事件](./Events/README.md)频发，我们对其中的不友好事件感到心痛。我们呼吁开源社区保持内部团结与和谐，尊重开发者和开源许可。开源社区不应损害营利性机构的利益，营利性机构也不应抑制开源社区的发展。
 
-本存储库最后一次更新时间为 2025 年 11 月 7 日 16:30（中国标准时间）。
+本存储库最后一次更新时间为 2025 年 11 月 11 日 10:30（中国标准时间）。
