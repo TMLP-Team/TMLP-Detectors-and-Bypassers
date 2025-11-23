@@ -1,6 +1,6 @@
 ## Implementers
 
-Related implementers related to Magisk, Zygisk, and LSPosed are stored here. 
+The implementers related to Rooting, Zygisk, and LSPosed are stored here. 
 
 The following tutorial is applicable to the deployment of Magisk (and its branches) and Apatch (and its branches) on Android devices. If you have completed a step, please skip it directly. 
 
@@ -97,9 +97,9 @@ It is worth noting that Zygisk Next integrates most of Shamiko's functionalities
 
 ## 部署工具
 
-与 Magisk、Zygisk 和 LSPosed 相关的部署工具在此处存储。
+与 Rooting、Zygisk 和 LSPosed 相关的部署工具在此处存储。
 
-以下教程适用于 Magisk 及其分支 和 Apatch 及其分支在安卓设备上的部署，如已完成请直接跳过。
+以下教程适用于 Magisk 及其分支和 Apatch 及其分支在安卓设备上的部署，如已完成请直接跳过。
 
 - 在计算机上安装必要的 adb、fastboot 和对应的手机设备驱动
 - 将安卓设备与计算机进行 USB 连接
