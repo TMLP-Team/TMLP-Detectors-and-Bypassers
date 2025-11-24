@@ -28,7 +28,7 @@ Related events related to Magisk, Zygisk, and LSPosed are stored here.
 - 20220120：Shamiko 模块首次公开发布。
 - 20221209：KernelSU（KSU）首次公开发布。
 - 20230202：Zygisk Next 模块首次公开发布。
-- 20240107：LSPosed 官方因抓马事件停止了更新，随后小狐狸面具也停止了更新。
+- 20240107：LSPosed 官方因[抓马事件](https://blog.csdn.net/techforward/article/details/135545453)停止了更新，随后小狐狸面具也停止了更新。
 - 20240109：Zygisk Next、Shamiko 和 KSU 遭恶意诽谤。
 - 20240901-至今：腾讯 QQ 出现大规模封号现象。
 - 20241203：谷歌宣布增强安卓 13 及以上的 Play 完整性检验，并于 2025 年 5 月实施，旧 Strong 将变为新 Device，旧 Device 将变为新 Basic。

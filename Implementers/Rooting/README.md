@@ -15,8 +15,12 @@ As there are many kernel files in KSU and its branches, they would not be stored
   - Magisk Delta / Kitsune Magisk (built-in whitelist mode): [https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
 - Apatch: [https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) and [https://t.me/APatchChannel](https://t.me/APatchChannel)
 - KSU: 
-  - KSU: [https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
-  - KSU Next: [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
+  - KSU:
+    - [https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
+    - [https://t.me/KernelSU](https://t.me/KernelSU)
+  - KSU Next:
+    - [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
+    - [https://t.me/ksunext_ci](https://t.me/ksunext_ci)
   - SukiSU Ultra: [https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
 
 ---
@@ -38,6 +42,10 @@ As there are many kernel files in KSU and its branches, they would not be stored
   - 德尔塔面具 / 小狐狸面具（内置白名单模式）：[https://github.com/HuskyDG/magisk-files](https://github.com/HuskyDG/magisk-files)
 - Apatch：[https://github.com/bmax121/APatch](https://github.com/bmax121/APatch) 和 [https://t.me/APatchChannel](https://t.me/APatchChannel)
 - KSU：
-  - KSU：[https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
-  - KSU Next：[https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
+  - KSU：
+    - [https://github.com/tiann/KernelSU](https://github.com/tiann/KernelSU)
+    - [https://t.me/KernelSU](https://t.me/KernelSU)
+  - KSU Next：
+    - [https://github.com/KernelSU-Next/KernelSU-Next](https://github.com/KernelSU-Next/KernelSU-Next)
+    - [https://t.me/ksunext_ci](https://t.me/ksunext_ci)
   - SukiSU Ultra：[https://github.com/SukiSU-Ultra/SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra)
