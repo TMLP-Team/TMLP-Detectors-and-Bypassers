@@ -76,8 +76,8 @@
 			"name":"Hunter", 
 			"packageName":"com.zhenxi.hunter", 
 			"developingPurpose":"E", 
-			"latestVersion":"v6.46 (646)", 
-			"releaseDate":"<= 20251105", 
+			"latestVersion":"v6.52 (652)", 
+			"releaseDate":"<= 20251124", 
 			"detectionRemark":{
 				"en":"Please wait about 20 seconds to complete the detection and display. On some occasions, the output of several specified issues will get loop. ", 
 				"zh-CN":"请等待 20 秒左右以完成检测和显示，某些情况下可能会一直输出某几个问题。"
