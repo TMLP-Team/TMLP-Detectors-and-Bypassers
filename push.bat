@@ -7,7 +7,7 @@ git add .
 IF %ERRORLEVEL%==0 (GOTO COMMIT) ELSE (GOTO FAILURE)
 
 :COMMIT
-git commit -m Update
+git commit -m "Regular Update (%DATE:~0,-2%%TIME%)"
 IF %ERRORLEVEL%==0 (GOTO PUSH) ELSE (GOTO FAILURE)
 
 :PUSH
