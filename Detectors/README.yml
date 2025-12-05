@@ -209,6 +209,8 @@
       and require network access (recent versions of Holmes). '
     zh-CN: 此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 非 Pure 版本在某些没有 root 或注入环境的设备上误报 Malicious
       Hook）和需要联网权限（Holmes 最近的几个版本）。
+  images:
+    '*': nativeTest.png
 - name: Octopus
   alias:
     zh-CN: 八达通
