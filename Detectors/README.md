@@ -158,6 +158,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Latest Version**: ``v32 (Mean Minotaur)``
 - **Release Date**: On or Before June 15th, 2025
 - **Detection Remark**: Holmes and Native Test are integrated here. Some historical versions will crash on some devices (older versions of Holmes), report false positives (Native Test non-pure versions may mis-report Malicious Hook on some unrooted devices), and require network access (recent versions of Holmes). 
+- ![nativeTest.jpg](nativeTest.jpg)
 
 ### Octopus
 
@@ -174,8 +175,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ Native Test ++
 - **Official Links**: [https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app); [https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **Source Status**: Open-source
 - **Developing Purpose**: Play Integrity Check
-- **Latest Version**: ``v1.2``
-- **Release Date**:  December 3rd, 2023
+- **Latest Version**: ``v2.2``
+- **Release Date**: On or Before December 10th, 2025
 
 ### Revolut
 
@@ -494,6 +495,7 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **最新版本**：``v32 (Mean Minotaur)``
 - **发行日期**：不晚于 2025 年 6 月 15 日
 - **检测备注**：此处对 Holmes 和 Native Test 做了整合，部分历史版本会在一些设备上闪退（Holmes 旧版）、假阳性（Native Test 非 Pure 版本在某些没有 root 或注入环境的设备上误报 Malicious Hook）和需要联网权限（Holmes 最近的几个版本）。
+- ![nativeTest.jpg](nativeTest.jpg)
 
 ### Octopus
 
@@ -511,8 +513,8 @@ Momo $\rightarrow$ Native Root Detector $\rightarrow$ 牛头人
 - **官方链接**：[https://github.com/1nikolas/play-integrity-checker-app](https://github.com/1nikolas/play-integrity-checker-app)；[https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck](https://play.google.com/store/apps/details?id=gr.nikolasspyr.integritycheck)
 - **开源状态**：开源
 - **开发用途**：Play 完整性检测
-- **最新版本**：``v1.2``
-- **发行日期**： 2023 年 12 月 3 日
+- **最新版本**：``v2.2``
+- **发行日期**：不晚于 2025 年 12 月 10 日
 
 ### Revolut
 
